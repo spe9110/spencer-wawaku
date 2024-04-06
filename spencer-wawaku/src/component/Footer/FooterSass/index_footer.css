@@ -1,0 +1,92 @@
+.container .footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+.container .footer h5 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.container .footer hr {
+  height: 0.1rem;
+  color: rgb(95, 101, 160);
+}
+.container .footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .footer__content__social__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  order: 2;
+}
+.container .footer__content__social__media a.instagram-icon, .container .footer__content__social__media a.github-icon, .container .footer__content__social__media a.youtube-icon, .container .footer__content__social__media a.twitter-icon, .container .footer__content__social__media a.facebook-icon, .container .footer__content__social__media a.tiktok-icon, .container .footer__content__social__media a.linkedin-icon {
+  border: 1px solid rgb(95, 101, 160);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #000;
+  cursor: pointer;
+}
+.container .footer__content__social__media a.instagram-icon:hover {
+  color: #C13584;
+}
+.container .footer__content__social__media a.github-icon:hover {
+  color: #000;
+}
+.container .footer__content__social__media a.youtube-icon:hover {
+  color: rgb(255, 0, 0);
+}
+.container .footer__content__social__media a.twitter-icon:hover {
+  color: #000;
+}
+.container .footer__content__social__media a.facebook-icon:hover {
+  color: #1877F2;
+}
+.container .footer__content__social__media a.tiktok-icon:hover {
+  color: #1a1919;
+}
+.container .footer__content__social__media a.linkedin-icon:hover {
+  color: #0e76a8;
+}
+.container .footer__content__copyright {
+  display: flex;
+  order: 1;
+  margin-top: 1rem;
+  text-align: center;
+}
+.container .footer button {
+  border: none;
+}
+.container .footer .backTop {
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: rgb(114, 227, 247);
+  z-index: 99;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+.container .footer a {
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+}/*# sourceMappingURL=index_footer.css.map */

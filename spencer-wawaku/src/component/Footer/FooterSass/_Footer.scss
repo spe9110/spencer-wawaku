@@ -1,0 +1,123 @@
+.container{
+    .footer{
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        // flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+
+        // let's get in touch
+        h5{
+            text-align: center;
+            // font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        hr{
+            height: .1rem;
+            // width: 80vw;
+            // margin: 1rem 0;
+            color: rgb(95, 101, 160);
+        }
+        &__content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            // social media
+            &__social__media{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                order: 2;
+        
+                a.instagram-icon, a.github-icon, a.youtube-icon, a.twitter-icon, a.facebook-icon, a.tiktok-icon, a.linkedin-icon{
+                    border: 1px solid rgb(95, 101, 160);
+                    // width: 1.5rem;
+                    // width: 2rem;
+                    // height: 2rem;
+                    display: grid;
+                    place-items: center;
+                    border-radius: 50%;
+                    // font-size: 1.3rem;
+                    // background: rgba(226, 225, 225, 0.6);
+                    background: #ffffff;
+                    // color: rgb(99, 96, 96);
+                    color: #000; 
+                    cursor: pointer;
+                }
+
+                // instagram
+                a.instagram-icon:hover {
+                    color: #C13584;
+                }
+                
+                // github
+                a.github-icon:hover {
+                    color: #000;;
+                }
+                // youtube
+                a.youtube-icon:hover {
+                    color: rgb(255, 0, 0);
+                }
+                // twitter
+                a.twitter-icon:hover {
+                    color: #000;
+                }
+                // facebook
+                a.facebook-icon:hover {
+                    color: #1877F2;
+                }
+                // tiktok
+                a.tiktok-icon:hover {
+                    color: #1a1919;
+                }
+                // LinkedIn
+                a.linkedin-icon:hover {
+                    color: #0e76a8;
+                }
+            }
+
+            // copyright
+            &__copyright{
+                display: flex;
+                order: 1;
+                margin-top: 1rem;
+                text-align: center;
+            }
+        }
+        
+    
+        button{
+            border: none;
+        }
+        .backTop{
+            position: fixed;
+            right: 3rem;
+            bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: rgb(114, 227, 247);
+            z-index: 99;
+            color: #ffffff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: none;    
+        }
+        a {
+            color: #ffffff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
