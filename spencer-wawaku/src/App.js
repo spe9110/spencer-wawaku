@@ -34,6 +34,8 @@ export default App;
 // npm i sass --save-dev
 // npm i react-router-dom@
 // npm i react-icons
+// npm i react-simple-typewriter
+// emoji windows = touche windows + .
 /*
 Based on 'Google JavaScript Style Guide'
 

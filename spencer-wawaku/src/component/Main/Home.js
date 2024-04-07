@@ -1,15 +1,44 @@
 import React from "react";
+import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import './MainSass/index_main.css';
+import { GoArrowUpRight } from "react-icons/go";
+import { NavLink } from "react-router-dom";
+import Profil from './Images/avatar-bis.png';
 
 export default function Home(){
+    const [text] = useTypewriter({
+        words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a Node Developer", "I'm a junior fullstack Developer", "I'm an Educator"],
+        loop: {},
+        typeSpeed: 250,
+        deleteSpeed: 30,
+        delaySpeed: 2500
+    })
+
     return(
-        <div className="Home">
-            <h3>Home</h3>
-            <p>lorem Bienvenue sur Ipsum.one, votre complice idéal dans la création de faux-texte Lorem Ipsum. Destiné aux graphistes, maquettistes, designers et professionnels de la PAO, notre générateur de texte offre une solution rapide et intuitive pour générer du contenu fictif. Que votre projet concerne la mise en forme de documents imprimés, la création de maquettes pour des sites internet, ou la composition de supports de communication, l’outil fournit un texte standardisé, facilitant la concentration sur l'aspect visuel plutôt que le contenu. Avec un simple clic, générez des paragraphes, des listes ou des mots en Lorem Ipsum, ce texte de remplissage professionnel qui trouve ses racines dans l'histoire de la typographie et du design graphique depuis le 16ème siècle. Découvrez comment notre générateur peut être un atout précieux pour votre processus créatif et vos rendus de maquettes.</p>
-            <p>lorem Bienvenue sur Ipsum.one, votre complice idéal dans la création de faux-texte Lorem Ipsum. Destiné aux graphistes, maquettistes, designers et professionnels de la PAO, notre générateur de texte offre une solution rapide et intuitive pour générer du contenu fictif. Que votre projet concerne la mise en forme de documents imprimés, la création de maquettes pour des sites internet, ou la composition de supports de communication, l’outil fournit un texte standardisé, facilitant la concentration sur l'aspect visuel plutôt que le contenu. Avec un simple clic, générez des paragraphes, des listes ou des mots en Lorem Ipsum, ce texte de remplissage professionnel qui trouve ses racines dans l'histoire de la typographie et du design graphique depuis le 16ème siècle. Découvrez comment notre générateur peut être un atout précieux pour votre processus créatif et vos rendus de maquettes.</p>
-            <p>lorem Bienvenue sur Ipsum.one, votre complice idéal dans la création de faux-texte Lorem Ipsum. Destiné aux graphistes, maquettistes, designers et professionnels de la PAO, notre générateur de texte offre une solution rapide et intuitive pour générer du contenu fictif. Que votre projet concerne la mise en forme de documents imprimés, la création de maquettes pour des sites internet, ou la composition de supports de communication, l’outil fournit un texte standardisé, facilitant la concentration sur l'aspect visuel plutôt que le contenu. Avec un simple clic, générez des paragraphes, des listes ou des mots en Lorem Ipsum, ce texte de remplissage professionnel qui trouve ses racines dans l'histoire de la typographie et du design graphique depuis le 16ème siècle. Découvrez comment notre générateur peut être un atout précieux pour votre processus créatif et vos rendus de maquettes.</p>
-            <p>lorem Bienvenue sur Ipsum.one, votre complice idéal dans la création de faux-texte Lorem Ipsum. Destiné aux graphistes, maquettistes, designers et professionnels de la PAO, notre générateur de texte offre une solution rapide et intuitive pour générer du contenu fictif. Que votre projet concerne la mise en forme de documents imprimés, la création de maquettes pour des sites internet, ou la composition de supports de communication, l’outil fournit un texte standardisé, facilitant la concentration sur l'aspect visuel plutôt que le contenu. Avec un simple clic, générez des paragraphes, des listes ou des mots en Lorem Ipsum, ce texte de remplissage professionnel qui trouve ses racines dans l'histoire de la typographie et du design graphique depuis le 16ème siècle. Découvrez comment notre générateur peut être un atout précieux pour votre processus créatif et vos rendus de maquettes.</p>
-            <p>lorem Bienvenue sur Ipsum.one, votre complice idéal dans la création de faux-texte Lorem Ipsum. Destiné aux graphistes, maquettistes, designers et professionnels de la PAO, notre générateur de texte offre une solution rapide et intuitive pour générer du contenu fictif. Que votre projet concerne la mise en forme de documents imprimés, la création de maquettes pour des sites internet, ou la composition de supports de communication, l’outil fournit un texte standardisé, facilitant la concentration sur l'aspect visuel plutôt que le contenu. Avec un simple clic, générez des paragraphes, des listes ou des mots en Lorem Ipsum, ce texte de remplissage professionnel qui trouve ses racines dans l'histoire de la typographie et du design graphique depuis le 16ème siècle. Découvrez comment notre générateur peut être un atout précieux pour votre processus créatif et vos rendus de maquettes.</p>
+        <div className="Hero">
+            {/* info */}
+            <div className="Hero__info">
+                <p className="Hero__info__greet">Hello it's</p>
+                <h3 className="Hero__info__name">Spencer WAWAKU</h3>
+                <h4 className="Hero__info__job">
+                    <span>{text}</span>
+                    <span style={{marginLeft:10}}><Cursor cursorStyle='✍🏾' /></span>
+                </h4>
+                <hr />
+                <p className="Hero__info__description">As a passionate web developer, I'm ready to bring your ideas to life by creating captivating and innovative digital experiences.</p>
+                <div className="Hero__info__btn">
+                    <NavLink to='/contact' className="Hero__info__btn__one">
+                            Get in touch
+                        </NavLink>
+                    <NavLink to='/contact' className="Hero__info__btn__two"><GoArrowUpRight /></NavLink>
+                </div>
+            </div>
+            {/* profil */}
+            <div className="Hero__profil">
+                <div>
+                    <img src={Profil} className="Hero__profil__picture" alt="avatar_picture"/>
+                </div>
+            </div>
         </div>
     )
 }

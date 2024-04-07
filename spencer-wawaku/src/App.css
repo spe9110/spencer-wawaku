@@ -129,13 +129,128 @@
   font-size: 1.1rem;
 }
 
-.container .Home {
+.container .Hero {
   width: 100vw;
-  height: auto;
-  padding-top: 3em;
+  height: 100vh;
+  padding: 2em 4em;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
 }
-.container .Home h3 {
-  font-size: 3rem;
+.container .Hero__info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 0.2rem;
+  width: 50%;
+  min-height: 60vh;
+  padding: 1em;
+}
+.container .Hero__info__greet {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.container .Hero__info__name {
+  margin-top: 1.5rem;
+  font-size: 4rem;
+  line-height: 1rem;
+  font-weight: bold;
+  color: blue;
+  font-family: roboto, sans-serif;
+}
+.container .Hero__info__job {
+  font-size: 2rem;
+  line-height: 1rem;
+  color: orangered;
+  margin-top: 2.4rem;
+}
+.container .Hero__info hr {
+  content: "";
+  background-color: #F1C21B;
+  height: 1px;
+  transform-origin: center left;
+  border: none;
+  width: 5rem;
+  margin-top: 1.5rem;
+}
+.container .Hero__info__description {
+  line-height: 1.5;
+  margin: 0.8rem 0;
+}
+.container .Hero__info__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.container .Hero__info__btn__one {
+  background-color: #0ea5e9;
+  color: #fff;
+  border: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  gap: 0.8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 1em 1.5em;
+  text-shadow: none;
+  transition-property: box-shadow, transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  cursor: pointer;
+  border-radius: 290486px;
+  margin-top: 1.5rem;
+}
+.container .Hero__info__btn__one:hover {
+  padding: 1em 1.5em;
+  background-color: #fff;
+  color: #0ea5e9;
+  border-radius: 32px;
+  border: 3px solid #0ea5e9;
+}
+.container .Hero__info__btn__two {
+  background-color: #0ea5e9;
+  color: #fff;
+  border: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  gap: 0.8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 1em 1.5em;
+  text-shadow: none;
+  transition-property: box-shadow, transform;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  cursor: pointer;
+  border-radius: 290486px;
+  margin-top: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #000;
+  padding: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+.container .Hero__profil {
+  width: 50%;
+  min-height: 60vh;
+  padding: 1em;
 }
 
 .container .About {
