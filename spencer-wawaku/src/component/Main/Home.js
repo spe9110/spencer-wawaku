@@ -18,7 +18,7 @@ export default function Home(){
         <div className="Hero">
             {/* info */}
             <div className="Hero__info">
-                <p className="Hero__info__greet">Hello it's</p>
+                <p className="Hero__info__greet">Hello <span style={{fontSize:30}}>👋🏾</span> it's </p>
                 <h3 className="Hero__info__name">Spencer WAWAKU</h3>
                 <h4 className="Hero__info__job">
                     <span>{text}</span>
@@ -35,9 +35,28 @@ export default function Home(){
             </div>
             {/* profil */}
             <div className="Hero__profil">
-                <div>
                     <img src={Profil} className="Hero__profil__picture" alt="avatar_picture"/>
+                <div className="Hero__profil__code">
+                    <span>console.log(data)</span>
                 </div>
+                <div className="Hero__profil__code__one">
+                    <span>NODEJS</span>
+                </div>
+                <div className="Hero__profil__code__two">
+                    <span>REACT</span>
+                </div>
+                <div className="Hero__profil__code__three">
+                    <span>HTML</span>
+                </div>
+                <div className="Hero__profil__code__four">
+                    <span>CSS</span>
+                </div>                    
+                <div className="Hero__profil__code__five">
+                    <span>SASS</span>
+                </div>                    
+                <div className="Hero__profil__code__six">
+                    <span>JAVASCRIPT</span>
+                </div>                    
             </div>
         </div>
     )

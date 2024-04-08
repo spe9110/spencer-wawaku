@@ -131,12 +131,7 @@
 
 .container .Hero {
   width: 100vw;
-  height: 100vh;
-  padding: 2em 4em;
   display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1rem;
 }
 .container .Hero__info {
   display: flex;
@@ -144,28 +139,18 @@
   align-items: start;
   justify-content: start;
   gap: 0.2rem;
-  width: 50%;
-  min-height: 60vh;
-  padding: 1em;
 }
 .container .Hero__info__greet {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 2.5rem;
+  line-height: 2rem;
 }
 .container .Hero__info__name {
-  margin-top: 1.5rem;
-  font-size: 4rem;
-  line-height: 1rem;
   font-weight: bold;
-  color: blue;
   font-family: roboto, sans-serif;
+  color: orangered;
 }
 .container .Hero__info__job {
-  font-size: 2rem;
   line-height: 1rem;
-  color: orangered;
-  margin-top: 2.4rem;
+  color: #0ea5e9;
 }
 .container .Hero__info hr {
   content: "";
@@ -177,13 +162,11 @@
   margin-top: 1.5rem;
 }
 .container .Hero__info__description {
-  line-height: 1.5;
-  margin: 0.8rem 0;
+  line-height: 2;
 }
 .container .Hero__info__btn {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
 }
 .container .Hero__info__btn__one {
@@ -192,11 +175,11 @@
   border: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.8rem;
   font-weight: 600;
-  font-size: 1.2rem;
   line-height: 1;
-  padding: 1em 1.5em;
   text-shadow: none;
   transition-property: box-shadow, transform;
   -webkit-user-select: none;
@@ -207,11 +190,10 @@
   will-change: box-shadow, transform;
   cursor: pointer;
   border-radius: 290486px;
-  margin-top: 1.5rem;
 }
 .container .Hero__info__btn__one:hover {
-  padding: 1em 1.5em;
   background-color: #fff;
+  transition: background 0.3s ease-in-out;
   color: #0ea5e9;
   border-radius: 32px;
   border: 3px solid #0ea5e9;
@@ -222,11 +204,11 @@
   border: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.8rem;
   font-weight: 600;
-  font-size: 1.2rem;
   line-height: 1;
-  padding: 1em 1.5em;
   text-shadow: none;
   transition-property: box-shadow, transform;
   -webkit-user-select: none;
@@ -237,22 +219,33 @@
   will-change: box-shadow, transform;
   cursor: pointer;
   border-radius: 290486px;
-  margin-top: 1.5rem;
-  width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   background-color: #000;
-  padding: 1em;
-  font-size: 1rem;
   font-weight: bold;
   margin-left: 0.3rem;
 }
 .container .Hero__profil {
-  width: 50%;
-  min-height: 60vh;
-  padding: 1em;
+  position: relative;
 }
-
+.container .Hero__profil__picture {
+  position: absolute;
+  z-index: 40;
+}
+.container .Hero__profil__code {
+  position: absolute;
+  color: orangered;
+  opacity: 0.6;
+  font-weight: 900;
+}
+.container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
+  position: absolute;
+  color: orangered;
+  opacity: 0.6;
+  font-weight: 900;
+}
+.container .Hero__profil__code__one {
+  z-index: 1;
+}
 .container .About {
   width: 100vw;
   height: 100vh;
@@ -440,7 +433,6 @@ body {
     top: 0;
     height: 6rem;
     padding: 0 3em;
-    margin-bottom: 2rem;
     background: #dbeafe;
   }
   .container .Header.dark-mode {
@@ -484,7 +476,6 @@ body {
     top: 0;
     height: 6rem;
     padding: 0 3em;
-    margin-bottom: 2rem;
     background: #dbeafe;
   }
   .container .Header.dark-mode {
@@ -528,7 +519,6 @@ body {
     top: 0;
     height: 6rem;
     padding: 0 3em;
-    margin-bottom: 2rem;
     background: #dbeafe;
   }
   .container .Header.dark-mode {
@@ -571,7 +561,6 @@ body {
     position: relative;
     height: 4rem;
     padding: 0 1.5em;
-    margin-bottom: 0.5rem;
     background: #dbeafe;
   }
   .container .Header.dark-mode {
@@ -662,7 +651,6 @@ body {
     position: relative;
     height: 4rem;
     padding: 0 1em;
-    margin-bottom: 0.5rem;
     background: #dbeafe;
   }
   .container .Header.dark-mode {
@@ -795,6 +783,211 @@ body {
     font-size: 1rem;
     display: grid;
     place-items: center;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container .Hero {
+    width: 100vw;
+    height: 100vh;
+    padding: 0 4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .Hero {
+    width: 100%;
+    min-height: 100vh;
+    gap: 0.7rem;
+    flex-direction: column;
+    padding: 0 1em;
+  }
+  .container .Hero__info {
+    width: 100%;
+    max-height: 59vh;
+    padding: 1.5em 0.6em;
+  }
+  .container .Hero__info__greet {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .container .Hero__info__name {
+    margin-top: 0.9rem;
+    font-size: 3.2rem;
+    line-height: 2rem;
+  }
+  .container .Hero__info__job {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    margin-top: 1.5rem;
+  }
+  .container .Hero__info__description {
+    margin: 0.8rem 0;
+    width: 80%;
+    font-size: 1rem;
+  }
+  .container .Hero__info__btn {
+    margin-top: 0.4rem;
+    justify-content: start;
+    margin: 0.3rem 0;
+  }
+  .container .Hero__info__btn__one {
+    padding: 0.8em 1.2em;
+    font-size: 0.9rem;
+  }
+  .container .Hero__info__btn__one:hover {
+    padding: 0.8em 1.2em;
+    color: #0ea5e9;
+    border-radius: 32px;
+    border: 3px solid #0ea5e9;
+  }
+  .container .Hero__info__btn__two {
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 1rem;
+  }
+  .container .Hero__profil {
+    width: 100%;
+    min-height: 46vh;
+    display: flex;
+    justify-content: center;
+  }
+  .container .Hero__profil__picture {
+    width: 18rem;
+    height: auto;
+  }
+  .container .Hero__profil__code {
+    right: 18%;
+    top: 40%;
+    font-size: 1rem;
+  }
+  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
+    font-size: 1rem;
+  }
+  .container .Hero__profil__code__one {
+    top: 10%;
+    left: 30%;
+    z-index: 1;
+  }
+  .container .Hero__profil__code__two {
+    bottom: 20%;
+    left: 35%;
+  }
+  .container .Hero__profil__code__three {
+    bottom: 30%;
+    right: 30%;
+  }
+  .container .Hero__profil__code__four {
+    bottom: 25%;
+    left: 65%;
+  }
+  .container .Hero__profil__code__five {
+    top: 50%;
+    left: 25%;
+  }
+  .container .Hero__profil__code__six {
+    top: 20%;
+    left: 55%;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .container .Hero {
+    width: 100%;
+    min-height: 100vh;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 0 0.4em;
+  }
+  .container .Hero__info {
+    width: 100%;
+    max-height: 59vh;
+    padding: 1em 0.6em;
+  }
+  .container .Hero__info__greet {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .container .Hero__info__name {
+    margin-top: 0.1rem;
+    font-size: 2.2rem;
+    line-height: 2rem;
+  }
+  .container .Hero__info__job {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    margin-top: 1rem;
+  }
+  .container .Hero__info__description {
+    margin: 0.4rem 0;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .container .Hero__info__btn {
+    margin-top: 0.4rem;
+    justify-content: start;
+    margin: 0.3rem 0;
+  }
+  .container .Hero__info__btn__one {
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+  }
+  .container .Hero__info__btn__one:hover {
+    padding: 0.5em 1em;
+    color: #0ea5e9;
+    border-radius: 32px;
+    border: 3px solid #0ea5e9;
+  }
+  .container .Hero__info__btn__two {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+  }
+  .container .Hero__profil {
+    width: 100%;
+    max-height: 41vh;
+    display: flex;
+    justify-content: center;
+  }
+  .container .Hero__profil__picture {
+    width: 17rem;
+    height: auto;
+  }
+  .container .Hero__profil__code {
+    right: 4%;
+    top: 40%;
+    font-size: 0.8rem;
+  }
+  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
+    font-size: 0.8rem;
+  }
+  .container .Hero__profil__code__one {
+    top: 10%;
+    left: 20%;
+    z-index: 1;
+  }
+  .container .Hero__profil__code__two {
+    bottom: 20%;
+    left: 25%;
+  }
+  .container .Hero__profil__code__three {
+    bottom: 30%;
+    right: 20%;
+  }
+  .container .Hero__profil__code__four {
+    bottom: 25%;
+    left: 55%;
+  }
+  .container .Hero__profil__code__five {
+    top: 50%;
+    left: 15%;
+  }
+  .container .Hero__profil__code__six {
+    top: 20%;
+    left: 65%;
   }
 }
 @media only screen and (min-width: 1300px) {

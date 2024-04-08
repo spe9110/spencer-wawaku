@@ -84,7 +84,7 @@ html, body{
             top: 0;
             height: 6rem;
             padding: 0 3em;
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
             background: $light-theme-bg;
 
             &.dark-mode{
@@ -143,7 +143,7 @@ html, body{
             top: 0;
             height: 6rem;
             padding: 0 3em;
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
             background: $light-theme-bg;
 
             &.dark-mode{
@@ -200,7 +200,7 @@ html, body{
             top: 0;
             height: 6rem;
             padding: 0 3em;
-            margin-bottom: 2rem;
+            // margin-bottom: 2rem;
             background: $light-theme-bg;
 
             &.dark-mode{
@@ -257,7 +257,7 @@ html, body{
             // top: 0;
             height: 4rem;
             padding: 0 1.5em;
-            margin-bottom: .5rem;
+            // margin-bottom: .5rem;
             background: $light-theme-bg;
 
             &.dark-mode{
@@ -368,7 +368,7 @@ html, body{
             // top: 0;
             height: 4rem;
             padding: 0 1em;
-            margin-bottom: .5rem;
+            // margin-bottom: .5rem;
             background: $light-theme-bg;
 
             &.dark-mode{
@@ -528,6 +528,260 @@ html, body{
         }
     }
 
+    // Hero section
+    .Hero{
+        // Large screen
+        @include responsive(large-wide){
+            // width: 100vw;
+            // height: 100vh;
+        } 
+        // Desktop
+        @include responsive(desktop){
+            // width: 100vw;
+            // height: 100vh;
+        } 
+        // Laptop
+        @include responsive(laptop){
+            width: 100vw;
+            height: 100vh;
+            padding: 0 4em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 1rem;
+            margin: 0;
+        
+            
+        } 
+        // tablet
+        @include responsive(tablet){
+            width: 100%;
+            min-height: 100vh;
+            gap: .7rem;
+            flex-direction: column;
+            padding: 0 1em;
+
+
+            &__info{
+                width: 100%;
+                max-height: 59vh;
+                padding: 1.5em .6em;
+
+                &__greet{
+                    font-size: 1.4rem;
+                    // color: red;
+                    font-weight: 500;
+                }
+                &__name{
+                    margin-top: .9rem;
+                    font-size: 3.2rem;
+                    line-height: 2rem;
+                }
+                &__job{
+                    font-size: 1.3rem;
+                    line-height: 1rem;
+                    margin-top: 1.5rem;
+                }
+                &__description{
+                    margin: .8rem 0;
+                    width: 80%;
+                    font-size: 1rem;
+                }
+                // Buttons
+                &__btn{
+                        margin-top: .4rem;
+                        justify-content: start;
+                        margin: .3rem 0;             
+                    &__one{
+                        padding: .8em 1.2em;
+                        font-size: .9rem;
+
+                        &:hover{
+                            padding: .8em 1.2em;
+                            // background-color: #fff;
+                            // transition: background .3s ease-in-out;
+                            color:#0ea5e9;
+                            border-radius: 32px;
+                            border: 3px solid #0ea5e9;
+                        }
+                    }
+                    &__two{
+                        width: 1.9rem;
+                        height: 1.9rem;
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+            &__profil{
+                width: 100%;
+                min-height: 46vh;
+                // margin: 0 auto;
+                display: flex;
+                // align-items: center;
+                justify-content: center;
+                
+                &__picture{
+                    width: 18rem;
+                    height: auto;
+                    // padding-bottom: 4rem;
+                }
+
+                &__code{
+                    right: 18%;
+                    top: 40%;
+                    // width: 10rem;
+                    // height: auto;
+                    font-size: 1rem;
+    
+                    &__one, &__two, &__three, &__four, &__five, &__six{
+                        font-size: 1rem;
+                    }
+                    &__one{
+                        top: 10%;
+                        left: 30%;
+                        z-index: 1;
+                    }
+                    &__two{
+                        bottom: 20%;
+                        left: 35%;
+                    }
+                    &__three{
+                        bottom: 30%;
+                        right: 30%;
+                    }
+                    &__four{
+                        bottom: 25%;
+                        left: 65%;
+                    }
+                    &__five{
+                        top: 50%;
+                        left: 25%;
+                    }
+                    &__six{
+                        top: 20%;
+                        left: 55%;
+                    }
+                }
+
+            }
+        } 
+        // mobile
+        @include responsive(mobile){
+            width: 100%;
+            min-height: 100vh;
+            gap: .5rem;
+            flex-direction: column;
+            padding: 0 .4em;
+
+
+            &__info{
+                width: 100%;
+                max-height: 59vh;
+                padding: 1em .6em;
+
+                &__greet{
+                    font-size: 1rem;
+                    // color: red;
+                    font-weight: 400;
+                }
+                &__name{
+                    margin-top: .1rem;
+                    font-size: 2.2rem;
+                    line-height: 2rem;
+                }
+                &__job{
+                    font-size: 1.3rem;
+                    line-height: 1rem;
+                    margin-top: 1rem;
+                }
+                &__description{
+                    margin: .4rem 0;
+                    width: 100%;
+                    font-size: .9rem;
+                }
+                // Buttons
+                &__btn{
+                        margin-top: .4rem;
+                        justify-content: start;
+                        margin: .3rem 0;             
+                    &__one{
+                        padding: .5em 1em;
+                        font-size: .8rem;
+
+                        &:hover{
+                            padding: .5em 1em;
+                            // background-color: #fff;
+                            // transition: background .3s ease-in-out;
+                            color:#0ea5e9;
+                            border-radius: 32px;
+                            border: 3px solid #0ea5e9;
+                        }
+                    }
+                    &__two{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        font-size: .8rem;
+                    }
+                }
+                
+            }
+            &__profil{
+                width: 100%;
+                max-height: 41vh;
+                // margin: 0 auto;
+                display: flex;
+                // align-items: center;
+                justify-content: center;
+                
+                &__picture{
+                    width: 17rem;
+                    height: auto;
+                    // padding-bottom: 4rem;
+                }
+
+                &__code{
+                    right: 4%;
+                    top: 40%;
+                    // width: 10rem;
+                    // height: auto;
+                    font-size: .8rem;
+    
+                    &__one, &__two, &__three, &__four, &__five, &__six{
+                        font-size: .8rem;
+                    }
+                    &__one{
+                        top: 10%;
+                        left: 20%;
+                        z-index: 1;
+                    }
+                    &__two{
+                        bottom: 20%;
+                        left: 25%;
+                    }
+                    &__three{
+                        bottom: 30%;
+                        right: 20%;
+                    }
+                    &__four{
+                        bottom: 25%;
+                        left: 55%;
+                    }
+                    &__five{
+                        top: 50%;
+                        left: 15%;
+                    }
+                    &__six{
+                        top: 20%;
+                        left: 65%;
+                    }
+                }
+
+            }
+
+        } 
+    }
     // footer
     .footer{
         @include responsive(large-wide){

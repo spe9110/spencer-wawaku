@@ -4,11 +4,13 @@
     border: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.8rem;
     font-weight: 600;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
     line-height: 1;
-    padding: 1em 1.5em;
+    // padding: 1em 1.5em;
     text-shadow: none;
     transition-property: box-shadow, transform;
     user-select: none;
@@ -17,19 +19,20 @@
     will-change: box-shadow, transform;
     cursor: pointer;
     border-radius: 290486px;
-    margin-top: 1.5rem;
+    // margin-top: 1.5rem;
 }
 
 .container{
     .Hero{
         width: 100vw;
-        height: 100vh;
-        padding: 2em 4em;
+        // height: 100vh;
+        // padding: 0 4em;
         // background: #fff;
         display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 1rem;
+        // align-items: center;
+        // justify-content: start;
+        // gap: 1rem;
+        // margin: 0;
         
         &__info{
             display: flex;
@@ -37,30 +40,32 @@
             align-items: start;
             justify-content: start;
             gap: .2rem;
-            width: 50%;
-            min-height: 60vh;
-            padding: 1em;
+            // width: 50%;
+            // min-height: 70vh;
+            // padding: 1em;
             // background: red;
 
             &__greet{
-                font-size: 1.5rem;
-                font-weight: 700;
-                line-height: 2.5rem;
+                // font-size: 2rem;
+                // font-weight: 500;
+                line-height: 2rem;
                 
             }
+
             &__name{
-                margin-top: 1.5rem;
-                font-size: 4rem;
-                line-height: 1rem;
+                // margin-top: 2.5rem;
+                // font-size: 4rem;
+                // line-height: 2rem;
                 font-weight: bold;
                 font-family: roboto, sans-serif;
+                color: orangered;
             }
 
             &__job{
-                font-size: 2rem;
+                // font-size: 2rem;
                 line-height: 1rem;
                 color: #0ea5e9;
-                margin-top: 2.4rem;
+                // margin-top: 2.4rem;
             }
             hr{
                 content: "";
@@ -71,14 +76,16 @@
                 width: 5rem;
                 margin-top: 1.5rem;
             }
+
             &__description{
-                line-height: 1.5;
-                margin: .8rem 0;
+                line-height: 2;
+                // margin: .8rem 0;
+                // width: 30rem;
             }
             &__btn{
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                // justify-content: center;
                 gap: .5rem;
                 // margin: .8rem 0;
                                 
@@ -86,8 +93,9 @@
                     @include button-styles;
 
                     &:hover{
-                        padding: 1em 1.5em;
+                        // padding: 1em 1.5em;
                         background-color: #fff;
+                        transition: background .3s ease-in-out;
                         color:#0ea5e9;
                         border-radius: 32px;
                         border: 3px solid #0ea5e9;
@@ -95,26 +103,77 @@
                 }
                 &__two{
                     @include button-styles;
-                    width: 3rem;
-                    height: 3rem;
+                    // width: 3rem;
+                    // height: 3rem;
                     border-radius: 50%;
                     background-color: #000 ;
-                    padding: 1em;
-                    font-size: 1rem;
+                    // padding: 1em;
+                    // font-size: 1rem;
                     font-weight: bold;
                     margin-left: .3rem;
                 }
             }
         }
         &__profil{
-            width: 50%;
-            min-height: 60vh;
-            padding: 1em;
+            position: relative;
+            // width: 50%;
+            // min-height: 70vh;
+            // padding: 1em;
             // background: blue;
+            // z-index: 40;
 
             &__picture{
-                font-size: 2rem;
+                position: absolute;
+                // font-size: 2rem;
+                // width: 30rem;
+                // height: auto;
+                z-index: 40;
                 // padding-bottom: 4rem;
+            }
+            &__code{
+                position: absolute;
+                // display: flex;
+                // flex-direction: column;
+                // right: -8%;
+                // top: 40%;
+                color: orangered;
+                opacity: .6;
+                font-weight: 900;
+                // width: 20rem;
+                // height: auto;
+                // z-index: 30;
+
+                &__one, &__two, &__three, &__four, &__five, &__six{
+                    position: absolute;
+                    color: orangered;
+                    opacity: .6;
+                    font-weight: 900;
+                }
+                &__one{
+                    // top: 20%;
+                    // left: 15%;
+                    z-index: 1;
+                }
+                &__two{
+                    // bottom: 20%;
+                    // left: 15%;
+                }
+                &__three{
+                    // top: 50%;
+                    // right: 15%;
+                }
+                &__four{
+                    // bottom: 30%;
+                    // left: 45%;
+                }
+                &__five{
+                    // top: 50%;
+                    // left: 5%;
+                }
+                &__six{
+                    // top: 20%;
+                    // left: 65%;
+                }
             }
         }
         
