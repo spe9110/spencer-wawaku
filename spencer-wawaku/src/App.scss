@@ -532,41 +532,343 @@ html, body{
     .Hero{
         // Large screen
         @include responsive(large-wide){
-            // width: 100vw;
-            // height: 100vh;
+            min-height: 100vh;
+            padding: 0 4em;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 1rem;
+            margin: 0;
+
+            &__info{
+                width: 50%;
+                min-height: 70vh;
+                padding: 1em;
+
+                &__greet{
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+                &__name{
+                    margin-top: 2.5rem;
+                    font-size: 4rem;
+                    line-height: 2rem;
+                }
+                &__job{
+                    font-size: 2rem;
+                    line-height: 1rem;
+                    margin-top: 2.4rem;
+                }
+                &__description{
+                    margin: .8rem 0;
+                    width: 30rem;
+                }
+                // Buttons
+                &__btn{
+                    justify-content: center;
+                    margin: .8rem 0;
+
+                    &__one{
+                        font-size: 1.2rem;
+                        padding: 1em 1.5em;
+
+                        &:hover{
+                            padding: 1em 1.5em;
+                        }
+                    }
+                    &__two{
+                        width: 3rem;
+                        height: 3rem;
+                        padding: 1em;
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+            &__profil{
+                width: 50%;
+                min-height: 70vh;
+                padding: 1em;
+                z-index: 40;
+
+                &__picture{
+                    font-size: 2rem;
+                    width: 30rem;
+                    height: auto;
+                    padding-bottom: 4rem;
+                }
+
+                &__code{
+                    display: flex;
+                    flex-direction: column;
+                    right: -8%;
+                    top: 40%;
+                    width: 20rem;
+                    height: auto;
+                    z-index: 30;
+    
+                    &__one, &__two, &__three, &__four, &__five, &__six{
+                        font-size: 1rem;
+                    }
+                    &__one{
+                        top: 20%;
+                        left: 15%;
+                    }
+                    &__two{
+                        bottom: 20%;
+                        left: 15%;
+                    }
+                    &__three{
+                        top: 50%;
+                        right: 15%;
+                    }
+                    &__four{
+                        bottom: 30%;
+                        left: 45%;
+                    }
+                    &__five{
+                        top: 50%;
+                        left: 5%;
+                    }
+                    &__six{
+                        top: 20%;
+                        left: 65%;
+                    }
+                }
+
+            }
         } 
         // Desktop
         @include responsive(desktop){
-            // width: 100vw;
-            // height: 100vh;
+            min-height: 100vh;
+            padding: 0 4em;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 1rem;
+            margin: 0;
+
+            &__info{
+                width: 50%;
+                min-height: 70vh;
+                padding: 1em;
+
+                &__greet{
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+                &__name{
+                    margin-top: 2.5rem;
+                    font-size: 4rem;
+                    line-height: 2rem;
+                }
+                &__job{
+                    font-size: 2rem;
+                    line-height: 1rem;
+                    margin-top: 2.4rem;
+                }
+                &__description{
+                    margin: .8rem 0;
+                    width: 30rem;
+                }
+                // Buttons
+                &__btn{
+                    justify-content: center;
+                    margin: .8rem 0;
+
+                    &__one{
+                        font-size: 1.2rem;
+                        padding: 1em 1.5em;
+
+                        &:hover{
+                            padding: 1em 1.5em;
+                        }
+                    }
+                    &__two{
+                        width: 3rem;
+                        height: 3rem;
+                        padding: 1em;
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+            &__profil{
+                width: 50%;
+                min-height: 70vh;
+                padding: 1em;
+                z-index: 40;
+
+                &__picture{
+                    font-size: 2rem;
+                    width: 30rem;
+                    height: auto;
+                    padding-bottom: 4rem;
+                }
+
+                &__code{
+                    display: flex;
+                    flex-direction: column;
+                    right: -8%;
+                    top: 40%;
+                    width: 20rem;
+                    height: auto;
+                    z-index: 30;
+    
+                    &__one, &__two, &__three, &__four, &__five, &__six{
+                        font-size: 1rem;
+                    }
+                    &__one{
+                        top: 20%;
+                        left: 15%;
+                    }
+                    &__two{
+                        bottom: 20%;
+                        left: 15%;
+                    }
+                    &__three{
+                        top: 50%;
+                        right: 15%;
+                    }
+                    &__four{
+                        bottom: 30%;
+                        left: 45%;
+                    }
+                    &__five{
+                        top: 50%;
+                        left: 5%;
+                    }
+                    &__six{
+                        top: 20%;
+                        left: 65%;
+                    }
+                }
+
+            }
         } 
         // Laptop
         @include responsive(laptop){
-            width: 100vw;
-            height: 100vh;
+            min-height: 100vh;
             padding: 0 4em;
-            display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: start;
             gap: 1rem;
             margin: 0;
         
-            
+            &__info{
+                width: 50%;
+                min-height: 70vh;
+                padding: 1em;
+
+                &__greet{
+                    font-size: 2rem;
+                    font-weight: 500;
+                }
+                &__name{
+                    margin-top: 2.5rem;
+                    font-size: 4rem;
+                    line-height: 2rem;
+                }
+                &__job{
+                    font-size: 2rem;
+                    line-height: 1rem;
+                    margin-top: 2.4rem;
+                }
+                &__description{
+                    margin: .8rem 0;
+                    width: 30rem;
+                }
+                // Buttons
+                &__btn{
+                    justify-content: center;
+                    margin: .8rem 0;
+
+                    &__one{
+                        font-size: 1.2rem;
+                        padding: 1em 1.5em;
+
+                        &:hover{
+                            padding: 1em 1.5em;
+                        }
+                    }
+                    &__two{
+                        width: 3rem;
+                        height: 3rem;
+                        padding: 1em;
+                        font-size: 1rem;
+                    }
+                }
+                
+            }
+            &__profil{
+                width: 50%;
+                min-height: 70vh;
+                padding: 1em;
+                z-index: 40;
+
+                &__picture{
+                    font-size: 2rem;
+                    width: 30rem;
+                    height: auto;
+                    padding-bottom: 4rem;
+                }
+
+                &__code{
+                    display: flex;
+                    flex-direction: column;
+                    right: -8%;
+                    top: 40%;
+                    width: 20rem;
+                    height: auto;
+                    z-index: 30;
+    
+                    &__one, &__two, &__three, &__four, &__five, &__six{
+                        font-size: 1rem;
+                    }
+                    &__one{
+                        top: 20%;
+                        left: 15%;
+                    }
+                    &__two{
+                        bottom: 20%;
+                        left: 15%;
+                    }
+                    &__three{
+                        top: 50%;
+                        right: 15%;
+                    }
+                    &__four{
+                        bottom: 30%;
+                        left: 45%;
+                    }
+                    &__five{
+                        top: 50%;
+                        left: 5%;
+                    }
+                    &__six{
+                        top: 20%;
+                        left: 65%;
+                    }
+                }
+
+            }
         } 
         // tablet
         @include responsive(tablet){
-            width: 100%;
-            min-height: 100vh;
+            min-height: 90vh;
             gap: .7rem;
             flex-direction: column;
             padding: 0 1em;
+            align-items: center;
+            justify-content: start;
+            margin: 0;
 
 
             &__info{
                 width: 100%;
-                max-height: 59vh;
-                padding: 1.5em .6em;
+                min-height: 30vh;
+                padding: .5em .6em;
 
                 &__greet{
                     font-size: 1.4rem;
@@ -616,14 +918,15 @@ html, body{
             }
             &__profil{
                 width: 100%;
-                min-height: 46vh;
+                min-height: 50vh;
+                // min-height: auto;
                 // margin: 0 auto;
                 display: flex;
                 // align-items: center;
                 justify-content: center;
                 
                 &__picture{
-                    width: 18rem;
+                    width: 15rem;
                     height: auto;
                     // padding-bottom: 4rem;
                 }
@@ -669,16 +972,18 @@ html, body{
         } 
         // mobile
         @include responsive(mobile){
-            width: 100%;
-            min-height: 100vh;
+            min-height: 80vh;
             gap: .5rem;
             flex-direction: column;
-            padding: 0 .4em;
+            padding: .5em 1em;
+            align-items: center;
+            justify-content: start;
+            margin: 0;
 
 
             &__info{
                 width: 100%;
-                max-height: 59vh;
+                min-height: 30vh;
                 padding: 1em .6em;
 
                 &__greet{
@@ -729,8 +1034,7 @@ html, body{
             }
             &__profil{
                 width: 100%;
-                max-height: 41vh;
-                // margin: 0 auto;
+                min-height: 50vh;
                 display: flex;
                 // align-items: center;
                 justify-content: center;
