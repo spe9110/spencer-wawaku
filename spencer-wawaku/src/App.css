@@ -130,8 +130,10 @@
 }
 
 .container .Hero {
+  position: relative;
   width: 100vw;
   display: flex;
+  overflow: hidden;
 }
 .container .Hero__info {
   display: flex;
@@ -282,6 +284,56 @@
   font-size: 3rem;
 }
 
+.Social__Media {
+  position: fixed;
+  display: none;
+  flex-direction: column; /* Align icons vertically */
+  top: 50%;
+  right: -9vw; /* Adjust the positioning as needed */
+  transform: translateY(-40%);
+  z-index: 20;
+}
+.Social__Media li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.Social__Media li a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  background-color: #bae6fd;
+  gap: 0.3rem;
+  color: rgb(92, 90, 90);
+  font-size: 1.5rem;
+  padding: 0.2em 0.4em;
+}
+.Social__Media li a:hover {
+  transform: scale(1.1) translateX(-8.3vw);
+  transition: transform 0.5s ease;
+}
+.Social__Media li a.Instagram-icon:hover {
+  color: #C13584;
+}
+.Social__Media li a.Github-icon:hover {
+  color: #000;
+}
+.Social__Media li a.Youtube-icon:hover {
+  color: rgb(255, 0, 0);
+}
+.Social__Media li a.Twitter-icon:hover {
+  color: #000;
+}
+.Social__Media li a.Facebook-icon:hover {
+  color: #1877F2;
+}
+.Social__Media li a.Tiktok-icon:hover {
+  color: #1a1919;
+}
+.Social__Media li a.Linkedin-icon:hover {
+  color: #0e76a8;
+}
+
 .container .footer {
   width: 100%;
   height: auto;
@@ -417,14 +469,6 @@ body {
 .dark-mode {
   background: #172554; /* Dark mode background */
   color: #fff; /* Dark mode text color */
-}
-
-@media only screen and (max-width: 499px) {
-  html, body {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-  }
 }
 
 @media only screen and (min-width: 1300px) {
@@ -883,6 +927,9 @@ body {
     top: 20%;
     left: 65%;
   }
+  .container .Hero .Social__Media {
+    display: flex;
+  }
 }
 @media only screen and (max-width: 1299px) {
   .container .Hero {
@@ -981,6 +1028,9 @@ body {
   .container .Hero__profil__code__six {
     top: 20%;
     left: 65%;
+  }
+  .container .Hero .Social__Media {
+    display: flex;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -1081,6 +1131,9 @@ body {
     top: 20%;
     left: 65%;
   }
+  .container .Hero .Social__Media {
+    display: flex;
+  }
 }
 @media only screen and (max-width: 768px) {
   .container .Hero {
@@ -1135,6 +1188,7 @@ body {
     width: 1.9rem;
     height: 1.9rem;
     font-size: 1rem;
+    padding: 0.5em;
   }
   .container .Hero__profil {
     width: 100%;
@@ -1179,6 +1233,9 @@ body {
     top: 20%;
     left: 55%;
   }
+  .container .Hero .Social__Media {
+    display: none;
+  }
 }
 @media only screen and (max-width: 499px) {
   .container .Hero {
@@ -1205,7 +1262,7 @@ body {
     line-height: 2rem;
   }
   .container .Hero__info__job {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1rem;
     margin-top: 1rem;
   }
@@ -1233,6 +1290,7 @@ body {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 0.8rem;
+    padding: 0.3em;
   }
   .container .Hero__profil {
     width: 100%;
@@ -1276,6 +1334,9 @@ body {
   .container .Hero__profil__code__six {
     top: 20%;
     left: 65%;
+  }
+  .container .Hero .Social__Media {
+    display: none;
   }
 }
 @media only screen and (min-width: 1300px) {

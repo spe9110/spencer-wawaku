@@ -1,0 +1,59 @@
+.Social__Media{
+    position: fixed;
+    display: none;
+    flex-direction: column; /* Align icons vertically */
+    top: 50%;
+    right: -9vw; /* Adjust the positioning as needed */
+    transform: translateY(-40%);
+    z-index: 20;
+
+    li{
+        list-style-type: none;
+        cursor: pointer;
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            text-decoration: none;
+            background-color: #bae6fd;
+            gap: .3rem;
+            color: rgb(92, 90, 90);
+            font-size: 1.5rem;
+            padding: 0.2em .4em;
+            // opacity: 0.8;
+
+            &:hover{
+                transform: scale(1.1) translateX(-8.3vw);
+                transition: transform 0.5s ease;
+            }
+        }
+        // instagram
+        a.Instagram-icon:hover {
+            color: #C13584;
+        }
+        // github
+        a.Github-icon:hover {
+            color: #000;;
+        }
+        // youtube
+        a.Youtube-icon:hover {
+            color: rgb(255, 0, 0);
+        }
+        // twitter
+        a.Twitter-icon:hover {
+            color: #000;
+        }
+        // facebook
+        a.Facebook-icon:hover {
+            color: #1877F2;
+        }
+        // tiktok
+        a.Tiktok-icon:hover {
+            color: #1a1919;
+        }
+        // LinkedIn
+        a.Linkedin-icon:hover {
+            color: #0e76a8;
+        }
+    }
+}

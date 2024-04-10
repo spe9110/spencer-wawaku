@@ -1,6 +1,8 @@
 .container .Hero {
+  position: relative;
   width: 100vw;
   display: flex;
+  overflow: hidden;
 }
 .container .Hero__info {
   display: flex;
@@ -149,4 +151,54 @@
 }
 .container .Contact h3 {
   font-size: 3rem;
+}
+
+.Social__Media {
+  position: fixed;
+  display: none;
+  flex-direction: column; /* Align icons vertically */
+  top: 50%;
+  right: -9vw; /* Adjust the positioning as needed */
+  transform: translateY(-40%);
+  z-index: 20;
+}
+.Social__Media li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.Social__Media li a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  background-color: #bae6fd;
+  gap: 0.3rem;
+  color: rgb(92, 90, 90);
+  font-size: 1.5rem;
+  padding: 0.2em 0.4em;
+}
+.Social__Media li a:hover {
+  transform: scale(1.1) translateX(-8.3vw);
+  transition: transform 0.5s ease;
+}
+.Social__Media li a.Instagram-icon:hover {
+  color: #C13584;
+}
+.Social__Media li a.Github-icon:hover {
+  color: #000;
+}
+.Social__Media li a.Youtube-icon:hover {
+  color: rgb(255, 0, 0);
+}
+.Social__Media li a.Twitter-icon:hover {
+  color: #000;
+}
+.Social__Media li a.Facebook-icon:hover {
+  color: #1877F2;
+}
+.Social__Media li a.Tiktok-icon:hover {
+  color: #1a1919;
+}
+.Social__Media li a.Linkedin-icon:hover {
+  color: #0e76a8;
 }/*# sourceMappingURL=index_main.css.map */

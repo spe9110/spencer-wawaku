@@ -24,6 +24,7 @@
 
 .container{
     .Hero{
+        position: relative;
         width: 100vw;
         // height: 100vh;
         // padding: 0 4em;
@@ -33,6 +34,7 @@
         // justify-content: start;
         // gap: 1rem;
         // margin: 0;
+        overflow: hidden;
         
         &__info{
             display: flex;

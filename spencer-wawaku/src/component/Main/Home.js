@@ -4,6 +4,7 @@ import './MainSass/index_main.css';
 import { GoArrowUpRight } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import Profil from './Images/avatar-bis.png';
+import SocialMediaHero from "./SocialMediaHero";
 
 export default function Home(){
     const [text] = useTypewriter({
@@ -58,6 +59,7 @@ export default function Home(){
                     <span>JAVASCRIPT</span>
                 </div>                    
             </div>
+            <SocialMediaHero/>
         </div>
     )
 }

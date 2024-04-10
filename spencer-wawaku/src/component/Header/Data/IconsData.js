@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaYoutube, FaFacebookF, FaTiktok, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaYoutube, FaFacebook, FaTiktok, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const socials = [
@@ -28,7 +28,7 @@ const socials = [
     },
     {
         id: 5,
-        icon: <FaFacebookF />,
+        icon: <FaFacebook />,
         title: 'Facebook',
         url: '/'
     },

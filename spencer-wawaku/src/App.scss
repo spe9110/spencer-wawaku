@@ -67,13 +67,6 @@
     align-items: center;
 }
 
-html, body{
-    @include responsive(mobile){
-        width: 100vw;
-        height: 100vh;
-        overflow-x: hidden;
-    }
-}
 .container{
     // Header
     .Header{
@@ -637,6 +630,9 @@ html, body{
                 }
 
             }
+            .Social__Media{
+                display: flex;
+            }
         } 
         // Desktop
         @include responsive(desktop){
@@ -744,6 +740,9 @@ html, body{
                     }
                 }
 
+            }
+            .Social__Media{
+                display: flex;
             }
         } 
         // Laptop
@@ -853,6 +852,9 @@ html, body{
                 }
 
             }
+            .Social__Media{
+                display: flex;
+            }
         } 
         // tablet
         @include responsive(tablet){
@@ -912,6 +914,7 @@ html, body{
                         width: 1.9rem;
                         height: 1.9rem;
                         font-size: 1rem;
+                        padding: .5em;
                     }
                 }
                 
@@ -937,6 +940,7 @@ html, body{
                     // width: 10rem;
                     // height: auto;
                     font-size: 1rem;
+                    
     
                     &__one, &__two, &__three, &__four, &__five, &__six{
                         font-size: 1rem;
@@ -969,6 +973,9 @@ html, body{
                 }
 
             }
+            .Social__Media{
+                display: none;
+            }
         } 
         // mobile
         @include responsive(mobile){
@@ -997,7 +1004,7 @@ html, body{
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 1.3rem;
+                    font-size: 1.1rem;
                     line-height: 1rem;
                     margin-top: 1rem;
                 }
@@ -1028,6 +1035,7 @@ html, body{
                         width: 1.5rem;
                         height: 1.5rem;
                         font-size: .8rem;
+                        padding: .3em;
                     }
                 }
                 
@@ -1082,6 +1090,9 @@ html, body{
                     }
                 }
 
+            }
+            .Social__Media{
+                display: none;
             }
 
         } 
