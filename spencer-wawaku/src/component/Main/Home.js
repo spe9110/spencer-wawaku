@@ -8,7 +8,7 @@ import SocialMediaHero from "./SocialMediaHero";
 
 export default function Home(){
     const [text] = useTypewriter({
-        words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a Node Developer", "I'm a junior fullstack Developer", "I'm an Educator"],
+        words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a NodeJs Developer", "I'm a junior fullstack Developer", "I'm an Educator"],
         loop: {},
         typeSpeed: 250,
         deleteSpeed: 30,

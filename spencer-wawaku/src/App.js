@@ -8,6 +8,7 @@ import Contact from './component/Main/Contact';
 import Footer from "./component/Footer/Footer";
 import { Routes, Route } from 'react-router-dom';
 import { useTheme } from './component/Header/DarkMode';
+import ScrollingText from "./component/Main/ScrollingText";
 
 function App() {
   const { theme } = useTheme();
@@ -22,6 +23,7 @@ function App() {
             <Route path="/videos" element={<Videos />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <ScrollingText/>
           <Footer />          
         </div>
   ) 

@@ -248,6 +248,7 @@
 .container .Hero__profil__code__one {
   z-index: 1;
 }
+
 .container .About {
   width: 100vw;
   height: 100vh;
@@ -332,6 +333,50 @@
 }
 .Social__Media li a.Linkedin-icon:hover {
   color: #0e76a8;
+}
+
+.text__infinite {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: bottom;
+  align-items: center;
+  padding: 2em;
+  font-family: "legend", sans-serif;
+  position: relative;
+}
+.text__infinite__scroll {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.text__infinite__scroll__one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+}
+.text__infinite__scroll__one span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text__infinite__scroll::before, .text__infinite__scroll::after {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 8rem;
+  top: 0;
+  z-index: 2;
+  background: red;
+}
+.text__infinite__scroll::before {
+  position: absolute;
+  left: 0;
+}
+.text__infinite__scroll::after {
+  position: absolute;
+  right: 0;
 }
 
 .container .footer {
@@ -446,18 +491,7 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
-.container {
-  width: 100vw;
-  min-height: 100vh;
-  font-family: "Quicksand", sans-serif;
-  background: #dbeafe; /* Default light mode background */
-  color: #000; /* Default light mode text color */
-  transition: background 0.3s ease-in-out;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.container a {
+a {
   text-decoration: none;
   color: #000;
 }
@@ -471,6 +505,16 @@ body {
   color: #fff; /* Dark mode text color */
 }
 
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Quicksand", sans-serif;
+  background: #dbeafe; /* Default light mode background */
+  color: #000; /* Default light mode text color */
+  transition: background 0.3s ease-in-out;
+  line-height: 1.5;
+  margin: 0;
+}
 @media only screen and (min-width: 1300px) {
   .container .Header {
     position: sticky;
@@ -831,13 +875,14 @@ body {
 }
 @media only screen and (min-width: 1300px) {
   .container .Hero {
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 0 4em;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     gap: 1rem;
     margin: 0;
+    overflow: auto;
   }
   .container .Hero__info {
     width: 50%;
@@ -887,7 +932,7 @@ body {
   }
   .container .Hero__profil__picture {
     font-size: 2rem;
-    width: 30rem;
+    width: 32.15rem;
     height: auto;
     padding-bottom: 4rem;
   }
@@ -933,13 +978,14 @@ body {
 }
 @media only screen and (max-width: 1299px) {
   .container .Hero {
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 0 4em;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     gap: 1rem;
     margin: 0;
+    overflow: auto;
   }
   .container .Hero__info {
     width: 50%;
@@ -1035,13 +1081,14 @@ body {
 }
 @media only screen and (max-width: 992px) {
   .container .Hero {
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 0 4em;
     flex-direction: row;
     align-items: center;
     justify-content: start;
     gap: 1rem;
     margin: 0;
+    overflow: auto;
   }
   .container .Hero__info {
     width: 50%;
@@ -1137,17 +1184,18 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .container .Hero {
-    min-height: 90vh;
+    min-height: 60vh;
     gap: 0.7rem;
     flex-direction: column;
     padding: 0 1em;
     align-items: center;
     justify-content: start;
     margin: 0;
+    overflow: auto;
   }
   .container .Hero__info {
     width: 100%;
-    min-height: 30vh;
+    min-height: 300px;
     padding: 0.5em 0.6em;
   }
   .container .Hero__info__greet {
@@ -1172,7 +1220,6 @@ body {
   .container .Hero__info__btn {
     margin-top: 0.4rem;
     justify-content: start;
-    margin: 0.3rem 0;
   }
   .container .Hero__info__btn__one {
     padding: 0.8em 1.2em;
@@ -1192,7 +1239,7 @@ body {
   }
   .container .Hero__profil {
     width: 100%;
-    min-height: 50vh;
+    min-height: 200px;
     display: flex;
     justify-content: center;
   }
@@ -1239,7 +1286,7 @@ body {
 }
 @media only screen and (max-width: 499px) {
   .container .Hero {
-    min-height: 80vh;
+    min-height: 60vh;
     gap: 0.5rem;
     flex-direction: column;
     padding: 0.5em 1em;
@@ -1249,7 +1296,7 @@ body {
   }
   .container .Hero__info {
     width: 100%;
-    min-height: 30vh;
+    min-height: 300px;
     padding: 1em 0.6em;
   }
   .container .Hero__info__greet {
@@ -1274,7 +1321,6 @@ body {
   .container .Hero__info__btn {
     margin-top: 0.4rem;
     justify-content: start;
-    margin: 0.3rem 0;
   }
   .container .Hero__info__btn__one {
     padding: 0.5em 1em;
@@ -1294,12 +1340,12 @@ body {
   }
   .container .Hero__profil {
     width: 100%;
-    min-height: 50vh;
+    min-height: 240px;
     display: flex;
     justify-content: center;
   }
   .container .Hero__profil__picture {
-    width: 17rem;
+    width: 18rem;
     height: auto;
   }
   .container .Hero__profil__code {
