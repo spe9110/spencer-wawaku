@@ -6,20 +6,6 @@
 // import resets
 @import './sass/resets';
 
-// a for whole app
-a{
-    text-decoration: none;
-    color: $light-theme-clr;    
-}
-
-.dark-mode a{
-    color: $dark-theme-clr;
-}
-.dark-mode {
-    background: $dark-theme-bg; /* Dark mode background */
-    color: $dark-theme-clr; /* Dark mode text color */
-}
-
 // Define mixin for media queries
 @mixin responsive($width) {
     @if $width == large-wide {
@@ -51,6 +37,52 @@ a{
     flex-direction: $direction;
     justify-content: center;
     align-items: center;
+}
+
+// linear-gradient mixin
+
+@mixin linear-gradient($from, $to, $opacity: 0) {
+    /* Fallback for sad browsers */
+    background-color: $to;
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* Opera */
+    background-image: -o-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* WebKit (Safari 4+, Chrome 1+) */
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba($from, $opacity)), to(rgba($to, $opacity)));
+    /* WebKit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* IE10 */
+    background-image: -ms-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* W3C */
+    background-image: linear-gradient(to right, rgba($from, $opacity), rgba($to, $opacity));
+}
+// VARIABLES
+// Define breakpoint variables
+$mobile: 499px;
+$tablet: 768px;
+$laptop: 992px;
+$desktop: 1299px;
+$large-wide: 1300px;
+
+// themes
+$light-theme-bg: #dbeafe; //main background
+$light-theme-clr: #000;
+$dark-theme-bg: #172554; //secondary background
+$dark-theme-clr: #fff;
+
+// a for whole app
+a{
+    text-decoration: none;
+    color: $light-theme-clr;    
+}
+
+.dark-mode a{
+    color: $dark-theme-clr;
+}
+.dark-mode {
+    background: $dark-theme-bg; /* Dark mode background */
+    color: $dark-theme-clr; /* Dark mode text color */
 }
 
 .container{
@@ -520,6 +552,7 @@ a{
         @include responsive(large-wide){
             min-height: 75vh;
             padding: 0 4em;
+            padding-top: 2em;
             flex-direction: row;
             align-items: center;
             justify-content: start;
@@ -632,6 +665,7 @@ a{
         @include responsive(desktop){
             min-height: 75vh;
             padding: 0 4em;
+            padding-top: 2em;
             flex-direction: row;
             align-items: center;
             justify-content: start;
@@ -744,6 +778,7 @@ a{
         @include responsive(laptop){
             min-height: 75vh;
             padding: 0 4em;
+            padding-top: 1.5em;
             flex-direction: row;
             align-items: center;
             justify-content: start;
@@ -858,6 +893,7 @@ a{
             gap: .7rem;
             flex-direction: column;
             padding: 0 1em;
+            padding-top: 1em;
             align-items: center;
             justify-content: start;
             margin: 0;
@@ -979,6 +1015,7 @@ a{
             gap: .5rem;
             flex-direction: column;
             padding: .5em 1em;
+            padding-top: 1em;
             align-items: center;
             justify-content: start;
             margin: 0;
@@ -1091,6 +1128,61 @@ a{
 
         } 
     }
+
+    // SCROLLING TEXT
+    .text__infinite{
+        @include responsive(large-wide){
+            height: 8rem;
+            padding: .2em;
+
+            &__scroll{
+                &__one{
+                    font-size: 8rem;
+                }
+            }
+            
+        }
+        @include responsive(desktop){
+            height: 8rem;
+            padding: .2em;
+
+            &__scroll{
+                &__one{
+                    font-size: 8rem;
+                }
+            }
+        }
+        @include responsive(laptop){
+            height: 6rem;
+            padding: .2em;
+
+            &__scroll{
+                &__one{
+                    font-size: 6rem;
+                }
+            }
+        }
+        @include responsive(tablet){
+            height: 3rem;
+            padding: .2em;
+
+            &__scroll{
+                &__one{
+                    font-size: 3rem;
+                }
+            }
+        }
+        @include responsive(mobile){
+            height: 3rem;
+            padding: .2em;
+
+            &__scroll{
+                &__one{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
     // footer
     .footer{
         @include responsive(large-wide){
@@ -1129,6 +1221,13 @@ a{
                     margin: .7rem 0;
                 }
             }
+            .backTop{
+                right: 3rem;
+                bottom: 2rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+            }
         }       
         @include responsive(desktop){
             background-color: #000000;
@@ -1165,6 +1264,13 @@ a{
                     font-size: 1rem;
                     margin: .7rem 0;
                 }
+            }
+            .backTop{
+                right: 3rem;
+                bottom: 2rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
             }
         }       
         @include responsive(laptop){
@@ -1203,7 +1309,14 @@ a{
                     margin: .7rem 0;
                 }
             }
-        }       
+            .backTop{
+                right: 3rem;
+                bottom: 2rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+            }
+        }
         @include responsive(tablet){
             background-color: #000000;
             color: $dark-theme-clr;
@@ -1240,7 +1353,14 @@ a{
                     margin: .7rem 0;
                 }
             }
-        }       
+            .backTop{
+                right: 1.8rem;
+                bottom: 2rem;
+                width: 2.2rem;
+                height: 2.2rem;
+                font-size: 1.2rem;
+            }
+        }
         @include responsive(mobile){
             background-color: #000000;
             color: $dark-theme-clr;
@@ -1275,6 +1395,13 @@ a{
                     font-size: .8rem;
                     margin: .5rem 0;
                 }
+            }
+            .backTop{
+                right: 1.2rem;
+                bottom: 2rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 1rem;
             }
         }       
     }

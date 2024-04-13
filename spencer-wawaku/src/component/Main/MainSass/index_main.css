@@ -204,46 +204,62 @@
   color: #0e76a8;
 }
 
-.text__infinite {
+.container .text__infinite {
   width: 100%;
-  height: 8rem;
   display: flex;
   justify-content: bottom;
   align-items: center;
-  padding: 2em;
   font-family: "legend", sans-serif;
   position: relative;
 }
-.text__infinite__scroll {
+.container .text__infinite__scroll {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
 }
-.text__infinite__scroll__one {
+.container .text__infinite__scroll__one {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8rem;
+  word-spacing: 0.3rem;
+  font-size: bold;
+  cursor: pointer;
+  animation: scroll 360s linear infinite;
 }
-.text__infinite__scroll__one span {
+.container .text__infinite__scroll__one div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.text__infinite__scroll::before, .text__infinite__scroll::after {
+.container .text__infinite__scroll__one span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  -webkit-text-stroke: 2px #000000;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.container .text__infinite__scroll__one:hover {
+  animation-play-state: paused;
+}
+.container .text__infinite__scroll::before, .container .text__infinite__scroll::after {
   position: absolute;
   content: "";
-  width: 200px;
-  height: 8rem;
   top: 0;
   z-index: 2;
-  background: red;
 }
-.text__infinite__scroll::before {
+.container .text__infinite__scroll::before {
   position: absolute;
   left: 0;
 }
-.text__infinite__scroll::after {
+.container .text__infinite__scroll::after {
   position: absolute;
   right: 0;
 }/*# sourceMappingURL=index_main.css.map */

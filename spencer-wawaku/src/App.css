@@ -335,46 +335,62 @@
   color: #0e76a8;
 }
 
-.text__infinite {
+.container .text__infinite {
   width: 100%;
-  height: 8rem;
   display: flex;
   justify-content: bottom;
   align-items: center;
-  padding: 2em;
   font-family: "legend", sans-serif;
   position: relative;
 }
-.text__infinite__scroll {
+.container .text__infinite__scroll {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
 }
-.text__infinite__scroll__one {
+.container .text__infinite__scroll__one {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 8rem;
+  word-spacing: 0.3rem;
+  font-size: bold;
+  cursor: pointer;
+  animation: scroll 360s linear infinite;
 }
-.text__infinite__scroll__one span {
+.container .text__infinite__scroll__one div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.text__infinite__scroll::before, .text__infinite__scroll::after {
+.container .text__infinite__scroll__one span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  -webkit-text-stroke: 2px #000000;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.container .text__infinite__scroll__one:hover {
+  animation-play-state: paused;
+}
+.container .text__infinite__scroll::before, .container .text__infinite__scroll::after {
   position: absolute;
   content: "";
-  width: 200px;
-  height: 8rem;
   top: 0;
   z-index: 2;
-  background: red;
 }
-.text__infinite__scroll::before {
+.container .text__infinite__scroll::before {
   position: absolute;
   left: 0;
 }
-.text__infinite__scroll::after {
+.container .text__infinite__scroll::after {
   position: absolute;
   right: 0;
 }
@@ -451,18 +467,13 @@
 }
 .container .footer .backTop {
   position: fixed;
-  right: 3rem;
-  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
   border-radius: 50%;
   background-color: rgb(114, 227, 247);
   z-index: 99;
   color: #ffffff;
-  font-size: 1.5rem;
   cursor: pointer;
   border: none;
 }
@@ -877,6 +888,7 @@ a {
   .container .Hero {
     min-height: 75vh;
     padding: 0 4em;
+    padding-top: 2em;
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -980,6 +992,7 @@ a {
   .container .Hero {
     min-height: 75vh;
     padding: 0 4em;
+    padding-top: 2em;
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -1083,6 +1096,7 @@ a {
   .container .Hero {
     min-height: 75vh;
     padding: 0 4em;
+    padding-top: 1.5em;
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -1188,6 +1202,7 @@ a {
     gap: 0.7rem;
     flex-direction: column;
     padding: 0 1em;
+    padding-top: 1em;
     align-items: center;
     justify-content: start;
     margin: 0;
@@ -1290,6 +1305,7 @@ a {
     gap: 0.5rem;
     flex-direction: column;
     padding: 0.5em 1em;
+    padding-top: 1em;
     align-items: center;
     justify-content: start;
     margin: 0;
@@ -1386,6 +1402,51 @@ a {
   }
 }
 @media only screen and (min-width: 1300px) {
+  .container .text__infinite {
+    height: 8rem;
+    padding: 0.2em;
+  }
+  .container .text__infinite__scroll__one {
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 1299px) {
+  .container .text__infinite {
+    height: 8rem;
+    padding: 0.2em;
+  }
+  .container .text__infinite__scroll__one {
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container .text__infinite {
+    height: 6rem;
+    padding: 0.2em;
+  }
+  .container .text__infinite__scroll__one {
+    font-size: 6rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .text__infinite {
+    height: 3rem;
+    padding: 0.2em;
+  }
+  .container .text__infinite__scroll__one {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .container .text__infinite {
+    height: 3rem;
+    padding: 0.2em;
+  }
+  .container .text__infinite__scroll__one {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
   .container .footer {
     background-color: #000000;
     color: #fff;
@@ -1416,6 +1477,13 @@ a {
   .container .footer__content__copyright {
     font-size: 1rem;
     margin: 0.7rem 0;
+  }
+  .container .footer .backTop {
+    right: 3rem;
+    bottom: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 1299px) {
@@ -1450,6 +1518,13 @@ a {
     font-size: 1rem;
     margin: 0.7rem 0;
   }
+  .container .footer .backTop {
+    right: 3rem;
+    bottom: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container .footer {
@@ -1483,6 +1558,13 @@ a {
     font-size: 0.8rem;
     margin: 0.7rem 0;
   }
+  .container .footer .backTop {
+    right: 3rem;
+    bottom: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 768px) {
   .container .footer {
@@ -1515,6 +1597,13 @@ a {
     font-size: 1rem;
     margin: 0.7rem 0;
   }
+  .container .footer .backTop {
+    right: 1.8rem;
+    bottom: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.2rem;
+  }
 }
 @media only screen and (max-width: 499px) {
   .container .footer {
@@ -1546,5 +1635,12 @@ a {
   .container .footer__content__copyright {
     font-size: 0.8rem;
     margin: 0.5rem 0;
+  }
+  .container .footer .backTop {
+    right: 1.2rem;
+    bottom: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=App.css.map */
