@@ -2,7 +2,6 @@
   position: relative;
   width: 100vw;
   display: flex;
-  overflow: hidden;
 }
 .container .Hero__info {
   display: flex;
@@ -230,13 +229,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: orangered;
 }
 .container .text__infinite__scroll__one span {
   display: flex;
   align-items: center;
   justify-content: center;
   color: transparent;
-  -webkit-text-stroke: 2px #000000;
+  -webkit-text-stroke: 2px orangered;
 }
 @keyframes scroll {
   0% {
@@ -248,18 +248,4 @@
 }
 .container .text__infinite__scroll__one:hover {
   animation-play-state: paused;
-}
-.container .text__infinite__scroll::before, .container .text__infinite__scroll::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  z-index: 2;
-}
-.container .text__infinite__scroll::before {
-  position: absolute;
-  left: 0;
-}
-.container .text__infinite__scroll::after {
-  position: absolute;
-  right: 0;
 }/*# sourceMappingURL=index_main.css.map */

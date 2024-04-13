@@ -1,10 +1,12 @@
 import React from "react";
 import './MainSass/index_main.css';
 import { GoDotFill } from "react-icons/go";
+import { useTheme } from '../Header/DarkMode';
 
 export default function ScrollingText(){
+    const { theme } = useTheme();
     return(
-        <div className="text__infinite">
+        <div className={`text__infinite ${theme === 'light' ? 'dark-mode' : 'light'}`}>
             <div className="text__infinite__scroll">
                 <div className="text__infinite__scroll__one">
                     <div>&nbsp;SPENCER WAWAKU <span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU</span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU <span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU</span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU <span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU</span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU <span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} />&nbsp;SPENCER WAWAKU</span>&nbsp;< GoDotFill style={{ color: "#FF4500", fontSize: 20 }} /></div>

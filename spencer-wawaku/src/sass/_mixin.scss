@@ -1,0 +1,51 @@
+// Define mixin for media queries
+@mixin responsive($width) {
+    @if $width == large-wide {
+      @media only screen and (min-width: $large-wide) {
+        @content;
+      }
+    } @else if $width == desktop {
+      @media only screen and (max-width: $desktop) {
+        @content;
+      }
+    } @else if $width == laptop {
+      @media only screen and (max-width: $laptop) {
+        @content;
+      }
+    } @else if $width == tablet {
+      @media only screen and (max-width: $tablet) {
+        @content;
+      }
+    } @else if $width == mobile {
+      @media only screen and (max-width: $mobile) {
+        @content;
+      }
+    }
+}
+  
+// flex mixin
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+// linear-gradient mixin
+
+@mixin linear-gradient($from, $to, $opacity: 0) {
+    /* Fallback for sad browsers */
+    background-color: $to;
+    /* Mozilla Firefox */
+    background-image: -moz-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* Opera */
+    background-image: -o-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* WebKit (Safari 4+, Chrome 1+) */
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba($from, $opacity)), to(rgba($to, $opacity)));
+    /* WebKit (Chrome 11+) */
+    background-image: -webkit-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* IE10 */
+    background-image: -ms-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
+    /* W3C */
+    background-image: linear-gradient(to right, rgba($from, $opacity), rgba($to, $opacity));
+}

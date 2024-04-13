@@ -5,71 +5,10 @@
 
 // import resets
 @import './sass/resets';
+@import './sass/mixin';
+@import './sass/variables';
 
-// Define mixin for media queries
-@mixin responsive($width) {
-    @if $width == large-wide {
-      @media only screen and (min-width: $large-wide) {
-        @content;
-      }
-    } @else if $width == desktop {
-      @media only screen and (max-width: $desktop) {
-        @content;
-      }
-    } @else if $width == laptop {
-      @media only screen and (max-width: $laptop) {
-        @content;
-      }
-    } @else if $width == tablet {
-      @media only screen and (max-width: $tablet) {
-        @content;
-      }
-    } @else if $width == mobile {
-      @media only screen and (max-width: $mobile) {
-        @content;
-      }
-    }
-}
-  
-// flex mixin
-@mixin flexCenter($direction) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-}
 
-// linear-gradient mixin
-
-@mixin linear-gradient($from, $to, $opacity: 0) {
-    /* Fallback for sad browsers */
-    background-color: $to;
-    /* Mozilla Firefox */
-    background-image: -moz-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
-    /* Opera */
-    background-image: -o-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
-    /* WebKit (Safari 4+, Chrome 1+) */
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba($from, $opacity)), to(rgba($to, $opacity)));
-    /* WebKit (Chrome 11+) */
-    background-image: -webkit-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
-    /* IE10 */
-    background-image: -ms-linear-gradient(left, rgba($from, $opacity), rgba($to, $opacity));
-    /* W3C */
-    background-image: linear-gradient(to right, rgba($from, $opacity), rgba($to, $opacity));
-}
-// VARIABLES
-// Define breakpoint variables
-$mobile: 499px;
-$tablet: 768px;
-$laptop: 992px;
-$desktop: 1299px;
-$large-wide: 1300px;
-
-// themes
-$light-theme-bg: #dbeafe; //main background
-$light-theme-clr: #000;
-$dark-theme-bg: #172554; //secondary background
-$dark-theme-clr: #fff;
 
 // a for whole app
 a{
@@ -97,6 +36,8 @@ a{
 
     // Header
     .Header{
+        background: $light-theme-bg;
+        transition: background .3s ease-in-out;
         // media queries
         // large-wide
         @include responsive(large-wide) {
@@ -104,7 +45,7 @@ a{
             top: 0;
             height: 6rem;
             padding: 0 3em;
-            background: $light-theme-bg;
+            
 
             &.dark-mode{
                 background: $dark-theme-bg;
@@ -162,8 +103,6 @@ a{
             top: 0;
             height: 6rem;
             padding: 0 3em;
-            // margin-bottom: 2rem;
-            background: $light-theme-bg;
 
             &.dark-mode{
                 background: $dark-theme-bg;
@@ -219,7 +158,6 @@ a{
             top: 0;
             height: 6rem;
             padding: 0 3em;
-            background: $light-theme-bg;
 
             &.dark-mode{
                 background: $dark-theme-bg;
@@ -275,8 +213,6 @@ a{
             // top: 0;
             height: 4rem;
             padding: 0 1.5em;
-            // margin-bottom: .5rem;
-            background: $light-theme-bg;
 
             &.dark-mode{
                 background: $dark-theme-bg;
@@ -386,8 +322,6 @@ a{
             // top: 0;
             height: 4rem;
             padding: 0 1em;
-            // margin-bottom: .5rem;
-            background: $light-theme-bg;
 
             &.dark-mode{
                 background: $dark-theme-bg;
@@ -548,6 +482,7 @@ a{
 
     // Hero section
     .Hero{
+        transition: background .3s ease-in-out;
         // Large screen
         @include responsive(large-wide){
             min-height: 75vh;
@@ -564,6 +499,7 @@ a{
                 width: 50%;
                 min-height: 70vh;
                 padding: 1em;
+                z-index: 40;
 
                 &__greet{
                     font-size: 2rem;
@@ -582,11 +518,13 @@ a{
                 &__description{
                     margin: .8rem 0;
                     width: 30rem;
+                    font-size: 1.3rem;
                 }
                 // Buttons
                 &__btn{
                     justify-content: center;
                     margin: .8rem 0;
+                    padding-bottom: 0;
 
                     &__one{
                         font-size: 1.2rem;
@@ -612,10 +550,8 @@ a{
                 z-index: 40;
 
                 &__picture{
-                    font-size: 2rem;
-                    width: 32.15rem;
+                    width: 36rem;
                     height: auto;
-                    padding-bottom: 4rem;
                 }
 
                 &__code{
@@ -695,6 +631,7 @@ a{
                 &__description{
                     margin: .8rem 0;
                     width: 30rem;
+                    font-size: 1.3rem;
                 }
                 // Buttons
                 &__btn{
@@ -725,10 +662,8 @@ a{
                 z-index: 40;
 
                 &__picture{
-                    font-size: 2rem;
-                    width: 30rem;
+                    width: 32rem;
                     height: auto;
-                    padding-bottom: 4rem;
                 }
 
                 &__code{
@@ -808,6 +743,7 @@ a{
                 &__description{
                     margin: .8rem 0;
                     width: 30rem;
+                    font-size: 1.1rem;
                 }
                 // Buttons
                 &__btn{
@@ -838,10 +774,8 @@ a{
                 z-index: 40;
 
                 &__picture{
-                    font-size: 2rem;
                     width: 30rem;
                     height: auto;
-                    padding-bottom: 4rem;
                 }
 
                 &__code{
@@ -954,23 +888,17 @@ a{
             &__profil{
                 width: 100%;
                 min-height: 200px;
-                // min-height: auto;
-                // margin: 0 auto;
                 display: flex;
-                // align-items: center;
                 justify-content: center;
                 
                 &__picture{
-                    width: 15rem;
+                    width: 550px;
                     height: auto;
-                    // padding-bottom: 4rem;
                 }
 
                 &__code{
                     right: 18%;
                     top: 40%;
-                    // width: 10rem;
-                    // height: auto;
                     font-size: 1rem;
                     
     
@@ -1011,7 +939,7 @@ a{
         } 
         // mobile
         @include responsive(mobile){
-            min-height: 60vh;
+            min-height: 50vh;
             gap: .5rem;
             flex-direction: column;
             padding: .5em 1em;
@@ -1023,7 +951,7 @@ a{
 
             &__info{
                 width: 100%;
-                min-height: 300px;
+                height: 300px;
                 padding: 1em .6em;
 
                 &__greet{
@@ -1074,14 +1002,13 @@ a{
             }
             &__profil{
                 width: 100%;
-                min-height: 240px;
+                height: 300px;
                 display: flex;
                 justify-content: center;
                 
                 &__picture{
-                    width: 18rem;
+                    width: 380px;
                     height: auto;
-                    // padding-bottom: 4rem;
                 }
 
                 &__code{
@@ -1131,13 +1058,15 @@ a{
 
     // SCROLLING TEXT
     .text__infinite{
+        transition: background .3s ease-in-out;
+
         @include responsive(large-wide){
             height: 8rem;
             padding: .2em;
 
             &__scroll{
                 &__one{
-                    font-size: 8rem;
+                    font-size: 8rem;                  
                 }
             }
             

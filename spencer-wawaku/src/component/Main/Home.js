@@ -5,10 +5,10 @@ import { GoArrowUpRight } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import Profil from './Images/avatar-bis.png';
 import SocialMediaHero from "./SocialMediaHero";
-// import { useTheme } from '../Header/DarkMode';
+import { useTheme } from '../Header/DarkMode';
 
 export default function Home(){
-    // const { theme } = useTheme();
+    const { theme } = useTheme();
 
     const [text] = useTypewriter({
         words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a NodeJs Developer", "I'm a junior fullstack Developer", "I'm an Educator"],
@@ -19,7 +19,7 @@ export default function Home(){
     })
 
     return(
-        <div className="Hero">
+        <div className={`Hero ${theme === 'light' ? 'dark-mode' : 'light'}`}>
             {/* info */}
             <div className="Hero__info">
                 <p className="Hero__info__greet">Hello <span style={{fontSize:30}}>👋🏾</span> it's </p>
