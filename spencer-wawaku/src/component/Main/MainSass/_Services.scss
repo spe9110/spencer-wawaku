@@ -1,11 +1,110 @@
 .container{
     .Services{
-        width: 100vw;
-        height: 100vh;
-        padding-top: 3em;
-    
-        h3{
-            font-size: 3rem;
+        position: relative;
+        width: 100%;
+        min-height: 70vh;
+        display: grid;
+        place-items: center ;
+        margin-bottom: 1rem;
+        transition: background .3s ease-in-out;
+
+        &__title{
+            font-size: 4rem;
+            margin-bottom: .5rem;
+            font-weight: bold;
         }
-    }
+        &__help{
+            font-size: 3rem;
+            padding-bottom: .9em;
+            font-weight: 400;
+        }
+        &__wrapper{
+            width: 90%;
+            min-height: 500px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); */
+            border: 2px solid orangered;
+            z-index: 20;
+            padding: 2rem;
+            backdrop-filter: blur(10px) brightness(90%);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+
+            &__card{
+                position: relative;
+                width: 20rem;
+                height: 20rem;
+                // background: #ffffff;
+                // color: #000;
+                z-index: 30;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+                border-radius: 15px 50px;
+                padding: 1.5em 1em;
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                transition: .3s ease-in-out;
+
+                &:hover{
+                    background: orangered;
+                    color: #fff;
+                    transition: .3s ease-in-out;
+                    
+                    .Services__wrapper__card__number {
+                        opacity: 0.4; // Change opacity of the number element on hover
+                    }
+                    .Services__wrapper__card__img{
+                        border: 5px solid rgb(182, 182, 184);
+                        background: #ffffff;
+                    }
+                }
+
+                &__number{
+                    position: absolute;
+                    top: 35%;
+                    right: 15%;
+                    font-size: 10rem;
+                    opacity: .09;
+                    font-weight: bold;
+                    padding: 0;
+                    margin: 0;
+                    background: none;
+                }
+                &__img{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 50%;
+                    z-index: 30;
+                    display: grid;
+                    place-items: center;
+                    border: 5px solid orangered;
+
+                    img{
+                        // width: 60%;
+                        // height: 60%;
+                        width: 30px;
+                        height: 30px;
+                        /* padding: 1em; */
+                        object-fit: cover;
+                    }
+                }
+                &__title{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                &__details{
+                    font-size: 1.1rem;
+                    text-align: start;
+                    text-align: justify;
+                }
+            }
+        }
+    }    
 }

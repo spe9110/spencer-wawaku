@@ -1,11 +1,126 @@
+//mixin
+@mixin title-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+@mixin borderRadiusStyle{
+    border-radius: 40px;  
+}
+@mixin borderShadowStyle{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
 .container{
     .About{
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        min-height: 100vh;
         padding-top: 3em;
-    
-        h3{
-            font-size: 3rem;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        gap: 2rem;
+
+        &__slider{
+            width: 35%;
+            min-height: 600px;
+            background-color: red;
+            padding: 1rem;            
+        }
+        &__content{
+            width: 50%;
+            min-height: 50vh;
+            background-color: blue;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            @include borderRadiusStyle;
+            @include borderShadowStyle;
+
+            &__title{
+                @include title-style;
+                font-size: 2rem;
+                color: #fff;
+            }
+            &__btn{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: .41rem;
+                padding: 1rem;
+                background: yellow;
+                width: 8rem;
+                height: 3rem;
+                @include borderRadiusStyle;
+                border: 1px solid #000;
+                
+                &__toggle{
+                    position: absolute;
+                    top: 12%;
+                    right: 3%;
+                    background-color: #fff;
+                    opacity: .6;
+                    width: 4rem;
+                    border: 1px solid #4d4c4c;
+                    height: 1.5rem;
+                    padding: 1em;
+                    @include borderRadiusStyle;
+                }
+                
+                &__one{
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    background-color: transparent;
+                    border: none;
+                }
+
+                &__two{
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+
+            &__wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &__info{
+                    display: block;
+
+                    &__intro{
+                        h3{
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            margin-bottom: 1rem;
+                        }
+                        p{
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    &__knowledge{
+                        display: flex;
+                    }
+                }
+                &__skill{
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                }
+            }
         }
     }
 }
