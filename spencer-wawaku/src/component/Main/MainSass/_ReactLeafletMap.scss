@@ -1,0 +1,22 @@
+.container{
+    .Contact{
+        .leaflet-container {
+            width: 100%;
+            min-height: 600px;
+            z-index: 10;
+        }
+    }
+}
+
+/*
+
+var mymap = L.map('map')
+
+#map{
+    width: 100%;
+    min-height: 600px;
+    z-index: 10;
+}
+Sources:
+https://zhiqiyu.github.io/post/react-leaflet-setup/
+*/ 

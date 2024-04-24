@@ -96,7 +96,9 @@
                 justify-content: center;
 
                 &__info{
-                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
 
                     &__intro{
                         h3{
@@ -115,7 +117,7 @@
                     }
                 }
                 &__skill{
-                    display: none;
+                    display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 2rem;

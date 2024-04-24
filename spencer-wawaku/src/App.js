@@ -9,11 +9,12 @@ import Footer from "./component/Footer/Footer";
 import { Routes, Route } from 'react-router-dom';
 import { useTheme } from './component/Header/DarkMode';
 import ScrollingText from "./component/Main/ScrollingText";
+import Alert from "./component/Main/AlertMessage/Alert";
 
 function App() {
   const { theme } = useTheme();
   return (
-        <div className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
+        <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
           <Header />
           <Routes>        
             <Route path="/" element={<Home />} /> 
@@ -25,8 +26,9 @@ function App() {
           </Routes>
           <ScrollingText/>
           <About/>
-          <Footer />          
-        </div>
+          <Footer />
+          <Alert/>          
+        </main>
   ) 
 }
 
@@ -39,6 +41,12 @@ export default App;
 // npm i react-icons
 // npm i react-simple-typewriter
 // emoji windows = touche windows + .
+// npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+// npm install react-multi-carousel --save
+// npm install --save-dev @babel/plugin-proposal-private-property-in-object
+// npm install slick-carousel --save
+
+
 /*
 Based on 'Google JavaScript Style Guide'
 

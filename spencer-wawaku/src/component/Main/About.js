@@ -1,10 +1,27 @@
 /* eslint-disable react/jsx-no-undef */
-import React from "react";
-import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
-import { Progress } from '@chakra-ui/react'
+import React, { useState } from 'react';
+import { CircularProgress, CircularProgressLabel , Progress } from '@chakra-ui/react';
 import './MainSass/index_main.css';
 
 export default function About(){
+
+    const [showInfo, setShowInfo] = useState(true);
+    const [showSkill, setShowSkill] = useState(false);
+
+    function storeAbout(){
+        // The localStorage.getItem() method retrieves a data item from the storage.
+        const storedShowInfo = localStorage.getItem("showInfo");
+
+        console.log(storedShowInfo);
+    }
+    storeAbout();
+
+    // Toggle showInfo and showSkill
+    const toggleAboutItem = () => {
+        setShowInfo(prevShowInfo => !prevShowInfo);
+        setShowSkill(prevShowSkill => !prevShowSkill);
+    }
+
     return(
         <div className="About">
             <div className="About__slider">
@@ -16,13 +33,13 @@ export default function About(){
             <div className="About__content">
                 <h3 className="About__content__title">About me</h3>
                 <div className="About__content__btn">
-                    <div className="About__content__btn__toggle"></div>
-                    <button className="About__content__btn__one">info</button>
-                    <button className="About__content__btn__two">skill</button>
+                    {/* <div className="About__content__btn__toggle"></div> */}
+                    <button className="About__content__btn__one" onClick={toggleAboutItem}>info</button>
+                    <button className="About__content__btn__two " onClick={toggleAboutItem}>skill</button>
                 </div>
                 <div className="About__content__wrapper">
                     {/* info */}
-                    <div className="About__content__wrapper__info">
+                    {showInfo && (<div className="About__content__wrapper__info">
                         <div className="About__content__wrapper__info__intro">
                             <h3>I'm Spencer Wawaku, I am a Frontend Developer freelance based in Rennes at France and I'm a Icodethis Pro member.</h3>
                             <p>I create responsive and user-friendly websites that combine exceptional user interfaces with optimal performance and superior quality.  I am here to provide you with customized solutions tailored to your needs.</p>
@@ -73,9 +90,9 @@ export default function About(){
                                 <span>MS Excel</span>
                             </div>
                         </div>
-                    </div>
+                    </div>)}
                     {/* skill hide*/}
-                    <div className="About__content__wrapper__skill">
+                    {showSkill && (<div className="About__content__wrapper__skill">
                         <div className="About__content__wrapper__skill__programming">
                             <div className="About__content__wrapper__skill__programming__content">
                                 <h4>Programming skills</h4>
@@ -121,7 +138,7 @@ export default function About(){
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>)}
                 </div>
             </div>
         </div>
