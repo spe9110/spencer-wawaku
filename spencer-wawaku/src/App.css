@@ -455,140 +455,191 @@
 }
 
 .container .Videos {
-  width: 100%;
   min-height: 70vh;
-  display: grid;
-  place-items: center;
-  margin-bottom: 1rem;
-  transition: background 0.3s ease-in-out;
-  padding: 1em;
+  width: 100%;
+  padding: 1em 3em;
+  height: 700px;
+  margin-bottom: 2rem;
+  position: relative;
+  /* these code insert space between items  */
 }
 .container .Videos__title {
   font-size: 4rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
+  text-align: center;
 }
 .container .Videos__watch {
   font-size: 3rem;
   padding-bottom: 0.3em;
   font-weight: 400;
+  text-align: center;
 }
-.container .Videos__container {
-  max-width: 80rem;
-  height: 500px;
-  padding: 0.5em;
-  background: yellow;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: 1.5rem;
-  overflow-x: hidden;
-}
-.container .Videos__container__card {
-  border-radius: 0.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
-  border: 3px solid #fff;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  width: calc(1200px + 3rem);
-}
-.container .Videos__container__card__img {
+.container .Videos__card {
+  width: 300px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: white;
+  margin-bottom: 0.4rem;
+  border-radius: 0.8rem;
   overflow: hidden;
-  position: relative;
-  width: 400px;
-  height: 250px;
-  display: grid;
-  place-items: center;
+  cursor: pointer;
 }
-.container .Videos__container__card__img__picture {
+.container .Videos__card:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.container .Videos__card__img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+.container .Videos__card__img__picture {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.container .Videos__container__card__img__label {
+.container .Videos__card__img__label {
   position: absolute;
   top: 10%;
   right: 5%;
-  background: rgba(255, 255, 255, 0.8);
-  color: rgb(2, 218, 2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   padding: 0.2em 1em;
   border-radius: 0.5em;
   font-size: 1rem;
   font-weight: bold;
   border: 1px solid rgb(11, 248, 11);
 }
-.container .Videos__container__card__content {
-  background: #fff;
-  padding: 0.5em;
-  width: 400px;
+.container .Videos__card__content {
+  width: 100%;
   height: 200px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+  padding: 0.5em;
+  margin-top: 0.2rem;
 }
-.container .Videos__container__card__content__title {
-  font-size: 1.5rem;
+.container .Videos__card__content__title {
+  font-size: 1.4rem;
   font-weight: bold;
-  text-align: center;
+  text-align: start;
   margin: 3px 0;
+  margin: 0.1rem 0;
+  padding: 0 0.6em;
 }
-.container .Videos__container__card__content__description {
+.container .Videos__card__content__description {
   font-size: 0.9rem;
   text-align: start;
   text-align: justify;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0;
   padding: 0 0.6em;
   font-weight: 500;
+  color: #747272;
 }
-.container .Videos__container__card__content__profil {
+.container .Videos__card__content__profil {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1em;
   gap: 1rem;
+  margin-top: 1rem;
 }
-.container .Videos__container__card__content__profil__author {
+.container .Videos__card__content__profil__author {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 0.3rem;
 }
-.container .Videos__container__card__content__profil__author__picture {
+.container .Videos__card__content__profil__author__picture {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   border: 5px solid orangered;
 }
-.container .Videos__container__card__content__profil__author__name {
+.container .Videos__card__content__profil__author__nameJob {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 0.2rem;
+}
+.container .Videos__card__content__profil__author__nameJob__name {
   font-size: 0.8rem;
   text-align: start;
   font-weight: bold;
   font-family: "roboto", sans-serif;
 }
-.container .Videos__container__card__content__profil__dateButton {
+.container .Videos__card__content__profil__author__nameJob__job {
+  font-size: 0.6rem;
+  color: #747272;
+  text-align: start;
+  font-weight: bold;
+  font-family: "roboto", sans-serif;
+}
+.container .Videos__card__content__profil__dateButton {
   display: flex;
   align-items: center;
   justify-content: start;
   gap: 0.3rem;
 }
-.container .Videos__container__card__content__profil__dateButton__date {
+.container .Videos__card__content__profil__dateButton__date {
   font-size: 0.7rem;
   text-align: start;
   color: #747272;
   font-weight: 700;
 }
-.container .Videos__container__card__content__profil__dateButton button {
+.container .Videos__card__content__profil__dateButton button {
   border: none;
 }
-.container .Videos__container__card__content__profil__dateButton__btn {
+.container .Videos__card__content__profil__dateButton__btn {
   background: orangered;
-  color: #fff;
   padding: 0.4em 1.2em;
   border-radius: 0.2em;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
+  border: none;
+}
+.container .Videos__card__content__profil__dateButton__btn:hover {
+  background: rgba(255, 68, 0, 0.87);
+}
+.container .Videos__card__content__profil__dateButton__btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.container .Videos .nextArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #4dda31;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 0.4rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+.container .Videos .prevArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #4dda31;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 0.4rem;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+}
+.container .Videos .slick-slide > div {
+  margin: 0 10px;
+}
+.container .Videos .slick-list {
+  margin: 0 -10px;
 }
 
 .container .Contact {
@@ -762,6 +813,7 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
   display: grid;
   place-items: center;
   margin: 0;
+  margin-top: 2rem;
 }
 .container .CountUp__wrapper {
   width: 50rem;

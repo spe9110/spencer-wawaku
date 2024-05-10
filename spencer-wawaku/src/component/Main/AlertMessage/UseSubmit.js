@@ -1,5 +1,6 @@
 import {useState} from "react"; 
- 
+
+// This is often used for simulating delays in asynchronous code, like waiting for data to arrive from a server or creating a pause in execution. 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms)); 
  
 /** 
@@ -20,7 +21,7 @@ const useSubmit = () => {
      } 
      setResponse({ 
        type: 'success', 
-       message: `Thanks for your submission ${data.firstName}, we will get back to you shortly!`, 
+       message: `Thank you ${data.firstName} for your submission, Your message has been successfully sent and we will get back to you shortly!.`, 
      }) 
    } catch (error) { 
      setResponse({ 

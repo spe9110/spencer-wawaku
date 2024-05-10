@@ -1,5 +1,5 @@
 import ProfilPicture from '../Images/avatar.PNG';
-import BannerImage from '../Images/11 meilleurs antivirus gratuits (1).png'
+import BannerImage from '../Images/11 meilleurs antivirus gratuits (1).png';
 
 const videos = [
     {
@@ -10,7 +10,8 @@ const videos = [
         title: '11 best free antivirus for your PC',
         description: 'In this tutorial, I present 11 of the best free antivirus programs to protect your PC and give you a solid first line of defense.',
         profil: ProfilPicture,
-        author: 'Spencer WAWAKU',
+        author: 'Spencer W.',
+        job: 'Full-Stack Dev',
         date: 'on Apr 14, 2024'
     },
     {
@@ -21,7 +22,8 @@ const videos = [
         title: '11 best free antivirus for your PC',
         description: 'In this tutorial, I present 11 of the best free antivirus programs to protect your PC and give you a solid first line of defense.',
         profil: ProfilPicture,
-        author: 'Spencer WAWAKU',
+        author: 'Spencer W.',
+        job: 'Full-Stack Dev',
         date: 'on Apr 14, 2024'
     },
     {
@@ -32,7 +34,8 @@ const videos = [
         title: '11 best free antivirus for your PC',
         description: 'In this tutorial, I present 11 of the best free antivirus programs to protect your PC and give you a solid first line of defense.',
         profil: ProfilPicture,
-        author: 'Spencer WAWAKU',
+        author: 'Spencer W.',
+        job: 'Full-Stack Dev',
         date: 'on Apr 14, 2024'
     },
     {
@@ -43,7 +46,8 @@ const videos = [
         title: '11 best free antivirus for your PC',
         description: 'In this tutorial, I present 11 of the best free antivirus programs to protect your PC and give you a solid first line of defense.',
         profil: ProfilPicture,
-        author: 'Spencer WAWAKU',
+        author: 'Spencer W.',
+        job: 'Full-Stack Dev',
         date: 'on Apr 14, 2024'
     },
     {
@@ -54,7 +58,8 @@ const videos = [
         title: '11 best free antivirus for your PC',
         description: 'In this tutorial, I present 11 of the best free antivirus programs to protect your PC and give you a solid first line of defense.',
         profil: ProfilPicture,
-        author: 'Spencer WAWAKU',
+        author: 'Spencer W.',
+        job: 'Full-Stack Dev',
         date: 'on Apr 14, 2024'
     },
     {
@@ -65,15 +70,11 @@ const videos = [
         title: '11 best free antivirus for your PC',
         description: 'In this tutorial, I present 11 of the best free antivirus programs to protect your PC and give you a solid first line of defense.',
         profil: ProfilPicture,
-        author: 'Spencer WAWAKU',
+        author: 'Spencer W.',
+        job: 'Full-Stack Dev',
         date: 'on Apr 14, 2024'
     }
     
 ]
 
 export default videos;
-
-/*
-
-
-*/ 

@@ -25,15 +25,15 @@ export default function Contact(){
   // initialization
     const formik = useFormik({ 
         initialValues: {
-            firstname: '',
-            lastname: '',
+            firstName: '',
+            lastName: '',
             subject: '',
             email: '',
             comment: '',
         },
         
         onSubmit: (values) => {
-          submit('https://spencerwawaku.com/Contact', values); 
+          submit('https://spencerwawaku.com/Contact', values);
         },
 
         validationSchema: Yup.object({ 
@@ -53,10 +53,10 @@ export default function Contact(){
 
     useEffect(() => { 
       if (response) { 
-        onOpen(response.type, response.message); 
+        onOpen(response.type, response.message);
         if (response.type === 'success') { 
           formik.resetForm(); 
-        } 
+        }  
       } 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response]); 
