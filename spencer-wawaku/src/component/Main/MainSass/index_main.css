@@ -119,18 +119,55 @@
 
 .container .About {
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   padding-top: 3em;
   display: flex;
   align-items: start;
   justify-content: center;
   gap: 2rem;
+  background-color: #fff;
+  margin-bottom: 2rem;
 }
 .container .About__slider {
-  width: 35%;
-  min-height: 600px;
-  background-color: red;
+  position: relative;
+  width: 30%;
+  height: 400px;
   padding: 1rem;
+}
+.container .About__slider__design {
+  position: absolute;
+  background-color: orangered;
+  width: 300px;
+  height: 350px;
+  border-radius: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.32) 0px 2px 8px;
+}
+.container .About__slider__picture {
+  position: absolute;
+  background-color: #fff;
+  width: 300px;
+  height: 350px;
+  border-radius: 1rem;
+  top: 75%;
+  transform: translateY(-75%);
+  left: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.container .About__slider__picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+.container .About__slider__picture img:hover {
+  transform: scale(1.05);
 }
 .container .About__content {
   width: 50%;
@@ -723,4 +760,70 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
   border-right: 1px solid black;
   height: 60px;
   display: block;
+}
+
+.carousel__btn {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background-color 0.3s;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: orangered;
+}
+
+.carousel__btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__btn--prev {
+  left: 0.5rem;
+}
+
+.carousel__btn--next {
+  right: 0.5rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.carousel__indicators {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel__indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel__indicator.active {
+  background-color: orangered; /* or any other color for active indicator */
 }/*# sourceMappingURL=index_main.css.map */

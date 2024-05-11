@@ -2,6 +2,11 @@
 import React, { useState } from 'react';
 import { CircularProgress, CircularProgressLabel , Progress } from '@chakra-ui/react';
 import './MainSass/index_main.css';
+import PictureProfil from './PictureProfil';
+import pictures from './DataMain/PictureData';
+
+// picture variables
+const picture = pictures;
 
 export default function About(){
 
@@ -28,7 +33,10 @@ export default function About(){
                 {/* design */}
                 <div className="About__slider__design"></div>
                 {/* picture slider*/}
-                <div className="About__slider__picture"></div>
+                <div className="About__slider__picture">
+                    {/* <img src="https://images.unsplash.com/photo-1668554245893-2430d0077217?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /> */}
+                    <PictureProfil pictures={picture} className="About__slider__picture__img" />
+                </div>
             </div>
             <div className="About__content">
                 <h3 className="About__content__title">About me</h3>
