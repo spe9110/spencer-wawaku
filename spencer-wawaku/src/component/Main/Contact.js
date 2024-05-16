@@ -10,7 +10,8 @@ import {
  FormErrorMessage,  
  FormLabel, 
  Input, 
- Textarea, 
+ Textarea,
+ Select 
 } from "@chakra-ui/react"; 
 import './MainSass/index_main.css';
 import ReactLeafletMap from './ReactLeafletMap';
@@ -27,7 +28,7 @@ export default function Contact(){
         initialValues: {
             firstName: '',
             lastName: '',
-            subject: '',
+            type: "hireMe", 
             email: '',
             comment: '',
         },
@@ -38,10 +39,7 @@ export default function Contact(){
 
         validationSchema: Yup.object({ 
           firstName: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!').required("Required"),
-          lastName: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!').required("Required"),
-          subject: Yup.string().required("Required")
-            .min(5, "Must be at least 5 characters")
-            .max(20, 'Too Long!'), 
+          lastName: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!').required("Required"), 
           email: Yup.string().email("Invalid email address").required("Required"), 
           comment: Yup.string() 
             .min(50, "Must be at least 50 characters")
@@ -93,16 +91,18 @@ export default function Contact(){
                             />
                             <FormErrorMessage>{formik.errors.lastName}</FormErrorMessage>
                         </FormControl>             
-                        <FormControl isRequired isInvalid={!!formik.errors.subject && formik.touched.subject}>
-                            <FormLabel htmlFor="subject">Subject</FormLabel>
-                            <Input
-                            id="subject"
-                            name="subject"
-                            type='text' 
-                            placeholder='Subject' 
-                            {...formik.getFieldProps("subject")}
-                            />
-                            <FormErrorMessage>{formik.errors.subject}</FormErrorMessage>
+                        <FormControl>
+                            <FormLabel htmlFor="type">Object</FormLabel>
+                            <Select id="type" name="type" {...formik.getFieldProps("type")}> 
+                              <option value="hireMe">Freelance project proposal</option> 
+                              <option value="buildWeb">Building website</option> 
+                              <option value="webOptimization">Performance and Optimization</option> 
+                              <option value="seo">SEO</option> 
+                              <option value="maintain">Maintenance and Updates</option> 
+                              <option value="photoshop">Photoshop</option> 
+                              <option value="consulting">Web consulting</option> 
+                              <option value="other">Other Services</option> 
+                            </Select>
                         </FormControl>
                         <FormControl isRequired isInvalid={!!formik.errors.email && formik.touched.email}>
                             <FormLabel htmlFor="email">Email address</FormLabel>

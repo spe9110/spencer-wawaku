@@ -4,7 +4,7 @@ import './FooterSass/index_footer.css';
 
 export default function Footer() {
     const [showBackToTop, setShowBackToTop] = useState(false);
-
+    const currentYear = new Date().getFullYear();
     const handleBackToTop = () => {
         window.scrollTo({ 
             top: 0, 
@@ -104,7 +104,7 @@ export default function Footer() {
                             <FaYoutube />
                         </a>
                     </ul>
-                    <p className="footer__content__copyright">&copy; 2024  Spencer wawaku. All rights reserved.</p>
+                    <p className="footer__content__copyright">&copy; {currentYear}  Spencer wawaku. All rights reserved.</p>
                 </div>
             </div>
 
