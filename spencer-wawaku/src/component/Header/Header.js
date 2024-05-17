@@ -51,7 +51,7 @@ export default function Header() {
     }, [])
 
     return (
-        <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`}>
+        <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} >
 
             {/* logo */}
             <div className='Header__logo'>

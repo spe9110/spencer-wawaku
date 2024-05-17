@@ -34,6 +34,10 @@ a{
     line-height: 1.5;
     margin: 0;
 
+    &.dark-mode{
+        background: $dark-theme-bg; /* Default light mode background */
+        color: $dark-theme-clr; /* Default light mode text color */
+    }
     // Header
     .Header{
         background: $light-theme-bg;

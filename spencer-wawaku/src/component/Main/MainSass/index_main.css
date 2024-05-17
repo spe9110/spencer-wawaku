@@ -1,7 +1,8 @@
 .container .Hero {
   position: relative;
-  width: 100vw;
+  width: 100%;
   display: flex;
+  overflow: hidden;
 }
 .container .Hero__info {
   display: flex;
