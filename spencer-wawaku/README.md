@@ -68,3 +68,127 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+<!-- 
+This React code snippet is designed to create a sticky header that hides when the user scrolls down and shows when the user scrolls up. Let's break down the code to understand how it works:
+
+1. Ref Creation:
+const headerRef = useRef(null);
+useRef is a React hook that creates a reference to a DOM element. Here, it initializes headerRef to be null initially. This reference will later be attached to the header element in your JSX.
+
+2. useEffect Hook:
+
+useEffect(() => {
+  let prevScrollPos = window.scrollY;
+
+useEffect is a React hook that runs side effects in function components. In this case, it runs once when the component mounts (because the dependency array is empty).
+let prevScrollPos = window.scrollY; stores the initial scroll position of the window.
+
+3. Scroll Event Listener:
+
+const handleScroll = () => {
+  const currentScrollPos = window.scrollY;
+  const headerElement = headerRef.current;
+  if (!headerElement) {
+    return;
+  }
+  if (prevScrollPos > currentScrollPos) {
+    headerElement.style.transform = "translateY(0)";
+  } else {
+    headerElement.style.transform = "translateY(-200px)";
+  }
+  prevScrollPos = currentScrollPos;
+};
+
+handleScroll is a function that gets called whenever the user scrolls the window.
+currentScrollPos stores the current vertical scroll position.
+headerElement gets the current DOM element referenced by headerRef.
+The function checks if the header element exists. If not, it returns early.
+If the previous scroll position (prevScrollPos) is greater than the current scroll position (currentScrollPos), it means the user is scrolling up, so the header should be shown (translateY(0)).
+If the previous scroll position is less than the current scroll position, the user is scrolling down, so the header should be hidden (translateY(-200px)).
+The previous scroll position is then updated to the current scroll position.
+
+4. Adding and Cleaning Up the Event Listener:
+window.addEventListener('scroll', handleScroll);
+
+return () => {
+  window.removeEventListener('scroll', handleScroll);
+};
+
+window.addEventListener('scroll', handleScroll); adds the handleScroll function as a listener for the scroll event on the window. This means handleScroll will be called whenever the user scrolls.
+The return function in useEffect is a cleanup function that removes the scroll event listener when the component unmounts. This prevents memory leaks by ensuring the event listener is removed.
+
+Full Component Example:
+Here’s how you might use the above logic in a functional component:
+
+import React, { useRef, useEffect } from 'react';
+
+const StickyHeader = () => {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const headerElement = headerRef.current;
+      if (!headerElement) {
+        return;
+      }
+      if (prevScrollPos > currentScrollPos) {
+        headerElement.style.transform = "translateY(0)";
+      } else {
+        headerElement.style.transform = "translateY(-200px)";
+      }
+      prevScrollPos = currentScrollPos;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <header ref={headerRef} style={{ transition: 'transform 0.3s ease' }}>
+      {/* Your header content */}
+    </header>
+  );
+};
+
+export default StickyHeader;
+
+    // Header sticky functionality
+    // Step one: useRef initialization
+    const headerRef = useRef(null);
+
+    // Step two: useEffect Hook
+    useEffect(() => {
+        let prevScrollPos = window.scrollY;
+
+        // Step three: scroll event listener
+        const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
+        const headerElement = headerRef.current;
+        if (!headerElement) {
+            return;
+        }
+        if (prevScrollPos > currentScrollPos) {
+            headerElement.style.transform = "translateY(0)";
+        } else {
+            headerElement.style.transform = "translateY(-200px)";
+        }
+        prevScrollPos = currentScrollPos;
+        };
+
+        // Step four: Adding and cleaning up the event listener
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []); // Empty dependency array ensures this effect runs only once
+
+ -->

@@ -5,6 +5,9 @@ import './MainSass/index_main.css';
 import PictureProfil from './PictureProfil';
 import pictures from './DataMain/PictureData';
 import knowledges from './DataMain/AllSkills';
+import programmingSkills from './DataMain/ProgrammingSkills';
+import otherSkills from './DataMain/OtherSkills';
+import tools from './DataMain/ToolsData';
 
 // picture variables
 const picture = pictures;
@@ -51,108 +54,52 @@ export default function About(){
                     </div>)}
                     {/* skill hide*/}
                     {showSkills === 2 && (<div className="About__content__wrapper__prog">
-                        <div className="About__content__wrapper__skill__programming">
-                            <div className="About__content__wrapper__skill__programming__content">
-                                <h4>Programming skills</h4>
-                                <h6>HTML</h6>
-                                <Progress colorScheme='green' width={80} rounded='md' size='md' value={70} />                            </div>
-                            <div className="About__content__wrapper__skill__microsoft">
-                                <h4>Others skills</h4>
-                                <div className="About__content__wrapper__skill__microsoft__contain">
-
-                                    <div className="circle-progress">
-                                        <h6>Word</h6>
-                                        <CircularProgress value={95} size={20} color='blue.400'>
-                                            <CircularProgressLabel fontSize={20}>95%</CircularProgressLabel>
-                                        </CircularProgress>
+                        <div className="About__content__wrapper__prog__programming">
+                            <h4>Programming skills</h4>
+                            {programmingSkills.map((prog) => (
+                                <React.Fragment key={prog.id}>
+                                    <div className='About__content__wrapper__prog__programming__skill-content'>
+                                        <p>{prog.title}</p>
+                                        <p>{prog.percentage}</p>
                                     </div>
 
-                                    <div className="circle-progress">
-                                        <h6>Excel</h6>
-                                        <CircularProgress value={75} color='blue.400'>
-                                            <CircularProgressLabel>75%</CircularProgressLabel>
-                                        </CircularProgress>
+                                    <div className='About__content__wrapper__prog__programming__skill-bg'>
+                                        <div className='About__content__wrapper__prog__programming__skill-bg__skill-progress' style={{width: prog.percentage}}></div>    
                                     </div>
-
-                                    <div className="circle-progress">
-                                        <h6>PowerPoint</h6>
-                                        <CircularProgress value={75} color='blue.400'>
-                                            <CircularProgressLabel>75%</CircularProgressLabel>
-                                        </CircularProgress>
+                                </React.Fragment>
+                            ))}                            
+                        </div>
+                        <div className="About__content__wrapper__prog__tool">
+                            <h4>Tools skills</h4>
+                            {tools.map(prog => (
+                                <React.Fragment key={prog.id}>
+                                    <div className="About__content__wrapper__prog__tool__tool-content">
+                                        <p>{prog.tool}</p>
+                                        <p>{prog.toolpercentage}</p>
                                     </div>
-
-                                    <div className="circle-progress">
-                                        <h6>Canva</h6>
-                                        <CircularProgress value={80} color='blue.400'>
-                                        <CircularProgressLabel>80%</CircularProgressLabel>
-                                        </CircularProgress>
+                                    <div className='About__content__wrapper__prog__tool__skill-bg'>
+                                        <div className='About__content__wrapper__prog__tool__skill-bg__skill-progress' style={{width: prog.toolpercentage}}></div>    
                                     </div>
-                                    <div className="circle-progress">
-                                        <h6>WordPress</h6>
-                                        <CircularProgress value={65} color='blue.400'>
-                                        <CircularProgressLabel>65%</CircularProgressLabel>
-                                        </CircularProgress>
-                                    </div>
-                                </div>
-                            </div>
+                                </React.Fragment>
+                                
+                            ))}                            
                         </div>
                     </div>)}
                     {/* skill hide*/}
-                    {showSkills === 3 && (<div className="About__content__wrapper__prog">
-                        <div className="About__content__wrapper__skill__programming">
-                            <div className="About__content__wrapper__skill__programming__content">
-                                <h4>Programming skills</h4>
-                                <h6>HTML</h6>
-                                <Progress 
-                                    colorScheme='green' 
-                                    sx={{
-                                        "& > div:first-child": { 
-                                          transitionProperty: "width 0.5s ease-in-out", 
-                                        }, 
-                                      }}  
-                                    width={80} 
-                                    rounded='md' 
-                                    size='md' 
-                                    value={70} />                            </div>
-                            <div className="About__content__wrapper__skill__microsoft">
-                                <h4>Others skills</h4>
-                                <div className="About__content__wrapper__skill__microsoft__contain">
-
-                                    <div className="circle-progress">
-                                        <h6>Word</h6>
-                                        <CircularProgress value={95} size={20} color='blue.400'>
-                                            <CircularProgressLabel fontSize={20}>95%</CircularProgressLabel>
-                                        </CircularProgress>
-                                    </div>
-
-                                    <div className="circle-progress">
-                                        <h6>Excel</h6>
-                                        <CircularProgress value={75} color='blue.400'>
-                                            <CircularProgressLabel>75%</CircularProgressLabel>
-                                        </CircularProgress>
-                                    </div>
-
-                                    <div className="circle-progress">
-                                        <h6>PowerPoint</h6>
-                                        <CircularProgress value={75} color='blue.400'>
-                                            <CircularProgressLabel>75%</CircularProgressLabel>
-                                        </CircularProgress>
-                                    </div>
-
-                                    <div className="circle-progress">
-                                        <h6>Canva</h6>
-                                        <CircularProgress value={80} color='blue.400'>
-                                        <CircularProgressLabel>80%</CircularProgressLabel>
-                                        </CircularProgress>
-                                    </div>
-                                    <div className="circle-progress">
-                                        <h6>WordPress</h6>
-                                        <CircularProgress value={65} color='blue.400'>
-                                        <CircularProgressLabel>65%</CircularProgressLabel>
-                                        </CircularProgress>
-                                    </div>
-                                </div>
-                            </div>
+                    {showSkills === 3 && (<div className="About__content__wrapper__other-skill">
+                        <div className="About__content__wrapper__other-skill__content">
+                            <h4>Other skills</h4>
+                            <div className="About__content__wrapper__other-skill__content__box">
+                                {otherSkills.map((Item) => (
+                                    <React.Fragment  key={Item.id}>
+                                       <div className="About__content__wrapper__other-skill__content__box__CircleBg">
+                                            <div className="About__content__wrapper__other-skill__content__box__CircleBg__progress" style={{width:Item.percentage}}></div>
+                                            <p className="About__content__wrapper__other-skill__content__box__CircleBg__percentage">{Item.percentage}</p>
+                                            <p className="About__content__wrapper__other-skill__content__box__CircleBg__title">{Item.title}</p>
+                                        </div >
+                                    </React.Fragment>
+                                ))}
+                            </div>                           
                         </div>
                     </div>)}
                 </div>

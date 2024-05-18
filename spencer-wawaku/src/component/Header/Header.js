@@ -88,9 +88,9 @@ export default function Header() {
             {/* button */}
             <div className='Header__contact'>
                 <Switch/>
-                <button className="Header__contact__contactMe">
-                    <NavLink to='/contact'>Contact</NavLink>
-                </button>
+                    <NavLink className="Header__contact__contactMe" to='/contact'>
+                        <button>Contact</button>
+                    </NavLink>
                 <button className="Header__contact__hamburgerBtn" onClick={handleHamburger}>
                     {mobileMenuOpen ? <FaXmark color={hamburgerColor} /> : <FaBars color={initialHamburgerColor} />}
                 </button>
