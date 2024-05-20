@@ -364,25 +364,9 @@
 }
 .container .About__content__wrapper__other-skill__content__box__CircleBg {
   position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: conic-gradient(blue 90deg, blue 90deg, #f8fafc 0deg, #f8fafc 0deg);
-  border: 1px solid #e5e7eb;
   display: grid;
   place-items: center;
-  margin: 1rem;
-}
-.container .About__content__wrapper__other-skill__content__box__CircleBg::before {
-  position: absolute;
-  content: "";
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #f8fafc;
-  border: 1px solid #e5e7eb;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-bottom: 0.5rem;
 }
 .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
   position: absolute;
@@ -393,7 +377,7 @@
 }
 .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -1rem;
   font-size: 0.8rem;
   text-align: center;
   font-weight: 600;

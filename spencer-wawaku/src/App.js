@@ -25,7 +25,10 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <ScrollingText/>
-          <About/>
+          {/* <About/> */}
+          {/* <Services/> */}
+          {/* <Videos/> */}
+          {/* <Contact/> */}
           <Footer />
           <Alert/>          
         </main>

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import React, { useState }  from 'react';
-import { CircularProgress, CircularProgressLabel , Progress } from '@chakra-ui/react';
+import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 import './MainSass/index_main.css';
 import PictureProfil from './PictureProfil';
 import pictures from './DataMain/PictureData';
@@ -14,7 +14,7 @@ const picture = pictures;
 
 export default function About(){
     const [showSkills, setShowSkills] = useState(1);
-
+    
     const handleShowSkills = (e) => {
         setShowSkills(e)
     }
@@ -92,11 +92,10 @@ export default function About(){
                             <div className="About__content__wrapper__other-skill__content__box">
                                 {otherSkills.map((Item) => (
                                     <React.Fragment  key={Item.id}>
-                                       <div className="About__content__wrapper__other-skill__content__box__CircleBg">
-                                            <div className="About__content__wrapper__other-skill__content__box__CircleBg__progress" style={{width:Item.percentage}}></div>
-                                            <p className="About__content__wrapper__other-skill__content__box__CircleBg__percentage">{Item.percentage}</p>
+                                        <CircularProgress value={`${Item.percentage}`} size='120px' color='#1d4ed8' className="About__content__wrapper__other-skill__content__box__CircleBg">
+                                          <CircularProgressLabel>{`${Item.percentage}%`}</CircularProgressLabel>
                                             <p className="About__content__wrapper__other-skill__content__box__CircleBg__title">{Item.title}</p>
-                                        </div >
+                                        </CircularProgress>
                                     </React.Fragment>
                                 ))}
                             </div>                           
@@ -107,3 +106,4 @@ export default function About(){
         </div>
     )       
 }
+
