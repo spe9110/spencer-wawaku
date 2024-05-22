@@ -485,18 +485,19 @@ a{
 
     // Hero section
     .Hero{
-        transition: background .3s ease-in-out;
         // Large screen
         @include responsive(large-wide){
             min-height: 75vh;
             padding: 0 4em;
+            height: 640px;
             padding-top: 2em;
             flex-direction: row;
-            align-items: center;
-            justify-content: start;
+            align-items: start;
+            justify-content: center;
             gap: 1rem;
             margin: 0;
             overflow: auto;
+            transition: background .3s ease-in-out;
 
             &__info{
                 width: 50%;

@@ -50,6 +50,7 @@ export default function Header() {
         return () => window.removeEventListener("resize", handleResize);
     }, [])
 
+    
     return (
         <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} >
 

@@ -5,13 +5,14 @@ import { GoArrowUpRight } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import Profil from './Images/avatar-bis.png';
 import SocialMediaHero from "./SocialMediaHero";
+import ScrollingText from "../Main/ScrollingText";
 import { useTheme } from '../Header/DarkMode';
 
-export default function Home(){
+export default function HomeSection(){
     const { theme } = useTheme();
 
     const [text] = useTypewriter({
-        words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a NodeJs Developer", "I'm a junior fullstack Developer", "I'm an Educator"],
+        words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a Node Developer", "I'm a junior fullstack Developer", "I'm a content creator", "I'm a self-taught programmer" ],
         loop: {},
         typeSpeed: 250,
         deleteSpeed: 30,
@@ -62,6 +63,7 @@ export default function Home(){
                     <span>JAVASCRIPT</span>
                 </div>                    
             </div>
+            <ScrollingText/>
             <SocialMediaHero/>
         </div>
     )

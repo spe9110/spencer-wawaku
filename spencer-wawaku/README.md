@@ -192,3 +192,182 @@ export default StickyHeader;
     }, []); // Empty dependency array ensures this effect runs only once
 
  -->
+
+ <!-- 
+ THE INDEX JS FILE
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './App.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import {ThemeProvider} from './component/Header/DarkMode';
+import { ChakraProvider } from '@chakra-ui/react';
+import { AlertProvider } from './component/Main/AlertMessage/AlertContext';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render( 
+  <React.StrictMode>
+    <ThemeProvider>
+      <BrowserRouter>
+        <AlertProvider>
+          <ChakraProvider>
+            <App />
+          </ChakraProvider>
+        </AlertProvider>
+      </BrowserRouter>
+    </ThemeProvider>
+  </React.StrictMode>
+);
+  -->
+
+  <!-- 
+  THE APP.js file
+
+  import React from "react";
+import Header from './component/Header/Header';
+import Home from './component/Main/Home';
+import About from './component/Main/About';
+import Services from "./component/Main/Services";
+import Videos from './component/Main/Videos'; 
+import Contact from './component/Main/Contact';
+import Footer from "./component/Footer/Footer";
+import { Routes, Route } from 'react-router-dom';
+import { useTheme } from './component/Header/DarkMode';
+import ScrollingText from "./component/Main/ScrollingText";
+import Alert from "./component/Main/AlertMessage/Alert";
+
+function App() {
+  const { theme } = useTheme();
+  return (
+        <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
+          <Header />
+          <Routes>        
+            <Route path="/" element={<Home />} /> 
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/videos" element={<Videos />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <ScrollingText/>
+          {/* <About/> */}
+          {/* <Services/> */}
+          {/* <Videos/> */}
+          {/* <Contact/> */}
+          <Footer />
+          <Alert/>          
+        </main>
+  ) 
+}
+THIS IS THE STRUCTURE FOR MULTIPLE PAGES
+   -->
+
+   <!-- 
+   Header js file
+
+   import { useState, useEffect } from 'react';
+import navbarItems from './Data/Data'; // Importing navbarItems from data.js
+import { FaBars, FaXmark } from "react-icons/fa6";
+import { Link, NavLink } from 'react-router-dom';
+import SocialMedia from './SocialMedia';
+import LogoImage from './Images/1.png';
+import Switch from './Switch';
+import { useTheme } from './DarkMode';
+import './HeaderSass/index_header.css';
+
+
+export default function Header() {
+
+    const { theme } = useTheme();
+
+    // we create a useState and initialize the MobileMenuOpen to false
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    // we initialize the hamburgerColor to black
+    const [hamburgerColor, setHamburgerColor] = useState(theme === 'light' ? '#ffffff' : '#000000');
+    // Store the initial hamburger color
+    const initialHamburgerColor = theme === 'light' ? '#ffffff' : '#000000';
+    // we initialize the show icon to false
+    const [showIcon, setShowIcon] = useState(false);
+
+    // with this function we change me menu on click
+    const handleHamburger = ()=>{
+        setMobileMenuOpen(!mobileMenuOpen);
+        // NOTE: onclick we change not the hamburgerColor but  "mobileMenuOpen" inside the setHamburgerColor function to change it color
+        setHamburgerColor(mobileMenuOpen ? initialHamburgerColor : '#ffffff');
+    }
+
+    // This function remove the menu on clicking an element
+    const handleNavLink = () => {
+        if (window.innerWidth < 768) {
+            setMobileMenuOpen(false); // Close the mobile menu when a navigation item is clicked
+        }
+    }
+
+    // useEffect to handle the navigation element's icon
+    useEffect(()=>{
+        const handleResize = () =>{
+            if(window.innerWidth < 768){
+                setShowIcon(true);
+            } else{
+                setShowIcon(false);
+            }
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, [])
+
+    
+    return (
+        <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} >
+
+            {/* logo */}
+            <div className='Header__logo'>
+                <Link to='/home' className="LinkName">
+                    <img className="Header__logo__picture" src={LogoImage} alt="photo_logo" />
+                    <h3 className="Header__logo__name">
+                        Spencer.
+                    </h3>
+                </Link>
+            </div>
+
+            {/* navigation */}
+            {/* to show the menu on click we  create a function on nav element */}
+            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`}>
+                <ul>
+                    {navbarItems.map(item => (
+                        <li key={item.id}>
+                            <NavLink 
+                                to={item.url}
+                                title={item.title}
+                                onClick={handleNavLink} // Call handleNavLink when a navigation item is clicked
+                            >
+                                {/* this code show/hide this icon on small and wide devices */}
+                                {showIcon && <span>{item.icon}</span>}
+                                <span>{item.title}</span>
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+                {/* social-media */}
+                <SocialMedia />
+            </nav>
+
+            {/* button */}
+            <div className='Header__contact'>
+                <Switch/>
+                    <NavLink className="Header__contact__contactMe" to='/contact'>
+                        <button>Contact</button>
+                    </NavLink>
+                <button className="Header__contact__hamburgerBtn" onClick={handleHamburger}>
+                    {mobileMenuOpen ? <FaXmark color={hamburgerColor} /> : <FaBars color={initialHamburgerColor} />}
+                </button>
+            </div>
+        </div>
+    );
+}
+    -->

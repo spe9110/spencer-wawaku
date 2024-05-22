@@ -5,7 +5,11 @@
         justify-content: bottom;
         align-items: center;
         font-family: "legend", sans-serif;
-        position: relative;
+        // position: relative;
+        position: absolute;
+        bottom: 0;
+        // margin-top: 2rem;
+        // z-index: 40;
     
     
         &__scroll{

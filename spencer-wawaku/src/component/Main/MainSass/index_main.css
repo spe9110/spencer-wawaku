@@ -487,7 +487,7 @@
   min-height: 70vh;
   width: 100%;
   padding: 1em 3em;
-  height: 700px;
+  height: 900px;
   margin-bottom: 2rem;
   position: relative;
   /* these code insert space between items  */
@@ -776,7 +776,8 @@
   justify-content: bottom;
   align-items: center;
   font-family: "legend", sans-serif;
-  position: relative;
+  position: absolute;
+  bottom: 0;
 }
 .container .text__infinite__scroll {
   display: flex;

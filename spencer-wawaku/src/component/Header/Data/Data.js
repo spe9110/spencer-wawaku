@@ -8,7 +8,7 @@ const navbarItems = [
         id: 1,
         icon: <FaHome />,
         title: 'Home',
-        url: '/'
+        url: '/home'
     },
     {
         id: 2,
