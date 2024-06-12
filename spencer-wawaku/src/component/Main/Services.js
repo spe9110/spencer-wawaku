@@ -4,7 +4,7 @@ import services from "./DataMain/ServicesData";
 import './MainSass/index_main.css';
 import { useTheme } from '../Header/DarkMode';
 
-export default function Services(){
+export default function ServicesSection(){
     const { theme } = useTheme();
 
     return(
@@ -18,7 +18,7 @@ export default function Services(){
                     <div className="Services__wrapper__card" key={Item.id} >
                         <h1 className="Services__wrapper__card__number"> {Item.number} </h1>
                         <div className="Services__wrapper__card__img">
-                            <img src={Item.img} alt="WebDev-Photo" />
+                            <img src={Item.icon} alt='WebDev-Photo' />
                         </div>
                         <h3 className="Services__wrapper__card__title"> {Item.title} </h3>
                         <p className="Services__wrapper__card__details"> {Item.description} </p>

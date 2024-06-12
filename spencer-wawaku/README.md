@@ -371,3 +371,22 @@ export default function Header() {
     );
 }
     -->
+<!-- 
+TO LINK THE FRONTEND AND BACKEND
+
+Pour démarrer à la fois votre frontend et votre backend, vous pouvez utiliser concurrently que vous avez déjà dans vos dépendances. Vous devrez créer des scripts pour démarrer le serveur backend et le client frontend.
+
+Pour le développement(lancer le frontend and backend)
+npm start 
+
+Pour la production (lancer le frontend and backend)
+npm run start:backend:prod
+npm run start:frontend
+ -->
+
+ <!-- 
+ script initial:
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  -->

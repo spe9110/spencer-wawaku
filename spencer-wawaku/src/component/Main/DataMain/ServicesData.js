@@ -9,42 +9,42 @@ const services = [
     {
         id: 1,
         number: '01',
-        img: WebDevelopment,
+        icon: WebDevelopment,
         title: 'Web Development',
         description: 'I can create website that adapt optimally to various devices and screen sizes, providing a consistent and enjoyable user experience.'
     },
     {
         id: 2,
         number: '02',
-        img: WebConsulting,
+        icon: WebConsulting,
         title: 'Web Consulting',
         description: 'Empowering businesses with expert guidance and tailored strategies to optimize their online presence and digital performance.'
     },
     {
         id: 3,
         number: '03',
-        img: Maintenance,
+        icon: Maintenance,
         title: 'Maintenance and Updates',
         description: 'Provide maintenance services to ensure websites remain functional, secure, and compliant with the latest web standards and technologies.'
     },
     {
         id: 4,
         number: '04',
-        img: Seo,
+        icon: Seo,
         title: 'Search Engine Optimization (SEO)',
         description: 'Optimize websites for search engines by implementing on-page SEO practices such as keyword optimization, meta tags, schema markup, and ensuring proper site structure.'
     },
     {
         id: 5,
         number: '05',
-        img: Performance,
+        icon: Performance,
         title: 'Performance Optimization',
         description: 'Improve website speed and efficiency by optimizing resource loading, using caching techniques, and reducing server request.'
     },
     {
         id: 6,
         number: '06',
-        img: AnimationEffets,
+        icon: AnimationEffets,
         title: 'Web Animation',
         description: 'Offer specialized animations such as parallax scrolling, hover effects, and transitions that add visual appeal and interactivity to the user interface'
     }

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './MainSass/index_main.css';
 
@@ -25,23 +25,23 @@ const CarouselIndicator = ({ pictures, activeIndex, onClick }) => {
 const PictureProfil = ({ pictures, interval = 3000 }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     // handle Prevous function
-    const prevSlide = () =>{
+    const prevSlide = useCallback(() => {
         setActiveIndex((activeIndex) =>
-            activeIndex === 0 ? pictures.length - 1 : activeIndex - 1 
+            activeIndex === 0 ? pictures.length - 1 : activeIndex - 1
         );
-    };
+    }, [pictures.length]);
 
     // handle next function
-    const nextSlide = () => {
-        setActiveIndex((activeIndex) => 
+    const nextSlide = useCallback(() => {
+        setActiveIndex((activeIndex) =>
             activeIndex === pictures.length - 1 ? 0 : activeIndex + 1
         );
-    };
+    }, [pictures.length]);
 
     // go to slide indicator
-    const goToSlide = (index) => {
-        setActiveIndex(index)
-    }
+    const goToSlide = useCallback((index) => {
+        setActiveIndex(index);
+    }, []);
 
     useEffect(() => {
         const autoPlayInterval = setInterval(nextSlide, interval);
@@ -72,3 +72,33 @@ const PictureProfil = ({ pictures, interval = 3000 }) => {
 }
 
 export default PictureProfil;
+
+
+/*
+PREVIOUS CODE
+// handle Prevous function
+    const prevSlide = () =>{
+        setActiveIndex((activeIndex) =>
+            activeIndex === 0 ? pictures.length - 1 : activeIndex - 1 
+        );
+    };
+
+    // handle next function
+    const nextSlide = () => {
+        setActiveIndex((activeIndex) => 
+            activeIndex === pictures.length - 1 ? 0 : activeIndex + 1
+        );
+    };
+
+    // go to slide indicator
+    const goToSlide = (index) => {
+        setActiveIndex(index)
+    }
+
+
+    USECALLBACK HOOK
+
+    prevSlide, nextSlide, and goToSlide functions are now wrapped in useCallback to ensure that their references do not change between renders unless their dependencies change.
+    This ensures that useEffect will not mistakenly identify changes in the nextSlide function on every render.
+
+*/ 
