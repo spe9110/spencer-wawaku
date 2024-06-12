@@ -126,7 +126,6 @@
   align-items: start;
   justify-content: center;
   gap: 2rem;
-  background-color: #fff;
   margin-bottom: 2rem;
 }
 .container .About__slider {
@@ -215,6 +214,7 @@
   outline: none;
   text-align: center;
   background-color: transparent;
+  color: #000;
 }
 .container .About__content__btn__one:hover, .container .About__content__btn__one.active, .container .About__content__btn__two:hover, .container .About__content__btn__two.active, .container .About__content__btn__three:hover, .container .About__content__btn__three.active {
   background-color: blue;
@@ -226,7 +226,6 @@
   display: flex;
   align-items: start;
   justify-content: center;
-  border: 2px solid #fff;
   padding: 0.2em;
   width: 100%;
   height: auto;
@@ -268,6 +267,7 @@
 }
 .container .About__content__wrapper__info__knowledge__list-skill:hover {
   background-color: #f8fafc;
+  color: #000;
   border: 1px solid #e5e7eb;
 }
 .container .About__content__wrapper__info__knowledge__list-skill img {
@@ -316,7 +316,6 @@
   width: 100%;
   height: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #f8fafc;
   border: 1px solid #e5e7eb;
   overflow: hidden;
   margin: 0.4rem 0;
@@ -507,15 +506,15 @@
 .container .Videos__card {
   width: 300px;
   height: 400px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
   margin-bottom: 0.4rem;
   border-radius: 0.8rem;
   overflow: hidden;
   cursor: pointer;
 }
 .container .Videos__card:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(250, 250, 250, 0.9);
 }
 .container .Videos__card__img {
   position: relative;
@@ -539,7 +538,7 @@
   border-radius: 0.5em;
   font-size: 1rem;
   font-weight: bold;
-  border: 1px solid rgb(11, 248, 11);
+  border: 1px solid orangered;
 }
 .container .Videos__card__content {
   width: 100%;
@@ -554,6 +553,7 @@
   margin: 3px 0;
   margin: 0.1rem 0;
   padding: 0 0.6em;
+  color: #000;
 }
 .container .Videos__card__content__description {
   font-size: 0.9rem;
@@ -592,6 +592,7 @@
   gap: 0.2rem;
 }
 .container .Videos__card__content__profil__author__nameJob__name {
+  color: #747272;
   font-size: 0.8rem;
   text-align: start;
   font-weight: bold;
@@ -641,13 +642,14 @@
   right: -1.5rem;
   width: 3rem;
   height: 3rem;
-  border: 1px solid #4dda31;
+  border: 1px solid orangered;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 0.4rem;
   z-index: 2;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 .container .Videos .prevArrow {
   position: absolute;
@@ -656,13 +658,14 @@
   left: -1.5rem;
   width: 3rem;
   height: 3rem;
-  border: 1px solid #4dda31;
+  border: 1px solid orangered;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 0.4rem;
   z-index: 2;
   display: grid;
   place-items: center;
+  cursor: pointer;
 }
 .container .Videos .slick-slide > div {
   margin: 0 10px;
@@ -707,6 +710,7 @@
 }
 .container .Contact__form__content {
   background: white;
+  color: #000;
   width: 40vw;
   min-height: 600px;
   padding: 18px 12px;

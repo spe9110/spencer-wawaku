@@ -8,11 +8,14 @@ import knowledges from './DataMain/AllSkills';
 import programmingSkills from './DataMain/ProgrammingSkills';
 import otherSkills from './DataMain/OtherSkills';
 import tools from './DataMain/ToolsData';
+import { useTheme } from '../Header/DarkMode';
+
 
 // picture variables
 const picture = pictures;
 
 export default function About(){
+    const { theme } = useTheme();
     const [showSkills, setShowSkills] = useState(1);
     
     const handleShowSkills = (e) => {
@@ -20,7 +23,7 @@ export default function About(){
     }
 
     return(
-        <div className="About">
+        <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`}>
             <div className="About__slider">
                 {/* design */}
                 <div className="About__slider__design"></div>
