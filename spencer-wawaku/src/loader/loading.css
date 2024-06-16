@@ -1,0 +1,46 @@
+#loader__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  /* Keyframes for the drawing effect */
+  /* Keyframes for the fading effect */
+}
+#loader__container__welcome {
+  font-size: 2rem;
+  color: white;
+}
+#loader__container__loader {
+  width: 60%;
+  height: auto;
+  margin-top: 4rem;
+}
+#loader__container__loader path {
+  stroke: white;
+  stroke-width: 5;
+  stroke-dasharray: 1000; /* Large number to ensure full length coverage */
+  stroke-dashoffset: 1000;
+  animation: draw 4s ease-in-out forwards, fade 2s ease-in-out 4s forwards;
+}
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fade {
+  to {
+    fill: white;
+    stroke: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  #loader__container #loader__container__welcome {
+    font-size: 1rem;
+  }
+  #loader__container #loader__container__loader {
+    width: 50%;
+    margin-top: 3rem;
+  }
+}/*# sourceMappingURL=loading.css.map */

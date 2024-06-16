@@ -355,11 +355,8 @@ a{
                 bottom: 0;
 
                 ul {
-                    display: flex;
-                    align-items: start;
-                    justify-content: start;
+                    @include flexDirection(column, start, start);
                     flex-wrap: nowrap;
-                    flex-direction: column;
 
                     li {
                         font-size: .8rem;
@@ -368,9 +365,7 @@ a{
                         font-weight: bold;
 
                         a{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            @include flexDirection(row, center, center);
                             gap: .2rem;
                             color: #fff;
                             width: 90%;
@@ -383,7 +378,8 @@ a{
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
-                    display: block;
+                    @include flexDirection(row, center, center);
+                    gap: .2rem;
                 }
 
                 ul li a:not(.active):hover {
@@ -943,40 +939,37 @@ a{
         } 
         // mobile
         @include responsive(mobile){
-            min-height: 50vh;
+            min-height: 730px;
+            // min-height: 680px;
             gap: .5rem;
-            flex-direction: column;
+            @include flexDirection(column, center, start);
             padding: .5em 1em;
-            padding-top: 1em;
-            align-items: center;
-            justify-content: start;
             margin: 0;
-
 
             &__info{
                 width: 100%;
-                height: 300px;
+                min-height: 300px;
                 padding: 1em .6em;
 
                 &__greet{
                     font-size: 1rem;
                     // color: red;
-                    font-weight: 400;
+                    font-weight: 500;
                 }
                 &__name{
                     margin-top: .1rem;
-                    font-size: 2.2rem;
+                    font-size: 2.4rem;
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 1.1rem;
+                    font-size: 1.3rem;
                     line-height: 1rem;
                     margin-top: 1rem;
                 }
                 &__description{
                     margin: .4rem 0;
                     width: 100%;
-                    font-size: .9rem;
+                    font-size: 1rem;
                 }
                 // Buttons
                 &__btn{
@@ -1006,12 +999,13 @@ a{
             }
             &__profil{
                 width: 100%;
-                height: 300px;
-                display: flex;
-                justify-content: center;
+                min-height: 380px;
+                // display: flex;
+                // justify-content: center;
+                margin: 0;
                 
                 &__picture{
-                    width: 380px;
+                    width: 362px;
                     height: auto;
                 }
 
@@ -1051,13 +1045,218 @@ a{
                         left: 65%;
                     }
                 }
-
             }
             .Social__Media{
                 display: none;
             }
-
         } 
+    }
+
+    // About Section
+    .About{
+        // Large screen
+        @include responsive(large-wide){
+
+        }
+        // Desktop
+        @include responsive(desktop){
+
+        }
+        // Laptop
+        @include responsive(laptop){
+
+        }
+        // tablet
+        @include responsive(tablet){
+
+        }
+        // Mobile
+        @include responsive(mobile){
+            min-height: 600px;
+            padding-top: 1em;
+            @include flexDirection(column);
+            gap: 1rem;
+            // background-color: red;
+
+            &__slider{
+                // position: relative;
+                width: 94%;
+                height: 500px;
+                @include flexDirection(column);
+                margin-bottom: 1.3rem;
+                // background-color: #000000;
+                
+    
+                &__design{
+                    // position: absolute;
+                    width: 90%;
+                    height: 100%;
+                    left: auto;
+                }
+                &__picture{
+                    // position: absolute;
+                    width: 90%;
+                    height: 100%;
+                    left: 2.8rem;
+                    top: 4%;
+                }
+            }
+
+            &__content{
+                width: 94%;
+                min-height: 500px;
+                @include flexDirection(column);
+
+                &__wrapper{
+                    &__info{
+                        &__knowledge{
+                            @include flexDirection(row);
+                        }
+                        &__prog{
+                            &__programming,
+                            &__tool{
+                                h4{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+
+    // Services Section
+    .Services{
+        // Large screen
+        @include responsive(large-wide){
+
+        }
+        // Desktop
+        @include responsive(desktop){
+
+        }
+        // Laptop
+        @include responsive(laptop){
+
+        }
+        // tablet
+        @include responsive(tablet){
+
+        }
+        // Mobile
+        @include responsive(mobile){
+            min-height: 600px;
+            &__help{
+                font-size: 1.8rem;
+                padding-bottom: .9em;
+                font-weight: 400;
+            }
+        }
+    }
+
+    // Videos Section
+    .Videos{
+        // Large screen
+        @include responsive(large-wide){
+
+        }
+        // Desktop
+        @include responsive(desktop){
+
+        }
+        // Laptop
+        @include responsive(laptop){
+
+        }
+        // tablet
+        @include responsive(tablet){
+
+        }
+        // Mobile
+        @include responsive(mobile){
+            min-height: 600px;
+            
+            &__watch{
+                font-size: 1.8rem;
+            }
+
+            .CountUp{
+                gap: 1rem;
+                &__wrapper{
+                    width: 25rem;
+                    height: 180px;
+                    @include flexDirection(row, center, center);
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(100% / 3);
+                        height: auto;
+
+                        &__icon, &__number{
+                            font-size: 1.4rem;
+                        }
+                        &__title{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Contact Section
+    .Contact{
+        // Large screen
+        @include responsive(large-wide){
+
+        }
+        // Desktop
+        @include responsive(desktop){
+
+        }
+        // Laptop
+        @include responsive(laptop){
+
+        }
+        // tablet
+        @include responsive(tablet){
+
+        }
+        // Mobile
+        @include responsive(mobile){
+            min-height: 600px;
+            @include flexDirection(column, center, center);
+            padding: 1rem 0;
+
+            &__title{
+                font-size: 2rem;
+            }
+    
+            &__touch{
+                font-size: 1.5rem;
+            }
+            &__form{
+                width: 90%;
+                height: auto;
+                @include flexDirection(column, center, center);
+                border-radius: .4rem;
+                &__map{
+                    width: 100%;
+                    height: 300px;
+                }
+                &__content{
+                    width: 100%;
+                    height: auto;
+                    padding: 10px;
+                }
+            }
+            .leaflet-container{
+                width: 100%;
+                height: 300px;
+            }
+        }
     }
 
     // SCROLLING TEXT
@@ -1116,6 +1315,7 @@ a{
             }
         }
     }
+
     // footer
     .footer{
         @include responsive(large-wide){
@@ -1298,6 +1498,7 @@ a{
             background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
+            height: 132px;
             justify-content: center;
             align-items: center;
             margin: 0 auto;

@@ -1,8 +1,6 @@
 .container .Hero {
   position: relative;
   width: 100%;
-  display: flex;
-  overflow: hidden;
 }
 .container .Hero__info {
   display: flex;
@@ -120,39 +118,22 @@
 
 .container .About {
   width: 100%;
-  min-height: 70vh;
-  padding-top: 3em;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
 }
 .container .About__slider {
   position: relative;
-  width: 30%;
-  height: 400px;
 }
 .container .About__slider__design {
   position: absolute;
   background-color: orangered;
-  width: 300px;
-  height: 350px;
   border-radius: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  left: 3rem;
   box-shadow: rgba(0, 0, 0, 0.32) 0px 2px 8px;
 }
 .container .About__slider__picture {
   position: absolute;
   background-color: #fff;
-  width: 300px;
-  height: 350px;
   border-radius: 1rem;
-  top: 75%;
-  transform: translateY(-75%);
-  left: 4rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   overflow: hidden;
   cursor: pointer;
@@ -171,13 +152,7 @@
   filter: grayscale(0);
 }
 .container .About__content {
-  width: 50%;
-  min-height: 50vh;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
   gap: 1rem;
   border-radius: 40px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -249,11 +224,7 @@
   margin-bottom: 1rem;
 }
 .container .About__content__wrapper__info__knowledge {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: start;
   gap: 0.4rem;
 }
 .container .About__content__wrapper__info__knowledge__list-skill {
@@ -292,7 +263,6 @@
   height: 100%;
 }
 .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-  font-size: 1.5rem;
   font-weight: bold;
   width: 100%;
   padding-left: 2rem !important;
@@ -385,10 +355,8 @@
 .container .Services {
   position: relative;
   width: 100%;
-  min-height: 70vh;
   display: grid;
   place-items: center;
-  margin-bottom: 1rem;
   transition: background 0.3s ease-in-out;
 }
 .container .Services__title {
@@ -397,7 +365,6 @@
   font-weight: bold;
 }
 .container .Services__help {
-  font-size: 3rem;
   padding-bottom: 0.9em;
   font-weight: 400;
 }
@@ -483,12 +450,9 @@
 }
 
 .container .Videos {
-  min-height: 70vh;
   width: 100%;
   padding: 1em 3em;
-  height: 900px;
-  margin-bottom: 2rem;
-  position: relative;
+  overflow: hidden;
   /* these code insert space between items  */
 }
 .container .Videos__title {
@@ -498,7 +462,6 @@
   text-align: center;
 }
 .container .Videos__watch {
-  font-size: 3rem;
   padding-bottom: 0.3em;
   font-weight: 400;
   text-align: center;
@@ -508,7 +471,6 @@
   height: 400px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #fff;
-  margin-bottom: 0.4rem;
   border-radius: 0.8rem;
   overflow: hidden;
   cursor: pointer;
@@ -676,44 +638,25 @@
 
 .container .Contact {
   width: 100%;
-  min-height: 70vh;
-  padding: 2em 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .container .Contact__title {
-  font-size: 4rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
 }
 .container .Contact__touch {
-  font-size: 3rem;
   padding-bottom: 0.3em;
   font-weight: 400;
 }
 .container .Contact__form {
-  width: 80vw;
-  min-height: 600px;
-  border-radius: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: start;
-  justify-content: start;
   overflow: hidden;
 }
 .container .Contact__form__map {
   background: greenyellow;
-  width: 40vw;
-  min-height: 600px;
 }
 .container .Contact__form__content {
   background: white;
   color: #000;
-  width: 40vw;
-  min-height: 600px;
-  padding: 18px 12px;
 }
 .container .Contact__form__content form {
   text-align: start;
@@ -774,7 +717,7 @@
   color: #0e76a8;
 }
 
-.container .text__infinite {
+.container .Hero .text__infinite {
   width: 100%;
   display: flex;
   justify-content: bottom;
@@ -783,12 +726,12 @@
   position: absolute;
   bottom: 0;
 }
-.container .text__infinite__scroll {
+.container .Hero .text__infinite__scroll {
   display: flex;
   overflow: hidden;
   white-space: nowrap;
 }
-.container .text__infinite__scroll__one {
+.container .Hero .text__infinite__scroll__one {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -797,13 +740,13 @@
   cursor: pointer;
   animation: scroll 360s linear infinite;
 }
-.container .text__infinite__scroll__one div {
+.container .Hero .text__infinite__scroll__one div {
   display: flex;
   align-items: center;
   justify-content: center;
   color: orangered;
 }
-.container .text__infinite__scroll__one span {
+.container .Hero .text__infinite__scroll__one span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,13 +761,11 @@
     transform: translateX(-50%);
   }
 }
-.container .text__infinite__scroll__one:hover {
+.container .Hero .text__infinite__scroll__one:hover {
   animation-play-state: paused;
 }
 
 .container .Contact .leaflet-container {
-  width: 100%;
-  min-height: 600px;
   z-index: 10;
 }
 
@@ -840,27 +781,20 @@ var mymap = L.map('map')
 Sources:
 https://zhiqiyu.github.io/post/react-leaflet-setup/
 */
-.container .CountUp {
-  width: 100vw;
+.container .Videos .CountUp {
+  width: 100%;
   min-height: 200px;
   padding: 1em 0;
   display: grid;
   place-items: center;
-  margin: 0;
-  margin-top: 2rem;
 }
-.container .CountUp__wrapper {
-  width: 50rem;
-  height: 200px;
+.container .Videos .CountUp__wrapper {
   background-color: orangered;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 8rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   color: #ffffff;
 }
-.container .CountUp__wrapper__experience, .container .CountUp__wrapper__project, .container .CountUp__wrapper__subscribers {
+.container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -868,20 +802,16 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
   justify-content: center;
   gap: 0.2rem;
   padding: 8px;
-  min-width: 150px;
-  min-height: 120px;
 }
-.container .CountUp__wrapper__experience__icon, .container .CountUp__wrapper__experience__number, .container .CountUp__wrapper__project__icon, .container .CountUp__wrapper__project__number, .container .CountUp__wrapper__subscribers__icon, .container .CountUp__wrapper__subscribers__number {
-  font-size: 2rem;
+.container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
   font-weight: bold;
   text-align: center;
 }
-.container .CountUp__wrapper__experience__title, .container .CountUp__wrapper__project__title, .container .CountUp__wrapper__subscribers__title {
-  font-size: 1.6rem;
+.container .Videos .CountUp__wrapper__experience__title, .container .Videos .CountUp__wrapper__project__title, .container .Videos .CountUp__wrapper__subscribers__title {
   font-weight: bold;
   text-align: center;
 }
-.container .CountUp__wrapper__experience::before, .container .CountUp__wrapper__project::before {
+.container .Videos .CountUp__wrapper__experience::before, .container .Videos .CountUp__wrapper__project::before {
   position: absolute;
   content: "";
   right: 0;

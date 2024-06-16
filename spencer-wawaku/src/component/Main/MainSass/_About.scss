@@ -20,42 +20,41 @@
 .container{
     .About{
         width: 100%;
-        min-height: 70vh;
-        padding-top: 3em;
-        display: flex;
-        align-items: start;
-        justify-content: center;
-        gap: 2rem;
-        // background-color: #fff;
-        margin-bottom: 2rem;
+        // min-height: 70vh;
+        // padding-top: 3em;
+        // display: flex;
+        // align-items: start;
+        // justify-content: center;
+        // gap: 2rem;
+        // margin-bottom: 2rem;
 
         &__slider{
             position: relative;
-            width: 30%;
-            height: 400px;
+            // width: 30%;
+            // height: 400px;
             // padding: 1rem;
             
 
             &__design{
                 position: absolute;
                 background-color: orangered;
-                width: 300px;
-                height: 350px;
+                // width: 300px;
+                // height: 350px;
                 border-radius: 1rem;
                 top: 50%;
                 transform: translateY(-50%);
-                left: 3rem;
+                // left: 3rem;
                 box-shadow: rgba(0, 0, 0, 0.32) 0px 2px 8px;
             }
             &__picture{
                 position: absolute;
                 background-color: #fff;
-                width: 300px;
-                height: 350px;
+                // width: 300px;
+                // height: 350px;
                 border-radius: 1rem;
-                top: 75%;
-                transform: translateY(-75%);
-                left: 4rem;
+                // top: 75%;
+                // transform: translateY(-75%);
+                // left: 4rem;
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 overflow: hidden;
                 cursor: pointer;
@@ -79,14 +78,14 @@
         }
 
         &__content{
-            width: 50%;
-            min-height: 50vh;
+            // width: 50%;
+            // min-height: 50vh;
             // background-color: blue;
             padding: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: start;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            // justify-content: start;
             gap: 1rem;
             @include borderRadiusStyle;
             @include borderShadowStyle;
@@ -162,11 +161,11 @@
                         }
                     }
                     &__knowledge{
-                        display: flex;
-                        flex-direction: row;
+                        // display: flex;
+                        // flex-direction: row;
                         flex-wrap: wrap;
-                        align-items: center;
-                        justify-content: start;
+                        // align-items: center;
+                        // justify-content: start;
                         gap: .4rem;
 
 
@@ -215,7 +214,7 @@
                         height: 100%;
 
                         h4{
-                            font-size: 1.5rem;
+                            // font-size: 1.5rem;
                             font-weight: bold;
                             width: 100%;
                             padding-left: 2rem !important;

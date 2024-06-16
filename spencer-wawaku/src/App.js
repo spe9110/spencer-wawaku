@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Header from './component/Header/Header';
 import Home from './component/Main/Home';
 import About from './component/Main/About';
@@ -9,9 +9,18 @@ import Footer from "./component/Footer/Footer";
 import { Routes, Route } from 'react-router-dom';
 import { useTheme } from './component/Header/DarkMode';
 import Alert from "./component/Main/AlertMessage/Alert";
+import LoadingScreen from "./loader/LoadingScreen";
 
 function App() {
   const { theme } = useTheme();
+  // loading screen
+  const [ loading, setLoading ] = useState(true);
+  useEffect(()=>{
+    setTimeout(()=>setLoading(false), 6000);
+  },[])
+  if(loading){
+    return <LoadingScreen/>
+  }
   return (
         <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
           <Header />

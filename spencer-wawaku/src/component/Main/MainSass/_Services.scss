@@ -2,10 +2,9 @@
     .Services{
         position: relative;
         width: 100%;
-        min-height: 70vh;
+        // min-height: 70vh;
         display: grid;
         place-items: center ;
-        margin-bottom: 1rem;
         transition: background .3s ease-in-out;
 
         &__title{
@@ -14,7 +13,7 @@
             font-weight: bold;
         }
         &__help{
-            font-size: 3rem;
+            // font-size: 3rem;
             padding-bottom: .9em;
             font-weight: 400;
         }
