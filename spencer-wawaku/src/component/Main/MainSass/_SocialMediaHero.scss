@@ -2,10 +2,10 @@
     position: fixed;
     display: none;
     flex-direction: column; /* Align icons vertically */
-    top: 50%;
-    right: -9vw; /* Adjust the positioning as needed */
-    transform: translateY(-40%);
-    z-index: 20;
+    // top: 50%;
+    // right: -9vw;
+    // transform: translateY(-40%);
+    z-index: 99;
 
     li{
         list-style-type: none;

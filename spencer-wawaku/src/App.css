@@ -812,10 +812,7 @@
   position: fixed;
   display: none;
   flex-direction: column; /* Align icons vertically */
-  top: 50%;
-  right: -9vw; /* Adjust the positioning as needed */
-  transform: translateY(-40%);
-  z-index: 20;
+  z-index: 99;
 }
 .Social__Media li {
   list-style-type: none;
@@ -1521,21 +1518,21 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .Hero {
-    min-height: 75vh;
+    min-height: 645px;
     padding: 0 4em;
-    height: 640px;
     padding-top: 2em;
+    display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: center;
     gap: 1rem;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
     transition: background 0.3s ease-in-out;
   }
   .container .Hero__info {
     width: 50%;
-    min-height: 70vh;
+    height: 480px;
     padding: 1em;
     z-index: 40;
   }
@@ -1578,7 +1575,7 @@ a {
   }
   .container .Hero__profil {
     width: 50%;
-    min-height: 70vh;
+    height: 480px;
     padding: 1em;
     z-index: 40;
   }
@@ -1624,23 +1621,28 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
+    top: 60%;
+    right: -9vw;
+    transform: translateY(-60%);
   }
 }
 @media only screen and (max-width: 1299px) {
   .container .Hero {
-    min-height: 75vh;
+    min-height: 625px;
     padding: 0 4em;
     padding-top: 2em;
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: start;
+    align-items: start;
+    justify-content: center;
     gap: 1rem;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
   }
   .container .Hero__info {
     width: 50%;
-    min-height: 70vh;
+    height: 480px;
     padding: 1em;
   }
   .container .Hero__info__greet {
@@ -1649,11 +1651,11 @@ a {
   }
   .container .Hero__info__name {
     margin-top: 2.5rem;
-    font-size: 4rem;
+    font-size: 3.3rem;
     line-height: 2rem;
   }
   .container .Hero__info__job {
-    font-size: 2rem;
+    font-size: 1.7rem;
     line-height: 1rem;
     margin-top: 2.4rem;
   }
@@ -1681,7 +1683,7 @@ a {
   }
   .container .Hero__profil {
     width: 50%;
-    min-height: 70vh;
+    height: 480px;
     padding: 1em;
     z-index: 40;
   }
@@ -1727,6 +1729,9 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
+    top: 40%;
+    right: -10.9vw;
+    transform: translateY(-40%);
   }
 }
 @media only screen and (max-width: 992px) {

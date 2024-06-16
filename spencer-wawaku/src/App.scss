@@ -483,21 +483,18 @@ a{
     .Hero{
         // Large screen
         @include responsive(large-wide){
-            min-height: 75vh;
+            min-height: 645px;
             padding: 0 4em;
-            height: 640px;
             padding-top: 2em;
-            flex-direction: row;
-            align-items: start;
-            justify-content: center;
+            @include flexDirection(row, start, center);
             gap: 1rem;
             margin: 0;
-            overflow: auto;
+            overflow: hidden;
             transition: background .3s ease-in-out;
 
             &__info{
                 width: 50%;
-                min-height: 70vh;
+                height: 480px;
                 padding: 1em;
                 z-index: 40;
 
@@ -545,7 +542,7 @@ a{
             }
             &__profil{
                 width: 50%;
-                min-height: 70vh;
+                height: 480px;
                 padding: 1em;
                 z-index: 40;
 
@@ -595,23 +592,25 @@ a{
             }
             .Social__Media{
                 display: flex;
+                top: 60%;
+                right: -9vw;
+                transform: translateY(-60%);
             }
         } 
         // Desktop
         @include responsive(desktop){
-            min-height: 75vh;
+            min-height: 625px;
             padding: 0 4em;
             padding-top: 2em;
-            flex-direction: row;
-            align-items: center;
-            justify-content: start;
+            @include flexDirection(row, start, center);
             gap: 1rem;
             margin: 0;
-            overflow: auto;
+            overflow: hidden;
+            transition: background .3s ease-in-out;
 
             &__info{
                 width: 50%;
-                min-height: 70vh;
+                height: 480px;
                 padding: 1em;
 
                 &__greet{
@@ -620,11 +619,11 @@ a{
                 }
                 &__name{
                     margin-top: 2.5rem;
-                    font-size: 4rem;
+                    font-size: 3.3rem;
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 2rem;
+                    font-size: 1.7rem;
                     line-height: 1rem;
                     margin-top: 2.4rem;
                 }
@@ -657,7 +656,7 @@ a{
             }
             &__profil{
                 width: 50%;
-                min-height: 70vh;
+                height: 480px;
                 padding: 1em;
                 z-index: 40;
 
@@ -707,6 +706,9 @@ a{
             }
             .Social__Media{
                 display: flex;
+                top: 40%;
+                right: -10.9vw;
+                transform: translateY(-40%);
             }
         } 
         // Laptop
