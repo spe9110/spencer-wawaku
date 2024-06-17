@@ -1621,9 +1621,9 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
-    top: 60%;
+    top: 50%;
     right: -9vw;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
   }
 }
 @media only screen and (max-width: 1299px) {
@@ -1729,26 +1729,27 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
-    top: 40%;
-    right: -10.9vw;
-    transform: translateY(-40%);
+    top: 50%;
+    right: -11.9vw;
+    transform: translateY(-50%);
   }
 }
 @media only screen and (max-width: 992px) {
   .container .Hero {
-    min-height: 75vh;
+    min-height: 590px;
     padding: 0 4em;
     padding-top: 1.5em;
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: start;
+    align-items: start;
+    justify-content: center;
     gap: 1rem;
     margin: 0;
     overflow: auto;
   }
   .container .Hero__info {
     width: 50%;
-    min-height: 70vh;
+    height: 450px;
     padding: 1em;
   }
   .container .Hero__info__greet {
@@ -1757,11 +1758,11 @@ a {
   }
   .container .Hero__info__name {
     margin-top: 2.5rem;
-    font-size: 4rem;
+    font-size: 3rem;
     line-height: 2rem;
   }
   .container .Hero__info__job {
-    font-size: 2rem;
+    font-size: 1.55rem;
     line-height: 1rem;
     margin-top: 2.4rem;
   }
@@ -1789,7 +1790,7 @@ a {
   }
   .container .Hero__profil {
     width: 50%;
-    min-height: 70vh;
+    height: 450px;
     padding: 1em;
     z-index: 40;
   }
@@ -1835,23 +1836,25 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
+    top: 50%;
+    right: -12.2vw;
+    transform: translateY(-50%);
   }
 }
 @media only screen and (max-width: 768px) {
   .container .Hero {
-    min-height: 60vh;
-    gap: 0.7rem;
+    min-height: 700px;
+    gap: 0.5rem;
+    display: flex;
     flex-direction: column;
-    padding: 0 1em;
-    padding-top: 1em;
     align-items: center;
     justify-content: start;
+    padding: 0.5em 1em;
     margin: 0;
-    overflow: auto;
   }
   .container .Hero__info {
     width: 100%;
-    min-height: 300px;
+    height: 330px;
     padding: 0.5em 0.6em;
   }
   .container .Hero__info__greet {
@@ -1895,9 +1898,8 @@ a {
   }
   .container .Hero__profil {
     width: 100%;
-    min-height: 200px;
-    display: flex;
-    justify-content: center;
+    min-height: 400px;
+    margin: 0;
   }
   .container .Hero__profil__picture {
     width: 550px;
@@ -1942,7 +1944,7 @@ a {
 }
 @media only screen and (max-width: 499px) {
   .container .Hero {
-    min-height: 730px;
+    min-height: 600px;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -1953,7 +1955,7 @@ a {
   }
   .container .Hero__info {
     width: 100%;
-    min-height: 300px;
+    height: 320px;
     padding: 1em 0.6em;
   }
   .container .Hero__info__greet {
@@ -1997,7 +1999,7 @@ a {
   }
   .container .Hero__profil {
     width: 100%;
-    min-height: 380px;
+    height: 380px;
     margin: 0;
   }
   .container .Hero__profil__picture {

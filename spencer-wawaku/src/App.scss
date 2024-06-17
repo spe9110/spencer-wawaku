@@ -592,9 +592,9 @@ a{
             }
             .Social__Media{
                 display: flex;
-                top: 60%;
+                top: 50%;
                 right: -9vw;
-                transform: translateY(-60%);
+                transform: translateY(-50%);
             }
         } 
         // Desktop
@@ -706,26 +706,24 @@ a{
             }
             .Social__Media{
                 display: flex;
-                top: 40%;
-                right: -10.9vw;
-                transform: translateY(-40%);
+                top: 50%;
+                right: -11.9vw;
+                transform: translateY(-50%);
             }
         } 
         // Laptop
         @include responsive(laptop){
-            min-height: 75vh;
+            min-height: 590px;
             padding: 0 4em;
             padding-top: 1.5em;
-            flex-direction: row;
-            align-items: center;
-            justify-content: start;
+            @include flexDirection(row, start, center);
             gap: 1rem;
             margin: 0;
             overflow: auto;
         
             &__info{
                 width: 50%;
-                min-height: 70vh;
+                height: 450px;
                 padding: 1em;
 
                 &__greet{
@@ -734,11 +732,11 @@ a{
                 }
                 &__name{
                     margin-top: 2.5rem;
-                    font-size: 4rem;
+                    font-size: 3rem;
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 2rem;
+                    font-size: 1.55rem;
                     line-height: 1rem;
                     margin-top: 2.4rem;
                 }
@@ -771,7 +769,7 @@ a{
             }
             &__profil{
                 width: 50%;
-                min-height: 70vh;
+                height: 450px;
                 padding: 1em;
                 z-index: 40;
 
@@ -821,24 +819,23 @@ a{
             }
             .Social__Media{
                 display: flex;
+                top: 50%;
+                right: -12.2vw;
+                transform: translateY(-50%);
             }
         } 
         // tablet
         @include responsive(tablet){
-            min-height: 60vh;
-            gap: .7rem;
-            flex-direction: column;
-            padding: 0 1em;
-            padding-top: 1em;
-            align-items: center;
-            justify-content: start;
+            min-height: 700px;
+            gap: .5rem;
+            @include flexDirection(column, center, start);
+            padding: .5em 1em;
             margin: 0;
-            overflow: auto;
 
 
             &__info{
                 width: 100%;
-                min-height: 300px;
+                height: 330px;
                 padding: .5em .6em;
 
                 &__greet{
@@ -889,9 +886,10 @@ a{
             }
             &__profil{
                 width: 100%;
-                min-height: 200px;
-                display: flex;
-                justify-content: center;
+                min-height: 400px;
+                // display: flex;
+                // justify-content: center;
+                margin: 0;
                 
                 &__picture{
                     width: 550px;
@@ -941,8 +939,7 @@ a{
         } 
         // mobile
         @include responsive(mobile){
-            min-height: 730px;
-            // min-height: 680px;
+            min-height: 600px;
             gap: .5rem;
             @include flexDirection(column, center, start);
             padding: .5em 1em;
@@ -950,7 +947,7 @@ a{
 
             &__info{
                 width: 100%;
-                min-height: 300px;
+                height: 320px;
                 padding: 1em .6em;
 
                 &__greet{
@@ -1001,7 +998,7 @@ a{
             }
             &__profil{
                 width: 100%;
-                min-height: 380px;
+                height: 380px;
                 // display: flex;
                 // justify-content: center;
                 margin: 0;
