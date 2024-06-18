@@ -1843,7 +1843,7 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .container .Hero {
-    min-height: 700px;
+    min-height: 920px;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -1898,7 +1898,7 @@ a {
   }
   .container .Hero__profil {
     width: 100%;
-    min-height: 400px;
+    height: 550px;
     margin: 0;
   }
   .container .Hero__profil__picture {
@@ -1944,7 +1944,7 @@ a {
 }
 @media only screen and (max-width: 499px) {
   .container .Hero {
-    min-height: 600px;
+    min-height: 630px;
     gap: 0.5rem;
     display: flex;
     flex-direction: column;

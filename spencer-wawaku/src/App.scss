@@ -826,7 +826,7 @@ a{
         } 
         // tablet
         @include responsive(tablet){
-            min-height: 700px;
+            min-height: 920px;
             gap: .5rem;
             @include flexDirection(column, center, start);
             padding: .5em 1em;
@@ -886,7 +886,7 @@ a{
             }
             &__profil{
                 width: 100%;
-                min-height: 400px;
+                height: 550px;
                 // display: flex;
                 // justify-content: center;
                 margin: 0;
@@ -939,7 +939,7 @@ a{
         } 
         // mobile
         @include responsive(mobile){
-            min-height: 600px;
+            min-height: 630px;
             gap: .5rem;
             @include flexDirection(column, center, start);
             padding: .5em 1em;
