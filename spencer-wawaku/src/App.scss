@@ -1055,19 +1055,254 @@ a{
     .About{
         // Large screen
         @include responsive(large-wide){
+            min-height: 700px;
+            padding-top: 3em;
+            @include flexDirection(row, start, center);
+            gap: 2rem;
 
+            &__slider{
+                width: 30%;
+                height: 400px;
+                padding: 1rem;
+                margin: 0 1rem;
+                @include flexDirection(column, start, center);
+
+                
+                &__design{
+                    width: 90%;
+                    height: 410px;
+                    left: 1rem;
+                }
+                &__picture{
+                    width: 90%;
+                    height: 410px;
+                    top: 4%;
+                    left: 2.6rem;
+                }
+            }
+            &__content{
+                width: 50%;
+                min-height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                    
+                &__wrapper{
+                    &__info{    
+                        &__knowledge{
+                            @include flexDirection(row, center, start);   
+    
+                            &__list-skill{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+    
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: 1.5rem;
+                            }
+                        };
+    
+                        &__programming,
+                        &__tool{
+                            &__skill-bg{
+                                background-color: #f8fafc;                                
+                            }
+                        }                    
+                                            
+                    }
+    
+                   
+                }
+            }
         }
         // Desktop
         @include responsive(desktop){
+            min-height: 700px;
+            padding-top: 3em;
+            @include flexDirection(row, start, center);
+            gap: 2rem;
 
+            &__slider{
+                width: 30%;
+                height: 400px;
+                padding: 1rem;
+                margin: 0 1rem;
+                @include flexDirection(column, start, center);
+
+                
+                &__design{
+                    width: 90%;
+                    height: 410px;
+                    left: 1rem;
+                }
+                &__picture{
+                    width: 90%;
+                    height: 410px;
+                    top: 4%;
+                    left: 2.6rem;
+                }
+            }
+            &__content{
+                width: 50%;
+                min-height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                    
+                &__wrapper{
+                    &__info{    
+                        &__knowledge{
+                            @include flexDirection(row, center, start);   
+    
+                            &__list-skill{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+    
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: 1.5rem;
+                            }
+                        };
+    
+                        &__programming,
+                        &__tool{
+                            &__skill-bg{
+                                background-color: #f8fafc;                                
+                            }
+                        }                    
+                                            
+                    }
+    
+                   
+                }
+            }
         }
         // Laptop
         @include responsive(laptop){
+            min-height: 650px;
+            padding-top: 3em;
+            @include flexDirection(row, start, center);
+            gap: 2rem;
 
+            &__slider{
+                width: 30%;
+                height: 400px;
+                padding: 1rem;
+                margin: 0 1rem;
+                @include flexDirection(column, start, center);
+
+                
+                &__design{
+                    width: 90%;
+                    height: 410px;
+                    left: 1rem;
+                }
+                &__picture{
+                    width: 90%;
+                    height: 410px;
+                    top: 4%;
+                    left: 2.6rem;
+                }
+            }
+            &__content{
+                width: 50%;
+                min-height: 50vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                    
+                &__wrapper{
+                    &__info{    
+                        &__knowledge{
+                            @include flexDirection(row, center, start);   
+    
+                            &__list-skill{
+                                background-color: #fff;
+                            }
+                        }
+                    }
+    
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: 1.5rem;
+                            }
+                        };
+    
+                        &__programming,
+                        &__tool{
+                            &__skill-bg{
+                                background-color: #f8fafc;                                
+                            }
+                        }                    
+                                            
+                    }
+    
+                   
+                }
+            }
         }
         // tablet
         @include responsive(tablet){
+            min-height: 600px;
+            padding-top: 1em;
+            @include flexDirection(column);
+            gap: 1rem;
 
+            &__slider{
+                width: 94%;
+                height: 520px;
+                @include flexDirection(column);
+                margin-bottom: 1.3rem;
+                
+    
+                &__design{
+                    width: 90%;
+                    height: 100%;
+                    left: auto;
+                }
+                &__picture{
+                    width: 90%;
+                    height: 100%;
+                    left: 2.8rem;
+                    top: 4%;
+                }
+            }
+
+            &__content{
+                width: 94%;
+                min-height: 500px;
+                @include flexDirection(column);
+
+                &__wrapper{
+                    &__info{
+                        &__knowledge{
+                            @include flexDirection(row);
+                        }
+                        &__prog{
+                            &__programming,
+                            &__tool{
+                                h4{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
         }
         // Mobile
         @include responsive(mobile){
@@ -1080,7 +1315,7 @@ a{
             &__slider{
                 // position: relative;
                 width: 94%;
-                height: 500px;
+                height: 520px;
                 @include flexDirection(column);
                 margin-bottom: 1.3rem;
                 // background-color: #000000;
@@ -1131,27 +1366,93 @@ a{
     .Services{
         // Large screen
         @include responsive(large-wide){
+            min-height: 700px;
 
+            &__help{
+                font-size: 3rem;
+            }
+            &__wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                &__card{
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
         }
         // Desktop
         @include responsive(desktop){
+            min-height: 700px;
 
+            &__help{
+                font-size: 3rem;
+            }
+            &__wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                &__card{
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
         }
         // Laptop
         @include responsive(laptop){
+            min-height: 700px;
 
+            &__help{
+                font-size: 2.3rem;
+            }
+            &__wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                &__card{
+                    width: 20rem;
+                    height: 20rem;
+                }
+            }
         }
         // tablet
         @include responsive(tablet){
-
+            min-height: 600px;
+            &__help{
+                font-size: 2rem;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: auto auto;
+                place-items: center;
+                &__card{
+                    width: 18rem;
+                    height: 18rem;
+                }
+            }
         }
         // Mobile
         @include responsive(mobile){
             min-height: 600px;
             &__help{
                 font-size: 1.8rem;
-                padding-bottom: .9em;
-                font-weight: 400;
+            }
+            &__wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                &__card{
+                    width: 20rem;
+                    height: 20rem;
+                }
             }
         }
     }
