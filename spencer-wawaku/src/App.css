@@ -549,7 +549,6 @@
   position: absolute;
   top: 35%;
   right: 15%;
-  font-size: 10rem;
   opacity: 0.09;
   font-weight: bold;
   padding: 0;
@@ -573,12 +572,10 @@
      object-fit: cover;
 }
 .container .Services__wrapper__card__title {
-  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
 }
 .container .Services__wrapper__card__details {
-  font-size: 1.1rem;
   text-align: start;
   text-align: justify;
 }
@@ -601,8 +598,6 @@
   text-align: center;
 }
 .container .Videos__card {
-  width: 300px;
-  height: 400px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: #fff;
   border-radius: 0.8rem;
@@ -638,7 +633,6 @@
 }
 .container .Videos__card__content {
   width: 100%;
-  height: 200px;
   padding: 0.5em;
   margin-top: 0.2rem;
 }
@@ -675,8 +669,6 @@
   gap: 0.3rem;
 }
 .container .Videos__card__content__profil__author__picture {
-  width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   border: 5px solid orangered;
 }
@@ -689,13 +681,11 @@
 }
 .container .Videos__card__content__profil__author__nameJob__name {
   color: #747272;
-  font-size: 0.8rem;
   text-align: start;
   font-weight: bold;
   font-family: "roboto", sans-serif;
 }
 .container .Videos__card__content__profil__author__nameJob__job {
-  font-size: 0.6rem;
   color: #747272;
   text-align: start;
   font-weight: bold;
@@ -708,7 +698,6 @@
   gap: 0.3rem;
 }
 .container .Videos__card__content__profil__dateButton__date {
-  font-size: 0.7rem;
   text-align: start;
   color: #747272;
   font-weight: 700;
@@ -720,7 +709,6 @@
   background: orangered;
   padding: 0.4em 1.2em;
   border-radius: 0.2em;
-  font-size: 0.9rem;
   font-weight: bold;
   border: none;
 }
@@ -931,7 +919,6 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
   padding: 8px;
 }
 .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
@@ -1335,7 +1322,11 @@ a {
     border-radius: 5px;
     padding: 0.4em;
     color: #fff;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
   }
   .container .Header__navbar ul li a:not(.active):hover {
     background-color: rgba(0, 0, 0, 0.3); /* Corrected rgba format */
@@ -1729,7 +1720,7 @@ a {
 }
 @media only screen and (max-width: 992px) {
   .container .Hero {
-    min-height: 590px;
+    min-height: 600px;
     padding: 0 4em;
     padding-top: 1.5em;
     display: flex;
@@ -1746,23 +1737,23 @@ a {
     padding: 1em;
   }
   .container .Hero__info__greet {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
   }
   .container .Hero__info__name {
     margin-top: 2.5rem;
-    font-size: 3rem;
+    font-size: 2.2rem;
     line-height: 2rem;
   }
   .container .Hero__info__job {
-    font-size: 1.55rem;
+    font-size: 1.2rem;
     line-height: 1rem;
     margin-top: 2.4rem;
   }
   .container .Hero__info__description {
     margin: 0.8rem 0;
-    width: 30rem;
-    font-size: 1.1rem;
+    width: 100%;
+    font-size: 1rem;
   }
   .container .Hero__info__btn {
     justify-content: center;
@@ -1830,7 +1821,7 @@ a {
   .container .Hero .Social__Media {
     display: flex;
     top: 50%;
-    right: -12.2vw;
+    right: -14%;
     transform: translateY(-50%);
   }
 }
@@ -1891,7 +1882,7 @@ a {
   }
   .container .Hero__profil {
     width: 100%;
-    height: 550px;
+    height: 520px;
     margin: 0;
   }
   .container .Hero__profil__picture {
@@ -2315,6 +2306,15 @@ a {
     width: 20rem;
     height: 20rem;
   }
+  .container .Services__wrapper__card__number {
+    font-size: 10rem;
+  }
+  .container .Services__wrapper__card__title {
+    font-size: 1.2rem;
+  }
+  .container .Services__wrapper__card__details {
+    font-size: 1.1rem;
+  }
 }
 @media only screen and (max-width: 1299px) {
   .container .Services {
@@ -2334,6 +2334,15 @@ a {
     width: 20rem;
     height: 20rem;
   }
+  .container .Services__wrapper__card__number {
+    font-size: 10rem;
+  }
+  .container .Services__wrapper__card__title {
+    font-size: 1.2rem;
+  }
+  .container .Services__wrapper__card__details {
+    font-size: 1.1rem;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container .Services {
@@ -2350,8 +2359,17 @@ a {
     justify-content: center;
   }
   .container .Services__wrapper__card {
-    width: 20rem;
-    height: 20rem;
+    width: 16.5rem;
+    height: 16.5rem;
+  }
+  .container .Services__wrapper__card__number {
+    font-size: 8.5rem;
+  }
+  .container .Services__wrapper__card__title {
+    font-size: 1rem;
+  }
+  .container .Services__wrapper__card__details {
+    font-size: 0.85rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2370,6 +2388,15 @@ a {
     width: 18rem;
     height: 18rem;
   }
+  .container .Services__wrapper__card__number {
+    font-size: 8rem;
+  }
+  .container .Services__wrapper__card__title {
+    font-size: 1.2rem;
+  }
+  .container .Services__wrapper__card__details {
+    font-size: 1.1rem;
+  }
 }
 @media only screen and (max-width: 499px) {
   .container .Services {
@@ -2389,20 +2416,115 @@ a {
     width: 20rem;
     height: 20rem;
   }
+  .container .Services__wrapper__card__number {
+    font-size: 8rem;
+  }
+  .container .Services__wrapper__card__title {
+    font-size: 1.2rem;
+  }
+  .container .Services__wrapper__card__details {
+    font-size: 1.1rem;
+  }
 }
-@media only screen and (max-width: 499px) {
+@media only screen and (min-width: 1300px) {
   .container .Videos {
-    min-height: 600px;
+    min-height: 700px;
   }
   .container .Videos__watch {
-    font-size: 1.8rem;
+    font-size: 3rem;
+  }
+  .container .Videos__card {
+    width: 300px;
+    height: 440px;
+    margin-bottom: 0.4rem;
+  }
+  .container .Videos__card__img {
+    height: 220px;
+  }
+  .container .Videos__card__content {
+    height: 220px;
+  }
+  .container .Videos__card__content__profil__author__picture {
+    width: 3rem;
+    height: 3rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__name {
+    font-size: 0.8rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__job {
+    font-size: 0.6rem;
+  }
+  .container .Videos__card__content__profil__dateButton__date {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__dateButton__btn {
+    font-size: 0.9rem;
   }
   .container .Videos .CountUp {
     gap: 1rem;
+    margin-top: 2rem;
   }
   .container .Videos .CountUp__wrapper {
-    width: 25rem;
-    height: 180px;
+    width: 50rem;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
+  .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
+    width: 33.3333333333%;
+    height: auto;
+  }
+  .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
+    font-size: 2rem;
+  }
+  .container .Videos .CountUp__wrapper__experience__title, .container .Videos .CountUp__wrapper__project__title, .container .Videos .CountUp__wrapper__subscribers__title {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 1299px) {
+  .container .Videos {
+    min-height: 700px;
+  }
+  .container .Videos__watch {
+    font-size: 3rem;
+  }
+  .container .Videos__card {
+    width: 300px;
+    height: 440px;
+    margin-bottom: 0.4rem;
+  }
+  .container .Videos__card__img {
+    height: 220px;
+  }
+  .container .Videos__card__content {
+    height: 220px;
+  }
+  .container .Videos__card__content__profil__author__picture {
+    width: 3rem;
+    height: 3rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__name {
+    font-size: 0.8rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__job {
+    font-size: 0.6rem;
+  }
+  .container .Videos__card__content__profil__dateButton__date {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__dateButton__btn {
+    font-size: 0.9rem;
+  }
+  .container .Videos .CountUp {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .container .Videos .CountUp__wrapper {
+    width: 50rem;
+    height: 200px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2413,10 +2535,220 @@ a {
     height: auto;
   }
   .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
   .container .Videos .CountUp__wrapper__experience__title, .container .Videos .CountUp__wrapper__project__title, .container .Videos .CountUp__wrapper__subscribers__title {
-    font-size: 1rem;
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container .Videos {
+    min-height: 700px;
+  }
+  .container .Videos__watch {
+    font-size: 1.5rem;
+  }
+  .container .Videos__card {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 0.4rem;
+  }
+  .container .Videos__card__img {
+    height: 150px;
+  }
+  .container .Videos__card__content {
+    height: 150px;
+  }
+  .container .Videos__card__content__profil__author__picture {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__name {
+    font-size: 0.6rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__job {
+    font-size: 0.5rem;
+  }
+  .container .Videos__card__content__profil__dateButton__date {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__dateButton__btn {
+    font-size: 0.9rem;
+  }
+  .container .Videos .CountUp {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .container .Videos .CountUp__wrapper {
+    width: 50rem;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
+    width: 33.3333333333%;
+    height: auto;
+  }
+  .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
+    font-size: 2rem;
+  }
+  .container .Videos .CountUp__wrapper__experience__title, .container .Videos .CountUp__wrapper__project__title, .container .Videos .CountUp__wrapper__subscribers__title {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .Videos {
+    min-height: 600px;
+  }
+  .container .Videos__watch {
+    font-size: 1.8rem;
+  }
+  .container .Videos__card {
+    width: 300px;
+    height: 420px;
+  }
+  .container .Videos__card__img {
+    height: 210px;
+  }
+  .container .Videos__card__content {
+    height: 210px;
+  }
+  .container .Videos__card__content__profil__author__picture {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__name {
+    font-size: 0.9rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__job {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__dateButton__date {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__dateButton__btn {
+    font-size: 0.8rem;
+  }
+  .container .Videos .CountUp {
+    gap: 1rem;
+    margin-top: 0;
+  }
+  .container .Videos .CountUp__wrapper {
+    width: 26rem;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
+  .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
+    width: 33.3333333333%;
+    height: auto;
+  }
+  .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
+    font-size: 1.2rem;
+  }
+  .container .Videos .CountUp__wrapper__experience__title, .container .Videos .CountUp__wrapper__project__title, .container .Videos .CountUp__wrapper__subscribers__title {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .container .Videos {
+    min-height: 600px;
+  }
+  .container .Videos__watch {
+    font-size: 1.8rem;
+  }
+  .container .Videos__card {
+    width: 300px;
+    height: 420px;
+  }
+  .container .Videos__card__img {
+    height: 210px;
+  }
+  .container .Videos__card__content {
+    height: 210px;
+  }
+  .container .Videos__card__content__profil__author__picture {
+    width: 2rem;
+    height: 2rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__name {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__job {
+    font-size: 0.5rem;
+  }
+  .container .Videos__card__content__profil__dateButton__date {
+    font-size: 0.7rem;
+  }
+  .container .Videos__card__content__profil__dateButton__btn {
+    font-size: 0.8rem;
+  }
+  .container .Videos .CountUp {
+    gap: 1rem;
+    margin-top: 0;
+  }
+  .container .Videos .CountUp__wrapper {
+    width: 19.5rem;
+    height: 140px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
+  .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
+    width: 33.3333333333%;
+    height: auto;
+    gap: 0;
+  }
+  .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
+    font-size: 1.2rem;
+  }
+  .container .Videos .CountUp__wrapper__experience__title, .container .Videos .CountUp__wrapper__project__title, .container .Videos .CountUp__wrapper__subscribers__title {
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .container .Contact {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+  .container .Contact__title {
+    font-size: 4rem;
+  }
+  .container .Contact__touch {
+    font-size: 3rem;
+  }
+  .container .Contact__form {
+    width: 80vw;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    border-radius: 2rem;
+  }
+  .container .Contact__form__map {
+    width: 40vw;
+    min-height: 600px;
+  }
+  .container .Contact__form__content {
+    width: 40vw;
+    min-height: 600px;
+    padding: 18px 12px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    min-height: 600px;
   }
 }
 @media only screen and (max-width: 499px) {

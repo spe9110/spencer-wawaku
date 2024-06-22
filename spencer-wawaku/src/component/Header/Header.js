@@ -31,7 +31,7 @@ export default function Header() {
 
     // This function remove the menu on clicking an element
     const handleNavLink = () => {
-        if (window.innerWidth < 768) {
+        if (window.innerWidth <= 768) {
             setMobileMenuOpen(false); // Close the mobile menu when a navigation item is clicked
         }
     }
@@ -39,7 +39,7 @@ export default function Header() {
     // useEffect to handle the navigation element's icon
     useEffect(()=>{
         const handleResize = () =>{
-            if(window.innerWidth < 768){
+            if(window.innerWidth <= 768){
                 setShowIcon(true);
             } else{
                 setShowIcon(false);

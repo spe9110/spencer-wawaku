@@ -273,8 +273,10 @@ a{
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
-                    display: block;
+                    @include flexDirection(row, center, center);
+                    gap: .2rem;
                 }
+
                 ul li a:not(.active):hover {
                     background-color: rgba(0, 0, 0, 0.3); /* Corrected rgba format */
                     border-radius: 5px;
@@ -713,7 +715,7 @@ a{
         } 
         // Laptop
         @include responsive(laptop){
-            min-height: 590px;
+            min-height: 600px;
             padding: 0 4em;
             padding-top: 1.5em;
             @include flexDirection(row, start, center);
@@ -727,23 +729,24 @@ a{
                 padding: 1em;
 
                 &__greet{
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     font-weight: 500;
                 }
                 &__name{
                     margin-top: 2.5rem;
-                    font-size: 3rem;
+                    font-size: 2.2rem;
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 1.55rem;
+                    font-size: 1.2rem;
                     line-height: 1rem;
                     margin-top: 2.4rem;
                 }
                 &__description{
                     margin: .8rem 0;
-                    width: 30rem;
-                    font-size: 1.1rem;
+                    // width: 30rem;
+                    width: 100%;
+                    font-size: 1rem;
                 }
                 // Buttons
                 &__btn{
@@ -820,7 +823,7 @@ a{
             .Social__Media{
                 display: flex;
                 top: 50%;
-                right: -12.2vw;
+                right: -14%;
                 transform: translateY(-50%);
             }
         } 
@@ -886,7 +889,7 @@ a{
             }
             &__profil{
                 width: 100%;
-                height: 550px;
+                height: 520px;
                 // display: flex;
                 // justify-content: center;
                 margin: 0;
@@ -1380,6 +1383,17 @@ a{
                 &__card{
                     width: 20rem;
                     height: 20rem;
+
+                    &__number{
+                        font-size: 10rem;
+                    }
+
+                    &__title{
+                        font-size: 1.2rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
@@ -1399,6 +1413,17 @@ a{
                 &__card{
                     width: 20rem;
                     height: 20rem;
+
+                    &__number{
+                        font-size: 10rem;
+                    }
+
+                    &__title{
+                        font-size: 1.2rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
@@ -1416,8 +1441,19 @@ a{
                 align-items: center;
                 justify-content: center;
                 &__card{
-                    width: 20rem;
-                    height: 20rem;
+                    width: 16.5rem;
+                    height: 16.5rem;
+                    
+                    &__number{
+                        font-size: 8.5rem;
+                    }
+
+                    &__title{
+                        font-size: 1rem;
+                    }
+                    &__details{
+                        font-size: .85rem;
+                    }
                 }
             }
         }
@@ -1434,6 +1470,17 @@ a{
                 &__card{
                     width: 18rem;
                     height: 18rem;
+
+                    &__number{
+                        font-size: 8rem;
+                    }
+
+                    &__title{
+                        font-size: 1.2rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
@@ -1452,6 +1499,17 @@ a{
                 &__card{
                     width: 20rem;
                     height: 20rem;
+
+                    &__number{
+                        font-size: 8rem;
+                    }
+
+                    &__title{
+                        font-size: 1.2rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
@@ -1461,19 +1519,291 @@ a{
     .Videos{
         // Large screen
         @include responsive(large-wide){
+            min-height: 700px;
 
+            &__watch{
+                font-size: 3rem;
+            }
+
+            &__card{
+            width: 300px;
+            height: 440px;
+            margin-bottom: .4rem;
+                &__img{
+                    height: 220px;
+                }
+
+                &__content{
+                    height: 220px;
+        
+                    &__profil{     
+                        &__author{        
+                            &__picture{
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: .8rem;
+                                }
+                                &__job{
+                                    font-size: .6rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .7rem;
+                            }
+            
+                            &__btn{
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .CountUp{
+                gap: 1rem;
+                margin-top: 2rem;
+
+                &__wrapper{
+                    width: 50rem;
+                    height: 200px;
+                    @include flexDirection(row, center, center);
+                    gap: 0rem;
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(100% / 3);
+                        height: auto;
+
+                        &__icon, &__number{
+                            font-size: 2rem;
+                        }
+                        &__title{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
         }
         // Desktop
         @include responsive(desktop){
+            min-height: 700px;
 
+            &__watch{
+                font-size: 3rem;
+            }
+
+            &__card{
+            width: 300px;
+            height: 440px;
+            margin-bottom: .4rem;
+                &__img{
+                    height: 220px;
+                }
+
+                &__content{
+                    height: 220px;
+        
+                    &__profil{     
+                        &__author{        
+                            &__picture{
+                                width: 3rem;
+                                height: 3rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: .8rem;
+                                }
+                                &__job{
+                                    font-size: .6rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .7rem;
+                            }
+            
+                            &__btn{
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .CountUp{
+                gap: 1rem;
+                margin-top: 2rem;
+                
+                &__wrapper{
+                    width: 50rem;
+                    height: 200px;
+                    @include flexDirection(row, center, center);
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(100% / 3);
+                        height: auto;
+
+                        &__icon, &__number{
+                            font-size: 2rem;
+                        }
+                        &__title{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
         }
         // Laptop
         @include responsive(laptop){
+            min-height: 700px;
 
+            &__watch{
+                font-size: 1.5rem;
+            }
+
+            &__card{
+            width: 300px;
+            height: 300px;
+            margin-bottom: .4rem;
+                &__img{
+                    height: 150px;
+                }
+
+                &__content{
+                    height: 150px;
+        
+                    &__profil{     
+                        &__author{        
+                            &__picture{
+                                width: 2.5rem;
+                                height: 2.5rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: .6rem;
+                                }
+                                &__job{
+                                    font-size: .5rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .7rem;
+                            }
+            
+                            &__btn{
+                                font-size: .9rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .CountUp{
+                gap: 1rem;
+                margin-top: 2rem;
+
+                &__wrapper{
+                    width: 50rem;
+                    height: 200px;
+                    @include flexDirection(row, center, center);
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(100% / 3);
+                        height: auto;
+
+                        &__icon, &__number{
+                            font-size: 2rem;
+                        }
+                        &__title{
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
         }
         // tablet
         @include responsive(tablet){
+            min-height: 600px;
+            
+            &__watch{
+                font-size: 1.8rem;
+            }
 
+            &__card{
+                width: 300px;
+                height: 420px;
+                &__img{
+                    height: 210px;
+                }
+
+                &__content{
+                    height: 210px;
+
+                    &__title{
+                        
+                    }
+                    &__description{
+                        
+                    }
+        
+                    &__profil{     
+                        &__author{        
+                            &__picture{
+                                width: 2.5rem;
+                                height: 2.5rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: .9rem;
+                                }
+                                &__job{
+                                    font-size: .7rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .7rem;
+                            }
+            
+                            &__btn{
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .CountUp{
+                gap: 1rem;
+                margin-top: 0;
+
+                &__wrapper{
+                    width: 26rem;
+                    height: 140px;
+                    @include flexDirection(row, center, center);
+                    gap: 0rem;
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(100% / 3);
+                        height: auto;
+
+                        &__icon, &__number{
+                            font-size: 1.2rem;
+                        }
+                        &__title{
+                            font-size: .7rem;
+                        }
+                    }
+                }
+            }
         }
         // Mobile
         @include responsive(mobile){
@@ -1483,22 +1813,71 @@ a{
                 font-size: 1.8rem;
             }
 
+            &__card{
+                width: 300px;
+                height: 420px;
+                &__img{
+                    height: 210px;
+                }
+
+                &__content{
+                    height: 210px;
+
+                    &__title{
+                        
+                    }
+                    &__description{
+                        
+                    }
+        
+                    &__profil{     
+                        &__author{        
+                            &__picture{
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: .7rem;
+                                }
+                                &__job{
+                                    font-size: .5rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .7rem;
+                            }
+            
+                            &__btn{
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
             .CountUp{
                 gap: 1rem;
+                margin-top: 0;
+
                 &__wrapper{
-                    width: 25rem;
-                    height: 180px;
+                    width: 19.5rem;
+                    height: 140px;
                     @include flexDirection(row, center, center);
+                    gap: 0rem;
 
                     &__experience, &__project, &__subscribers{
                         width: calc(100% / 3);
                         height: auto;
+                        gap: 0;
 
                         &__icon, &__number{
-                            font-size: 1.4rem;
+                            font-size: 1.2rem;
                         }
                         &__title{
-                            font-size: 1rem;
+                            font-size: .7rem;
                         }
                     }
                 }
@@ -1510,7 +1889,36 @@ a{
     .Contact{
         // Large screen
         @include responsive(large-wide){
+            min-height: 700px;
+            @include flexDirection(column, center, center);
+           padding: 2em 0;
 
+            &__title{
+                font-size: 4rem;
+            }
+    
+            &__touch{
+                font-size: 3rem;
+            }
+            &__form{
+                width: 80vw;
+                min-height: 600px;
+                @include flexDirection(row, start, start);
+                border-radius: 2rem;
+                &__map{
+                    width: 40vw;
+                    min-height: 600px;
+                }
+                &__content{
+                    width: 40vw;
+                    min-height: 600px;
+                    padding: 18px 12px;
+                }
+            }
+            .leaflet-container{
+                width: 100%;
+                min-height: 600px;
+            }
         }
         // Desktop
         @include responsive(desktop){
