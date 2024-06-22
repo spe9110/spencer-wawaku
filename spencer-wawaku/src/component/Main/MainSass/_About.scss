@@ -76,7 +76,6 @@
                 }
             }
         }
-
         &__content{
             // width: 50%;
             // min-height: 50vh;
@@ -94,26 +93,22 @@
 
             &__title{
                 @include title-style;
-                font-size: 2rem;
                 // color: #fff;
             }
             &__btn{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 25rem;
                 height: 3rem;
                 padding: 2px;
                 border-radius: 5px;
                 border: 1px solid #e5e7eb;
                 background-color: #f9fafb;
                 
-                
-                
                 &__one, &__two, &__three{
-                    width: calc(25rem / 3);
+                    // width: calc(25rem / 3);
                     height: 100%;
-                    font-size: 1rem;
+                    // font-size: 1rem;
                     font-weight: 600;
                     border: none;
                     outline: none;
@@ -274,7 +269,7 @@
                         height: 100%;
 
                         h4{
-                            font-size: 1.5rem;
+                            // font-size: 1.5rem;
                             font-weight: bold;
                             width: 100%;
                             padding-left: 2rem !important;
@@ -308,7 +303,7 @@
                                     position: absolute;
                                     top: 50%;
                                     transform: translateY(-50%);
-                                    font-size: 1.5rem;
+                                    // font-size: 1.5rem;
                                     font-weight: 600;
                                 }
 

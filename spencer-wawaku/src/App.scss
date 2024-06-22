@@ -1085,11 +1085,24 @@ a{
             }
             &__content{
                 width: 50%;
-                min-height: 50vh;
+                min-height: 500px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: start;
+
+                &__title{
+                    font-size: 4rem;
+                }
+
+                &__btn{
+                    width: 35rem;
+
+                    &__one, &__two, &__three{
+                        font-size: 1.5rem;
+                        width: calc(35rem / 3);
+                    }
+                }
                     
                 &__wrapper{
                     &__info{    
@@ -1219,12 +1232,25 @@ a{
             }
             &__content{
                 width: 50%;
-                min-height: 50vh;
+                min-height: 450px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: start;
-                    
+
+                &__title{
+                    font-size: 2.8rem;
+                }
+
+                &__btn{
+                    width: 24rem;
+
+                    &__one, &__two, &__three{
+                        font-size: 1rem;
+                        width: calc(24rem / 3);
+                    }
+                }
+
                 &__wrapper{
                     &__info{    
                         &__knowledge{
@@ -1240,7 +1266,7 @@ a{
                         &__programming,
                         &__tool{
                             h4{
-                                font-size: 1.5rem;
+                                font-size: 1.1rem;
                             }
                         };
     
@@ -1252,7 +1278,22 @@ a{
                         }                    
                                             
                     }
+                    
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: 1.1rem;
+                            }
     
+                            &__box{
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
                    
                 }
             }
@@ -1286,24 +1327,50 @@ a{
 
             &__content{
                 width: 94%;
-                min-height: 500px;
+                min-height: 450px;
                 @include flexDirection(column);
 
+                &__title{
+                    font-size: 2.5rem;
+                }
+                &__btn{
+                    width: 28rem;
+
+                    &__one, &__two, &__three{
+                        font-size: 1rem;
+                        width: calc(28rem / 3);
+                    }
+                }
+                    
                 &__wrapper{
                     &__info{
                         &__knowledge{
                             @include flexDirection(row);
                         }
-                        &__prog{
-                            &__programming,
-                            &__tool{
-                                h4{
-                                    font-size: 1rem;
+                    }
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: 1rem;
+                            }
+    
+                            &__box{
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: .8rem;
+                                    }
                                 }
                             }
                         }
                     }
-                    
                 }
             }
         }
@@ -1341,24 +1408,49 @@ a{
 
             &__content{
                 width: 94%;
-                min-height: 500px;
+                min-height: 400px;
                 @include flexDirection(column);
 
+                &__title{
+                    font-size: 1.8rem;
+                }
+                &__btn{
+                    width: 22rem;
+
+                    &__one, &__two, &__three{
+                        font-size: .7rem;
+                        width: calc(22rem / 3);
+                    }
+                }
                 &__wrapper{
                     &__info{
                         &__knowledge{
                             @include flexDirection(row);
                         }
-                        &__prog{
-                            &__programming,
-                            &__tool{
-                                h4{
-                                    font-size: 1rem;
+                    }
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: .7rem;
+                            }
+                        }
+                    }
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: .7rem;
+                            }
+    
+                            &__box{
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: .7rem;
+                                    }
                                 }
                             }
                         }
                     }
-                    
                 }
             }
             

@@ -95,7 +95,7 @@ export default function About(){
                             <div className="About__content__wrapper__other-skill__content__box">
                                 {otherSkills.map((Item) => (
                                     <React.Fragment  key={Item.id}>
-                                        <CircularProgress value={`${Item.percentage}`} size='120px' color='#1d4ed8' className="About__content__wrapper__other-skill__content__box__CircleBg">
+                                        <CircularProgress value={`${Item.percentage}`} size='6rem' color='#1d4ed8' className="About__content__wrapper__other-skill__content__box__CircleBg">
                                           <CircularProgressLabel>{`${Item.percentage}%`}</CircularProgressLabel>
                                             <p className="About__content__wrapper__other-skill__content__box__CircleBg__title">{Item.title}</p>
                                         </CircularProgress>

@@ -308,13 +308,11 @@
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
 }
 .container .About__content__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25rem;
   height: 3rem;
   padding: 2px;
   border-radius: 5px;
@@ -322,9 +320,7 @@
   background-color: #f9fafb;
 }
 .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
-  width: 8.3333333333rem;
   height: 100%;
-  font-size: 1rem;
   font-weight: 600;
   border: none;
   outline: none;
@@ -451,7 +447,6 @@
   height: 100%;
 }
 .container .About__content__wrapper__other-skill__content h4 {
-  font-size: 1.5rem;
   font-weight: bold;
   width: 100%;
   padding-left: 2rem !important;
@@ -482,7 +477,6 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5rem;
   font-weight: 600;
 }
 .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
@@ -2060,11 +2054,21 @@ a {
   }
   .container .About__content {
     width: 50%;
-    min-height: 50vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+  }
+  .container .About__content__title {
+    font-size: 4rem;
+  }
+  .container .About__content__btn {
+    width: 35rem;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1.5rem;
+    width: 11.6666666667rem;
   }
   .container .About__content__wrapper__info__knowledge {
     display: flex;
@@ -2170,11 +2174,21 @@ a {
   }
   .container .About__content {
     width: 50%;
-    min-height: 50vh;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+  }
+  .container .About__content__title {
+    font-size: 2.8rem;
+  }
+  .container .About__content__btn {
+    width: 24rem;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1rem;
+    width: 8rem;
   }
   .container .About__content__wrapper__info__knowledge {
     display: flex;
@@ -2186,10 +2200,16 @@ a {
     background-color: #fff;
   }
   .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
     background-color: #f8fafc;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.1rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.5rem;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2224,11 +2244,21 @@ a {
   }
   .container .About__content {
     width: 94%;
-    min-height: 500px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .container .About__content__title {
+    font-size: 2.5rem;
+  }
+  .container .About__content__btn {
+    width: 28rem;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1rem;
+    width: 9.3333333333rem;
   }
   .container .About__content__wrapper__info__knowledge {
     display: flex;
@@ -2236,8 +2266,14 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .container .About__content__wrapper__info__prog__programming h4, .container .About__content__wrapper__info__prog__tool h4 {
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
     font-size: 1rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 0.8rem;
   }
 }
 @media only screen and (max-width: 499px) {
@@ -2272,11 +2308,21 @@ a {
   }
   .container .About__content {
     width: 94%;
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .container .About__content__title {
+    font-size: 1.8rem;
+  }
+  .container .About__content__btn {
+    width: 22rem;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 0.7rem;
+    width: 7.3333333333rem;
   }
   .container .About__content__wrapper__info__knowledge {
     display: flex;
@@ -2284,8 +2330,14 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .container .About__content__wrapper__info__prog__programming h4, .container .About__content__wrapper__info__prog__tool h4 {
-    font-size: 1rem;
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+    font-size: 0.7rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 0.7rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 0.7rem;
   }
 }
 @media only screen and (min-width: 1300px) {
