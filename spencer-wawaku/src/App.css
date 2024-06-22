@@ -308,6 +308,7 @@
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 2rem;
 }
 .container .About__content__btn {
   display: flex;
@@ -386,6 +387,7 @@
   font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
+  color: #000;
 }
 .container .About__content__wrapper__prog {
   display: flex;
@@ -2060,15 +2062,12 @@ a {
     align-items: center;
     justify-content: start;
   }
-  .container .About__content__title {
-    font-size: 4rem;
-  }
   .container .About__content__btn {
-    width: 35rem;
+    width: 100%;
   }
   .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
     font-size: 1.5rem;
-    width: 11.6666666667rem;
+    width: 33.3333333333%;
   }
   .container .About__content__wrapper__info__knowledge {
     display: flex;
@@ -2119,11 +2118,18 @@ a {
   }
   .container .About__content {
     width: 50%;
-    min-height: 50vh;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
+  }
+  .container .About__content__btn {
+    width: 100%;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1.5rem;
+    width: 33.3333333333%;
   }
   .container .About__content__wrapper__info__knowledge {
     display: flex;

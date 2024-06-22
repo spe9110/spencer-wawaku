@@ -94,6 +94,7 @@
             &__title{
                 @include title-style;
                 // color: #fff;
+                font-size: 2rem;
             }
             &__btn{
                 display: flex;
@@ -190,6 +191,7 @@
                                 font-size: .8rem;
                                 font-weight: bold;
                                 text-align: center;
+                                color: #000;
                             }
                         }
                     }
