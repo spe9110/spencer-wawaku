@@ -497,8 +497,7 @@
   transition: background 0.3s ease-in-out;
 }
 .container .Services__title {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   font-weight: bold;
 }
 .container .Services__help {
@@ -577,13 +576,12 @@
 }
 
 .container .Videos {
-  width: 100%;
   padding: 1em 3em;
+  margin: 0 auto;
   overflow: hidden;
   /* these code insert space between items  */
 }
 .container .Videos__title {
-  font-size: 4rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   text-align: center;
@@ -633,7 +631,6 @@
   margin-top: 0.2rem;
 }
 .container .Videos__card__content__title {
-  font-size: 1.4rem;
   font-weight: bold;
   text-align: start;
   margin: 3px 0;
@@ -642,7 +639,6 @@
   color: #000;
 }
 .container .Videos__card__content__description {
-  font-size: 0.9rem;
   text-align: start;
   text-align: justify;
   margin: 0.5rem 0;
@@ -654,7 +650,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1em;
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -2084,6 +2079,12 @@ a {
   .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
     background-color: #f8fafc;
   }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.5rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 1299px) {
   .container .About {
@@ -2146,6 +2147,12 @@ a {
   .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
     background-color: #f8fafc;
   }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.5rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.5rem;
+  }
 }
 @media only screen and (max-width: 992px) {
   .container .About {
@@ -2206,13 +2213,13 @@ a {
     background-color: #fff;
   }
   .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
     background-color: #f8fafc;
   }
   .container .About__content__wrapper__other-skill__content h4 {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
     font-size: 1.5rem;
@@ -2350,6 +2357,9 @@ a {
   .container .Services {
     min-height: 700px;
   }
+  .container .Services__title {
+    font-size: 4rem;
+  }
   .container .Services__help {
     font-size: 3rem;
   }
@@ -2377,6 +2387,9 @@ a {
 @media only screen and (max-width: 1299px) {
   .container .Services {
     min-height: 700px;
+  }
+  .container .Services__title {
+    font-size: 4rem;
   }
   .container .Services__help {
     font-size: 3rem;
@@ -2406,6 +2419,9 @@ a {
   .container .Services {
     min-height: 700px;
   }
+  .container .Services__title {
+    font-size: 3rem;
+  }
   .container .Services__help {
     font-size: 2.3rem;
   }
@@ -2417,22 +2433,25 @@ a {
     justify-content: center;
   }
   .container .Services__wrapper__card {
-    width: 16.5rem;
-    height: 16.5rem;
+    width: 15rem;
+    height: 15rem;
   }
   .container .Services__wrapper__card__number {
     font-size: 8.5rem;
   }
   .container .Services__wrapper__card__title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .container .Services__wrapper__card__details {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
 }
 @media only screen and (max-width: 768px) {
   .container .Services {
     min-height: 600px;
+  }
+  .container .Services__title {
+    font-size: 2.2rem;
   }
   .container .Services__help {
     font-size: 2rem;
@@ -2441,27 +2460,31 @@ a {
     display: grid;
     grid-template-columns: auto auto;
     place-items: center;
+    background-color: red;
   }
   .container .Services__wrapper__card {
-    width: 18rem;
-    height: 18rem;
+    width: 14rem;
+    height: 14rem;
   }
   .container .Services__wrapper__card__number {
     font-size: 8rem;
   }
   .container .Services__wrapper__card__title {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   .container .Services__wrapper__card__details {
-    font-size: 1.1rem;
+    font-size: 0.65rem;
   }
 }
 @media only screen and (max-width: 499px) {
   .container .Services {
     min-height: 600px;
   }
+  .container .Services__title {
+    font-size: 2rem;
+  }
   .container .Services__help {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   .container .Services__wrapper {
     display: flex;
@@ -2487,20 +2510,33 @@ a {
 @media only screen and (min-width: 1300px) {
   .container .Videos {
     min-height: 700px;
+    width: 100%;
+  }
+  .container .Videos__title {
+    font-size: 4rem;
   }
   .container .Videos__watch {
     font-size: 3rem;
   }
   .container .Videos__card {
     width: 300px;
-    height: 440px;
+    height: 400px;
     margin-bottom: 0.4rem;
   }
   .container .Videos__card__img {
-    height: 220px;
+    height: 200px;
   }
   .container .Videos__card__content {
-    height: 220px;
+    height: 200px;
+  }
+  .container .Videos__card__content__title {
+    font-size: 1.4rem;
+  }
+  .container .Videos__card__content__description {
+    font-size: 0.9rem;
+  }
+  .container .Videos__card__content__profil {
+    padding: 0 1rem;
   }
   .container .Videos__card__content__profil__author__picture {
     width: 3rem;
@@ -2545,20 +2581,33 @@ a {
 @media only screen and (max-width: 1299px) {
   .container .Videos {
     min-height: 700px;
+    width: 100%;
+  }
+  .container .Videos__title {
+    font-size: 4rem;
   }
   .container .Videos__watch {
     font-size: 3rem;
   }
   .container .Videos__card {
     width: 300px;
-    height: 440px;
+    height: 400px;
     margin-bottom: 0.4rem;
   }
   .container .Videos__card__img {
-    height: 220px;
+    height: 200px;
   }
   .container .Videos__card__content {
-    height: 220px;
+    height: 200px;
+  }
+  .container .Videos__card__content__title {
+    font-size: 1.4rem;
+  }
+  .container .Videos__card__content__description {
+    font-size: 0.9rem;
+  }
+  .container .Videos__card__content__profil {
+    padding: 0 1rem;
   }
   .container .Videos__card__content__profil__author__picture {
     width: 3rem;
@@ -2587,6 +2636,7 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 0rem;
   }
   .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
     width: 33.3333333333%;
@@ -2602,43 +2652,56 @@ a {
 @media only screen and (max-width: 992px) {
   .container .Videos {
     min-height: 700px;
+    width: 100%;
+  }
+  .container .Videos__title {
+    font-size: 3rem;
   }
   .container .Videos__watch {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .container .Videos__card {
     width: 300px;
-    height: 300px;
+    height: 400px;
     margin-bottom: 0.4rem;
   }
   .container .Videos__card__img {
-    height: 150px;
+    height: 200px;
   }
   .container .Videos__card__content {
-    height: 150px;
+    height: 200px;
   }
-  .container .Videos__card__content__profil__author__picture {
-    width: 2.5rem;
-    height: 2.5rem;
+  .container .Videos__card__content__title {
+    font-size: 0.9rem;
   }
-  .container .Videos__card__content__profil__author__nameJob__name {
+  .container .Videos__card__content__description {
     font-size: 0.6rem;
   }
+  .container .Videos__card__content__profil {
+    padding: 0;
+  }
+  .container .Videos__card__content__profil__author__picture {
+    width: 2rem;
+    height: 2rem;
+  }
+  .container .Videos__card__content__profil__author__nameJob__name {
+    font-size: 0.55rem;
+  }
   .container .Videos__card__content__profil__author__nameJob__job {
-    font-size: 0.5rem;
+    font-size: 0.45rem;
   }
   .container .Videos__card__content__profil__dateButton__date {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .container .Videos__card__content__profil__dateButton__btn {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   .container .Videos .CountUp {
     gap: 1rem;
     margin-top: 2rem;
   }
   .container .Videos .CountUp__wrapper {
-    width: 50rem;
+    width: 45rem;
     height: 200px;
     display: flex;
     flex-direction: row;
@@ -2646,7 +2709,7 @@ a {
     justify-content: center;
   }
   .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
-    width: 33.3333333333%;
+    width: 15rem;
     height: auto;
   }
   .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
@@ -2659,29 +2722,42 @@ a {
 @media only screen and (max-width: 768px) {
   .container .Videos {
     min-height: 600px;
+    width: 80%;
+  }
+  .container .Videos__title {
+    font-size: 2.2rem;
   }
   .container .Videos__watch {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .container .Videos__card {
     width: 300px;
-    height: 420px;
+    height: 400px;
   }
   .container .Videos__card__img {
-    height: 210px;
+    height: 200px;
   }
   .container .Videos__card__content {
-    height: 210px;
+    height: 200px;
+  }
+  .container .Videos__card__content__title {
+    font-size: 1.1rem;
+  }
+  .container .Videos__card__content__description {
+    font-size: 0.9rem;
+  }
+  .container .Videos__card__content__profil {
+    padding: 0 0.8em;
   }
   .container .Videos__card__content__profil__author__picture {
     width: 2.5rem;
     height: 2.5rem;
   }
   .container .Videos__card__content__profil__author__nameJob__name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .container .Videos__card__content__profil__author__nameJob__job {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .container .Videos__card__content__profil__dateButton__date {
     font-size: 0.7rem;
@@ -2694,7 +2770,7 @@ a {
     margin-top: 0;
   }
   .container .Videos .CountUp__wrapper {
-    width: 26rem;
+    width: 21rem;
     height: 140px;
     display: flex;
     flex-direction: row;
@@ -2703,7 +2779,7 @@ a {
     gap: 0rem;
   }
   .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
-    width: 33.3333333333%;
+    width: 7rem;
     height: auto;
   }
   .container .Videos .CountUp__wrapper__experience__icon, .container .Videos .CountUp__wrapper__experience__number, .container .Videos .CountUp__wrapper__project__icon, .container .Videos .CountUp__wrapper__project__number, .container .Videos .CountUp__wrapper__subscribers__icon, .container .Videos .CountUp__wrapper__subscribers__number {
@@ -2716,19 +2792,32 @@ a {
 @media only screen and (max-width: 499px) {
   .container .Videos {
     min-height: 600px;
+    width: 100%;
+  }
+  .container .Videos__title {
+    font-size: 2rem;
   }
   .container .Videos__watch {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   .container .Videos__card {
     width: 300px;
-    height: 420px;
+    height: 400px;
   }
   .container .Videos__card__img {
-    height: 210px;
+    height: 200px;
   }
   .container .Videos__card__content {
-    height: 210px;
+    height: 200px;
+  }
+  .container .Videos__card__content__title {
+    font-size: 1rem;
+  }
+  .container .Videos__card__content__description {
+    font-size: 0.9rem;
+  }
+  .container .Videos__card__content__profil {
+    padding: 0 0.7em;
   }
   .container .Videos__card__content__profil__author__picture {
     width: 2rem;
@@ -2751,7 +2840,7 @@ a {
     margin-top: 0;
   }
   .container .Videos .CountUp__wrapper {
-    width: 19.5rem;
+    width: 19rem;
     height: 140px;
     display: flex;
     flex-direction: row;
@@ -2760,7 +2849,7 @@ a {
     gap: 0rem;
   }
   .container .Videos .CountUp__wrapper__experience, .container .Videos .CountUp__wrapper__project, .container .Videos .CountUp__wrapper__subscribers {
-    width: 33.3333333333%;
+    width: 6.3333333333rem;
     height: auto;
     gap: 0;
   }
@@ -2809,6 +2898,120 @@ a {
     min-height: 600px;
   }
 }
+@media only screen and (max-width: 1299px) {
+  .container .Contact {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+  .container .Contact__title {
+    font-size: 4rem;
+  }
+  .container .Contact__touch {
+    font-size: 3rem;
+  }
+  .container .Contact__form {
+    width: 80vw;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    border-radius: 2rem;
+  }
+  .container .Contact__form__map {
+    width: 40vw;
+    min-height: 600px;
+  }
+  .container .Contact__form__content {
+    width: 40vw;
+    min-height: 600px;
+    padding: 18px 12px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    min-height: 600px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container .Contact {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+  .container .Contact__title {
+    font-size: 3rem;
+  }
+  .container .Contact__touch {
+    font-size: 2rem;
+  }
+  .container .Contact__form {
+    width: 80vw;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    border-radius: 2rem;
+  }
+  .container .Contact__form__map {
+    width: 40vw;
+    min-height: 600px;
+  }
+  .container .Contact__form__content {
+    width: 40vw;
+    min-height: 600px;
+    padding: 18px 12px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    min-height: 500px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container .Contact {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+  .container .Contact__title {
+    font-size: 2rem;
+  }
+  .container .Contact__touch {
+    font-size: 1.2rem;
+  }
+  .container .Contact__form {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+  }
+  .container .Contact__form__map {
+    width: 100%;
+    height: 300px;
+  }
+  .container .Contact__form__content {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    height: 300px;
+  }
+}
 @media only screen and (max-width: 499px) {
   .container .Contact {
     min-height: 600px;
@@ -2822,7 +3025,7 @@ a {
     font-size: 2rem;
   }
   .container .Contact__touch {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .container .Contact__form {
     width: 90%;

@@ -1127,8 +1127,21 @@ a{
                         }                    
                                             
                     }
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: 1.5rem;
+                            }
     
-                   
+                            &__box{
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1202,6 +1215,21 @@ a{
                         }                    
                                             
                     }
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: 1.5rem;
+                            }
+    
+                            &__box{
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1268,9 +1296,9 @@ a{
                         &__programming,
                         &__tool{
                             h4{
-                                font-size: 1.1rem;
+                                font-size: .9rem;
                             }
-                        };
+                        }
     
                         &__programming,
                         &__tool{
@@ -1284,7 +1312,7 @@ a{
                     &__other-skill{
                         &__content{
                             h4{
-                                font-size: 1.1rem;
+                                font-size: .9rem;
                             }
     
                             &__box{
@@ -1464,6 +1492,9 @@ a{
         // Large screen
         @include responsive(large-wide){
             min-height: 700px;
+            &__title{
+                font-size: 4rem;
+            }
 
             &__help{
                 font-size: 3rem;
@@ -1494,7 +1525,9 @@ a{
         // Desktop
         @include responsive(desktop){
             min-height: 700px;
-
+            &__title{
+                font-size: 4rem;
+            }
             &__help{
                 font-size: 3rem;
             }
@@ -1524,7 +1557,9 @@ a{
         // Laptop
         @include responsive(laptop){
             min-height: 700px;
-
+            &__title{
+                font-size: 3rem;
+            }
             &__help{
                 font-size: 2.3rem;
             }
@@ -1535,18 +1570,18 @@ a{
                 align-items: center;
                 justify-content: center;
                 &__card{
-                    width: 16.5rem;
-                    height: 16.5rem;
+                    width: 15rem;
+                    height: 15rem;
                     
                     &__number{
                         font-size: 8.5rem;
                     }
 
                     &__title{
-                        font-size: 1rem;
+                        font-size: .9rem;
                     }
                     &__details{
-                        font-size: .85rem;
+                        font-size: .7rem;
                     }
                 }
             }
@@ -1554,6 +1589,9 @@ a{
         // tablet
         @include responsive(tablet){
             min-height: 600px;
+            &__title{
+                font-size: 2.2rem;
+            }
             &__help{
                 font-size: 2rem;
             }
@@ -1561,19 +1599,21 @@ a{
                 display: grid;
                 grid-template-columns: auto auto;
                 place-items: center;
+                background-color: red;
+
                 &__card{
-                    width: 18rem;
-                    height: 18rem;
+                    width: 14rem;
+                    height: 14rem;
 
                     &__number{
                         font-size: 8rem;
                     }
 
                     &__title{
-                        font-size: 1.2rem;
+                        font-size: .8rem;
                     }
                     &__details{
-                        font-size: 1.1rem;
+                        font-size: .65rem;
                     }
                 }
             }
@@ -1581,8 +1621,11 @@ a{
         // Mobile
         @include responsive(mobile){
             min-height: 600px;
+            &__title{
+                font-size: 2rem;
+            }
             &__help{
-                font-size: 1.8rem;
+                font-size: 1.2rem;
             }
             &__wrapper{
                 display: flex;
@@ -1614,23 +1657,36 @@ a{
         // Large screen
         @include responsive(large-wide){
             min-height: 700px;
+            width: 100%;
 
+            &__title{
+                font-size: 4rem;
+            }
             &__watch{
                 font-size: 3rem;
             }
 
             &__card{
             width: 300px;
-            height: 440px;
+            height: 400px;
             margin-bottom: .4rem;
                 &__img{
-                    height: 220px;
+                    height: 200px;
                 }
 
                 &__content{
-                    height: 220px;
+                    height: 200px;
+
+                    &__title{
+                        font-size: 1.4rem;
+                    }
+                    &__description{
+                        font-size: .9rem;
+                    }
         
-                    &__profil{     
+                    &__profil{  
+                        padding: 0 1rem;
+
                         &__author{        
                             &__picture{
                                 width: 3rem;
@@ -1685,23 +1741,36 @@ a{
         // Desktop
         @include responsive(desktop){
             min-height: 700px;
+            width: 100%;
 
+            &__title{
+                font-size: 4rem;
+            }
             &__watch{
                 font-size: 3rem;
             }
 
             &__card{
             width: 300px;
-            height: 440px;
+            height: 400px;
             margin-bottom: .4rem;
                 &__img{
-                    height: 220px;
+                    height: 200px;
                 }
 
                 &__content{
-                    height: 220px;
+                    height: 200px;
+
+                    &__title{
+                        font-size: 1.4rem;
+                    }
+                    &__description{
+                        font-size: .9rem;
+                    }
         
-                    &__profil{     
+                    &__profil{  
+                        padding: 0 1rem;
+
                         &__author{        
                             &__picture{
                                 width: 3rem;
@@ -1732,11 +1801,12 @@ a{
             .CountUp{
                 gap: 1rem;
                 margin-top: 2rem;
-                
+
                 &__wrapper{
                     width: 50rem;
                     height: 200px;
                     @include flexDirection(row, center, center);
+                    gap: 0rem;
 
                     &__experience, &__project, &__subscribers{
                         width: calc(100% / 3);
@@ -1755,44 +1825,56 @@ a{
         // Laptop
         @include responsive(laptop){
             min-height: 700px;
+            width: 100%;
 
+            &__title{
+                font-size: 3rem;
+            }
             &__watch{
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
 
             &__card{
             width: 300px;
-            height: 300px;
+            height: 400px;
             margin-bottom: .4rem;
                 &__img{
-                    height: 150px;
+                    height: 200px;
                 }
 
                 &__content{
-                    height: 150px;
+                    height: 200px;
+                    &__title{
+                        font-size: .9rem;
+                    }
+                    &__description{
+                        font-size: .6rem;
+                    }
         
-                    &__profil{     
+                    &__profil{
+                        padding: 0;
+
                         &__author{        
                             &__picture{
-                                width: 2.5rem;
-                                height: 2.5rem;
+                                width: 2rem;
+                                height: 2rem;
                             }
                             &__nameJob{
                                 &__name{
-                                    font-size: .6rem;
+                                    font-size: .55rem;
                                 }
                                 &__job{
-                                    font-size: .5rem;
+                                    font-size: .45rem;
                                 }
                             }
                         }
                         &__dateButton{
                             &__date{
-                                font-size: .7rem;
+                                font-size: .5rem;
                             }
             
                             &__btn{
-                                font-size: .9rem;
+                                font-size: .6rem;
                             }
                         }
                     }
@@ -1804,12 +1886,12 @@ a{
                 margin-top: 2rem;
 
                 &__wrapper{
-                    width: 50rem;
+                    width: 45rem;
                     height: 200px;
                     @include flexDirection(row, center, center);
 
                     &__experience, &__project, &__subscribers{
-                        width: calc(100% / 3);
+                        width: calc(45rem / 3);
                         height: auto;
 
                         &__icon, &__number{
@@ -1825,29 +1907,34 @@ a{
         // tablet
         @include responsive(tablet){
             min-height: 600px;
-            
+            width: 80%;
+
+            &__title{
+                font-size: 2.2rem;
+            }
             &__watch{
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             &__card{
                 width: 300px;
-                height: 420px;
+                height: 400px;
                 &__img{
-                    height: 210px;
+                    height: 200px;
                 }
 
                 &__content{
-                    height: 210px;
+                    height: 200px;
 
                     &__title{
-                        
+                        font-size: 1.1rem;
                     }
                     &__description{
-                        
+                        font-size: .9rem;
                     }
         
-                    &__profil{     
+                    &__profil{
+                        padding: 0 .8em;     
                         &__author{        
                             &__picture{
                                 width: 2.5rem;
@@ -1855,10 +1942,10 @@ a{
                             }
                             &__nameJob{
                                 &__name{
-                                    font-size: .9rem;
+                                    font-size: .8rem;
                                 }
                                 &__job{
-                                    font-size: .7rem;
+                                    font-size: .6rem;
                                 }
                             }
                         }
@@ -1880,13 +1967,13 @@ a{
                 margin-top: 0;
 
                 &__wrapper{
-                    width: 26rem;
+                    width: 21rem;
                     height: 140px;
                     @include flexDirection(row, center, center);
                     gap: 0rem;
 
                     &__experience, &__project, &__subscribers{
-                        width: calc(100% / 3);
+                        width: calc(21rem / 3);
                         height: auto;
 
                         &__icon, &__number{
@@ -1902,29 +1989,34 @@ a{
         // Mobile
         @include responsive(mobile){
             min-height: 600px;
-            
-            &__watch{
-                font-size: 1.8rem;
-            }
+            width: 100%;
 
+            &__title{
+                font-size: 2rem;
+            }
+            &__watch{
+                font-size: 1.2rem;
+            }
+            
             &__card{
                 width: 300px;
-                height: 420px;
+                height: 400px;
                 &__img{
-                    height: 210px;
+                    height: 200px;
                 }
 
                 &__content{
-                    height: 210px;
+                    height: 200px;
 
                     &__title{
-                        
+                        font-size: 1rem;
                     }
                     &__description{
-                        
+                        font-size: .9rem;
                     }
         
-                    &__profil{     
+                    &__profil{ 
+                        padding: 0 .7em;    
                         &__author{        
                             &__picture{
                                 width: 2rem;
@@ -1957,13 +2049,13 @@ a{
                 margin-top: 0;
 
                 &__wrapper{
-                    width: 19.5rem;
+                    width: 19rem;
                     height: 140px;
                     @include flexDirection(row, center, center);
                     gap: 0rem;
 
                     &__experience, &__project, &__subscribers{
-                        width: calc(100% / 3);
+                        width: calc(19rem / 3);
                         height: auto;
                         gap: 0;
 
@@ -1985,7 +2077,7 @@ a{
         @include responsive(large-wide){
             min-height: 700px;
             @include flexDirection(column, center, center);
-           padding: 2em 0;
+            padding: 2em 0;
 
             &__title{
                 font-size: 4rem;
@@ -2016,15 +2108,102 @@ a{
         }
         // Desktop
         @include responsive(desktop){
+            min-height: 700px;
+            @include flexDirection(column, center, center);
+            padding: 2em 0;
 
+            &__title{
+                font-size: 4rem;
+            }
+    
+            &__touch{
+                font-size: 3rem;
+            }
+            &__form{
+                width: 80vw;
+                min-height: 600px;
+                @include flexDirection(row, start, start);
+                border-radius: 2rem;
+                &__map{
+                    width: 40vw;
+                    min-height: 600px;
+                }
+                &__content{
+                    width: 40vw;
+                    min-height: 600px;
+                    padding: 18px 12px;
+                }
+            }
+            .leaflet-container{
+                width: 100%;
+                min-height: 600px;
+            }
         }
         // Laptop
         @include responsive(laptop){
+            min-height: 650px;
+            @include flexDirection(column, center, center);
+            padding: 2em 0;
 
+            &__title{
+                font-size: 3rem;
+            }
+    
+            &__touch{
+                font-size: 2rem;
+            }
+            &__form{
+                width: 80vw;
+                min-height: 600px;
+                @include flexDirection(row, start, start);
+                border-radius: 2rem;
+                &__map{
+                    width: 40vw;
+                    min-height: 600px;
+                }
+                &__content{
+                    width: 40vw;
+                    min-height: 600px;
+                    padding: 18px 12px;
+                }
+            }
+            .leaflet-container{
+                width: 100%;
+                min-height: 500px;
+            }
         }
         // tablet
         @include responsive(tablet){
+            min-height: 600px;
+            @include flexDirection(column, center, center);
+            padding: 1rem 0;
 
+            &__title{
+                font-size: 2rem;
+            }
+    
+            &__touch{
+                font-size: 1.2rem;
+            }
+            &__form{
+                width: 90%;
+                height: auto;
+                @include flexDirection(column, center, center);
+                border-radius: .4rem;
+                &__map{
+                    width: 100%;
+                    height: 300px;
+                }
+                &__content{
+                    width: 100%;
+                    height: auto;
+                    padding: 10px;
+                }
+            }
+            .leaflet-container{
+                width: 100%;
+                height: 300px;
+            }
         }
         // Mobile
         @include responsive(mobile){
@@ -2037,7 +2216,7 @@ a{
             }
     
             &__touch{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
             &__form{
                 width: 90%;

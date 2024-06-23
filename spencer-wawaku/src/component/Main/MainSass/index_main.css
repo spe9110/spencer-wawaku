@@ -356,8 +356,7 @@
   transition: background 0.3s ease-in-out;
 }
 .container .Services__title {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   font-weight: bold;
 }
 .container .Services__help {
@@ -436,13 +435,12 @@
 }
 
 .container .Videos {
-  width: 100%;
   padding: 1em 3em;
+  margin: 0 auto;
   overflow: hidden;
   /* these code insert space between items  */
 }
 .container .Videos__title {
-  font-size: 4rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   text-align: center;
@@ -492,7 +490,6 @@
   margin-top: 0.2rem;
 }
 .container .Videos__card__content__title {
-  font-size: 1.4rem;
   font-weight: bold;
   text-align: start;
   margin: 3px 0;
@@ -501,7 +498,6 @@
   color: #000;
 }
 .container .Videos__card__content__description {
-  font-size: 0.9rem;
   text-align: start;
   text-align: justify;
   margin: 0.5rem 0;
@@ -513,7 +509,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1em;
   gap: 1rem;
   margin-top: 1rem;
 }
