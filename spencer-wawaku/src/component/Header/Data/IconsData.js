@@ -6,13 +6,13 @@ const socials = [
         id: 1,
         icon: <FaGithub />,
         title: 'Github',
-        url: '/'
+        url: 'https://github.com/spe9110'
     },
     {
         id: 2,
         icon: <FaYoutube />,
         title: 'Youtube',
-        url: '/'
+        url: 'https://www.youtube.com/watch?v=XqsZX9SA6yQ'
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const socials = [
         id: 4,
         icon: <FaXTwitter />,
         title: 'Twitter',
-        url: '/'
+        url: 'https://x.com/SpencerNsitu/with_replies'
     },
     {
         id: 5,
@@ -36,13 +36,13 @@ const socials = [
         id: 6,
         icon: <FaTiktok />,
         title: 'Tiktok',
-        url: '/'
+        url: 'https://www.tiktok.com/@dev_spe?_t=8nX6AACwZ1c&_r=1'
     },
     {
         id: 7,
         icon: <FaLinkedin />,
         title: 'Linkedin',
-        url: '/'
+        url: 'https://www.linkedin.com/in/spencer-nsitu-zola-971b75136/'
     }
 ]
 export default socials;
