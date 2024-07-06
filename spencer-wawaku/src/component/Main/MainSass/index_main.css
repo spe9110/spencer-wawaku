@@ -153,7 +153,6 @@
   filter: grayscale(0);
 }
 .container .About__content {
-  padding: 1rem;
   gap: 1rem;
   border-radius: 40px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -168,7 +167,6 @@
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
 }
 .container .About__content__btn {
   display: flex;
@@ -212,18 +210,15 @@
   height: 100%;
 }
 .container .About__content__wrapper__info__intro h3 {
-  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 .container .About__content__wrapper__info__intro p {
-  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 .container .About__content__wrapper__info__knowledge {
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  display: grid;
 }
 .container .About__content__wrapper__info__knowledge__list-skill {
   display: grid;
@@ -264,8 +259,6 @@
 .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
   font-weight: bold;
   width: 100%;
-  padding-left: 2rem !important;
-  padding: 5px;
   border-radius: 0.5rem;
   background: blue;
   border: 1px solid #e5e7eb;
@@ -276,10 +269,6 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 5px;
-}
-.container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
-  font-size: 1.1rem;
-  font-weight: 500;
 }
 .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
   width: 100%;
@@ -313,7 +302,7 @@
   width: 100%;
   padding-left: 2rem !important;
   padding: 5px;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   background: blue;
   border: 1px solid #e5e7eb;
   color: #fff;
@@ -321,8 +310,6 @@
 .container .About__content__wrapper__other-skill__content__box {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
   width: 100%;
   place-items: center;
   gap: 0.9rem;
@@ -790,7 +777,7 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
 }
 
 .carousel__btn {
-  display: grid;
+  display: none;
   place-items: center;
   position: absolute;
   top: 50%;

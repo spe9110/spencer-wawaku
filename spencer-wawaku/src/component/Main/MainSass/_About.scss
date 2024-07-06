@@ -30,20 +30,13 @@
 
         &__slider{
             position: relative;
-            // width: 30%;
-            // height: 400px;
-            // padding: 1rem;
-            
 
             &__design{
                 position: absolute;
                 background-color: orangered;
-                // width: 300px;
-                // height: 350px;
                 border-radius: 1rem;
                 top: 50%;
                 transform: translateY(-50%);
-                // left: 3rem;
                 box-shadow: rgba(0, 0, 0, 0.32) 0px 2px 8px;
             }
             &__picture{
@@ -80,7 +73,7 @@
             // width: 50%;
             // min-height: 50vh;
             // background-color: blue;
-            padding: 1rem;
+            // padding: 1rem;
             // display: flex;
             // flex-direction: column;
             // align-items: center;
@@ -94,7 +87,7 @@
             &__title{
                 @include title-style;
                 // color: #fff;
-                font-size: 2rem;
+                // font-size: 2rem;
             }
             &__btn{
                 display: flex;
@@ -146,23 +139,19 @@
 
                     &__intro{
                         h3{
-                            font-size: 1.3rem;
+                            // font-size: 1.3rem;
                             font-weight: bold;
                             margin-bottom: 1rem;
                         }
                         p{
-                            font-size: 1.1rem;
+                            // font-size: 1.1rem;
                             font-weight: 500;
                             margin-bottom: 1rem;
                         }
                     }
                     &__knowledge{
-                        // display: flex;
-                        // flex-direction: row;
-                        flex-wrap: wrap;
-                        // align-items: center;
-                        // justify-content: start;
-                        gap: .4rem;
+                        display: grid;
+                        // gap: .4rem;
 
 
                         &__list-skill{
@@ -209,23 +198,19 @@
                     &__tool{
                         width: 100%;
                         height: 100%;
-
                         h4{
                             // font-size: 1.5rem;
                             font-weight: bold;
                             width: 100%;
-                            padding-left: 2rem !important;
-                            padding: 5px;
+                            // padding-left: 2rem !important;
+                            // padding: 5px;
                             // @include borderRadiusStyle();
                             border-radius: .5rem;
                             background: blue;
                             border: 1px solid #e5e7eb;
                             color: #fff;
                         }
-                    }
 
-                    &__programming,
-                    &__tool{
                         &__skill-content,
                         &__tool-content{
                             display: flex;
@@ -233,8 +218,8 @@
                             justify-content: space-between;
                             margin-top: 5px;
                             p{
-                                font-size: 1.1rem;
-                                font-weight: 500;
+                                // font-size: 1.1rem;
+                                // font-weight: 500;
                             }
                         }
                         &__skill-bg{
@@ -277,7 +262,7 @@
                             padding-left: 2rem !important;
                             padding: 5px;
                             // @include borderRadiusStyle();
-                            border-radius: .5rem;
+                            border-radius: .2rem;
                             background: blue;
                             border: 1px solid #e5e7eb;
                             color: #fff;
@@ -286,8 +271,8 @@
                         &__box{
                             position: relative;
                             display: grid;
-                            grid-template-columns: auto auto auto;
-                            grid-template-rows: auto auto auto;
+                            // grid-template-columns: auto auto auto;
+                            // grid-template-rows: auto auto auto;
                             width: 100%;
                             place-items: center;
                             gap: .9rem;

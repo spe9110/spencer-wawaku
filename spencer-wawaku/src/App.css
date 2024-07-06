@@ -291,7 +291,6 @@
   filter: grayscale(0);
 }
 .container .About__content {
-  padding: 1rem;
   gap: 1rem;
   border-radius: 40px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -306,7 +305,6 @@
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
 }
 .container .About__content__btn {
   display: flex;
@@ -350,18 +348,15 @@
   height: 100%;
 }
 .container .About__content__wrapper__info__intro h3 {
-  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 .container .About__content__wrapper__info__intro p {
-  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
 .container .About__content__wrapper__info__knowledge {
-  flex-wrap: wrap;
-  gap: 0.4rem;
+  display: grid;
 }
 .container .About__content__wrapper__info__knowledge__list-skill {
   display: grid;
@@ -402,8 +397,6 @@
 .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
   font-weight: bold;
   width: 100%;
-  padding-left: 2rem !important;
-  padding: 5px;
   border-radius: 0.5rem;
   background: blue;
   border: 1px solid #e5e7eb;
@@ -414,10 +407,6 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 5px;
-}
-.container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
-  font-size: 1.1rem;
-  font-weight: 500;
 }
 .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
   width: 100%;
@@ -451,7 +440,7 @@
   width: 100%;
   padding-left: 2rem !important;
   padding: 5px;
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
   background: blue;
   border: 1px solid #e5e7eb;
   color: #fff;
@@ -459,8 +448,6 @@
 .container .About__content__wrapper__other-skill__content__box {
   position: relative;
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
   width: 100%;
   place-items: center;
   gap: 0.9rem;
@@ -928,7 +915,7 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
 }
 
 .carousel__btn {
-  display: grid;
+  display: none;
   place-items: center;
   position: absolute;
   top: 50%;
@@ -2368,398 +2355,109 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .About {
-    min-height: 700px;
-    padding-top: 3em;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    gap: 2rem;
-  }
-  .container .About__slider {
-    width: 30%;
-    height: 400px;
-    padding: 1rem;
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-  }
-  .container .About__slider__design {
-    width: 90%;
-    height: 410px;
-    left: 1rem;
-  }
-  .container .About__slider__picture {
-    width: 90%;
-    height: 410px;
-    top: 4%;
-    left: 2.6rem;
-  }
-  .container .About__content {
-    width: 50%;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-  }
-  .container .About__content__btn {
-    width: 100%;
-  }
-  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
-    font-size: 1.5rem;
-    width: 33.3333333333%;
-  }
-  .container .About__content__wrapper__info__knowledge {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-  }
-  .container .About__content__wrapper__info__knowledge__list-skill {
-    background-color: #fff;
-  }
-  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 1.5rem;
-  }
-  .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
-    background-color: #f8fafc;
-  }
-  .container .About__content__wrapper__other-skill__content h4 {
-    font-size: 1.5rem;
-  }
-  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
-    font-size: 1.5rem;
+    background-color: pink;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .About {
-    min-height: 700px;
-    padding-top: 3em;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    gap: 2rem;
+    background-color: green;
   }
-  .container .About__slider {
-    width: 30%;
-    height: 400px;
-    padding: 1rem;
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .container .About {
+    background-color: orange;
   }
-  .container .About__slider__design {
-    width: 90%;
-    height: 410px;
-    left: 1rem;
+}
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .container .About {
+    background-color: yellow;
   }
-  .container .About__slider__picture {
-    width: 90%;
-    height: 410px;
-    top: 4%;
-    left: 2.6rem;
+}
+@media only screen and (min-width: 412px) and (max-width: 499px) {
+  .container .About {
+    background-color: red;
   }
-  .container .About__content {
-    width: 50%;
-    min-height: 500px;
+}
+@media only screen and (min-width: 320px) and (max-width: 411px) {
+  .container .About {
+    min-height: 620px;
+    padding-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    gap: 1rem;
+    background-color: blue;
+  }
+  .container .About__slider {
+    width: 90%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+  }
+  .container .About__slider__design {
+    width: 90%;
+    height: 100%;
+    left: 0.2rem;
+  }
+  .container .About__slider__picture {
+    width: 90%;
+    height: 100%;
+    left: 1.4rem;
+    top: 4%;
+  }
+  .container .About__slider .carousel__btn {
+    display: none;
+  }
+  .container .About__content {
+    width: 90%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+  }
+  .container .About__content__title {
+    font-size: 1.1rem;
   }
   .container .About__content__btn {
     width: 100%;
   }
   .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
-    font-size: 1.5rem;
-    width: 33.3333333333%;
+    font-size: 0.7rem;
+    width: 7.3333333333rem;
   }
-  .container .About__content__wrapper__info__knowledge {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-  }
-  .container .About__content__wrapper__info__knowledge__list-skill {
-    background-color: #fff;
-  }
-  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 1.5rem;
-  }
-  .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
-    background-color: #f8fafc;
-  }
-  .container .About__content__wrapper__other-skill__content h4 {
-    font-size: 1.5rem;
-  }
-  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .container .About {
-    min-height: 650px;
-    padding-top: 3em;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    gap: 2rem;
-  }
-  .container .About__slider {
-    width: 30%;
-    height: 400px;
-    padding: 1rem;
-    margin: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-  }
-  .container .About__slider__design {
-    width: 90%;
-    height: 410px;
-    left: 1rem;
-  }
-  .container .About__slider__picture {
-    width: 90%;
-    height: 410px;
-    top: 4%;
-    left: 2.6rem;
-  }
-  .container .About__content {
-    width: 50%;
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-  }
-  .container .About__content__title {
-    font-size: 2.8rem;
-  }
-  .container .About__content__btn {
-    width: 24rem;
-  }
-  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+  .container .About__content__wrapper__info__intro h3 {
     font-size: 1rem;
-    width: 8rem;
   }
-  .container .About__content__wrapper__info__knowledge {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
-  }
-  .container .About__content__wrapper__info__knowledge__list-skill {
-    background-color: #fff;
-  }
-  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+  .container .About__content__wrapper__info__intro p {
     font-size: 0.9rem;
   }
-  .container .About__content__wrapper__prog__programming__skill-bg, .container .About__content__wrapper__prog__tool__skill-bg {
-    background-color: #f8fafc;
-  }
-  .container .About__content__wrapper__other-skill__content h4 {
-    font-size: 0.9rem;
-  }
-  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
-    font-size: 1.5rem;
-  }
-}
-@media only screen and (min-width: 500px) and (max-width: 768px) {
-  .container .About {
-    min-height: 600px;
-    padding-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .container .About__slider {
-    width: 94%;
-    height: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.3rem;
-  }
-  .container .About__slider__design {
-    width: 90%;
-    height: 100%;
-    left: auto;
-  }
-  .container .About__slider__picture {
-    width: 90%;
-    height: 100%;
-    left: 2.8rem;
-    top: 4%;
-  }
-  .container .About__content {
-    width: 94%;
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .About__content__title {
-    font-size: 2.5rem;
-  }
-  .container .About__content__btn {
-    width: 28rem;
-  }
-  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
-    font-size: 1rem;
-    width: 9.3333333333rem;
-  }
   .container .About__content__wrapper__info__knowledge {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 0.2rem;
   }
   .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 1rem;
+    font-size: 0.5rem;
+    padding-left: 1.5em !important;
+    padding: 4px;
   }
-  .container .About__content__wrapper__other-skill__content h4 {
-    font-size: 1rem;
+  .container .About__content__wrapper__prog__programming__skill-content, .container .About__content__wrapper__prog__programming__tool-content, .container .About__content__wrapper__prog__tool__skill-content, .container .About__content__wrapper__prog__tool__tool-content {
+    margin-top: 5px;
   }
-  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+  .container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
     font-size: 0.8rem;
   }
-}
-@media only screen and (min-width: 412px) and (max-width: 499px) {
-  .container .About {
-    min-height: 600px;
-    padding-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .container .About__slider {
-    width: 94%;
-    height: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.3rem;
-  }
-  .container .About__slider__design {
-    width: 90%;
-    height: 100%;
-    left: auto;
-  }
-  .container .About__slider__picture {
-    width: 90%;
-    height: 100%;
-    left: 2.8rem;
-    top: 4%;
-  }
-  .container .About__content {
-    width: 94%;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .About__content__title {
-    font-size: 1.8rem;
-  }
-  .container .About__content__btn {
-    width: 22rem;
-  }
-  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
-    font-size: 0.7rem;
-    width: 7.3333333333rem;
-  }
-  .container .About__content__wrapper__info__knowledge {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 0.7rem;
-  }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 0.7rem;
   }
-  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
-    font-size: 0.7rem;
-  }
-}
-@media only screen and (min-width: 320px) and (max-width: 411px) {
-  .container .About {
-    min-height: 600px;
-    padding-top: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .container .About__slider {
-    width: 94%;
-    height: 520px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.3rem;
-  }
-  .container .About__slider__design {
-    width: 90%;
-    height: 100%;
-    left: auto;
-  }
-  .container .About__slider__picture {
-    width: 90%;
-    height: 100%;
-    left: 2.8rem;
-    top: 4%;
-  }
-  .container .About__content {
-    width: 94%;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .About__content__title {
-    font-size: 1.8rem;
-  }
-  .container .About__content__btn {
-    width: 22rem;
-  }
-  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
-    font-size: 0.7rem;
-    width: 7.3333333333rem;
-  }
-  .container .About__content__wrapper__info__knowledge {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
-    font-size: 0.7rem;
-  }
-  .container .About__content__wrapper__other-skill__content h4 {
-    font-size: 0.7rem;
+  .container .About__content__wrapper__other-skill__content__box {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
   .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
     font-size: 0.7rem;

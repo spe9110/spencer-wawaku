@@ -1,5 +1,6 @@
 .carousel__btn{
-    display: grid;
+    // display: grid;
+    display: none;
     place-items: center;
     position: absolute;
     top: 50%;
@@ -51,7 +52,7 @@ img:hover {
     transform: translateX(-50%);
 }
   
-  .carousel__indicator {
+.carousel__indicator {
     width: 10px;
     height: 10px;
     background-color: #ccc;
