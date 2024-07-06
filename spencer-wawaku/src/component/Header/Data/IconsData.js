@@ -18,7 +18,7 @@ const socials = [
         id: 3,
         icon: <FaInstagram />,
         title: 'Instagram',
-        url: '/'
+        url: 'https://www.instagram.com/code_spencer2/'
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ const socials = [
         id: 5,
         icon: <FaFacebook />,
         title: 'Facebook',
-        url: '/'
+        url: 'https://www.facebook.com/profile.php?id=61554155662615'
     },
     {
         id: 6,

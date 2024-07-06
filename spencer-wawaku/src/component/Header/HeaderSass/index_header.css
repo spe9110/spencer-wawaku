@@ -42,25 +42,22 @@
   letter-spacing: 1px;
 }
 .container .Header__navbar {
-  align-items: center;
-  justify-content: center;
   z-index: 40;
 }
 .container .Header__navbar ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.8rem;
 }
 .container .Header__navbar li {
   list-style: none;
 }
 .container .Header__navbar li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 0.2rem;
-  gap: 0.3rem;
+  display: none;
+}
+.container .Header__navbar li a #icon {
+  display: none;
+}
+.container .Header__navbar li a #icon-link {
+  display: none;
 }
 .container .Header__contact {
   display: flex;

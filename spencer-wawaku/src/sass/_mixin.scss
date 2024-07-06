@@ -5,19 +5,23 @@
         @content;
       }
     } @else if $width == desktop {
-      @media only screen and (max-width: $desktop) {
+      @media only screen and (min-width: 993px) and (max-width: $desktop) {
         @content;
       }
     } @else if $width == laptop {
-      @media only screen and (max-width: $laptop) {
+      @media only screen and (min-width: 769px) and (max-width: $laptop) {
         @content;
       }
     } @else if $width == tablet {
-      @media only screen and (max-width: $tablet) {
+      @media only screen and (min-width: 500px) and (max-width: $tablet) {
         @content;
       }
     } @else if $width == mobile {
-      @media only screen and (max-width: $mobile) {
+      @media only screen and (min-width: $xs-mobile2) and (max-width: $mobile) {
+        @content;
+      }
+    } @else if $width == xs-mobile {
+      @media only screen and (min-width: $xs-mobile) and (max-width: 411px) {
         @content;
       }
     }

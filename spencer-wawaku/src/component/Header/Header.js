@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import navbarItems from './Data/Data'; // Importing navbarItems from data.js
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link, NavLink } from 'react-router-dom';
 import SocialMedia from './SocialMedia';
-import LogoImage from './Images/1.png';
+import LogoImage from './Images/spfavicon.png';
 import Switch from './Switch';
 import { useTheme } from './DarkMode';
 import './HeaderSass/index_header.css';
@@ -19,8 +19,7 @@ export default function Header() {
     const [hamburgerColor, setHamburgerColor] = useState(theme === 'light' ? '#ffffff' : '#000000');
     // Store the initial hamburger color
     const initialHamburgerColor = theme === 'light' ? '#ffffff' : '#000000';
-    // we initialize the show icon to false
-    const [showIcon, setShowIcon] = useState(false);
+    
 
     // with this function we change me menu on click
     const handleHamburger = ()=>{
@@ -35,21 +34,6 @@ export default function Header() {
             setMobileMenuOpen(false); // Close the mobile menu when a navigation item is clicked
         }
     }
-
-    // useEffect to handle the navigation element's icon
-    useEffect(()=>{
-        const handleResize = () =>{
-            if(window.innerWidth <= 768){
-                setShowIcon(true);
-            } else{
-                setShowIcon(false);
-            }
-        }
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, [])
-
     
     return (
         <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} >
@@ -76,8 +60,8 @@ export default function Header() {
                                 onClick={handleNavLink} // Call handleNavLink when a navigation item is clicked
                             >
                                 {/* this code show/hide this icon on small and wide devices */}
-                                {showIcon && <span>{item.icon}</span>}
-                                <span>{item.title}</span>
+                                <span id='icon-link'>{item.icon}</span>
+                                <span id='title'>{item.title}</span>
                             </NavLink>
                         </li>
                     ))}
@@ -99,3 +83,28 @@ export default function Header() {
         </div>
     );
 }
+
+/*
+
+// we initialize the show icon to false
+    // const [showIcon, setShowIcon] = useState(false);
+
+ // useEffect to handle the navigation element's icon
+    // useEffect(()=>{
+    //     const handleResize = () =>{
+    //         if(window.innerWidth <= 768){
+    //             setShowIcon(true);
+    //         } else{
+    //             setShowIcon(false);
+    //         }
+    //     }
+
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, [])
+
+    return
+    
+    / this code show/hide this icon on small and wide devices /
+    {showIcon && <span id='icon-link'>{item.icon}</span>}
+*/ 

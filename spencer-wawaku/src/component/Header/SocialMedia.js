@@ -40,8 +40,8 @@ export default function SocialMedia() {
                             rel="noopener noreferrer"
                             aria-label={socialMedia.title}
                         >
-                            <span>{socialMedia.icon}</span>
-                            {showTitle && <span>{socialMedia.title}</span>}
+                            <span id='icon'>{socialMedia.icon}</span>
+                            {showTitle && <span id='title'>{socialMedia.title}</span>}
                         </a>
                     </li>
                 ))}

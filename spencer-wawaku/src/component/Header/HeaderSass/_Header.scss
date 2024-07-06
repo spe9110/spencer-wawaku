@@ -43,26 +43,33 @@
         }
 
         &__navbar{
-            align-items: center;
-            justify-content: center;
+            // align-items: center;
+            // justify-content: center;
             z-index: 40;
 
             ul{
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
                 gap: .8rem;
             }
 
             li{
                 list-style: none;
                 a{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    display: none;
+                    // align-items: center;
+                    // justify-content: center;
                     // font-weight: 600;
-                    margin: 0 .2rem;
-                    gap: .3rem;
+                    // margin: 0 .2rem;
+                    // gap: .3rem;
+
+                    #icon{
+                        display: none;
+                    }
+                    #icon-link{
+                        display: none;
+                    }
                 }
 
             }

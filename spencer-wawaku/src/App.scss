@@ -63,12 +63,32 @@ a{
             }
 
             &__navbar{
-                display: flex;
-                flex-direction: row;
+                @include flexDirection(row, center, center);
 
-                ul{
-                    li{
+                ul {
+                    @include flexDirection(row, center center);
+                    width: auto;
+
+                    li {
+                        font-size: 1rem;
+                        gap: 3rem;
+                        text-align: center;
                         font-weight: bold;
+                        
+                        a{
+                            @include flexDirection(row, center, center);
+                            gap: .2rem;
+                            // color: #fff;
+                            margin: 0 auto;
+                            padding: .2rem;
+
+                            #icon-link{
+                                display: none;
+                            }
+                            #title{
+                                display: block;
+                            }
+                        }
                     }
                 }
                 // the active button
@@ -120,11 +140,32 @@ a{
             }
 
             &__navbar{
-                display: flex;
-                flex-direction: row;
-                ul{
-                    li{
+                @include flexDirection(row, center, center);
+
+                ul {
+                    @include flexDirection(row, center center);
+                    width: auto;
+
+                    li {
+                        font-size: 1rem;
+                        gap: 3rem;
+                        text-align: center;
                         font-weight: bold;
+                        
+                        a{
+                            @include flexDirection(row, center, center);
+                            gap: .2rem;
+                            // color: #fff;
+                            margin: 0 auto;
+                            padding: .2rem;
+
+                            #icon-link{
+                                display: none;
+                            }
+                            #title{
+                                display: block;
+                            }
+                        }
                     }
                 }
                 // the active button
@@ -175,11 +216,31 @@ a{
             }
             
             &__navbar{
-                display: flex;
-                flex-direction: row;
-                ul{
-                    li{
+                @include flexDirection(row, center, center);
+
+                ul {
+                    @include flexDirection(row, center center);
+                    width: auto;
+
+                    li {
+                        font-size: 1rem;
+                        gap: 3rem;
+                        text-align: center;
                         font-weight: bold;
+                        
+                        a{
+                            @include flexDirection(row, center, center);
+                            gap: .2rem;
+                            margin: 0 auto;
+                            padding: .2rem;
+
+                            #icon-link{
+                                display: none;
+                            }
+                            #title{
+                                display: block;
+                            }
+                        }
                     }
                 }
                 // the active button
@@ -231,14 +292,11 @@ a{
             // navigation
             &__navbar{
                 position: fixed;
-                display: none;
-                align-items: start;
-                justify-content: start;
-                flex-direction: column;
-                background: rgba($color: #166534, $alpha: .6);
+                @include flexDirection(column, center, center);
+                background: rgba($color: #000000, $alpha: .6);
                 backdrop-filter: blur(25px);
                 width: 100%;
-                height: 100vh;
+                height: 100vh; 
                 right: 0;
                 left: 100%;
                 // transition: left .3s ease-in-out;
@@ -246,25 +304,30 @@ a{
                 bottom: 0;
 
                 ul {
-                    width: 100%;
-                    display: flex;
-                    align-items: start;
-                    justify-content: start;
+                    @include flexDirection(column, start, start);
                     flex-wrap: nowrap;
-                    flex-direction: column;
+                    width: 90%;
 
                     li {
-                        width: 100%;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         gap: 3rem;
                         text-align: center;
                         font-weight: bold;
+                        width: 90%;
+                        
                         a{
+                            @include flexDirection(row, center, center);
+                            gap: .2rem;
                             color: #fff;
                             width: 90%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            margin: 0 auto;
+
+                            #icon-link{
+                                display: block !important;
+                            }
+                            #title{
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -335,21 +398,18 @@ a{
             // logo
             &__logo{
                 &__name{
-                    font-size: 1.4rem;
+                    font-size: 1rem;
                     font-weight: bold;
                 }
             }
             // navigation
             &__navbar{
                 position: fixed;
-                display: none;
-                align-items: start;
-                justify-content: start;
-                flex-direction: column;
+                @include flexDirection(column, center, center);
                 background: rgba($color: #000000, $alpha: .6);
                 backdrop-filter: blur(25px);
                 width: 100%;
-                height: 100vh;
+                height: 100vh; 
                 right: 0;
                 left: 100%;
                 // transition: left .3s ease-in-out;
@@ -359,19 +419,28 @@ a{
                 ul {
                     @include flexDirection(column, start, start);
                     flex-wrap: nowrap;
+                    width: 90%;
 
                     li {
-                        font-size: .8rem;
+                        font-size: 1rem;
                         gap: 3rem;
                         text-align: center;
                         font-weight: bold;
+                        width: 90%;
 
                         a{
                             @include flexDirection(row, center, center);
                             gap: .2rem;
                             color: #fff;
                             width: 90%;
-                            margin: 0 .2rem;
+                            margin: 0 auto;
+
+                            #icon-link{
+                                display: block !important;
+                            }
+                            #title{
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -383,7 +452,7 @@ a{
                     @include flexDirection(row, center, center);
                     gap: .2rem;
                 }
-
+                // this code apply css to li a element that are not active
                 ul li a:not(.active):hover {
                     background-color: rgba(0, 0, 0, 0.3); /* Corrected rgba format */
                     border-radius: 5px;
@@ -428,6 +497,120 @@ a{
                 }
             }
         }
+
+        // extra-small
+        @include responsive(xs-mobile) {
+            position: relative;
+            // top: 0;
+            height: 4rem;
+            padding: 0 1em;
+
+            &.dark-mode{
+                background: $dark-theme-bg;
+            }
+
+            // logo
+            &__logo{
+                &__name{
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            // navigation
+            &__navbar{
+                position: fixed;
+                @include flexDirection(column, center, center);
+                background: rgba($color: #000000, $alpha: .6);
+                backdrop-filter: blur(25px);
+                width: 100%;
+                height: 100vh; 
+                right: 0;
+                left: 100%;
+                // transition: left .3s ease-in-out;
+                top: 0;
+                bottom: 0;
+
+                ul {
+                    @include flexDirection(column, start, start);
+                    flex-wrap: nowrap;
+                    width: 90%;
+
+                    li {
+                        font-size: .8rem;
+                        gap: 3rem;
+                        text-align: center;
+                        font-weight: bold;
+                        width: 90%;
+
+                        a{
+                            @include flexDirection(row, center, center);
+                            gap: .2rem;
+                            color: #fff;
+                            width: 90%;
+                            margin: 0 auto;
+
+                            #icon-link{
+                                display: block !important;
+                            }
+                            #title{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .active {
+                    background-color: blue;
+                    border-radius: 5px;
+                    padding: .4em;
+                    color: #fff;
+                    @include flexDirection(row, center, center);
+                    gap: .2rem;
+                }
+                // this code apply css to li a element that are not active
+                ul li a:not(.active):hover {
+                    background-color: rgba(0, 0, 0, 0.3); /* Corrected rgba format */
+                    border-radius: 5px;
+                    padding: .4em;
+                    color: #fff;
+                }
+            }
+            // transition animation left
+            @keyframes slideInLeft {
+                from {
+                    left: 100%;
+                }
+                to {
+                    left: 0;
+                }
+            }
+
+            // open menu
+            &__navbar.open{
+                display: flex;
+                left: 0;
+                animation: slideInLeft 0.5s ease forwards;
+            }
+
+            // contact
+            &__contact{
+                // hamburger button
+                &__hamburgerBtn{
+                    display: flex;
+                    // color: $dark-theme-clr;
+                }
+                
+                // button
+                &__contactMe {
+                    padding: .4em;
+                    font-size: .8rem;
+                }
+                .Switch-btn{
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    // z-index: 30;           
+                }
+            }
+        }
     }
     // social media
     .social-media{
@@ -456,6 +639,13 @@ a{
                         font-size: 1.2rem;
                         display: grid;
                         place-items: center;
+
+                        #icon{
+                            display: block;
+                        }
+                        #title{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -472,9 +662,42 @@ a{
                 // gap: .2rem;
                 li{
                     a{
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         display: grid;
                         place-items: center;
+
+                        #icon{
+                            display: block;
+                        }
+                        #title{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        @include responsive(xs-mobile){
+            display: flex;
+            bottom: 4rem;
+
+            ul{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                // gap: .2rem;
+                li{
+                    a{
+                        font-size: .8rem;
+                        display: grid;
+                        place-items: center;
+
+                        #icon{
+                            display: block;
+                        }
+                        #title{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -485,6 +708,7 @@ a{
     .Hero{
         // Large screen
         @include responsive(large-wide){
+            background-color: pink;
             min-height: 645px;
             padding: 0 4em;
             padding-top: 2em;
@@ -550,7 +774,7 @@ a{
 
                 &__picture{
                     width: 32.2rem;
-                    height: auto;
+                    height: 100%;
                 }
 
                 &__code{
@@ -597,10 +821,19 @@ a{
                 top: 50%;
                 right: -9vw;
                 transform: translateY(-50%);
+
+                li{
+                    a{
+                        &:hover{
+                            transform: scale(1.1) translateX(-8.5vw);
+                        }
+                    }
+                }
             }
         } 
         // Desktop
         @include responsive(desktop){
+            background-color: greenyellow;
             min-height: 625px;
             padding: 0 4em;
             padding-top: 2em;
@@ -654,7 +887,6 @@ a{
                         font-size: 1rem;
                     }
                 }
-                
             }
             &__profil{
                 width: 50%;
@@ -704,19 +936,27 @@ a{
                         left: 65%;
                     }
                 }
-
             }
             .Social__Media{
                 display: flex;
                 top: 50%;
-                right: -11vw;
+                right: -10vw;
                 transform: translateY(-50%);
+
+                li{
+                    a{
+                        &:hover{
+                            transform: scale(1.1) translateX(-9vw);
+                        }
+                    }
+                }
             }
         } 
         // Laptop
         @include responsive(laptop){
-            min-height: 600px;
-            padding: 0 4em;
+            background-color: orange;
+            min-height: 585px;
+            padding: 0 1em;
             padding-top: 1.5em;
             @include flexDirection(row, start, center);
             gap: 1rem;
@@ -725,11 +965,11 @@ a{
         
             &__info{
                 width: 50%;
-                height: 450px;
+                min-height: 450px;
                 padding: 1em;
 
                 &__greet{
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                     font-weight: 500;
                 }
                 &__name{
@@ -738,13 +978,12 @@ a{
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 1.2rem;
+                    font-size: 1.3rem;
                     line-height: 1rem;
                     margin-top: 2.4rem;
                 }
                 &__description{
                     margin: .8rem 0;
-                    // width: 30rem;
                     width: 100%;
                     font-size: 1rem;
                 }
@@ -754,7 +993,7 @@ a{
                     margin: .8rem 0;
 
                     &__one{
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                         padding: 1em 1.5em;
 
                         &:hover{
@@ -768,17 +1007,16 @@ a{
                         font-size: 1rem;
                     }
                 }
-                
             }
             &__profil{
                 width: 50%;
-                height: 450px;
+                min-height: 450px;
                 padding: 1em;
                 z-index: 40;
 
                 &__picture{
                     width: 30rem;
-                    height: auto;
+                    // height: auto;
                 }
 
                 &__code{
@@ -787,7 +1025,7 @@ a{
                     right: -8%;
                     top: 40%;
                     width: 20rem;
-                    height: auto;
+                    // height: auto;
                     z-index: 30;
     
                     &__one, &__two, &__three, &__four, &__five, &__six{
@@ -818,18 +1056,26 @@ a{
                         left: 65%;
                     }
                 }
-
             }
             .Social__Media{
                 display: flex;
-                top: 50%;
-                right: -14%;
-                transform: translateY(-50%);
+                top: 30%;
+                right: -15.1vw;
+                transform: translateY(-30%);
+
+                li{
+                    a{
+                        &:hover{
+                            transform: scale(1.1) translateX(-14.5vw);
+                        }
+                    }
+                }
             }
         } 
         // tablet
         @include responsive(tablet){
-            min-height: 920px;
+            background-color: yellow;
+            min-height: 850px;
             gap: .5rem;
             @include flexDirection(column, center, start);
             padding: .5em 1em;
@@ -843,7 +1089,6 @@ a{
 
                 &__greet{
                     font-size: 1.4rem;
-                    // color: red;
                     font-weight: 500;
                 }
                 &__name{
@@ -852,14 +1097,14 @@ a{
                     line-height: 2rem;
                 }
                 &__job{
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
                     line-height: 1rem;
                     margin-top: 1.5rem;
                 }
                 &__description{
                     margin: .8rem 0;
                     width: 80%;
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                 }
                 // Buttons
                 &__btn{
@@ -889,14 +1134,12 @@ a{
             }
             &__profil{
                 width: 100%;
-                height: 520px;
-                // display: flex;
-                // justify-content: center;
+                height: 420px;
                 margin: 0;
                 
                 &__picture{
                     width: 550px;
-                    height: auto;
+                    height: 110%;
                 }
 
                 &__code{
@@ -910,20 +1153,20 @@ a{
                     }
                     &__one{
                         top: 10%;
-                        left: 30%;
+                        left: 10%;
                         z-index: 1;
                     }
                     &__two{
                         bottom: 20%;
-                        left: 35%;
+                        left: 15%;
                     }
                     &__three{
                         bottom: 30%;
-                        right: 30%;
+                        right: 32%;
                     }
                     &__four{
-                        bottom: 25%;
-                        left: 65%;
+                        top: 45%;
+                        left: 11%;
                     }
                     &__five{
                         top: 50%;
@@ -934,7 +1177,6 @@ a{
                         left: 55%;
                     }
                 }
-
             }
             .Social__Media{
                 display: none;
@@ -942,6 +1184,7 @@ a{
         } 
         // mobile
         @include responsive(mobile){
+            background-color: red;
             min-height: 630px;
             gap: .5rem;
             @include flexDirection(column, center, start);
@@ -1001,14 +1244,125 @@ a{
             }
             &__profil{
                 width: 100%;
-                height: 380px;
-                // display: flex;
-                // justify-content: center;
+                height: 350px;
                 margin: 0;
                 
                 &__picture{
                     width: 362px;
                     height: auto;
+                }
+
+                &__code{
+                    right: 4%;
+                    top: 40%;
+                    font-size: .8rem;
+    
+                    &__one, &__two, &__three, &__four, &__five, &__six{
+                        font-size: .8rem;
+                    }
+                    &__one{
+                        top: 10%;
+                        left: 20%;
+                        z-index: 1;
+                    }
+                    &__two{
+                        bottom: 20%;
+                        left: 25%;
+                    }
+                    &__three{
+                        bottom: 30%;
+                        right: 20%;
+                    }
+                    &__four{
+                        bottom: 25%;
+                        left: 55%;
+                    }
+                    &__five{
+                        top: 50%;
+                        left: 15%;
+                    }
+                    &__six{
+                        top: 20%;
+                        left: 65%;
+                    }
+                }
+            }
+            .Social__Media{
+                display: none;
+            }
+        } 
+        // extra-small mobile
+        @include responsive(xs-mobile){
+            background-color: blue;
+            min-height: 610px;
+            gap: .5rem;
+            @include flexDirection(column, center, start);
+            padding: .5em 1em;
+            margin: 0;
+            padding-bottom: 1em;
+            z-index: 20;
+            
+            &__info{
+                width: 100%;
+                height: 320px;
+                margin-top: 5%;
+                // background-color: red;
+
+                &__greet{
+                    font-size: 1rem;
+                    // color: red;
+                    font-weight: 500;
+                }
+                &__name{
+                    margin-top: .1rem;
+                    font-size: 1.8rem;
+                    line-height: 2rem;
+                }
+                &__job{
+                    font-size: 1rem;
+                    line-height: 1rem;
+                    margin-top: 1rem;
+                }
+                &__description{
+                    margin: .4rem 0;
+                    width: 100%;
+                    font-size: 1rem;
+                }
+                // Buttons
+                &__btn{
+                        margin-top: .4rem; 
+                        justify-content: start;
+                    &__one{
+                        padding: .5em 1em;
+                        font-size: .8rem;
+
+                        &:hover{
+                            padding: .5em 1em;
+                            // background-color: #fff;
+                            // transition: background .3s ease-in-out;
+                            color:#0ea5e9;
+                            border-radius: 32px;
+                            border: 3px solid #0ea5e9;
+                        }
+                    }
+                    &__two{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        font-size: .8rem;
+                        padding: .3em;
+                    }
+                }
+                
+            }
+            &__profil{
+                width: 100%;
+                height: 280px;
+                // display: flex;
+                // justify-content: center;
+                
+                &__picture{
+                    width: 350px;
+                    height: 280px;
                 }
 
                 &__code{
@@ -1117,10 +1471,6 @@ a{
                             h4{
                                 font-size: 1.5rem;
                             }
-                        }
-    
-                        &__programming,
-                        &__tool{
                             &__skill-bg{
                                 background-color: #f8fafc;                                
                             }
@@ -1206,9 +1556,6 @@ a{
                             h4{
                                 font-size: 1.5rem;
                             }
-                        }
-                        &__programming,
-                        &__tool{
                             &__skill-bg{
                                 background-color: #f8fafc;                                
                             }
@@ -1298,10 +1645,6 @@ a{
                             h4{
                                 font-size: .9rem;
                             }
-                        }
-    
-                        &__programming,
-                        &__tool{
                             &__skill-bg{
                                 background-color: #f8fafc;                                
                             }
@@ -1406,6 +1749,87 @@ a{
         }
         // Mobile
         @include responsive(mobile){
+            min-height: 600px;
+            padding-top: 1em;
+            @include flexDirection(column);
+            gap: 1rem;
+            // background-color: red;
+
+            &__slider{
+                // position: relative;
+                width: 94%;
+                height: 520px;
+                @include flexDirection(column);
+                margin-bottom: 1.3rem;
+                // background-color: #000000;
+                
+    
+                &__design{
+                    // position: absolute;
+                    width: 90%;
+                    height: 100%;
+                    left: auto;
+                }
+                &__picture{
+                    // position: absolute;
+                    width: 90%;
+                    height: 100%;
+                    left: 2.8rem;
+                    top: 4%;
+                }
+            }
+
+            &__content{
+                width: 94%;
+                min-height: 400px;
+                @include flexDirection(column);
+
+                &__title{
+                    font-size: 1.8rem;
+                }
+                &__btn{
+                    width: 22rem;
+
+                    &__one, &__two, &__three{
+                        font-size: .7rem;
+                        width: calc(22rem / 3);
+                    }
+                }
+                &__wrapper{
+                    &__info{
+                        &__knowledge{
+                            @include flexDirection(row);
+                        }
+                    }
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: .7rem;
+                            }
+                        }
+                    }
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: .7rem;
+                            }
+    
+                            &__box{
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: .7rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        // Mobile
+        @include responsive(xs-mobile){
             min-height: 600px;
             padding-top: 1em;
             @include flexDirection(column);
@@ -1620,6 +2044,38 @@ a{
         }
         // Mobile
         @include responsive(mobile){
+            min-height: 600px;
+            &__title{
+                font-size: 2rem;
+            }
+            &__help{
+                font-size: 1.2rem;
+            }
+            &__wrapper{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                &__card{
+                    width: 20rem;
+                    height: 20rem;
+
+                    &__number{
+                        font-size: 8rem;
+                    }
+
+                    &__title{
+                        font-size: 1.2rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        // Mobile
+        @include responsive(xs-mobile){
             min-height: 600px;
             &__title{
                 font-size: 2rem;
@@ -2069,6 +2525,89 @@ a{
                 }
             }
         }
+        // Mobile
+        @include responsive(xs-mobile){
+            min-height: 600px;
+            width: 100%;
+
+            &__title{
+                font-size: 2rem;
+            }
+            &__watch{
+                font-size: 1.2rem;
+            }
+            
+            &__card{
+                width: 300px;
+                height: 400px;
+                &__img{
+                    height: 200px;
+                }
+
+                &__content{
+                    height: 200px;
+
+                    &__title{
+                        font-size: 1rem;
+                    }
+                    &__description{
+                        font-size: .9rem;
+                    }
+        
+                    &__profil{ 
+                        padding: 0 .7em;    
+                        &__author{        
+                            &__picture{
+                                width: 2rem;
+                                height: 2rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: .7rem;
+                                }
+                                &__job{
+                                    font-size: .5rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .7rem;
+                            }
+            
+                            &__btn{
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .CountUp{
+                gap: 1rem;
+                margin-top: 0;
+
+                &__wrapper{
+                    width: 19rem;
+                    height: 140px;
+                    @include flexDirection(row, center, center);
+                    gap: 0rem;
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(19rem / 3);
+                        height: auto;
+                        gap: 0;
+
+                        &__icon, &__number{
+                            font-size: 1.2rem;
+                        }
+                        &__title{
+                            font-size: .7rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // Contact Section
@@ -2238,11 +2777,52 @@ a{
                 min-height: 350px;
             }
         }
+        // extra-small Mobile
+        @include responsive(xs-mobile){
+            min-height: 600px;
+            @include flexDirection(column, center, center);
+            padding: 1rem 0;
+
+            &__title{
+                font-size: 2rem;
+            }
+    
+            &__touch{
+                font-size: 1.2rem;
+            }
+            &__form{
+                width: 90%;
+                min-height: 600px;
+                @include flexDirection(column, center, center);
+                border-radius: .4rem;
+                &__map{
+                    width: 100%;
+                    min-height: 350px;
+                }
+                &__content{
+                    width: 100%;
+                    min-height: 400px;
+                    padding: 10px;
+                }
+            }
+            .leaflet-container{
+                width: 100%;
+                min-height: 350px;
+            }
+        }
     }
 
     // SCROLLING TEXT
     .text__infinite{
+        background: $light-theme-bg; /* Default light mode background */
+        color: $light-theme-clr; /* Default light mode text color */
         transition: background .3s ease-in-out;
+
+        &.dark-mode{
+            background: $dark-theme-bg; /* Default light mode background */
+            color: $dark-theme-clr; /* Default light mode text color */
+            transition: background .3s ease-in-out;
+        }
 
         @include responsive(large-wide){
             height: 8rem;
@@ -2276,7 +2856,7 @@ a{
             }
         }
         @include responsive(tablet){
-            height: 3rem;
+            height: 5rem;
             padding: .2em;
 
             &__scroll{
@@ -2288,6 +2868,17 @@ a{
         @include responsive(mobile){
             height: 3rem;
             padding: .2em;
+
+            &__scroll{
+                &__one{
+                    font-size: 2rem;
+                }
+            }
+        }
+        @include responsive(xs-mobile){
+            height: 3rem;
+            padding: .2em;
+            // background-color: #fff;
 
             &__scroll{
                 &__one{
@@ -2476,6 +3067,50 @@ a{
             }
         }
         @include responsive(mobile){
+            background-color: #000000;
+            color: $dark-theme-clr;
+            display: flex;
+            height: 132px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            h5{
+                font-size: 1rem;
+            }
+
+            hr{
+                width: 50vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            }
+
+            &__content{
+                flex-direction: column;
+                
+                &__social__media{
+                    a.instagram-icon, a.github-icon, a.youtube-icon, a.twitter-icon, a.facebook-icon, a.tiktok-icon, a.linkedin-icon{
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        font-size: .8rem;
+
+                    }
+                }
+                &__copyright{
+                    font-size: .8rem;
+                    margin: .5rem 0;
+                }
+            }
+            .backTop{
+                right: 1.2rem;
+                bottom: 2rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 1rem;
+            }
+        }       
+        @include responsive(xs-mobile){
             background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
