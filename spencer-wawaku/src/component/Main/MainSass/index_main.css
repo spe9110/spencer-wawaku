@@ -219,6 +219,7 @@
 }
 .container .About__content__wrapper__info__knowledge {
   display: grid;
+  place-items: center;
 }
 .container .About__content__wrapper__info__knowledge__list-skill {
   display: grid;
@@ -331,7 +332,6 @@
 .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
   position: absolute;
   bottom: -1rem;
-  font-size: 0.8rem;
   text-align: center;
   font-weight: 600;
 }

@@ -151,6 +151,7 @@
                     }
                     &__knowledge{
                         display: grid;
+                        place-items: center;
                         // gap: .4rem;
 
 
@@ -297,7 +298,7 @@
                                 &__title{
                                     position: absolute;
                                     bottom: -1rem;
-                                    font-size: .8rem;
+                                    // font-size: .8rem;
                                     text-align: center;
                                     font-weight: 600;
                                 }                               

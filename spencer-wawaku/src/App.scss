@@ -1753,80 +1753,107 @@ a{
         }
         // Mobile
         @include responsive(mobile){
-            // min-height: 600px;
-            // padding-top: 1em;
-            // @include flexDirection(column);
-            // gap: 1rem;
+            min-height: 680px;
+            padding-top: 1em;
+            @include flexDirection(column, center, center);
+            gap: 1rem;
             background-color: red;
 
-            // &__slider{
-            //     width: 94%;
-            //     height: 520px;
-            //     @include flexDirection(column);
-            //     margin-bottom: 1.3rem;
+            &__slider{
+                width: 92%;
+                height: 420px;
+                @include flexDirection(column, center, center);
+                margin-bottom: 1.3rem;
     
-            //     &__design{
-            //         // position: absolute;
-            //         width: 90%;
-            //         height: 100%;
-            //         left: auto;
-            //     }
-            //     &__picture{
-            //         // position: absolute;
-            //         width: 90%;
-            //         height: 100%;
-            //         left: 2.8rem;
-            //         top: 4%;
-            //     }
-            // }
+                &__design{
+                    width: 92%;
+                    height: 100%;
+                    left: .2rem;
+                }
+                &__picture{
+                    width: 92%;
+                    height: 100%;
+                    left: 1.4rem;
+                    top: 4%;
+                }
+                .carousel__btn{
+                    display: none;
+                }
+            }
 
-            // &__content{
-            //     width: 94%;
-            //     min-height: 400px;
-            //     @include flexDirection(column);
+            &__content{
+                width: 92%;
+                min-height: 360px;
+                @include flexDirection(column, center, center);
+                padding: .5em;
 
-            //     &__title{
-            //         font-size: 1.8rem;
-            //     }
-            //     &__btn{
-            //         width: 22rem;
+                &__title{
+                    font-size: 1.5rem !important;
+                }
+                &__btn{
+                    width: 100%;
 
-            //         &__one, &__two, &__three{
-            //             font-size: .7rem;
-            //             width: calc(22rem / 3);
-            //         }
-            //     }
-            //     &__wrapper{
-            //         &__info{
-            //             &__knowledge{
-            //                 @include flexDirection(row);
-            //             }
-            //         }
-            //         &__prog{
-            //             &__programming,
-            //             &__tool{
-            //                 h4{
-            //                     font-size: .7rem;
-            //                 }
-            //             }
-            //         }
-            //         &__other-skill{
-            //             &__content{
-            //                 h4{
-            //                     font-size: .7rem;
-            //                 }
+                    &__one, &__two, &__three{
+                        font-size: .9rem;
+                        width: calc(100% / 3);
+                    }
+                }
+                &__wrapper{
+                    &__info{
+                        &__intro{
+                            h3{
+                                font-size: 1.2rem;
+                            }
+                            p{
+                                font-size: 1rem;
+                            }
+                        }
+                        &__knowledge{
+                            grid-template-columns: auto auto auto;
+                            gap: .2rem;
+                        }
+                    }
+
+                    &__prog{
+                        &__programming,
+                        &__tool{
+                            h4{
+                                font-size: .9rem;
+                                padding-left: 1.5em !important;
+                                padding: 4px;
+                            }
+                            &__skill-content,
+                            &__tool-content{
+                                margin-top: 5px;
+                                p{
+                                    font-size: .9rem;
+                                }
+                            }
+                        }
+                    }
+                    &__other-skill{
+                        &__content{
+                            h4{
+                                font-size: .9rem;
+                            }
     
-            //                 &__box{
-            //                     &__CircleBg{
-            //                         &__percentage{
-            //                             font-size: .7rem;
-            //                         }
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
+                            &__box{
+                                grid-template-columns: auto auto;
+                                grid-template-rows: auto auto;
+                                
+                                &__CircleBg{
+                                    &__percentage{
+                                        font-size: .9rem;
+                                    }
+                                    &__title{
+                                        font-size: .9rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
             
         }
         // extra-small Mobile
@@ -1873,7 +1900,7 @@ a{
 
                     &__one, &__two, &__three{
                         font-size: .7rem;
-                        width: calc(22rem / 3);
+                        width: calc(100% / 3);
                     }
                 }
                 &__wrapper{
@@ -1920,6 +1947,9 @@ a{
                                 
                                 &__CircleBg{
                                     &__percentage{
+                                        font-size: .7rem;
+                                    }
+                                    &__title{
                                         font-size: .7rem;
                                     }
                                 }

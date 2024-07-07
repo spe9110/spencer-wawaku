@@ -357,6 +357,7 @@
 }
 .container .About__content__wrapper__info__knowledge {
   display: grid;
+  place-items: center;
 }
 .container .About__content__wrapper__info__knowledge__list-skill {
   display: grid;
@@ -469,7 +470,6 @@
 .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
   position: absolute;
   bottom: -1rem;
-  font-size: 0.8rem;
   text-align: center;
   font-weight: 600;
 }
@@ -2375,7 +2375,90 @@ a {
 }
 @media only screen and (min-width: 412px) and (max-width: 499px) {
   .container .About {
+    min-height: 680px;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     background-color: red;
+  }
+  .container .About__slider {
+    width: 92%;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+  }
+  .container .About__slider__design {
+    width: 92%;
+    height: 100%;
+    left: 0.2rem;
+  }
+  .container .About__slider__picture {
+    width: 92%;
+    height: 100%;
+    left: 1.4rem;
+    top: 4%;
+  }
+  .container .About__slider .carousel__btn {
+    display: none;
+  }
+  .container .About__content {
+    width: 92%;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+  }
+  .container .About__content__title {
+    font-size: 1.5rem !important;
+  }
+  .container .About__content__btn {
+    width: 100%;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 0.9rem;
+    width: 33.3333333333%;
+  }
+  .container .About__content__wrapper__info__intro h3 {
+    font-size: 1.2rem;
+  }
+  .container .About__content__wrapper__info__intro p {
+    font-size: 1rem;
+  }
+  .container .About__content__wrapper__info__knowledge {
+    grid-template-columns: auto auto auto;
+    gap: 0.2rem;
+  }
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+    font-size: 0.9rem;
+    padding-left: 1.5em !important;
+    padding: 4px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content, .container .About__content__wrapper__prog__programming__tool-content, .container .About__content__wrapper__prog__tool__skill-content, .container .About__content__wrapper__prog__tool__tool-content {
+    margin-top: 5px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
+    font-size: 0.9rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 0.9rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 0.9rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
+    font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 411px) {
@@ -2429,7 +2512,7 @@ a {
   }
   .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
     font-size: 0.7rem;
-    width: 7.3333333333rem;
+    width: 33.3333333333%;
   }
   .container .About__content__wrapper__info__intro h3 {
     font-size: 1rem;
@@ -2460,6 +2543,9 @@ a {
     grid-template-rows: auto auto;
   }
   .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 0.7rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
     font-size: 0.7rem;
   }
 }
