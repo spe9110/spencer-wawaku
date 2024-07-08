@@ -145,6 +145,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 10% 30%;
+     object-position: 10% 30%;
   transition: all 0.5s ease-in-out;
   filter: grayscale(100%);
 }
@@ -240,7 +242,6 @@
   height: 40px;
 }
 .container .About__content__wrapper__info__knowledge__list-skill span {
-  font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
   color: #000;
@@ -303,7 +304,7 @@
   width: 100%;
   padding-left: 2rem !important;
   padding: 5px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   background: blue;
   border: 1px solid #e5e7eb;
   color: #fff;

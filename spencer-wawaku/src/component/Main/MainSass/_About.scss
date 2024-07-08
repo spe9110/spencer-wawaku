@@ -57,6 +57,7 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    object-position: 10% 30%;
                     -moz-transition: all 0.5s ease-in-out; 
                     -webkit-transition: all 0.5s ease-in-out; 
                     transition: all 0.5s ease-in-out;
@@ -178,7 +179,7 @@
                                 height: 40px;
                             }
                             span{
-                                font-size: .8rem;
+                                // font-size: .8rem;
                                 font-weight: bold;
                                 text-align: center;
                                 color: #000;
@@ -263,7 +264,7 @@
                             padding-left: 2rem !important;
                             padding: 5px;
                             // @include borderRadiusStyle();
-                            border-radius: .2rem;
+                            border-radius: .5rem;
                             background: blue;
                             border: 1px solid #e5e7eb;
                             color: #fff;

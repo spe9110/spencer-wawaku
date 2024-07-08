@@ -283,6 +283,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 10% 30%;
+     object-position: 10% 30%;
   transition: all 0.5s ease-in-out;
   filter: grayscale(100%);
 }
@@ -378,7 +380,6 @@
   height: 40px;
 }
 .container .About__content__wrapper__info__knowledge__list-skill span {
-  font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
   color: #000;
@@ -441,7 +442,7 @@
   width: 100%;
   padding-left: 2rem !important;
   padding: 5px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   background: blue;
   border: 1px solid #e5e7eb;
   color: #fff;
@@ -2355,22 +2356,391 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .About {
+    min-height: 700px;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
     background-color: pink;
+  }
+  .container .About__slider {
+    width: 30%;
+    height: 400px;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .container .About__slider__design {
+    width: 90%;
+    height: 410px;
+    left: 1rem;
+  }
+  .container .About__slider__picture {
+    width: 90%;
+    height: 410px;
+    top: 4%;
+    left: 2.6rem;
+  }
+  .container .About__slider__picture img {
+    -o-object-position: 60% 40% !important;
+       object-position: 60% 40% !important;
+  }
+  .container .About__slider .carousel__btn {
+    display: flex;
+  }
+  .container .About__content {
+    width: 55%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1em;
+  }
+  .container .About__content__title {
+    font-size: 2.5rem !important;
+    text-transform: capitalize !important;
+  }
+  .container .About__content__btn {
+    width: 100%;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1.5rem;
+    width: 33.3333333333%;
+  }
+  .container .About__content__wrapper__info__intro h3 {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__intro p {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__knowledge {
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 0.2rem;
+  }
+  .container .About__content__wrapper__info__knowledge__list-skill span {
+    font-size: 0.8rem;
+  }
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+    font-size: 1.5rem;
+    padding-left: 1.3em !important;
+    padding: 4px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content, .container .About__content__wrapper__prog__programming__tool-content, .container .About__content__wrapper__prog__tool__skill-content, .container .About__content__wrapper__prog__tool__tool-content {
+    margin-top: 5px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
+    font-size: 1rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.5rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem !important;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
+    font-size: 0.8rem;
+    bottom: -1.3rem !important;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .About {
+    min-height: 700px;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 2rem;
     background-color: green;
+  }
+  .container .About__slider {
+    width: 30%;
+    height: 400px;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .container .About__slider__design {
+    width: 90%;
+    height: 410px;
+    left: 1rem;
+  }
+  .container .About__slider__picture {
+    width: 90%;
+    height: 410px;
+    top: 4%;
+    left: 2.6rem;
+  }
+  .container .About__slider__picture img {
+    -o-object-position: 60% 40% !important;
+       object-position: 60% 40% !important;
+  }
+  .container .About__slider .carousel__btn {
+    display: flex;
+  }
+  .container .About__content {
+    width: 55%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1em;
+  }
+  .container .About__content__title {
+    font-size: 2.5rem !important;
+    text-transform: capitalize !important;
+  }
+  .container .About__content__btn {
+    width: 100%;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1.5rem;
+    width: 33.3333333333%;
+  }
+  .container .About__content__wrapper__info__intro h3 {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__intro p {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__knowledge {
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 0.2rem;
+  }
+  .container .About__content__wrapper__info__knowledge__list-skill span {
+    font-size: 0.8rem;
+  }
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+    font-size: 1.5rem;
+    padding-left: 1.3em !important;
+    padding: 4px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content, .container .About__content__wrapper__prog__programming__tool-content, .container .About__content__wrapper__prog__tool__skill-content, .container .About__content__wrapper__prog__tool__tool-content {
+    margin-top: 5px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
+    font-size: 1rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.5rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem !important;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
+    font-size: 0.8rem;
+    bottom: -1.3rem !important;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .container .About {
+    min-height: 650px;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
     background-color: orange;
+  }
+  .container .About__slider {
+    width: 35%;
+    height: 400px;
+    padding: 1rem;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+  .container .About__slider__design {
+    width: 90%;
+    height: 410px;
+    left: 0.4rem;
+  }
+  .container .About__slider__picture {
+    width: 90%;
+    height: 410px;
+    top: 4%;
+    left: 2rem;
+  }
+  .container .About__slider__picture img {
+    -o-object-position: 60% 50% !important;
+       object-position: 60% 50% !important;
+  }
+  .container .About__slider .carousel__btn {
+    display: flex;
+  }
+  .container .About__content {
+    width: 55%;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 0.8em;
+  }
+  .container .About__content__title {
+    font-size: 2rem !important;
+  }
+  .container .About__content__btn {
+    width: 100%;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1.2rem;
+    width: 33.3333333333%;
+  }
+  .container .About__content__wrapper__info__intro h3 {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__intro p {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__knowledge {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 0.2rem;
+  }
+  .container .About__content__wrapper__info__knowledge__list-skill span {
+    font-size: 0.9rem;
+  }
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+    font-size: 1.2rem;
+    padding-left: 1.3em !important;
+    padding: 4px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content, .container .About__content__wrapper__prog__programming__tool-content, .container .About__content__wrapper__prog__tool__skill-content, .container .About__content__wrapper__prog__tool__tool-content {
+    margin-top: 5px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
+    font-size: 1rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem !important;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
+    font-size: 1rem;
+    bottom: -1.5rem !important;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .container .About {
+    min-height: 680px;
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     background-color: yellow;
+  }
+  .container .About__slider {
+    width: 94%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+  }
+  .container .About__slider__design {
+    width: 94%;
+    height: 100%;
+    left: 0.3rem;
+  }
+  .container .About__slider__picture {
+    width: 94%;
+    height: 100%;
+    left: 1.8rem;
+    top: 4%;
+  }
+  .container .About__slider .carousel__btn {
+    display: flex;
+  }
+  .container .About__content {
+    width: 94%;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8em;
+  }
+  .container .About__content__title {
+    font-size: 2rem !important;
+  }
+  .container .About__content__btn {
+    width: 100%;
+  }
+  .container .About__content__btn__one, .container .About__content__btn__two, .container .About__content__btn__three {
+    font-size: 1.3rem;
+    width: 33.3333333333%;
+  }
+  .container .About__content__wrapper__info__intro h3 {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__intro p {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__info__knowledge {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 0.2rem;
+  }
+  .container .About__content__wrapper__info__knowledge__list-skill span {
+    font-size: 0.9rem;
+  }
+  .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
+    font-size: 1.3rem;
+    padding-left: 1.5em !important;
+    padding: 4px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content, .container .About__content__wrapper__prog__programming__tool-content, .container .About__content__wrapper__prog__tool__skill-content, .container .About__content__wrapper__prog__tool__tool-content {
+    margin-top: 5px;
+  }
+  .container .About__content__wrapper__prog__programming__skill-content p, .container .About__content__wrapper__prog__programming__tool-content p, .container .About__content__wrapper__prog__tool__skill-content p, .container .About__content__wrapper__prog__tool__tool-content p {
+    font-size: 1rem;
+  }
+  .container .About__content__wrapper__other-skill__content h4 {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem !important;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__percentage {
+    font-size: 1.3rem;
+  }
+  .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
+    font-size: 1rem;
+    bottom: -1.5rem !important;
   }
 }
 @media only screen and (min-width: 412px) and (max-width: 499px) {
@@ -2435,6 +2805,9 @@ a {
   .container .About__content__wrapper__info__knowledge {
     grid-template-columns: auto auto auto;
     gap: 0.2rem;
+  }
+  .container .About__content__wrapper__info__knowledge__list-skill span {
+    font-size: 0.8rem;
   }
   .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
     font-size: 0.9rem;
@@ -2523,6 +2896,9 @@ a {
   .container .About__content__wrapper__info__knowledge {
     grid-template-columns: auto auto auto;
     gap: 0.2rem;
+  }
+  .container .About__content__wrapper__info__knowledge__list-skill span {
+    font-size: 0.8rem;
   }
   .container .About__content__wrapper__prog__programming h4, .container .About__content__wrapper__prog__tool h4 {
     font-size: 0.5rem;
@@ -3563,8 +3939,8 @@ a {
     margin: 0.7rem 0;
   }
   .container .footer .backTop {
-    right: 3rem;
-    bottom: 2rem;
+    right: 2rem;
+    bottom: 5rem;
     width: 2.5rem;
     height: 2.5rem;
     font-size: 1.5rem;
