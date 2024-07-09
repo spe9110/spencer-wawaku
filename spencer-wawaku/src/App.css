@@ -497,10 +497,8 @@
   border-radius: 2rem;
   border: 2px solid orangered;
   z-index: 20;
-  padding: 2rem;
   -webkit-backdrop-filter: blur(10px) brightness(90%);
           backdrop-filter: blur(10px) brightness(90%);
-  gap: 1rem;
   margin-bottom: 1rem;
 }
 .container .Services__wrapper__card {
@@ -537,8 +535,6 @@
   background: none;
 }
 .container .Services__wrapper__card__img {
-  width: 3.5rem;
-  height: 3.5rem;
   border-radius: 50%;
   z-index: 30;
   display: grid;
@@ -546,9 +542,6 @@
   border: 5px solid orangered;
 }
 .container .Services__wrapper__card__img img {
-  width: 30px;
-  height: 30px;
-  /* padding: 1em; */
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2927,187 +2920,68 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .Services {
-    min-height: 700px;
-  }
-  .container .Services__title {
-    font-size: 4rem;
-  }
-  .container .Services__help {
-    font-size: 3rem;
-  }
-  .container .Services__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .Services__wrapper__card {
-    width: 20rem;
-    height: 20rem;
-  }
-  .container .Services__wrapper__card__number {
-    font-size: 10rem;
-  }
-  .container .Services__wrapper__card__title {
-    font-size: 1.2rem;
-  }
-  .container .Services__wrapper__card__details {
-    font-size: 1.1rem;
+    background-color: pink;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .Services {
-    min-height: 700px;
-  }
-  .container .Services__title {
-    font-size: 4rem;
-  }
-  .container .Services__help {
-    font-size: 3rem;
-  }
-  .container .Services__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .Services__wrapper__card {
-    width: 20rem;
-    height: 20rem;
-  }
-  .container .Services__wrapper__card__number {
-    font-size: 10rem;
-  }
-  .container .Services__wrapper__card__title {
-    font-size: 1.2rem;
-  }
-  .container .Services__wrapper__card__details {
-    font-size: 1.1rem;
+    background-color: green;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .container .Services {
-    min-height: 700px;
-  }
-  .container .Services__title {
-    font-size: 3rem;
-  }
-  .container .Services__help {
-    font-size: 2.3rem;
-  }
-  .container .Services__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .Services__wrapper__card {
-    width: 15rem;
-    height: 15rem;
-  }
-  .container .Services__wrapper__card__number {
-    font-size: 8.5rem;
-  }
-  .container .Services__wrapper__card__title {
-    font-size: 0.9rem;
-  }
-  .container .Services__wrapper__card__details {
-    font-size: 0.7rem;
+    background-color: orange;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .container .Services {
-    min-height: 600px;
-  }
-  .container .Services__title {
-    font-size: 2.2rem;
-  }
-  .container .Services__help {
-    font-size: 2rem;
-  }
-  .container .Services__wrapper {
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    background-color: red;
-  }
-  .container .Services__wrapper__card {
-    width: 14rem;
-    height: 14rem;
-  }
-  .container .Services__wrapper__card__number {
-    font-size: 8rem;
-  }
-  .container .Services__wrapper__card__title {
-    font-size: 0.8rem;
-  }
-  .container .Services__wrapper__card__details {
-    font-size: 0.65rem;
+    background-color: yellow;
   }
 }
 @media only screen and (min-width: 412px) and (max-width: 499px) {
   .container .Services {
-    min-height: 600px;
-  }
-  .container .Services__title {
-    font-size: 2rem;
-  }
-  .container .Services__help {
-    font-size: 1.2rem;
-  }
-  .container .Services__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .container .Services__wrapper__card {
-    width: 20rem;
-    height: 20rem;
-  }
-  .container .Services__wrapper__card__number {
-    font-size: 8rem;
-  }
-  .container .Services__wrapper__card__title {
-    font-size: 1.2rem;
-  }
-  .container .Services__wrapper__card__details {
-    font-size: 1.1rem;
+    background-color: red;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 411px) {
   .container .Services {
-    min-height: 600px;
+    min-height: 500px;
+    background-color: blue;
   }
   .container .Services__title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .container .Services__help {
     font-size: 1.2rem;
   }
   .container .Services__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 1rem 0.2rem;
+    place-items: center;
+    gap: 0.4rem;
   }
   .container .Services__wrapper__card {
-    width: 20rem;
-    height: 20rem;
+    width: 90%;
+    height: 12rem;
   }
   .container .Services__wrapper__card__number {
-    font-size: 8rem;
+    font-size: 6rem;
+  }
+  .container .Services__wrapper__card__img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .container .Services__wrapper__card__img img {
+    width: 20px;
+    height: 20px;
   }
   .container .Services__wrapper__card__title {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
   .container .Services__wrapper__card__details {
-    font-size: 1.1rem;
+    font-size: 0.7rem;
   }
 }
 @media only screen and (min-width: 1300px) {

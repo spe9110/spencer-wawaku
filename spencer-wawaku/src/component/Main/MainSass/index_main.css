@@ -359,10 +359,8 @@
   border-radius: 2rem;
   border: 2px solid orangered;
   z-index: 20;
-  padding: 2rem;
   -webkit-backdrop-filter: blur(10px) brightness(90%);
           backdrop-filter: blur(10px) brightness(90%);
-  gap: 1rem;
   margin-bottom: 1rem;
 }
 .container .Services__wrapper__card {
@@ -399,8 +397,6 @@
   background: none;
 }
 .container .Services__wrapper__card__img {
-  width: 3.5rem;
-  height: 3.5rem;
   border-radius: 50%;
   z-index: 30;
   display: grid;
@@ -408,9 +404,6 @@
   border: 5px solid orangered;
 }
 .container .Services__wrapper__card__img img {
-  width: 30px;
-  height: 30px;
-  /* padding: 1em; */
   -o-object-fit: cover;
      object-fit: cover;
 }

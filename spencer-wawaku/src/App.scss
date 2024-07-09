@@ -2108,193 +2108,209 @@ a{
     .Services{
         // Large screen
         @include responsive(large-wide){
-            min-height: 700px;
-            &__title{
-                font-size: 4rem;
-            }
+            // min-height: 700px;
+            background-color: pink;
+            // &__title{
+            //     font-size: 4rem;
+            // }
 
-            &__help{
-                font-size: 3rem;
-            }
-            &__wrapper{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                &__card{
-                    width: 20rem;
-                    height: 20rem;
+            // &__help{
+            //     font-size: 3rem;
+            // }
+            // &__wrapper{
+            //     display: flex;
+            //     flex-direction: row;
+            //     flex-wrap: wrap;
+            //     align-items: center;
+            //     justify-content: center;
+            //     &__card{
+            //         width: 20rem;
+            //         height: 20rem;
 
-                    &__number{
-                        font-size: 10rem;
-                    }
+            //         &__number{
+            //             font-size: 10rem;
+            //         }
 
-                    &__title{
-                        font-size: 1.2rem;
-                    }
-                    &__details{
-                        font-size: 1.1rem;
-                    }
-                }
-            }
+            //         &__title{
+            //             font-size: 1.2rem;
+            //         }
+            //         &__details{
+            //             font-size: 1.1rem;
+            //         }
+            //     }
+            // }
         }
         // Desktop
         @include responsive(desktop){
-            min-height: 700px;
-            &__title{
-                font-size: 4rem;
-            }
-            &__help{
-                font-size: 3rem;
-            }
-            &__wrapper{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                &__card{
-                    width: 20rem;
-                    height: 20rem;
+            // min-height: 700px;
+            background-color: green;
+            // &__title{
+            //     font-size: 4rem;
+            // }
+            // &__help{
+            //     font-size: 3rem;
+            // }
+            // &__wrapper{
+            //     display: flex;
+            //     flex-direction: row;
+            //     flex-wrap: wrap;
+            //     align-items: center;
+            //     justify-content: center;
+            //     &__card{
+            //         width: 20rem;
+            //         height: 20rem;
 
-                    &__number{
-                        font-size: 10rem;
-                    }
+            //         &__number{
+            //             font-size: 10rem;
+            //         }
 
-                    &__title{
-                        font-size: 1.2rem;
-                    }
-                    &__details{
-                        font-size: 1.1rem;
-                    }
-                }
-            }
+            //         &__title{
+            //             font-size: 1.2rem;
+            //         }
+            //         &__details{
+            //             font-size: 1.1rem;
+            //         }
+            //     }
+            // }
         }
         // Laptop
         @include responsive(laptop){
-            min-height: 700px;
-            &__title{
-                font-size: 3rem;
-            }
-            &__help{
-                font-size: 2.3rem;
-            }
-            &__wrapper{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                &__card{
-                    width: 15rem;
-                    height: 15rem;
+            // min-height: 700px;
+            background-color: orange;
+            // &__title{
+            //     font-size: 3rem;
+            // }
+            // &__help{
+            //     font-size: 2.3rem;
+            // }
+            // &__wrapper{
+            //     display: flex;
+            //     flex-direction: row;
+            //     flex-wrap: wrap;
+            //     align-items: center;
+            //     justify-content: center;
+            //     &__card{
+            //         width: 15rem;
+            //         height: 15rem;
                     
-                    &__number{
-                        font-size: 8.5rem;
-                    }
+            //         &__number{
+            //             font-size: 8.5rem;
+            //         }
 
-                    &__title{
-                        font-size: .9rem;
-                    }
-                    &__details{
-                        font-size: .7rem;
-                    }
-                }
-            }
+            //         &__title{
+            //             font-size: .9rem;
+            //         }
+            //         &__details{
+            //             font-size: .7rem;
+            //         }
+            //     }
+            // }
         }
         // tablet
         @include responsive(tablet){
-            min-height: 600px;
+            // min-height: 600px;
+            background-color: yellow;
+            // &__title{
+            //     font-size: 2.2rem;
+            // }
+            // &__help{
+            //     font-size: 2rem;
+            // }
+            // &__wrapper{
+            //     display: grid;
+            //     grid-template-columns: auto auto;
+            //     place-items: center;
+            //     background-color: red;
+
+            //     &__card{
+            //         width: 14rem;
+            //         height: 14rem;
+
+            //         &__number{
+            //             font-size: 8rem;
+            //         }
+
+            //         &__title{
+            //             font-size: .8rem;
+            //         }
+            //         &__details{
+            //             font-size: .65rem;
+            //         }
+            //     }
+            // }
+        }
+        // Mobile
+        @include responsive(mobile){
+            // min-height: 600px;
+            background-color: red;
+            // &__title{
+            //     font-size: 2rem;
+            // }
+            // &__help{
+            //     font-size: 1.2rem;
+            // }
+            // &__wrapper{
+            //     display: flex;
+            //     flex-direction: row;
+            //     flex-wrap: wrap;
+            //     align-items: center;
+            //     justify-content: center;
+            //     &__card{
+            //         width: 20rem;
+            //         height: 20rem;
+
+            //         &__number{
+            //             font-size: 8rem;
+            //         }
+
+            //         &__title{
+            //             font-size: 1.2rem;
+            //         }
+            //         &__details{
+            //             font-size: 1.1rem;
+            //         }
+            //     }
+            // }
+        }
+        // Mobile
+        @include responsive(xs-mobile){
+            min-height: 500px;
+            background-color: blue;
             &__title{
-                font-size: 2.2rem;
+                font-size: 1.5rem;
             }
             &__help{
-                font-size: 2rem;
+                font-size: 1.2rem;
             }
             &__wrapper{
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: auto;
+                padding: 1rem .2rem;
                 place-items: center;
-                background-color: red;
-
+                gap: .4rem;
                 &__card{
-                    width: 14rem;
-                    height: 14rem;
+                    width: 90%;
+                    height: 12rem;
 
                     &__number{
-                        font-size: 8rem;
+                        font-size: 6rem;
+                    }
+                    &__img{
+                        width: 2.5rem;
+                        height: 2.5rem;
+    
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
                     }
 
                     &__title{
                         font-size: .8rem;
+                        margin-top: .5rem;
                     }
                     &__details{
-                        font-size: .65rem;
-                    }
-                }
-            }
-        }
-        // Mobile
-        @include responsive(mobile){
-            min-height: 600px;
-            &__title{
-                font-size: 2rem;
-            }
-            &__help{
-                font-size: 1.2rem;
-            }
-            &__wrapper{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                &__card{
-                    width: 20rem;
-                    height: 20rem;
-
-                    &__number{
-                        font-size: 8rem;
-                    }
-
-                    &__title{
-                        font-size: 1.2rem;
-                    }
-                    &__details{
-                        font-size: 1.1rem;
-                    }
-                }
-            }
-        }
-        // Mobile
-        @include responsive(xs-mobile){
-            min-height: 600px;
-            &__title{
-                font-size: 2rem;
-            }
-            &__help{
-                font-size: 1.2rem;
-            }
-            &__wrapper{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                &__card{
-                    width: 20rem;
-                    height: 20rem;
-
-                    &__number{
-                        font-size: 8rem;
-                    }
-
-                    &__title{
-                        font-size: 1.2rem;
-                    }
-                    &__details{
-                        font-size: 1.1rem;
+                        font-size: .7rem;
                     }
                 }
             }
