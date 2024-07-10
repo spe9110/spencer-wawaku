@@ -55,6 +55,9 @@ export default App;
 // npm install react-multi-carousel --save
 // npm install --save-dev @babel/plugin-proposal-private-property-in-object
 // npm install slick-carousel --save
+// npm install gsap (Install the GSAP library) and 
+// npm install @gsap/react (Install the GSAP React package)
+
 
 
 /*

@@ -2108,169 +2108,227 @@ a{
     .Services{
         // Large screen
         @include responsive(large-wide){
-            // min-height: 700px;
+            min-height: 700px;
             background-color: pink;
-            // &__title{
-            //     font-size: 4rem;
-            // }
+            &__title{
+                font-size: 4rem;
+            }
 
-            // &__help{
-            //     font-size: 3rem;
-            // }
-            // &__wrapper{
-            //     display: flex;
-            //     flex-direction: row;
-            //     flex-wrap: wrap;
-            //     align-items: center;
-            //     justify-content: center;
-            //     &__card{
-            //         width: 20rem;
-            //         height: 20rem;
+            &__help{
+                font-size: 3rem;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 1rem .2rem;
+                place-items: center;
+                row-gap: 1rem;
+                column-gap: .2rem;
 
-            //         &__number{
-            //             font-size: 10rem;
-            //         }
+                &__card{
+                    width: 22rem;
+                    height: 20rem;
+                    padding: 1.5em 1em;
 
-            //         &__title{
-            //             font-size: 1.2rem;
-            //         }
-            //         &__details{
-            //             font-size: 1.1rem;
-            //         }
-            //     }
-            // }
+                    &__number{
+                        font-size: 10rem;
+                    }
+                    &__img{
+                        width: 3.5rem;
+                        height: 3.5rem;
+    
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    &__title{
+                        font-size: 1.4rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
         }
         // Desktop
         @include responsive(desktop){
-            // min-height: 700px;
+            min-height: 700px;
             background-color: green;
-            // &__title{
-            //     font-size: 4rem;
-            // }
-            // &__help{
-            //     font-size: 3rem;
-            // }
-            // &__wrapper{
-            //     display: flex;
-            //     flex-direction: row;
-            //     flex-wrap: wrap;
-            //     align-items: center;
-            //     justify-content: center;
-            //     &__card{
-            //         width: 20rem;
-            //         height: 20rem;
+            &__title{
+                font-size: 3.5rem;
+            }
+            &__help{
+                font-size: 2.5rem;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 1rem .2rem;
+                place-items: center;
+                row-gap: 1rem;
+                column-gap: .2rem;
 
-            //         &__number{
-            //             font-size: 10rem;
-            //         }
+                &__card{
+                    width: 20rem;
+                    height: 20rem;
+                    padding: 1.5em 1em;
 
-            //         &__title{
-            //             font-size: 1.2rem;
-            //         }
-            //         &__details{
-            //             font-size: 1.1rem;
-            //         }
-            //     }
-            // }
+                    &__number{
+                        font-size: 10rem;
+                    }
+                    &__img{
+                        width: 3.2rem;
+                        height: 3.2rem;
+    
+                        img{
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                    &__title{
+                        font-size: 1.4rem;
+                    }
+                    &__details{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
         }
         // Laptop
         @include responsive(laptop){
-            // min-height: 700px;
+            min-height: 700px;
             background-color: orange;
-            // &__title{
-            //     font-size: 3rem;
-            // }
-            // &__help{
-            //     font-size: 2.3rem;
-            // }
-            // &__wrapper{
-            //     display: flex;
-            //     flex-direction: row;
-            //     flex-wrap: wrap;
-            //     align-items: center;
-            //     justify-content: center;
-            //     &__card{
-            //         width: 15rem;
-            //         height: 15rem;
-                    
-            //         &__number{
-            //             font-size: 8.5rem;
-            //         }
+            &__title{
+                font-size: 3rem;
+            }
+            &__help{
+                font-size: 2.3rem;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 1rem .2rem;
+                place-items: center;
+                row-gap: 1rem;
+                column-gap: .2rem;
 
-            //         &__title{
-            //             font-size: .9rem;
-            //         }
-            //         &__details{
-            //             font-size: .7rem;
-            //         }
-            //     }
-            // }
+                &__card{
+                    width: 15rem;
+                    height: 15rem;
+                    padding: .7em 1em;
+
+                    &__number{
+                        font-size: 8rem;
+                    }
+                    &__img{
+                        width: 3rem;
+                        height: 3rem;
+    
+                        img{
+                            width: 26px;
+                            height: 26px;
+                        }
+                    }
+                    &__title{
+                        font-size: .9rem;
+                    }
+                    &__details{
+                        font-size: .78rem;
+                    }
+                }
+            }
         }
         // tablet
         @include responsive(tablet){
-            // min-height: 600px;
+            min-height: 600px;
             background-color: yellow;
-            // &__title{
-            //     font-size: 2.2rem;
-            // }
-            // &__help{
-            //     font-size: 2rem;
-            // }
-            // &__wrapper{
-            //     display: grid;
-            //     grid-template-columns: auto auto;
-            //     place-items: center;
-            //     background-color: red;
+            &__title{
+                font-size: 2.2rem;
+            }
+            &__help{
+                font-size: 2rem;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: auto auto;
+                padding: 1rem .2rem;
+                place-items: center;
+                row-gap: 1rem;
+                column-gap: .2rem;
 
-            //     &__card{
-            //         width: 14rem;
-            //         height: 14rem;
+                &__card{
+                    width: 90%;
+                    height: 15rem;
+                    padding: .5em 1em;
 
-            //         &__number{
-            //             font-size: 8rem;
-            //         }
+                    &__number{
+                        font-size: 8rem;
+                    }
 
-            //         &__title{
-            //             font-size: .8rem;
-            //         }
-            //         &__details{
-            //             font-size: .65rem;
-            //         }
-            //     }
-            // }
+                    &__img{
+                        width: 3rem;
+                        height: 3rem;
+    
+                        img{
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    &__title{
+                        font-size: 1rem;
+                    }
+                    &__details{
+                        font-size: .9rem;
+                    }
+                }
+            }
         }
         // Mobile
         @include responsive(mobile){
-            // min-height: 600px;
+            min-height: 550px;
             background-color: red;
-            // &__title{
-            //     font-size: 2rem;
-            // }
-            // &__help{
-            //     font-size: 1.2rem;
-            // }
-            // &__wrapper{
-            //     display: flex;
-            //     flex-direction: row;
-            //     flex-wrap: wrap;
-            //     align-items: center;
-            //     justify-content: center;
-            //     &__card{
-            //         width: 20rem;
-            //         height: 20rem;
+            &__title{
+                font-size: 1.8rem;
+            }
+            &__help{
+                font-size: 1.2rem;
+            }
+            &__wrapper{
+                display: grid;
+                grid-template-columns: auto;
+                padding: 1rem .2rem;
+                place-items: center;
+                row-gap: .8rem;
 
-            //         &__number{
-            //             font-size: 8rem;
-            //         }
+                &__card{
+                    width: 90%;
+                    height: 16rem;
+                    padding: .5em 1em;
 
-            //         &__title{
-            //             font-size: 1.2rem;
-            //         }
-            //         &__details{
-            //             font-size: 1.1rem;
-            //         }
-            //     }
-            // }
+                    &__number{
+                        font-size: 8rem;
+                    }
+
+                    &__img{
+                        width: 3rem;
+                        height: 3rem;
+    
+                        img{
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+
+                    &__title{
+                        font-size: 1rem;
+                    }
+                    &__details{
+                        font-size: .9rem;
+                    }
+                }
+            }
         }
         // Mobile
         @include responsive(xs-mobile){
@@ -2287,10 +2345,12 @@ a{
                 grid-template-columns: auto;
                 padding: 1rem .2rem;
                 place-items: center;
-                gap: .4rem;
+                row-gap: .6rem;
+                
                 &__card{
                     width: 90%;
                     height: 12rem;
+                    padding: .5em 1em;
 
                     &__number{
                         font-size: 6rem;
@@ -2307,7 +2367,7 @@ a{
 
                     &__title{
                         font-size: .8rem;
-                        margin-top: .5rem;
+                        // margin-top: .5rem;
                     }
                     &__details{
                         font-size: .7rem;

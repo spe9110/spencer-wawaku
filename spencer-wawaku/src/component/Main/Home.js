@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef } from 'react';
 import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import './MainSass/index_main.css';
 import { GoArrowUpRight } from "react-icons/go";
@@ -7,6 +7,11 @@ import Profil from './Images/avatar-bis.png';
 import SocialMediaHero from "./SocialMediaHero";
 import ScrollingText from "../Main/ScrollingText";
 import { useTheme } from '../Header/DarkMode';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+
+gsap.registerPlugin(useGSAP);
 
 export default function HomeSection(){
     const { theme } = useTheme();
@@ -17,20 +22,40 @@ export default function HomeSection(){
         typeSpeed: 250,
         deleteSpeed: 30,
         delaySpeed: 2500
-    })
+    });
+
+    const firstAnime = useRef();
+    const tl = useRef();
+
+    useGSAP(
+        () => {
+            tl.current = gsap
+                .timeline()
+                .from("#greet", {
+                    x: "-50%"
+                    })
+                .from("#name", {
+                    duration: 1.5, 
+                    opacity: 0, 
+                    x: "-50%", 
+                    delay: 0.3, 
+                    stagger: 0.5
+                });
+        }
+    );
 
     return(
-        <div className={`Hero ${theme === 'light' ? 'dark-mode' : 'light'}`}>
+        <div ref={firstAnime} className={`Hero ${theme === 'light' ? 'dark-mode' : 'light'}`} id='Hero_Anime'>
             {/* info */}
             <div className="Hero__info">
-                <p className="Hero__info__greet">Hello <span style={{fontSize:30}}>👋🏾</span> it's </p>
-                <h3 className="Hero__info__name">Spencer WAWAKU</h3>
-                <h4 className="Hero__info__job">
+                <p id='greet' className="Hero__info__greet">Hello <span style={{fontSize:30}}>👋🏾</span> it's </p>
+                <h3 id='name' className="Hero__info__name">Spencer WAWAKU</h3>
+                <h4 id='job' className="Hero__info__job">
                     <span>{text}</span>
                     <span style={{marginLeft:10}}><Cursor cursorStyle='✍🏾' /></span>
                 </h4>
                 <hr />
-                <p className="Hero__info__description">As a passionate web developer, I'm ready to bring your ideas to life by creating captivating and innovative digital experiences.</p>
+                <p id='descript' className="Hero__info__description">As a passionate web developer, I'm ready to bring your ideas to life by creating captivating and innovative digital experiences.</p>
                 <div className="Hero__info__btn">
                     <NavLink to='/contact' className="Hero__info__btn__one">
                             Get in touch
