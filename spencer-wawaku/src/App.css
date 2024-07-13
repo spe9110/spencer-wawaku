@@ -3692,32 +3692,208 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .Contact {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
     background-color: pink;
+  }
+  .container .Contact__title {
+    font-size: 4rem;
+  }
+  .container .Contact__touch {
+    font-size: 3rem;
+  }
+  .container .Contact__form {
+    width: 80vw;
+    min-height: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    border-radius: 2rem;
+  }
+  .container .Contact__form__map, .container .Contact__form__content {
+    width: 40vw;
+    min-height: 550px;
+    flex: 1;
+  }
+  .container .Contact__form__map {
+    overflow: hidden;
+  }
+  .container .Contact__form__content {
+    padding: 18px 12px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .Contact {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
     background-color: green;
+  }
+  .container .Contact__title {
+    font-size: 4rem;
+  }
+  .container .Contact__touch {
+    font-size: 3rem;
+  }
+  .container .Contact__form {
+    width: 80vw;
+    min-height: 550px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    border-radius: 2rem;
+  }
+  .container .Contact__form__map, .container .Contact__form__content {
+    width: 40vw;
+    min-height: 550px;
+    flex: 1;
+  }
+  .container .Contact__form__map {
+    overflow: hidden;
+  }
+  .container .Contact__form__content {
+    padding: 18px 12px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .container .Contact {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
     background-color: orange;
+  }
+  .container .Contact__title {
+    font-size: 3rem;
+  }
+  .container .Contact__touch {
+    font-size: 2rem;
+  }
+  .container .Contact__form {
+    width: 80vw;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    border-radius: 2rem;
+  }
+  .container .Contact__form__map, .container .Contact__form__content {
+    width: 40vw;
+    min-height: 500px;
+    flex: 1;
+  }
+  .container .Contact__form__map {
+    overflow: hidden;
+  }
+  .container .Contact__form__content {
+    padding: 18px 12px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .container .Contact {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
     background-color: yellow;
+  }
+  .container .Contact__title {
+    font-size: 2rem;
+  }
+  .container .Contact__touch {
+    font-size: 1.4rem;
+  }
+  .container .Contact__form {
+    width: 80%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+  }
+  .container .Contact__form__map {
+    width: 100%;
+    height: 350px;
+  }
+  .container .Contact__form__content {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    height: 350px;
   }
 }
 @media only screen and (min-width: 412px) and (max-width: 499px) {
   .container .Contact {
+    min-height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
     background-color: red;
+  }
+  .container .Contact__title {
+    font-size: 2rem;
+  }
+  .container .Contact__touch {
+    font-size: 1.2rem;
+  }
+  .container .Contact__form {
+    width: 90%;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+  }
+  .container .Contact__form__map {
+    width: 100%;
+    height: 230px;
+  }
+  .container .Contact__form__content {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+  }
+  .container .Contact .leaflet-container {
+    width: 100%;
+    height: 230px;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 411px) {
   .container .Contact {
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3733,7 +3909,7 @@ a {
   }
   .container .Contact__form {
     width: 90%;
-    min-height: 600px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -3742,7 +3918,7 @@ a {
   }
   .container .Contact__form__map {
     width: 100%;
-    min-height: 350px;
+    height: 220px;
   }
   .container .Contact__form__content {
     width: 100%;
@@ -3751,7 +3927,7 @@ a {
   }
   .container .Contact .leaflet-container {
     width: 100%;
-    min-height: 350px;
+    height: 220px;
   }
 }
 .container .text__infinite {
