@@ -2346,7 +2346,7 @@ a{
                 padding: 1rem .2rem;
                 place-items: center;
                 row-gap: .6rem;
-                
+
                 &__card{
                     width: 90%;
                     height: 12rem;
@@ -2383,6 +2383,8 @@ a{
         @include responsive(large-wide){
             min-height: 700px;
             width: 100%;
+            background-color: pink;
+            padding: .5em 1em;
 
             &__title{
                 font-size: 4rem;
@@ -2438,10 +2440,19 @@ a{
                     }
                 }
             }
-
+            .nextArrow{
+                width: 3rem;
+                height: 3rem;
+                right: -1.5rem;
+            }
+            .prevArrow{
+                width: 3rem;
+                height: 3rem;
+                left: -1.5rem;
+            }
             .CountUp{
                 gap: 1rem;
-                margin-top: 2rem;
+                margin: 2rem 0;
 
                 &__wrapper{
                     width: 50rem;
@@ -2467,6 +2478,8 @@ a{
         @include responsive(desktop){
             min-height: 700px;
             width: 100%;
+            background-color: green;
+            padding: .5em 1em;
 
             &__title{
                 font-size: 4rem;
@@ -2522,10 +2535,19 @@ a{
                     }
                 }
             }
-
+            .nextArrow{
+                width: 3rem;
+                height: 3rem;
+                right: -1.5rem;
+            }
+            .prevArrow{
+                width: 3rem;
+                height: 3rem;
+                left: -1.5rem;
+            }
             .CountUp{
                 gap: 1rem;
-                margin-top: 2rem;
+                margin: 2rem 0;
 
                 &__wrapper{
                     width: 50rem;
@@ -2551,6 +2573,8 @@ a{
         @include responsive(laptop){
             min-height: 700px;
             width: 100%;
+            background-color: orange;
+            padding: .5em 4em;
 
             &__title{
                 font-size: 3rem;
@@ -2561,19 +2585,28 @@ a{
 
             &__card{
             width: 300px;
-            height: 400px;
+            height: 380px;
             margin-bottom: .4rem;
                 &__img{
-                    height: 200px;
+                    height: 190px;
+
+                    &__picture{
+                        width: 100% !important;
+                        height: 190px;
+                    }
+                    &__label{
+                        font-size: 1rem;
+                    }
                 }
 
                 &__content{
-                    height: 200px;
-                    &__title{
-                        font-size: .9rem;
+                    height: 190px !important;
+
+                     &__title{
+                        font-size: 1.1rem;
                     }
                     &__description{
-                        font-size: .6rem;
+                        font-size: .9rem;
                     }
         
                     &__profil{
@@ -2581,31 +2614,40 @@ a{
 
                         &__author{        
                             &__picture{
-                                width: 2rem;
-                                height: 2rem;
+                                width: 2.5rem;
+                                height: 2.5rem;
                             }
                             &__nameJob{
                                 &__name{
-                                    font-size: .55rem;
+                                    font-size: .9rem;
                                 }
                                 &__job{
-                                    font-size: .45rem;
+                                    font-size: .75rem;
                                 }
                             }
                         }
                         &__dateButton{
                             &__date{
-                                font-size: .5rem;
+                                font-size: .75rem;
                             }
             
                             &__btn{
-                                font-size: .6rem;
+                                font-size: .9rem;
                             }
                         }
                     }
                 }
             }
-
+            .nextArrow{
+                width: 2.6rem;
+                height: 2.6rem;
+                right: -1.3rem;
+            }
+            .prevArrow{
+                width: 2.6rem;
+                height: 2.6rem;
+                left: -1.3rem;
+            }
             .CountUp{
                 gap: 1rem;
                 margin-top: 2rem;
@@ -2632,13 +2674,15 @@ a{
         // tablet
         @include responsive(tablet){
             min-height: 600px;
-            width: 80%;
+            width: 100%;
+            background-color: yellow;
+            padding: .5em 10em;
 
             &__title{
                 font-size: 2.2rem;
             }
             &__watch{
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             &__card{
@@ -2646,16 +2690,24 @@ a{
                 height: 400px;
                 &__img{
                     height: 200px;
+
+                    &__picture{
+                        width: 100% !important;
+                        height: 200px !important;
+                    }
+                    &__label{
+                        font-size: .9rem;
+                    }
                 }
 
                 &__content{
-                    height: 200px;
+                    height: 200px !important;
 
                     &__title{
-                        font-size: 1.1rem;
+                        font-size: 1.3rem;
                     }
                     &__description{
-                        font-size: .9rem;
+                        font-size: 1rem;
                     }
         
                     &__profil{
@@ -2664,6 +2716,109 @@ a{
                             &__picture{
                                 width: 2.5rem;
                                 height: 2.5rem;
+                            }
+                            &__nameJob{
+                                &__name{
+                                    font-size: 1rem;
+                                }
+                                &__job{
+                                    font-size: .8rem;
+                                }
+                            }
+                        }
+                        &__dateButton{
+                            &__date{
+                                font-size: .8rem;
+                            }
+            
+                            &__btn{
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .nextArrow{
+                width: 2rem;
+                height: 2rem;
+                right: -1rem;
+            }
+            .prevArrow{
+                width: 2rem;
+                height: 2rem;
+                left: -1rem;
+            }
+            .CountUp{
+                gap: 1rem;
+                margin: .3rem 0;
+                padding: .1em 0;
+                height: 140px;
+
+                &__wrapper{
+                    width: 28rem;
+                    height: 140px;
+                    @include flexDirection(row, center, center);
+                    gap: 0rem;
+
+                    &__experience, &__project, &__subscribers{
+                        width: calc(28rem / 3);
+                        height: auto;
+
+                        &__icon, &__number{
+                            font-size: 1.5rem;
+                        }
+                        &__title{
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+        // Mobile
+        @include responsive(mobile){
+            min-height: 550px;
+            width: 100%;
+            background-color: red;
+            padding: .5em;
+
+            &__title{
+                font-size: 2rem;
+            }
+            &__watch{
+                font-size: 1.3rem;
+            }
+            
+            &__card{
+                width: 300px;
+                height: 380px;
+                &__img{
+                    height: 190px;
+
+                    &__picture{
+                        width: 100% !important;
+                        height: 190px !important;
+                    }
+                    &__label{
+                        font-size: .7rem;
+                    }
+                }
+
+                &__content{
+                    height: 190px !important;
+
+                    &__title{
+                        font-size: 1rem;
+                    }
+                    &__description{
+                        font-size: .9rem;
+                    }
+        
+                    &__profil{ 
+                        padding: 0 .7em;    
+                        &__author{        
+                            &__picture{
+                                width: 2rem;
+                                height: 2rem;
                             }
                             &__nameJob{
                                 &__name{
@@ -2687,100 +2842,31 @@ a{
                 }
             }
 
-            .CountUp{
-                gap: 1rem;
-                margin-top: 0;
-
-                &__wrapper{
-                    width: 21rem;
-                    height: 140px;
-                    @include flexDirection(row, center, center);
-                    gap: 0rem;
-
-                    &__experience, &__project, &__subscribers{
-                        width: calc(21rem / 3);
-                        height: auto;
-
-                        &__icon, &__number{
-                            font-size: 1.2rem;
-                        }
-                        &__title{
-                            font-size: .7rem;
-                        }
-                    }
-                }
+            .nextArrow{
+                width: 2rem;
+                height: 2rem;
+                right: -1rem;
             }
-        }
-        // Mobile
-        @include responsive(mobile){
-            min-height: 600px;
-            width: 100%;
-
-            &__title{
-                font-size: 2rem;
-            }
-            &__watch{
-                font-size: 1.2rem;
-            }
-            
-            &__card{
-                width: 300px;
-                height: 400px;
-                &__img{
-                    height: 200px;
-                }
-
-                &__content{
-                    height: 200px;
-
-                    &__title{
-                        font-size: 1rem;
-                    }
-                    &__description{
-                        font-size: .9rem;
-                    }
-        
-                    &__profil{ 
-                        padding: 0 .7em;    
-                        &__author{        
-                            &__picture{
-                                width: 2rem;
-                                height: 2rem;
-                            }
-                            &__nameJob{
-                                &__name{
-                                    font-size: .7rem;
-                                }
-                                &__job{
-                                    font-size: .5rem;
-                                }
-                            }
-                        }
-                        &__dateButton{
-                            &__date{
-                                font-size: .7rem;
-                            }
-            
-                            &__btn{
-                                font-size: .8rem;
-                            }
-                        }
-                    }
-                }
+            .prevArrow{
+                width: 2rem;
+                height: 2rem;
+                left: -1rem;
             }
 
             .CountUp{
                 gap: 1rem;
-                margin-top: 0;
+                margin: .3rem 0;
+                padding: .1em 0;
+                height: 120px;
 
                 &__wrapper{
-                    width: 19rem;
-                    height: 140px;
+                    width: 22rem;
+                    height: 120px;
                     @include flexDirection(row, center, center);
                     gap: 0rem;
 
                     &__experience, &__project, &__subscribers{
-                        width: calc(19rem / 3);
+                        width: calc(22rem / 3);
                         height: auto;
                         gap: 0;
 
@@ -2788,39 +2874,49 @@ a{
                             font-size: 1.2rem;
                         }
                         &__title{
-                            font-size: .7rem;
+                            font-size: .66rem;
                         }
                     }
                 }
             }
         }
-        // Mobile
+        // Extra-small Mobile
         @include responsive(xs-mobile){
-            min-height: 600px;
+            min-height: 450px;
             width: 100%;
+            background-color: blue;
+            padding: .5em;
 
             &__title{
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
             &__watch{
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
             
             &__card{
                 width: 300px;
-                height: 400px;
+                height: 320px;
                 &__img{
-                    height: 200px;
+                    height: 160px !important;
+
+                    &__picture{
+                        width: 100% !important;
+                        height: 160px !important;
+                    }
+                    &__label{
+                        font-size: .5rem;
+                    }
                 }
 
                 &__content{
-                    height: 200px;
+                    height: 160px !important;
 
                     &__title{
-                        font-size: 1rem;
+                        font-size: .9rem;
                     }
                     &__description{
-                        font-size: .9rem;
+                        font-size: .7rem;
                     }
         
                     &__profil{ 
@@ -2832,7 +2928,7 @@ a{
                             }
                             &__nameJob{
                                 &__name{
-                                    font-size: .7rem;
+                                    font-size: .6rem;
                                 }
                                 &__job{
                                     font-size: .5rem;
@@ -2841,37 +2937,49 @@ a{
                         }
                         &__dateButton{
                             &__date{
-                                font-size: .7rem;
+                                font-size: .6rem;
                             }
             
                             &__btn{
-                                font-size: .8rem;
+                                font-size: .6rem;
                             }
                         }
                     }
                 }
             }
+            .nextArrow{
+                width: 2rem;
+                height: 2rem;
+                right: -1rem;
+            }
+            .prevArrow{
+                width: 2rem;
+                height: 2rem;
+                left: -1rem;
+            }
 
             .CountUp{
                 gap: 1rem;
-                margin-top: 0;
+                margin: .1rem 0;
+                padding: .1em 0;
+                height: 120px;
 
                 &__wrapper{
-                    width: 19rem;
-                    height: 140px;
+                    width: 18rem;
+                    height: 100px;
                     @include flexDirection(row, center, center);
                     gap: 0rem;
 
                     &__experience, &__project, &__subscribers{
-                        width: calc(19rem / 3);
+                        width: calc(18rem / 3);
                         height: auto;
                         gap: 0;
 
                         &__icon, &__number{
-                            font-size: 1.2rem;
+                            font-size: 1rem;
                         }
                         &__title{
-                            font-size: .7rem;
+                            font-size: .6rem;
                         }
                     }
                 }
@@ -2883,174 +2991,180 @@ a{
     .Contact{
         // Large screen
         @include responsive(large-wide){
-            min-height: 700px;
-            @include flexDirection(column, center, center);
-            padding: 2em 0;
+            // min-height: 700px;
+            // @include flexDirection(column, center, center);
+            // padding: 2em 0;
+            background-color: pink;
 
-            &__title{
-                font-size: 4rem;
-            }
+            // &__title{
+            //     font-size: 4rem;
+            // }
     
-            &__touch{
-                font-size: 3rem;
-            }
-            &__form{
-                width: 80vw;
-                min-height: 600px;
-                @include flexDirection(row, start, start);
-                border-radius: 2rem;
-                &__map{
-                    width: 40vw;
-                    min-height: 600px;
-                }
-                &__content{
-                    width: 40vw;
-                    min-height: 600px;
-                    padding: 18px 12px;
-                }
-            }
-            .leaflet-container{
-                width: 100%;
-                min-height: 600px;
-            }
+            // &__touch{
+            //     font-size: 3rem;
+            // }
+            // &__form{
+            //     width: 80vw;
+            //     min-height: 600px;
+            //     @include flexDirection(row, start, start);
+            //     border-radius: 2rem;
+            //     &__map{
+            //         width: 40vw;
+            //         min-height: 600px;
+            //     }
+            //     &__content{
+            //         width: 40vw;
+            //         min-height: 600px;
+            //         padding: 18px 12px;
+            //     }
+            // }
+            // .leaflet-container{
+            //     width: 100%;
+            //     min-height: 600px;
+            // }
         }
         // Desktop
         @include responsive(desktop){
-            min-height: 700px;
-            @include flexDirection(column, center, center);
-            padding: 2em 0;
+            // min-height: 700px;
+            // @include flexDirection(column, center, center);
+            // padding: 2em 0;
+            background-color: green;
 
-            &__title{
-                font-size: 4rem;
-            }
+            // &__title{
+            //     font-size: 4rem;
+            // }
     
-            &__touch{
-                font-size: 3rem;
-            }
-            &__form{
-                width: 80vw;
-                min-height: 600px;
-                @include flexDirection(row, start, start);
-                border-radius: 2rem;
-                &__map{
-                    width: 40vw;
-                    min-height: 600px;
-                }
-                &__content{
-                    width: 40vw;
-                    min-height: 600px;
-                    padding: 18px 12px;
-                }
-            }
-            .leaflet-container{
-                width: 100%;
-                min-height: 600px;
-            }
+            // &__touch{
+            //     font-size: 3rem;
+            // }
+            // &__form{
+            //     width: 80vw;
+            //     min-height: 600px;
+            //     @include flexDirection(row, start, start);
+            //     border-radius: 2rem;
+            //     &__map{
+            //         width: 40vw;
+            //         min-height: 600px;
+            //     }
+            //     &__content{
+            //         width: 40vw;
+            //         min-height: 600px;
+            //         padding: 18px 12px;
+            //     }
+            // }
+            // .leaflet-container{
+            //     width: 100%;
+            //     min-height: 600px;
+            // }
         }
         // Laptop
         @include responsive(laptop){
-            min-height: 650px;
-            @include flexDirection(column, center, center);
-            padding: 2em 0;
+            // min-height: 650px;
+            // @include flexDirection(column, center, center);
+            // padding: 2em 0;
+            background-color: orange;
 
-            &__title{
-                font-size: 3rem;
-            }
+            // &__title{
+            //     font-size: 3rem;
+            // }
     
-            &__touch{
-                font-size: 2rem;
-            }
-            &__form{
-                width: 80vw;
-                min-height: 600px;
-                @include flexDirection(row, start, start);
-                border-radius: 2rem;
-                &__map{
-                    width: 40vw;
-                    min-height: 600px;
-                }
-                &__content{
-                    width: 40vw;
-                    min-height: 600px;
-                    padding: 18px 12px;
-                }
-            }
-            .leaflet-container{
-                width: 100%;
-                min-height: 600px;
-            }
+            // &__touch{
+            //     font-size: 2rem;
+            // }
+            // &__form{
+            //     width: 80vw;
+            //     min-height: 600px;
+            //     @include flexDirection(row, start, start);
+            //     border-radius: 2rem;
+            //     &__map{
+            //         width: 40vw;
+            //         min-height: 600px;
+            //     }
+            //     &__content{
+            //         width: 40vw;
+            //         min-height: 600px;
+            //         padding: 18px 12px;
+            //     }
+            // }
+            // .leaflet-container{
+            //     width: 100%;
+            //     min-height: 600px;
+            // }
         }
         // tablet
         @include responsive(tablet){
-            min-height: 600px;
-            @include flexDirection(column, center, center);
-            padding: 1rem 0;
+            // min-height: 600px;
+            // @include flexDirection(column, center, center);
+            // padding: 1rem 0;
+            background-color: yellow;
 
-            &__title{
-                font-size: 2rem;
-            }
+            // &__title{
+            //     font-size: 2rem;
+            // }
     
-            &__touch{
-                font-size: 1.2rem;
-            }
-            &__form{
-                width: 90%;
-                min-height: 600px;
-                @include flexDirection(column, center, center);
-                border-radius: .4rem;
-                &__map{
-                    width: 100%;
-                    min-height: 400px;
-                }
-                &__content{
-                    width: 100%;
-                    min-height: 400px;
-                    padding: 10px;
-                }
-            }
-            .leaflet-container{
-                width: 100%;
-                min-height: 400px;
-            }
+            // &__touch{
+            //     font-size: 1.2rem;
+            // }
+            // &__form{
+            //     width: 90%;
+            //     min-height: 600px;
+            //     @include flexDirection(column, center, center);
+            //     border-radius: .4rem;
+            //     &__map{
+            //         width: 100%;
+            //         min-height: 400px;
+            //     }
+            //     &__content{
+            //         width: 100%;
+            //         min-height: 400px;
+            //         padding: 10px;
+            //     }
+            // }
+            // .leaflet-container{
+            //     width: 100%;
+            //     min-height: 400px;
+            // }
         }
         // Mobile
         @include responsive(mobile){
-            min-height: 600px;
-            @include flexDirection(column, center, center);
-            padding: 1rem 0;
+            // min-height: 600px;
+            // @include flexDirection(column, center, center);
+            // padding: 1rem 0;
+            background-color: red;
 
-            &__title{
-                font-size: 2rem;
-            }
+            // &__title{
+            //     font-size: 2rem;
+            // }
     
-            &__touch{
-                font-size: 1.2rem;
-            }
-            &__form{
-                width: 90%;
-                min-height: 600px;
-                @include flexDirection(column, center, center);
-                border-radius: .4rem;
-                &__map{
-                    width: 100%;
-                    min-height: 350px;
-                }
-                &__content{
-                    width: 100%;
-                    min-height: 400px;
-                    padding: 10px;
-                }
-            }
-            .leaflet-container{
-                width: 100%;
-                min-height: 350px;
-            }
+            // &__touch{
+            //     font-size: 1.2rem;
+            // }
+            // &__form{
+            //     width: 90%;
+            //     min-height: 600px;
+            //     @include flexDirection(column, center, center);
+            //     border-radius: .4rem;
+            //     &__map{
+            //         width: 100%;
+            //         min-height: 350px;
+            //     }
+            //     &__content{
+            //         width: 100%;
+            //         min-height: 400px;
+            //         padding: 10px;
+            //     }
+            // }
+            // .leaflet-container{
+            //     width: 100%;
+            //     min-height: 350px;
+            // }
         }
         // extra-small Mobile
         @include responsive(xs-mobile){
             min-height: 600px;
             @include flexDirection(column, center, center);
             padding: 1rem 0;
+            background-color: blue;
 
             &__title{
                 font-size: 2rem;

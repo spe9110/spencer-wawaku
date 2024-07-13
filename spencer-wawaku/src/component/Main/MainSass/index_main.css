@@ -416,7 +416,6 @@
 }
 
 .container .Videos {
-  padding: 1em 3em;
   margin: 0 auto;
   overflow: hidden;
   /* these code insert space between items  */
@@ -448,7 +447,6 @@
 }
 .container .Videos__card__img__picture {
   display: block;
-  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -461,7 +459,6 @@
   color: #fff;
   padding: 0.2em 1em;
   border-radius: 0.5em;
-  font-size: 1rem;
   font-weight: bold;
   border: 1px solid orangered;
 }
@@ -554,9 +551,6 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -1.5rem;
-  width: 3rem;
-  height: 3rem;
   border: 1px solid orangered;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -570,9 +564,6 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -1.5rem;
-  width: 3rem;
-  height: 3rem;
   border: 1px solid orangered;
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
@@ -733,8 +724,6 @@ https://zhiqiyu.github.io/post/react-leaflet-setup/
 */
 .container .Videos .CountUp {
   width: 100%;
-  min-height: 200px;
-  padding: 1em 0;
   display: grid;
   place-items: center;
 }
