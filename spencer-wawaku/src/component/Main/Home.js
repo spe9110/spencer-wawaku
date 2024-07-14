@@ -32,15 +32,54 @@ export default function HomeSection(){
             tl.current = gsap
                 .timeline()
                 .from("#greet", {
-                    x: "-50%"
+                    duration: .5, 
+                    opacity: 0, 
+                    x: "-50%", 
+                    delay: 0.1, 
+                    stagger: 0.5
                     })
                 .from("#name", {
+                    duration: 1, 
+                    opacity: 0, 
+                    x: "-50%", 
+                    delay: 0.2, 
+                    stagger: 0.5
+                })
+                .from("#job", {
                     duration: 1.5, 
                     opacity: 0, 
                     x: "-50%", 
                     delay: 0.3, 
                     stagger: 0.5
-                });
+                })
+                .from("#descript", {
+                    duration: 2, 
+                    opacity: 0, 
+                    x: "-50%", 
+                    delay: 0.4, 
+                    stagger: 0.5
+                })
+                .from("#btn_one", {
+                    duration: 2, 
+                    opacity: 0, 
+                    y: "10%", 
+                    delay: 0.5, 
+                    stagger: 0.5
+                })
+                .from("#picture", {
+                    duration: 3, 
+                    opacity: 0, 
+                    y: "20%", 
+                    delay: 0.6, 
+                    stagger: 0.5
+                })
+                .from("#MediaSocial", {
+                    duration: 3, 
+                    opacity: 0, 
+                    x: "20%", 
+                    delay: 0.6, 
+                    stagger: 0.5
+                })
         }
     );
 
@@ -56,7 +95,7 @@ export default function HomeSection(){
                 </h4>
                 <hr />
                 <p id='descript' className="Hero__info__description">As a passionate web developer, I'm ready to bring your ideas to life by creating captivating and innovative digital experiences.</p>
-                <div className="Hero__info__btn">
+                <div className="Hero__info__btn"  id='btn_one'>
                     <NavLink to='/contact' className="Hero__info__btn__one">
                             Get in touch
                         </NavLink>
@@ -64,7 +103,7 @@ export default function HomeSection(){
                 </div>
             </div>
             {/* profil */}
-            <div className="Hero__profil">
+            <div className="Hero__profil" id='picture'>
                     <img src={Profil} className="Hero__profil__picture" alt="avatar_picture"/>
                 <div className="Hero__profil__code">
                     <span>console.log(data)</span>
@@ -89,7 +128,7 @@ export default function HomeSection(){
                 </div>                    
             </div>
             <ScrollingText/>
-            <SocialMediaHero/>
+            <SocialMediaHero id="MediaSocial" />
         </div>
     )
 }

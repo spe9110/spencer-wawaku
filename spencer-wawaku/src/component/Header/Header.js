@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import navbarItems from './Data/Data'; // Importing navbarItems from data.js
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link, NavLink } from 'react-router-dom';
@@ -7,7 +7,11 @@ import LogoImage from './Images/spfavicon.png';
 import Switch from './Switch';
 import { useTheme } from './DarkMode';
 import './HeaderSass/index_header.css';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
+
+gsap.registerPlugin(useGSAP);
 
 export default function Header() {
 
@@ -34,12 +38,28 @@ export default function Header() {
             setMobileMenuOpen(false); // Close the mobile menu when a navigation item is clicked
         }
     }
-    
+        // GSAP 
+    const thirdAnime = useRef();
+    const tl = useRef();
+
+    useGSAP(
+        () => {
+            tl.current = gsap
+                .timeline()
+                .from("#logo, #navbar, #btn", {
+                    duration: 1, 
+                    opacity: 0, 
+                    y: "-100%", 
+                    stagger: 0.5
+                })
+                
+        }
+    );
     return (
-        <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} >
+        <div ref={thirdAnime} className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`}>
 
             {/* logo */}
-            <div className='Header__logo'>
+            <div className='Header__logo'  id='logo'>
                 <Link to='/home' className="LinkName">
                     <img className="Header__logo__picture" src={LogoImage} alt="photo_logo" />
                     <h3 className="Header__logo__name">
@@ -50,7 +70,7 @@ export default function Header() {
 
             {/* navigation */}
             {/* to show the menu on click we  create a function on nav element */}
-            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`}>
+            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar'>
                 <ul>
                     {navbarItems.map(item => (
                         <li key={item.id}>
@@ -71,7 +91,7 @@ export default function Header() {
             </nav>
 
             {/* button */}
-            <div className='Header__contact'>
+            <div className='Header__contact' id='btn'>
                 <Switch/>
                     <NavLink className="Header__contact__contactMe" to='/contact'>
                         <button>Contact</button>
