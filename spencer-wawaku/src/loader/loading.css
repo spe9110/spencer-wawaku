@@ -1,4 +1,4 @@
-#loader__container {
+.loader__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,16 +8,12 @@
   /* Keyframes for the drawing effect */
   /* Keyframes for the fading effect */
 }
-#loader__container__welcome {
-  font-size: 2rem;
-  color: white;
-}
-#loader__container__loader {
+.loader__container__loader {
   width: 60%;
   height: auto;
   margin-top: 4rem;
 }
-#loader__container__loader path {
+.loader__container__loader path {
   stroke: white;
   stroke-width: 5;
   stroke-dasharray: 1000; /* Large number to ensure full length coverage */
@@ -36,11 +32,22 @@
   }
 }
 @media screen and (max-width: 768px) {
-  #loader__container #loader__container__welcome {
-    font-size: 1rem;
-  }
-  #loader__container #loader__container__loader {
+  .loader__container #loader__container__loader {
     width: 50%;
     margin-top: 3rem;
   }
+}
+
+.loader__container__two {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1d4ed8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader__container__two__welcome {
+  font-size: 12rem;
+  color: white;
 }/*# sourceMappingURL=loading.css.map */

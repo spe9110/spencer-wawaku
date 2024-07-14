@@ -16,11 +16,12 @@ function App() {
   // loading screen
   const [ loading, setLoading ] = useState(true);
   useEffect(()=>{
-    setTimeout(()=>setLoading(false), 6000);
+    setTimeout(()=>setLoading(false), 10000);
   },[])
   if(loading){
     return <LoadingScreen/>
   }
+
   return (
         <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
           <Header />

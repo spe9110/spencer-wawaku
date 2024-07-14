@@ -73,13 +73,6 @@ export default function HomeSection(){
                     delay: 0.6, 
                     stagger: 0.5
                 })
-                .from("#MediaSocial", {
-                    duration: 3, 
-                    opacity: 0, 
-                    x: "20%", 
-                    delay: 0.6, 
-                    stagger: 0.5
-                })
         }
     );
 
@@ -128,7 +121,7 @@ export default function HomeSection(){
                 </div>                    
             </div>
             <ScrollingText/>
-            <SocialMediaHero id="MediaSocial" />
+            <SocialMediaHero/>
         </div>
     )
 }

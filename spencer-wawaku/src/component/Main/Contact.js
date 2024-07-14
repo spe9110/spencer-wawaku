@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable react/jsx-no-undef */
-import { useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { useFormik } from "formik"; 
 import * as Yup from 'yup'; 
 import { 
@@ -17,6 +17,10 @@ import './MainSass/index_main.css';
 import ReactLeafletMap from './ReactLeafletMap';
 import UseSubmit from './AlertMessage/UseSubmit';
 import { useAlertContext } from './AlertMessage/AlertContext';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 export default function Contact(){
 
@@ -59,15 +63,31 @@ export default function Contact(){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response]); 
 
+    const contactAnime = useRef();
+    const tl = useRef();
+
+    useGSAP(
+      () => {
+          tl.current = gsap.timeline()
+              .from("#map", {
+                  duration: 2, 
+                  opacity: 0,
+              })
+              .from("#form", {
+                  duration: 2, 
+                  opacity: 0,
+              },"-=1.5")
+      }
+    )
     return(
         <div className="Contact">
             <h3 className="Contact__title">Contact</h3>
             <p className="Contact__touch">Let's get in touch</p>
-            <div className='Contact__form'>
-                <div className="Contact__form__map">
+            <div className='Contact__form' ref={contactAnime}>
+                <div className="Contact__form__map" id='map'>
                     <ReactLeafletMap/>
                 </div>
-                <div className="Contact__form__content">
+                <div className="Contact__form__content" id='form'>
                     <form onSubmit={formik.handleSubmit}> 
                         <FormControl isRequired isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                             <FormLabel htmlFor="first name">First name</FormLabel>

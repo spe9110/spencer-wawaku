@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
-import React, { useState }  from 'react';
+import { useState, useRef }  from 'react';
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 import './MainSass/index_main.css';
 import PictureProfil from './PictureProfil';
@@ -9,7 +9,11 @@ import programmingSkills from './DataMain/ProgrammingSkills';
 import otherSkills from './DataMain/OtherSkills';
 import tools from './DataMain/ToolsData';
 import { useTheme } from '../Header/DarkMode';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
+
+gsap.registerPlugin(useGSAP);
 
 // picture variables
 const picture = pictures;
@@ -22,9 +26,28 @@ export default function About(){
         setShowSkills(e)
     }
 
+    const aboutAnime = useRef();
+    const tl = useRef();
+
+    useGSAP(
+        () => {
+            tl.current = gsap.timeline()
+                .from("#photo", {
+                    x: "-100%",
+                    duration: 1.5, 
+                    opacity: 0,
+                })
+                .from("#stat", {
+                    x: "100%",
+                    duration: 1.5, 
+                    opacity: 0,
+                },  "-=1.5")
+        }
+    )
+
     return(
-        <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`}>
-            <div className="About__slider">
+        <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={aboutAnime}>
+            <div className="About__slider" id='photo'>
                 {/* design */}
                 <div className="About__slider__design"></div>
                 {/* picture slider*/}
@@ -32,7 +55,7 @@ export default function About(){
                     <PictureProfil pictures={picture} className="About__slider__picture__img" />
                 </div>
             </div>
-            <div className="About__content">
+            <div className="About__content" id='stat'>
                 <h3 className="About__content__title">About me</h3>
                 <div className="About__content__btn">
                     <button className={showSkills === 1 ? "About__content__btn__one active" : "About__content__btn__one"} onClick={()=> handleShowSkills(1)}>All skills</button>
@@ -110,3 +133,4 @@ export default function About(){
     )       
 }
 
+//  "-=1.5" the both items start animation at the same time
