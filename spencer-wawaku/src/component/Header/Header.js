@@ -56,7 +56,7 @@ export default function Header() {
         }
     );
     return (
-        <div ref={thirdAnime} className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`}>
+        <header ref={thirdAnime} className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} role='banner' >
 
             {/* logo */}
             <div className='Header__logo'  id='logo'>
@@ -70,7 +70,7 @@ export default function Header() {
 
             {/* navigation */}
             {/* to show the menu on click we  create a function on nav element */}
-            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar'>
+            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar' role='navigation' >
                 <ul>
                     {navbarItems.map(item => (
                         <li key={item.id}>
@@ -100,7 +100,7 @@ export default function Header() {
                     {mobileMenuOpen ? <FaXmark color={hamburgerColor} /> : <FaBars color={initialHamburgerColor} />}
                 </button>
             </div>
-        </div>
+        </header>
     );
 }
 

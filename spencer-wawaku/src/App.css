@@ -244,15 +244,24 @@
   color: orangered;
   opacity: 0.6;
   font-weight: 900;
+  animation: bounce 0.8s ease infinite alternate;
 }
 .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
   position: absolute;
   color: orangered;
   opacity: 0.6;
   font-weight: 900;
-}
-.container .Hero__profil__code__one {
   z-index: 1;
+  animation: bounce 0.8s ease infinite alternate;
+}
+@keyframes bounce {
+  from {
+    text-shadow: 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 2px 3px rgba(255, 68, 0, 0.014), 0 2px 3px rgba(255, 68, 0, 0.014), 0 2px 3px rgba(255, 68, 0, 0.014);
+  }
+  to {
+    transform: translateY(-20px);
+    text-shadow: 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 0px 20px rgba(255, 68, 0, 0.863), 0 0px 20px rgba(255, 68, 0, 0.863), 0 0px 20px rgba(255, 68, 0, 0.863);
+  }
 }
 
 .container .About {
@@ -1695,7 +1704,6 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .Hero {
-    background-color: pink;
     min-height: 645px;
     padding: 0 4em;
     padding-top: 2em;
@@ -1809,7 +1817,6 @@ a {
 }
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .Hero {
-    background-color: greenyellow;
     min-height: 625px;
     padding: 0 4em;
     padding-top: 2em;
@@ -1921,7 +1928,6 @@ a {
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .container .Hero {
-    background-color: orange;
     min-height: 585px;
     padding: 0 1em;
     padding-top: 1.5em;
@@ -2030,7 +2036,6 @@ a {
 }
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .container .Hero {
-    background-color: yellow;
     min-height: 850px;
     gap: 0.5rem;
     display: flex;
@@ -2132,7 +2137,6 @@ a {
 }
 @media only screen and (min-width: 412px) and (max-width: 499px) {
   .container .Hero {
-    background-color: red;
     min-height: 630px;
     gap: 0.5rem;
     display: flex;
@@ -2234,7 +2238,6 @@ a {
 }
 @media only screen and (min-width: 320px) and (max-width: 411px) {
   .container .Hero {
-    background-color: blue;
     min-height: 610px;
     gap: 0.5rem;
     display: flex;
@@ -2344,7 +2347,6 @@ a {
     align-items: start;
     justify-content: center;
     gap: 2rem;
-    background-color: pink;
   }
   .container .About__slider {
     width: 30%;
@@ -2443,7 +2445,6 @@ a {
     align-items: start;
     justify-content: center;
     gap: 2rem;
-    background-color: green;
   }
   .container .About__slider {
     width: 30%;
@@ -2542,7 +2543,6 @@ a {
     align-items: start;
     justify-content: center;
     gap: 1rem;
-    background-color: orange;
   }
   .container .About__slider {
     width: 35%;
@@ -2640,7 +2640,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: yellow;
   }
   .container .About__slider {
     width: 94%;
@@ -2733,7 +2732,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: red;
   }
   .container .About__slider {
     width: 92%;
@@ -2824,7 +2822,6 @@ a {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background-color: blue;
   }
   .container .About__slider {
     width: 90%;
@@ -2909,7 +2906,6 @@ a {
 @media only screen and (min-width: 1300px) {
   .container .Services {
     min-height: 700px;
-    background-color: pink;
   }
   .container .Services__title {
     font-size: 4rem;
@@ -2952,7 +2948,6 @@ a {
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .Services {
     min-height: 700px;
-    background-color: green;
   }
   .container .Services__title {
     font-size: 3.5rem;
@@ -2995,7 +2990,6 @@ a {
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .container .Services {
     min-height: 700px;
-    background-color: orange;
   }
   .container .Services__title {
     font-size: 3rem;
@@ -3038,7 +3032,6 @@ a {
 @media only screen and (min-width: 500px) and (max-width: 768px) {
   .container .Services {
     min-height: 600px;
-    background-color: yellow;
   }
   .container .Services__title {
     font-size: 2.2rem;
@@ -3081,7 +3074,6 @@ a {
 @media only screen and (min-width: 412px) and (max-width: 499px) {
   .container .Services {
     min-height: 550px;
-    background-color: red;
   }
   .container .Services__title {
     font-size: 1.8rem;
@@ -3122,7 +3114,6 @@ a {
 @media only screen and (min-width: 320px) and (max-width: 411px) {
   .container .Services {
     min-height: 500px;
-    background-color: blue;
   }
   .container .Services__title {
     font-size: 1.5rem;
@@ -3164,7 +3155,6 @@ a {
   .container .Videos {
     min-height: 700px;
     width: 100%;
-    background-color: pink;
     padding: 0.5em 1em;
   }
   .container .Videos__title {
@@ -3247,7 +3237,6 @@ a {
   .container .Videos {
     min-height: 700px;
     width: 100%;
-    background-color: green;
     padding: 0.5em 1em;
   }
   .container .Videos__title {
@@ -3330,7 +3319,6 @@ a {
   .container .Videos {
     min-height: 700px;
     width: 100%;
-    background-color: orange;
     padding: 0.5em 4em;
   }
   .container .Videos__title {
@@ -3419,7 +3407,6 @@ a {
   .container .Videos {
     min-height: 600px;
     width: 100%;
-    background-color: yellow;
     padding: 0.5em 10em;
   }
   .container .Videos__title {
@@ -3510,7 +3497,6 @@ a {
   .container .Videos {
     min-height: 550px;
     width: 100%;
-    background-color: red;
     padding: 0.5em;
   }
   .container .Videos__title {
@@ -3602,7 +3588,6 @@ a {
   .container .Videos {
     min-height: 450px;
     width: 100%;
-    background-color: blue;
     padding: 0.5em;
   }
   .container .Videos__title {
@@ -3698,7 +3683,6 @@ a {
     align-items: center;
     justify-content: center;
     padding: 2em 0;
-    background-color: pink;
   }
   .container .Contact__title {
     font-size: 4rem;
@@ -3739,7 +3723,6 @@ a {
     align-items: center;
     justify-content: center;
     padding: 2em 0;
-    background-color: green;
   }
   .container .Contact__title {
     font-size: 4rem;
@@ -3780,7 +3763,6 @@ a {
     align-items: center;
     justify-content: center;
     padding: 2em 0;
-    background-color: orange;
   }
   .container .Contact__title {
     font-size: 3rem;
@@ -3821,7 +3803,6 @@ a {
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    background-color: yellow;
   }
   .container .Contact__title {
     font-size: 2rem;
@@ -3860,7 +3841,6 @@ a {
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    background-color: red;
   }
   .container .Contact__title {
     font-size: 2rem;
@@ -3899,7 +3879,6 @@ a {
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
-    background-color: blue;
   }
   .container .Contact__title {
     font-size: 2rem;

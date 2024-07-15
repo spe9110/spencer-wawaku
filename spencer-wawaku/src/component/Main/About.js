@@ -46,7 +46,7 @@ export default function About(){
     )
 
     return(
-        <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={aboutAnime}>
+        <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={aboutAnime} role='main'>
             <div className="About__slider" id='photo'>
                 {/* design */}
                 <div className="About__slider__design"></div>

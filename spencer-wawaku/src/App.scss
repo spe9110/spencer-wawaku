@@ -708,7 +708,6 @@ a{
     .Hero{
         // Large screen
         @include responsive(large-wide){
-            background-color: pink;
             min-height: 645px;
             padding: 0 4em;
             padding-top: 2em;
@@ -833,7 +832,6 @@ a{
         } 
         // Desktop
         @include responsive(desktop){
-            background-color: greenyellow;
             min-height: 625px;
             padding: 0 4em;
             padding-top: 2em;
@@ -954,7 +952,6 @@ a{
         } 
         // Laptop
         @include responsive(laptop){
-            background-color: orange;
             min-height: 585px;
             padding: 0 1em;
             padding-top: 1.5em;
@@ -1074,7 +1071,6 @@ a{
         } 
         // tablet
         @include responsive(tablet){
-            background-color: yellow;
             min-height: 850px;
             gap: .5rem;
             @include flexDirection(column, center, start);
@@ -1184,7 +1180,6 @@ a{
         } 
         // mobile
         @include responsive(mobile){
-            background-color: red;
             min-height: 630px;
             gap: .5rem;
             @include flexDirection(column, center, start);
@@ -1293,7 +1288,6 @@ a{
         } 
         // extra-small mobile
         @include responsive(xs-mobile){
-            background-color: blue;
             min-height: 610px;
             gap: .5rem;
             @include flexDirection(column, center, start);
@@ -1416,7 +1410,6 @@ a{
             padding-top: 3em;
             @include flexDirection(row, start, center);
             gap: 2rem;
-            background-color: pink;
 
             &__slider{
                 width: 30%;
@@ -1536,7 +1529,6 @@ a{
             padding-top: 3em;
             @include flexDirection(row, start, center);
             gap: 2rem;
-            background-color: green;
 
             &__slider{
                 width: 30%;
@@ -1656,7 +1648,6 @@ a{
             padding-top: 3em;
             @include flexDirection(row, start, center);
             gap: 1rem;
-            background-color: orange;
 
             &__slider{
                 width: 35%;
@@ -1776,7 +1767,6 @@ a{
             padding-top: 1em;
             @include flexDirection(column, center, center);
             gap: 1rem;
-            background-color: yellow;
 
             &__slider{
                 width: 94%;
@@ -1888,7 +1878,6 @@ a{
             padding-top: 1em;
             @include flexDirection(column, center, center);
             gap: 1rem;
-            background-color: red;
 
             &__slider{
                 width: 92%;
@@ -1998,7 +1987,6 @@ a{
             padding-top: 1em;
             @include flexDirection(column, center, center);
             gap: 1rem;
-            background-color: blue;
 
             &__slider{
                 width: 90%;
@@ -2109,7 +2097,6 @@ a{
         // Large screen
         @include responsive(large-wide){
             min-height: 700px;
-            background-color: pink;
             &__title{
                 font-size: 4rem;
             }
@@ -2154,7 +2141,6 @@ a{
         // Desktop
         @include responsive(desktop){
             min-height: 700px;
-            background-color: green;
             &__title{
                 font-size: 3.5rem;
             }
@@ -2198,7 +2184,6 @@ a{
         // Laptop
         @include responsive(laptop){
             min-height: 700px;
-            background-color: orange;
             &__title{
                 font-size: 3rem;
             }
@@ -2242,7 +2227,6 @@ a{
         // tablet
         @include responsive(tablet){
             min-height: 600px;
-            background-color: yellow;
             &__title{
                 font-size: 2.2rem;
             }
@@ -2288,7 +2272,6 @@ a{
         // Mobile
         @include responsive(mobile){
             min-height: 550px;
-            background-color: red;
             &__title{
                 font-size: 1.8rem;
             }
@@ -2333,7 +2316,6 @@ a{
         // Mobile
         @include responsive(xs-mobile){
             min-height: 500px;
-            background-color: blue;
             &__title{
                 font-size: 1.5rem;
             }
@@ -2383,7 +2365,6 @@ a{
         @include responsive(large-wide){
             min-height: 700px;
             width: 100%;
-            background-color: pink;
             padding: .5em 1em;
 
             &__title{
@@ -2478,7 +2459,6 @@ a{
         @include responsive(desktop){
             min-height: 700px;
             width: 100%;
-            background-color: green;
             padding: .5em 1em;
 
             &__title{
@@ -2573,7 +2553,6 @@ a{
         @include responsive(laptop){
             min-height: 700px;
             width: 100%;
-            background-color: orange;
             padding: .5em 4em;
 
             &__title{
@@ -2675,7 +2654,6 @@ a{
         @include responsive(tablet){
             min-height: 600px;
             width: 100%;
-            background-color: yellow;
             padding: .5em 10em;
 
             &__title{
@@ -2778,7 +2756,6 @@ a{
         @include responsive(mobile){
             min-height: 550px;
             width: 100%;
-            background-color: red;
             padding: .5em;
 
             &__title{
@@ -2884,7 +2861,6 @@ a{
         @include responsive(xs-mobile){
             min-height: 450px;
             width: 100%;
-            background-color: blue;
             padding: .5em;
 
             &__title{
@@ -2994,7 +2970,6 @@ a{
             min-height: 650px;
             @include flexDirection(column, center, center);
             padding: 2em 0;
-            background-color: pink;
 
             &__title{
                 font-size: 4rem;
@@ -3033,7 +3008,6 @@ a{
             min-height: 650px;
             @include flexDirection(column, center, center);
             padding: 2em 0;
-            background-color: green;
 
             &__title{
                 font-size: 4rem;
@@ -3072,7 +3046,6 @@ a{
             min-height: 700px;
             @include flexDirection(column, center, center);
             padding: 2em 0;
-            background-color: orange;
 
             &__title{
                 font-size: 3rem;
@@ -3112,7 +3085,6 @@ a{
             min-height: 600px;
             @include flexDirection(column, center, center);
             padding: 1rem 0;
-            background-color: yellow;
 
             &__title{
                 font-size: 2rem;
@@ -3146,7 +3118,6 @@ a{
             min-height: 580px;
             @include flexDirection(column, center, center);
             padding: 1rem 0;
-            background-color: red;
 
             &__title{
                 font-size: 2rem;
@@ -3180,7 +3151,6 @@ a{
             min-height: 500px;
             @include flexDirection(column, center, center);
             padding: 1rem 0;
-            background-color: blue;
 
             &__title{
                 font-size: 2rem;

@@ -16,8 +16,9 @@ function App() {
   // loading screen
   const [ loading, setLoading ] = useState(true);
   useEffect(()=>{
-    setTimeout(()=>setLoading(false), 10000);
+    setTimeout(()=>setLoading(false), 30000);
   },[])
+
   if(loading){
     return <LoadingScreen/>
   }
@@ -33,11 +34,6 @@ function App() {
             <Route path="/videos" element={<Videos />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          
-          {/* <About/> */}
-          {/* <Services/> */}
-          {/* <Videos/> */}
-          {/* <Contact/> */}
           <Footer />
           <Alert/>          
         </main>

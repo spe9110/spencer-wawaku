@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import React from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -8,32 +8,40 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './MainSass/index_main.css';
 import videos from "./DataMain/VideosData";
 import CountUpPage from "./CountUpPage";
+import { useTheme } from '../Header/DarkMode';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 
 function SampleNextArrow(props) {
-    const { onClick } = props;
-    return (
-      <div
-        className='nextArrow'
-        onClick={onClick}
-      >
-        <FaArrowRight/>
-      </div>
-    );
-  }
+  const { onClick } = props;
+  return (
+    <div
+      className='nextArrow'
+      onClick={onClick}
+    >
+      <FaArrowRight/>
+    </div>
+  );
+}
   
-  function SamplePrevArrow(props) {
-    const { onClick } = props;
-    return (
-      <div
-        className='prevArrow'
-        onClick={onClick}
-      >
-        <FaArrowLeft/>
-      </div>
-    );
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div
+      className='prevArrow'
+      onClick={onClick}
+    >
+      <FaArrowLeft/>
+    </div>
+  );
 }
 
+gsap.registerPlugin(useGSAP);
+
 export default function Videos(){
+    const { theme } = useTheme();
+    
     let settings = {
         dots: true,
         infinite: true,
@@ -83,8 +91,22 @@ export default function Videos(){
         prevArrow: <SamplePrevArrow />
     };
 
+    const videosAnime = useRef(null);
+    const tl = useRef(gsap.timeline());
+
+    useGSAP(
+      () => {
+          tl.current = gsap.timeline()
+            .from(videosAnime.current.children, {
+                duration: 1.5, 
+                opacity: 0,
+                stagger: 1
+            })
+      }
+    )
+
     return(
-        <div className="Videos">
+        <div className={`Videos ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={videosAnime} role='main'>
             <h3 className="Videos__title">Videos</h3>
             <p className="Videos__watch">Watch me on Youtube</p>
             

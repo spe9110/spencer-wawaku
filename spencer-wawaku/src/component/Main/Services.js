@@ -27,7 +27,7 @@ export default function ServicesSection(){
     )
 
     return(
-        <div className={`Services ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={servicesAnime}>
+        <div className={`Services ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={servicesAnime} role='main'>
             <h3 className="Services__title">Services</h3>
             <p className="Services__help">I can help you with</p>
 

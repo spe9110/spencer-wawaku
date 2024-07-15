@@ -106,15 +106,24 @@
   color: orangered;
   opacity: 0.6;
   font-weight: 900;
+  animation: bounce 0.8s ease infinite alternate;
 }
 .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
   position: absolute;
   color: orangered;
   opacity: 0.6;
   font-weight: 900;
-}
-.container .Hero__profil__code__one {
   z-index: 1;
+  animation: bounce 0.8s ease infinite alternate;
+}
+@keyframes bounce {
+  from {
+    text-shadow: 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 2px 3px rgba(255, 68, 0, 0.014), 0 2px 3px rgba(255, 68, 0, 0.014), 0 2px 3px rgba(255, 68, 0, 0.014);
+  }
+  to {
+    transform: translateY(-20px);
+    text-shadow: 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 0px 20px rgba(255, 68, 0, 0.863), 0 0px 20px rgba(255, 68, 0, 0.863), 0 0px 20px rgba(255, 68, 0, 0.863);
+  }
 }
 
 .container .About {

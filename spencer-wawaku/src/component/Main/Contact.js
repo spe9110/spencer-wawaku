@@ -19,11 +19,12 @@ import UseSubmit from './AlertMessage/UseSubmit';
 import { useAlertContext } from './AlertMessage/AlertContext';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useTheme } from '../Header/DarkMode';
 
 gsap.registerPlugin(useGSAP);
 
 export default function Contact(){
-
+  const { theme } = useTheme();
   const { isLoading, response, submit }  = UseSubmit();
   const { onOpen } = useAlertContext();
   
@@ -69,25 +70,23 @@ export default function Contact(){
     useGSAP(
       () => {
           tl.current = gsap.timeline()
-              .from("#map", {
-                  duration: 2, 
-                  opacity: 0,
-              })
-              .from("#form", {
-                  duration: 2, 
-                  opacity: 0,
-              },"-=1.5")
+            .from(contactAnime.current.children, {
+                duration: 1.5, 
+                opacity: 0,
+                stagger: 1
+            })
       }
     )
+
     return(
-        <div className="Contact">
+        <div className={`Contact ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={contactAnime} role='main'>
             <h3 className="Contact__title">Contact</h3>
             <p className="Contact__touch">Let's get in touch</p>
-            <div className='Contact__form' ref={contactAnime}>
+            <div className='Contact__form'>
                 <div className="Contact__form__map" id='map'>
                     <ReactLeafletMap/>
                 </div>
-                <div className="Contact__form__content" id='form'>
+                <div className="Contact__form__content" id='form' role='form'>
                     <form onSubmit={formik.handleSubmit}> 
                         <FormControl isRequired isInvalid={!!formik.errors.firstName && formik.touched.firstName}>
                             <FormLabel htmlFor="first name">First name</FormLabel>
