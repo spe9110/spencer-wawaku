@@ -27,6 +27,7 @@ export default function Header() {
 
     // with this function we change me menu on click
     const handleHamburger = ()=>{
+        console.log('nav link clicked');
         setMobileMenuOpen(!mobileMenuOpen);
         // NOTE: onclick we change not the hamburgerColor but  "mobileMenuOpen" inside the setHamburgerColor function to change it color
         setHamburgerColor(mobileMenuOpen ? initialHamburgerColor : '#ffffff');
@@ -56,7 +57,7 @@ export default function Header() {
         }
     );
     return (
-        <header ref={thirdAnime} className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} role='banner' >
+        <div ref={thirdAnime} className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`}>
 
             {/* logo */}
             <div className='Header__logo'  id='logo'>
@@ -70,7 +71,7 @@ export default function Header() {
 
             {/* navigation */}
             {/* to show the menu on click we  create a function on nav element */}
-            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar' role='navigation' >
+            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar'>
                 <ul>
                     {navbarItems.map(item => (
                         <li key={item.id}>
@@ -100,7 +101,7 @@ export default function Header() {
                     {mobileMenuOpen ? <FaXmark color={hamburgerColor} /> : <FaBars color={initialHamburgerColor} />}
                 </button>
             </div>
-        </header>
+        </div>
     );
 }
 

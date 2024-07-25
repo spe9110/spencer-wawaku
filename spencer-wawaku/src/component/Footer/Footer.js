@@ -29,7 +29,7 @@ export default function Footer() {
     }, []);
 
     return (
-        <footer className="footer" role="contentinfo">
+        <div className="footer">
             <div>
                 <h5>Let's get in touch</h5>
                 <hr/>
@@ -113,7 +113,7 @@ export default function Footer() {
                     <FaAngleUp />
                 </button>
             )}
-        </footer>
+        </div>
     )
 }
 
