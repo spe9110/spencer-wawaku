@@ -15,10 +15,7 @@ import { useTheme } from '../Header/DarkMode';
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div
-      className='nextArrow'
-      onClick={onClick}
-    >
+    <div className='nextArrow' onClick={onClick}>
       <FaArrowRight/>
     </div>
   );
@@ -27,10 +24,7 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div
-      className='prevArrow'
-      onClick={onClick}
-    >
+    <div className='prevArrow' onClick={onClick}>
       <FaArrowLeft/>
     </div>
   );
