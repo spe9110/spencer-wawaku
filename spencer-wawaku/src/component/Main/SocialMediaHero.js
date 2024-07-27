@@ -18,8 +18,8 @@ export default function SocialMediaHero(){
                     duration: 3, 
                     opacity: 0, 
                     x: "50%", 
-                    delay: 10, 
-                    stagger: 0.5
+                    delay: 3, 
+                    stagger: 1.5
                 })
         }
     );

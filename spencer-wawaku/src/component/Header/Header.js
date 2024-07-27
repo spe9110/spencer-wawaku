@@ -7,7 +7,6 @@ import LogoImage from './Images/spfavicon.png';
 import Switch from './Switch';
 import { useTheme } from './DarkMode';
 import './HeaderSass/index_header.css';
-// import gsap from 'gsap';
 
 export default function Header() {
 

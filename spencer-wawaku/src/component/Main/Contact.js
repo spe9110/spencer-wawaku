@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable react/jsx-no-undef */
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useLayoutEffect } from "react";
 import { useFormik } from "formik"; 
 import * as Yup from 'yup'; 
 import { 
@@ -18,10 +18,7 @@ import ReactLeafletMap from './ReactLeafletMap';
 import UseSubmit from './AlertMessage/UseSubmit';
 import { useAlertContext } from './AlertMessage/AlertContext';
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 import { useTheme } from '../Header/DarkMode';
-
-gsap.registerPlugin(useGSAP);
 
 export default function Contact(){
   const { theme } = useTheme();
@@ -67,16 +64,17 @@ export default function Contact(){
     const contactAnime = useRef();
     const tl = useRef();
 
-    useGSAP(
-      () => {
+    useLayoutEffect(() => {
+      let ctx = gsap.context(() => {
           tl.current = gsap.timeline()
-            .from(contactAnime.current.children, {
-                duration: 1.5, 
-                opacity: 0,
-                stagger: 1
-            })
-      }
-    )
+          .from(contactAnime.current.children, {
+            duration: 1.5, 
+            opacity: 0,
+            stagger: 1
+          })
+      });
+      return () => ctx.revert();
+    }, []);
 
     return(
         <div className={`Contact ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={contactAnime} role='main'>

@@ -56,7 +56,6 @@ export default App;
 // npm install @gsap/react (Install the GSAP React package)
 
 
-
 /*
 Based on 'Google JavaScript Style Guide'
 

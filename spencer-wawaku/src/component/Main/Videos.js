@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-import { useRef } from "react";
+import gsap from 'gsap';
+import { useRef, useLayoutEffect } from "react";
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -9,8 +10,6 @@ import './MainSass/index_main.css';
 import videos from "./DataMain/VideosData";
 import CountUpPage from "./CountUpPage";
 import { useTheme } from '../Header/DarkMode';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 
 
 function SampleNextArrow(props) {
@@ -36,8 +35,6 @@ function SamplePrevArrow(props) {
     </div>
   );
 }
-
-gsap.registerPlugin(useGSAP);
 
 export default function Videos(){
     const { theme } = useTheme();
@@ -91,19 +88,20 @@ export default function Videos(){
         prevArrow: <SamplePrevArrow />
     };
 
-    const videosAnime = useRef(null);
-    const tl = useRef(gsap.timeline());
+    const videosAnime = useRef();
+    const tl = useRef();
 
-    useGSAP(
-      () => {
+    useLayoutEffect(() => {
+      let ctx = gsap.context(() => {
           tl.current = gsap.timeline()
-            .from(videosAnime.current.children, {
-                duration: 1.5, 
-                opacity: 0,
-                stagger: 1
-            })
-      }
-    )
+          .from(videosAnime.current.children, {
+            duration: 1.5, 
+            opacity: 0,
+            stagger: 1
+        })
+      });
+      return () => ctx.revert();
+    }, []);
 
     return(
         <div className={`Videos ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={videosAnime} role='main'>

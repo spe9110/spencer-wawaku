@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import './MainSass/index_main.css';
 import { GoArrowUpRight } from "react-icons/go";
@@ -8,10 +8,10 @@ import SocialMediaHero from "./SocialMediaHero";
 import ScrollingText from "../Main/ScrollingText";
 import { useTheme } from '../Header/DarkMode';
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
+// import { useGSAP } from '@gsap/react';
 
 
-gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(useGSAP);
 
 export default function HomeSection(){
     const { theme } = useTheme();
@@ -27,54 +27,38 @@ export default function HomeSection(){
     const firstAnime = useRef();
     const tl = useRef();
 
-    useGSAP(
-        () => {
-            tl.current = gsap
-                .timeline()
-                .from("#greet", {
-                    duration: .5, 
-                    opacity: 0, 
-                    x: "-50%", 
-                    delay: 0.1, 
-                    stagger: 0.5
-                    })
-                .from("#name", {
-                    duration: 1, 
-                    opacity: 0, 
-                    x: "-50%", 
-                    delay: 0.2, 
-                    stagger: 0.5
-                })
-                .from("#job", {
-                    duration: 1.5, 
-                    opacity: 0, 
-                    x: "-50%", 
-                    delay: 0.3, 
-                    stagger: 0.5
-                })
-                .from("#descript", {
-                    duration: 2, 
-                    opacity: 0, 
-                    x: "-50%", 
-                    delay: 0.4, 
-                    stagger: 0.5
-                })
-                .from("#btn_one", {
-                    duration: 2, 
-                    opacity: 0, 
-                    y: "10%", 
-                    delay: 0.5, 
-                    stagger: 0.5
-                })
-                .from("#picture", {
-                    duration: 3, 
-                    opacity: 0, 
-                    y: "20%", 
-                    delay: 0.6, 
-                    stagger: 0.5
-                })
-        }
-    );
+    // useGSAP(
+    //     () => {
+    //         tl.current = gsap
+
+    //             .from("#picture", {
+    //                 duration: 3, 
+    //                 opacity: 0, 
+    //                 y: "20%", 
+    //                 delay: 0.6, 
+    //                 stagger: 0.5
+    //             })
+    //     }
+    // );
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            tl.current = gsap.timeline()
+            .from("#greet, #name, #job, #descript, #btn_one", {
+                duration: 1.3, 
+                opacity: 0, 
+                y: "+30", 
+                stagger: 0.5
+            })
+            .from("#picture", {
+                duration: 2, 
+                opacity: 0, 
+                y: "+30", 
+                stagger: 1
+            })
+        });
+        return () => ctx.revert();
+    }, []);
 
     return(
         <div ref={firstAnime} className={`Hero ${theme === 'light' ? 'dark-mode' : 'light'}`} id='Hero_Anime'>

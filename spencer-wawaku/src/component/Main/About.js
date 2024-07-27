@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
-import { useState, useRef }  from 'react';
+import { useState, useRef, useLayoutEffect }  from 'react';
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 import './MainSass/index_main.css';
 import PictureProfil from './PictureProfil';
@@ -10,10 +10,7 @@ import otherSkills from './DataMain/OtherSkills';
 import tools from './DataMain/ToolsData';
 import { useTheme } from '../Header/DarkMode';
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
 
-
-gsap.registerPlugin(useGSAP);
 
 // picture variables
 const picture = pictures;
@@ -29,21 +26,23 @@ export default function About(){
     const aboutAnime = useRef();
     const tl = useRef();
 
-    useGSAP(
-        () => {
+    // typically it's best to useLayoutEffect() instead of useEffect() to have React render the initial state properly from the very start.
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
             tl.current = gsap.timeline()
-                .from("#photo", {
-                    x: "-100%",
-                    duration: 1.5, 
-                    opacity: 0,
-                })
-                .from("#stat", {
-                    x: "100%",
-                    duration: 1.5, 
-                    opacity: 0,
-                },  "-=1.5")
-        }
-    )
+            .from("#photo", {
+                x: "-100%",
+                duration: 1.8, 
+                opacity: 0,
+            })
+            .from("#stat", {
+                x: "100%",
+                duration: 1.8, 
+                opacity: 0,
+            },  "-=1.5")
+        });
+        return () => ctx.revert();
+    }, []);
 
     return(
         <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={aboutAnime} role='main'>
