@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import navbarItems from './Data/Data'; // Importing navbarItems from data.js
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link, NavLink } from 'react-router-dom';
@@ -7,15 +7,15 @@ import LogoImage from './Images/spfavicon.png';
 import Switch from './Switch';
 import { useTheme } from './DarkMode';
 import './HeaderSass/index_header.css';
-import gsap from 'gsap';
+// import gsap from 'gsap';
 
 export default function Header() {
 
     const { theme } = useTheme();
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [hamburgerColor, setHamburgerColor] = useState(theme === 'light' ? '#000000' : '#ffffff');
-    const initialHamburgerColor = theme === 'light' ? '#000000' : '#ffffff';
+    const [hamburgerColor, setHamburgerColor] = useState(theme === '#000' ? '#ffffff' : '#000000');
+    const initialHamburgerColor = theme === '#000' ? '#ffffff' : '#000000';
 
     const handleHamburger = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -28,20 +28,8 @@ export default function Header() {
         }
     };
 
-    const thirdAnime = useRef(null);
-    const tl = useRef(null);
-
-    useEffect(() => {
-        tl.current = gsap.timeline().from("#logo, #navbar, #btn", {
-            duration: 1,
-            opacity: 0,
-            y: "-100%",
-            stagger: 0.5,
-        });
-    }, []);
-
     return (
-        <div ref={thirdAnime} className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`}>
+        <div className={`Header ${theme === 'light' ? 'dark-mode' : 'light'}`} role='banner'>
             {/* logo */}
             <div className='Header__logo' id='logo'>
                 <Link to='/home' className="LinkName">
@@ -51,7 +39,7 @@ export default function Header() {
             </div>
 
             {/* navigation */}
-            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar'>
+            <nav className={`Header__navbar ${mobileMenuOpen ? 'open' : ''}`} id='navbar' role='navigation'>
                 <ul>
                     {navbarItems.map(item => (
                         <li key={item.id}>
