@@ -16,7 +16,7 @@ function App() {
   // loading screen
   const [ loading, setLoading ] = useState(true);
   useEffect(()=>{
-    setTimeout(()=>setLoading(false), 30000);
+    setTimeout(()=>setLoading(false), 15000);
   },[])
 
   if(loading){
