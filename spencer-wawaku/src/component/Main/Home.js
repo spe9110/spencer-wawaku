@@ -1,3 +1,4 @@
+import gsap from 'gsap';
 import { useRef, useLayoutEffect } from 'react';
 import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import './MainSass/index_main.css';
@@ -7,11 +8,7 @@ import Profil from './Images/avatar-bis.png';
 import SocialMediaHero from "./SocialMediaHero";
 import ScrollingText from "../Main/ScrollingText";
 import { useTheme } from '../Header/DarkMode';
-import gsap from 'gsap';
-// import { useGSAP } from '@gsap/react';
-
-
-// gsap.registerPlugin(useGSAP);
+import circleSkills from "./DataMain/RoundSkill";
 
 export default function HomeSection(){
     const { theme } = useTheme();
@@ -26,20 +23,6 @@ export default function HomeSection(){
 
     const firstAnime = useRef();
     const tl = useRef();
-
-    // useGSAP(
-    //     () => {
-    //         tl.current = gsap
-
-    //             .from("#picture", {
-    //                 duration: 3, 
-    //                 opacity: 0, 
-    //                 y: "20%", 
-    //                 delay: 0.6, 
-    //                 stagger: 0.5
-    //             })
-    //     }
-    // );
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -81,8 +64,21 @@ export default function HomeSection(){
             </div>
             {/* profil */}
             <div className="Hero__profil" id='picture'>
-                    <img src={Profil} className="Hero__profil__picture" alt="avatar_picture"/>
-                <div className="Hero__profil__code">
+                <img src={Profil} className="Hero__profil__picture" alt="avatar_picture"/>
+                <div className='Hero__profil__circle'>
+                    <div className='Hero__profil__circle__round_1'>
+                        {circleSkills.map(item => (
+                            <span><img src={item.circleOne} alt='skill_picture'/></span>
+                        ))}        
+                    </div>
+                    <div className='Hero__profil__circle__round_2'>
+                        {circleSkills.map(item => (
+                            <span><img src={item.circleTwo} alt='skill_picture'/></span>
+                        ))}
+                    </div>
+                </div>
+
+                {/* <div className="Hero__profil__code">
                     <span>console.log(data)</span>
                 </div>
                 <div className="Hero__profil__code__one">
@@ -102,7 +98,7 @@ export default function HomeSection(){
                 </div>                    
                 <div className="Hero__profil__code__six">
                     <span>JAVASCRIPT</span>
-                </div>                    
+                </div>                     */}
             </div>
             <ScrollingText/>
             <SocialMediaHero/>

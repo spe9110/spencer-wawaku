@@ -101,28 +101,126 @@
   position: absolute;
   z-index: 40;
 }
-.container .Hero__profil__code {
+.container .Hero__profil__circle {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  color: orangered;
-  opacity: 0.6;
-  font-weight: 900;
-  animation: bounce 0.8s ease infinite alternate;
+  top: 0;
+  left: 0;
+  display: flex;
 }
-.container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
+.container .Hero__profil__circle__round_1 {
+  position: relative;
+  top: 30%;
+  left: 5%;
+  width: 50%;
+  height: 20rem;
+  border-radius: 50%;
+  z-index: 30;
+  border: 1px solid #94a3b8;
+  animation: animateCircleOne 300s linear infinite;
+}
+.container .Hero__profil__circle__round_1 span {
   position: absolute;
-  color: orangered;
-  opacity: 0.6;
-  font-weight: 900;
-  z-index: 1;
-  animation: bounce 0.8s ease infinite alternate;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #94a3b8;
+  padding: 0.4em;
 }
-@keyframes bounce {
+.container .Hero__profil__circle__round_1 span:nth-child(1) {
+  top: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .Hero__profil__circle__round_1 span:nth-child(2) {
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .Hero__profil__circle__round_1 span:nth-child(3) {
+  top: 50%;
+  left: -7%;
+  transform: translateY(-50%);
+}
+.container .Hero__profil__circle__round_1 span:nth-child(4) {
+  top: 50%;
+  right: -7%;
+  transform: translateY(-50%);
+}
+.container .Hero__profil__circle__round_1 span img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #94a3b8;
+}
+@keyframes animateCircleOne {
   from {
-    text-shadow: 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 2px 3px rgba(255, 68, 0, 0.014), 0 2px 3px rgba(255, 68, 0, 0.014), 0 2px 3px rgba(255, 68, 0, 0.014);
+    transform: rotate(0deg);
   }
   to {
-    transform: translateY(-20px);
-    text-shadow: 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 1px 0 orangered, 0 0px 20px rgba(255, 68, 0, 0.863), 0 0px 20px rgba(255, 68, 0, 0.863), 0 0px 20px rgba(255, 68, 0, 0.863);
+    transform: rotate(360deg);
+  }
+}
+.container .Hero__profil__circle__round_2 {
+  position: relative;
+  top: 30%;
+  right: 8%;
+  width: 50%;
+  height: 20rem;
+  border-radius: 50%;
+  z-index: 30;
+  border: 1px solid #94a3b8;
+  animation: animateCircleTwo 300s linear infinite reverse;
+}
+.container .Hero__profil__circle__round_2 span {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #94a3b8;
+  padding: 0.4em;
+}
+.container .Hero__profil__circle__round_2 span:nth-child(1) {
+  top: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .Hero__profil__circle__round_2 span:nth-child(2) {
+  bottom: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .Hero__profil__circle__round_2 span:nth-child(3) {
+  top: 50%;
+  left: -7%;
+  transform: translateY(-50%);
+}
+.container .Hero__profil__circle__round_2 span:nth-child(4) {
+  top: 50%;
+  right: -7%;
+  transform: translateY(-50%);
+}
+.container .Hero__profil__circle__round_2 span img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #94a3b8;
+}
+@keyframes animateCircleTwo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
