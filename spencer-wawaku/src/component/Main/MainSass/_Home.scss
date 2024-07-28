@@ -145,47 +145,46 @@
 
                 &__round_1{
                     position: relative;
-                    top: 30%;
-                    left: 5%;
-                    width: 50%;
-                    height: 20rem;
+                    // top: 30%;
+                    // left: 5%;
+                    // width: 50%;
+                    // height: 20rem;
                     border-radius: 50%;
                     z-index: 30;
-                    // background-color: red;
                     // slate 400
                     border: 1px solid #94a3b8;
                     animation: animateCircleOne 300s linear infinite;
 
                     span{
                         position: absolute;
-                        width: 3rem;
-                        height: 3rem;
+                        // width: 3rem;
+                        // height: 3rem;
                         border-radius: 50%;
                         background-color: transparent;
                         border: 1px solid #94a3b8;
                         padding: .4em;
 
                         &:nth-child(1) {
-                            top: -7%;
+                            // top: -7%;
                             left: 50%;
                             transform: translateX(-50%);
                         }
                         
                         &:nth-child(2) {
-                            bottom: -7%;
+                            // bottom: -7%;
                             left: 50%;
                             transform: translateX(-50%);
                         }
                         
                         &:nth-child(3) {
                             top: 50%;
-                            left: -7%;
+                            // left: -7%;
                             transform: translateY(-50%);
                         }
                         
                         &:nth-child(4) {
                             top: 50%;
-                            right: -7%;
+                            // right: -7%;
                             transform: translateY(-50%);
                         }
 
@@ -195,7 +194,7 @@
                             object-fit: cover;
                             background-color: white;
                             border-radius: 50%;
-                            // background-color: transparent;
+                            // padding: .2em;
                             border: 1px solid #94a3b8;
                         }
                     }
@@ -211,46 +210,45 @@
                 }
                 &__round_2{
                     position: relative;
-                    top: 30%;
-                    right: 8%;
-                    width: 50%;
-                    height: 20rem;
+                    // top: 30%;
+                    // right: 8%;
+                    // width: 50%;
+                    // height: 20rem;
                     border-radius: 50%;
                     z-index: 30;
-                    // background-color: blue;
                     border: 1px solid #94a3b8;
                     animation: animateCircleTwo 300s linear infinite reverse;
 
                     span{
                         position: absolute;
-                        width: 3rem;
-                        height: 3rem;
+                        // width: 3rem;
+                        // height: 3rem;
                         border-radius: 50%;
                         background-color: transparent;
                         border: 1px solid #94a3b8;
-                        padding: .4em;
+                        // padding: .4em;
 
                         &:nth-child(1) {
-                            top: -7%;
+                            // top: -7%;
                             left: 50%;
                             transform: translateX(-50%);
                         }
                         
                         &:nth-child(2) {
-                            bottom: -7%;
+                            // bottom: -7%;
                             left: 50%;
                             transform: translateX(-50%);
                         }
                         
                         &:nth-child(3) {
                             top: 50%;
-                            left: -7%;
+                            // left: -7%;
                             transform: translateY(-50%);
                         }
                         
                         &:nth-child(4) {
                             top: 50%;
-                            right: -7%;
+                            // right: -7%;
                             transform: translateY(-50%);
                         }
 
@@ -260,6 +258,7 @@
                             object-fit: cover;
                             background-color: white;
                             border-radius: 50%;
+                            padding: .2em;
                             // background-color: transparent;
                             border: 1px solid #94a3b8;
                         }

@@ -775,42 +775,71 @@ a{
                     width: 32.2rem;
                     height: 100%;
                 }
-
-                &__code{
-                    display: flex;
-                    flex-direction: column;
-                    right: -8%;
-                    top: 40%;
-                    width: 20rem;
-                    height: auto;
-                    z-index: 30;
-    
-                    &__one, &__two, &__three, &__four, &__five, &__six{
-                        font-size: 1rem;
-                    }
-                    &__one{
-                        top: 20%;
-                        left: 15%;
-                    }
-                    &__two{
-                        bottom: 20%;
-                        left: 15%;
-                    }
-                    &__three{
-                        top: 50%;
-                        right: 15%;
-                    }
-                    &__four{
-                        bottom: 30%;
-                        left: 45%;
-                    }
-                    &__five{
-                        top: 50%;
+                // Animate skill
+                &__circle{
+                    &__round_1{
+                        top: 30%;
                         left: 5%;
+                        width: 50%;
+                        height: 20rem;
+    
+                        span{
+                            width: 3rem;
+                            height: 3rem;
+                            padding: .4em;
+
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                        
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+
+                            img{
+                                padding: .2em;
+                            }
+                        }    
                     }
-                    &__six{
-                        top: 20%;
-                        left: 65%;
+                    &__round_2{
+                        top: 30%;
+                        right: 8%;
+                        width: 50%;
+                        height: 20rem;
+    
+                        span{
+                            width: 3rem;
+                            height: 3rem;
+                            padding: .4em;
+    
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                        
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+    
+                            img{
+                                padding: .2em;
+                            }
+                        }
                     }
                 }
 
@@ -897,41 +926,70 @@ a{
                     height: auto;
                 }
 
-                &__code{
-                    display: flex;
-                    flex-direction: column;
-                    right: -8%;
-                    top: 40%;
-                    width: 20rem;
-                    height: auto;
-                    z-index: 30;
-    
-                    &__one, &__two, &__three, &__four, &__five, &__six{
-                        font-size: 1rem;
-                    }
-                    &__one{
-                        top: 20%;
-                        left: 15%;
-                    }
-                    &__two{
-                        bottom: 20%;
-                        left: 15%;
-                    }
-                    &__three{
-                        top: 50%;
-                        right: 15%;
-                    }
-                    &__four{
-                        bottom: 30%;
-                        left: 45%;
-                    }
-                    &__five{
-                        top: 50%;
+                &__circle{
+                    &__round_1{
+                        top: 30%;
                         left: 5%;
+                        width: 50%;
+                        height: 20rem;
+    
+                        span{
+                            width: 3rem;
+                            height: 3rem;
+                            padding: .4em;
+
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                        
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+
+                            img{
+                                padding: .2em;
+                            }
+                        }    
                     }
-                    &__six{
-                        top: 20%;
-                        left: 65%;
+                    &__round_2{
+                        top: 30%;
+                        right: 8%;
+                        width: 50%;
+                        height: 20rem;
+    
+                        span{
+                            width: 3rem;
+                            height: 3rem;
+                            padding: .4em;
+    
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                        
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+    
+                            img{
+                                padding: .2em;
+                            }
+                        }
                     }
                 }
             }
@@ -1016,41 +1074,67 @@ a{
                     // height: auto;
                 }
 
-                &__code{
-                    display: flex;
-                    flex-direction: column;
-                    right: -8%;
-                    top: 40%;
-                    width: 20rem;
-                    // height: auto;
-                    z-index: 30;
+                // Animate skill
+                &__circle{
+                    &__round_1{
+                        width: 50%;
+                        height: 15rem;
+                        top: 20%;
+                        left: 4%;
     
-                    &__one, &__two, &__three, &__four, &__five, &__six{
-                        font-size: 1rem;
+                        span{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            padding: .2em !important;
+    
+                            &:nth-child(1) {
+                                top: -9%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -9%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -9%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -9%;
+                            }
+                        }
                     }
-                    &__one{
+                    &__round_2{
+                        width: 50%;
+                        height: 15rem;
                         top: 20%;
-                        left: 15%;
-                    }
-                    &__two{
-                        bottom: 20%;
-                        left: 15%;
-                    }
-                    &__three{
-                        top: 50%;
-                        right: 15%;
-                    }
-                    &__four{
-                        bottom: 30%;
-                        left: 45%;
-                    }
-                    &__five{
-                        top: 50%;
-                        left: 5%;
-                    }
-                    &__six{
-                        top: 20%;
-                        left: 65%;
+                        right: 8%;
+    
+                        span{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            padding: .2em !important;
+    
+                            &:nth-child(1) {
+                                top: -9%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -9%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -9%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -9%;
+                            }
+    
+                            img{
+                                padding: .1em !important;
+                            }
+                        }
                     }
                 }
             }
@@ -1138,39 +1222,67 @@ a{
                     height: 110%;
                 }
 
-                &__code{
-                    right: 18%;
-                    top: 40%;
-                    font-size: 1rem;
-                    
-    
-                    &__one, &__two, &__three, &__four, &__five, &__six{
-                        font-size: 1rem;
-                    }
-                    &__one{
-                        top: 10%;
-                        left: 10%;
-                        z-index: 1;
-                    }
-                    &__two{
-                        bottom: 20%;
-                        left: 15%;
-                    }
-                    &__three{
-                        bottom: 30%;
-                        right: 32%;
-                    }
-                    &__four{
-                        top: 45%;
-                        left: 11%;
-                    }
-                    &__five{
-                        top: 50%;
-                        left: 25%;
-                    }
-                    &__six{
+                // Animate skill
+                &__circle{
+                    &__round_1{
+                        width: 50%;
+                        height: 22rem;
                         top: 20%;
-                        left: 55%;
+                        left: 4%;
+    
+                        span{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            padding: .1em !important;
+    
+                            &:nth-child(1) {
+                                top: -5%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -5%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -5%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -5%;
+                            }
+                        }
+                    }
+                    &__round_2{
+                        width: 50%;
+                        height: 22rem;
+                        top: 20%;
+                        right: 12%;
+    
+                        span{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            padding: .1em !important;
+    
+                            &:nth-child(1) {
+                                top: -5%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -5%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -5%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -5%;
+                            }
+    
+                            img{
+                                padding: .1em !important;
+                            }
+                        }
                     }
                 }
             }
@@ -1247,38 +1359,71 @@ a{
                     height: auto;
                 }
 
-                &__code{
-                    right: 4%;
-                    top: 40%;
-                    font-size: .8rem;
+                // Animate skill
+                &__circle{
+                    &__round_1{
+                        width: 50%;
+                        height: 12rem;
+                        top: 25%;
+                        left: 2%;
     
-                    &__one, &__two, &__three, &__four, &__five, &__six{
-                        font-size: .8rem;
+                        span{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            padding: .1em !important;
+    
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+    
+                            img{
+                                padding: .1em !important;
+                            }
+                        }
                     }
-                    &__one{
-                        top: 10%;
-                        left: 20%;
-                        z-index: 1;
-                    }
-                    &__two{
-                        bottom: 20%;
-                        left: 25%;
-                    }
-                    &__three{
-                        bottom: 30%;
-                        right: 20%;
-                    }
-                    &__four{
-                        bottom: 25%;
-                        left: 55%;
-                    }
-                    &__five{
-                        top: 50%;
-                        left: 15%;
-                    }
-                    &__six{
-                        top: 20%;
-                        left: 65%;
+                    &__round_2{
+                        width: 50%;
+                        height: 12rem;
+                        top: 25%;
+                        right: 2%;
+    
+                        span{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            padding: .1em !important;
+    
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+    
+                            img{
+                                padding: .1em !important;
+                            }
+                        }
                     }
                 }
             }
@@ -1358,41 +1503,71 @@ a{
                     width: 350px;
                     height: 280px;
                 }
-
-                &__code{
-                    right: 4%;
-                    top: 40%;
-                    // width: 10rem;
-                    // height: auto;
-                    font-size: .8rem;
+                // Animate skill
+                &__circle{
+                    &__round_1{
+                        width: 50%;
+                        height: 10rem;
+                        top: 25%;
+                        left: 2%;
     
-                    &__one, &__two, &__three, &__four, &__five, &__six{
-                        font-size: .8rem;
+                        span{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            padding: .1em !important;
+    
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+    
+                            img{
+                                padding: .1em !important;
+                            }
+                        }
                     }
-                    &__one{
-                        top: 10%;
-                        left: 20%;
-                        z-index: 1;
-                    }
-                    &__two{
-                        bottom: 20%;
-                        left: 25%;
-                    }
-                    &__three{
-                        bottom: 30%;
-                        right: 20%;
-                    }
-                    &__four{
-                        bottom: 25%;
-                        left: 55%;
-                    }
-                    &__five{
-                        top: 50%;
-                        left: 15%;
-                    }
-                    &__six{
-                        top: 20%;
-                        left: 65%;
+                    &__round_2{
+                        width: 50%;
+                        height: 10rem;
+                        top: 25%;
+                        right: 2%;
+    
+                        span{
+                            width: 1.5rem;
+                            height: 1.5rem;
+                            padding: .1em !important;
+    
+                            &:nth-child(1) {
+                                top: -7%;
+                            }
+                            
+                            &:nth-child(2) {
+                                bottom: -7%;
+                            }
+                            
+                            &:nth-child(3) {
+                                left: -7%;
+                            }
+                            
+                            &:nth-child(4) {
+                                right: -7%;
+                            }
+    
+                            img{
+                                padding: .1em !important;
+                            }
+                        }
                     }
                 }
             }

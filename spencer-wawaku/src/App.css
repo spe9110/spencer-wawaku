@@ -250,10 +250,6 @@
 }
 .container .Hero__profil__circle__round_1 {
   position: relative;
-  top: 30%;
-  left: 5%;
-  width: 50%;
-  height: 20rem;
   border-radius: 50%;
   z-index: 30;
   border: 1px solid #94a3b8;
@@ -261,31 +257,25 @@
 }
 .container .Hero__profil__circle__round_1 span {
   position: absolute;
-  width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #94a3b8;
   padding: 0.4em;
 }
 .container .Hero__profil__circle__round_1 span:nth-child(1) {
-  top: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_1 span:nth-child(2) {
-  bottom: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_1 span:nth-child(3) {
   top: 50%;
-  left: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_1 span:nth-child(4) {
   top: 50%;
-  right: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_1 span img {
@@ -307,10 +297,6 @@
 }
 .container .Hero__profil__circle__round_2 {
   position: relative;
-  top: 30%;
-  right: 8%;
-  width: 50%;
-  height: 20rem;
   border-radius: 50%;
   z-index: 30;
   border: 1px solid #94a3b8;
@@ -318,31 +304,24 @@
 }
 .container .Hero__profil__circle__round_2 span {
   position: absolute;
-  width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #94a3b8;
-  padding: 0.4em;
 }
 .container .Hero__profil__circle__round_2 span:nth-child(1) {
-  top: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_2 span:nth-child(2) {
-  bottom: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_2 span:nth-child(3) {
   top: 50%;
-  left: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_2 span:nth-child(4) {
   top: 50%;
-  right: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_2 span img {
@@ -352,6 +331,7 @@
      object-fit: cover;
   background-color: white;
   border-radius: 50%;
+  padding: 0.2em;
   border: 1px solid #94a3b8;
 }
 @keyframes animateCircleTwo {
@@ -1868,41 +1848,57 @@ a {
     width: 32.2rem;
     height: 100%;
   }
-  .container .Hero__profil__code {
-    display: flex;
-    flex-direction: column;
-    right: -8%;
-    top: 40%;
-    width: 20rem;
-    height: auto;
-    z-index: 30;
-  }
-  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
-    font-size: 1rem;
-  }
-  .container .Hero__profil__code__one {
-    top: 20%;
-    left: 15%;
-  }
-  .container .Hero__profil__code__two {
-    bottom: 20%;
-    left: 15%;
-  }
-  .container .Hero__profil__code__three {
-    top: 50%;
-    right: 15%;
-  }
-  .container .Hero__profil__code__four {
-    bottom: 30%;
-    left: 45%;
-  }
-  .container .Hero__profil__code__five {
-    top: 50%;
+  .container .Hero__profil__circle__round_1 {
+    top: 30%;
     left: 5%;
+    width: 50%;
+    height: 20rem;
   }
-  .container .Hero__profil__code__six {
-    top: 20%;
-    left: 65%;
+  .container .Hero__profil__circle__round_1 span {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.4em;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(1) {
+    top: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(2) {
+    bottom: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(3) {
+    left: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(4) {
+    right: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span img {
+    padding: 0.2em;
+  }
+  .container .Hero__profil__circle__round_2 {
+    top: 30%;
+    right: 8%;
+    width: 50%;
+    height: 20rem;
+  }
+  .container .Hero__profil__circle__round_2 span {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.4em;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(1) {
+    top: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(2) {
+    bottom: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(3) {
+    left: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(4) {
+    right: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span img {
+    padding: 0.2em;
   }
   .container .Hero .Social__Media {
     display: flex;
@@ -1979,41 +1975,57 @@ a {
     width: 32rem;
     height: auto;
   }
-  .container .Hero__profil__code {
-    display: flex;
-    flex-direction: column;
-    right: -8%;
-    top: 40%;
-    width: 20rem;
-    height: auto;
-    z-index: 30;
-  }
-  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
-    font-size: 1rem;
-  }
-  .container .Hero__profil__code__one {
-    top: 20%;
-    left: 15%;
-  }
-  .container .Hero__profil__code__two {
-    bottom: 20%;
-    left: 15%;
-  }
-  .container .Hero__profil__code__three {
-    top: 50%;
-    right: 15%;
-  }
-  .container .Hero__profil__code__four {
-    bottom: 30%;
-    left: 45%;
-  }
-  .container .Hero__profil__code__five {
-    top: 50%;
+  .container .Hero__profil__circle__round_1 {
+    top: 30%;
     left: 5%;
+    width: 50%;
+    height: 20rem;
   }
-  .container .Hero__profil__code__six {
-    top: 20%;
-    left: 65%;
+  .container .Hero__profil__circle__round_1 span {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.4em;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(1) {
+    top: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(2) {
+    bottom: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(3) {
+    left: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(4) {
+    right: -7%;
+  }
+  .container .Hero__profil__circle__round_1 span img {
+    padding: 0.2em;
+  }
+  .container .Hero__profil__circle__round_2 {
+    top: 30%;
+    right: 8%;
+    width: 50%;
+    height: 20rem;
+  }
+  .container .Hero__profil__circle__round_2 span {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.4em;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(1) {
+    top: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(2) {
+    bottom: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(3) {
+    left: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(4) {
+    right: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span img {
+    padding: 0.2em;
   }
   .container .Hero .Social__Media {
     display: flex;
@@ -2088,40 +2100,54 @@ a {
   .container .Hero__profil__picture {
     width: 30rem;
   }
-  .container .Hero__profil__code {
-    display: flex;
-    flex-direction: column;
-    right: -8%;
-    top: 40%;
-    width: 20rem;
-    z-index: 30;
-  }
-  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
-    font-size: 1rem;
-  }
-  .container .Hero__profil__code__one {
+  .container .Hero__profil__circle__round_1 {
+    width: 50%;
+    height: 15rem;
     top: 20%;
-    left: 15%;
+    left: 4%;
   }
-  .container .Hero__profil__code__two {
-    bottom: 20%;
-    left: 15%;
+  .container .Hero__profil__circle__round_1 span {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.2em !important;
   }
-  .container .Hero__profil__code__three {
-    top: 50%;
-    right: 15%;
+  .container .Hero__profil__circle__round_1 span:nth-child(1) {
+    top: -9%;
   }
-  .container .Hero__profil__code__four {
-    bottom: 30%;
-    left: 45%;
+  .container .Hero__profil__circle__round_1 span:nth-child(2) {
+    bottom: -9%;
   }
-  .container .Hero__profil__code__five {
-    top: 50%;
-    left: 5%;
+  .container .Hero__profil__circle__round_1 span:nth-child(3) {
+    left: -9%;
   }
-  .container .Hero__profil__code__six {
+  .container .Hero__profil__circle__round_1 span:nth-child(4) {
+    right: -9%;
+  }
+  .container .Hero__profil__circle__round_2 {
+    width: 50%;
+    height: 15rem;
     top: 20%;
-    left: 65%;
+    right: 8%;
+  }
+  .container .Hero__profil__circle__round_2 span {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.2em !important;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(1) {
+    top: -9%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(2) {
+    bottom: -9%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(3) {
+    left: -9%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(4) {
+    right: -9%;
+  }
+  .container .Hero__profil__circle__round_2 span img {
+    padding: 0.1em !important;
   }
   .container .Hero .Social__Media {
     display: flex;
@@ -2197,38 +2223,54 @@ a {
     width: 550px;
     height: 110%;
   }
-  .container .Hero__profil__code {
-    right: 18%;
-    top: 40%;
-    font-size: 1rem;
-  }
-  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
-    font-size: 1rem;
-  }
-  .container .Hero__profil__code__one {
-    top: 10%;
-    left: 10%;
-    z-index: 1;
-  }
-  .container .Hero__profil__code__two {
-    bottom: 20%;
-    left: 15%;
-  }
-  .container .Hero__profil__code__three {
-    bottom: 30%;
-    right: 32%;
-  }
-  .container .Hero__profil__code__four {
-    top: 45%;
-    left: 11%;
-  }
-  .container .Hero__profil__code__five {
-    top: 50%;
-    left: 25%;
-  }
-  .container .Hero__profil__code__six {
+  .container .Hero__profil__circle__round_1 {
+    width: 50%;
+    height: 22rem;
     top: 20%;
-    left: 55%;
+    left: 4%;
+  }
+  .container .Hero__profil__circle__round_1 span {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.1em !important;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(1) {
+    top: -5%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(2) {
+    bottom: -5%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(3) {
+    left: -5%;
+  }
+  .container .Hero__profil__circle__round_1 span:nth-child(4) {
+    right: -5%;
+  }
+  .container .Hero__profil__circle__round_2 {
+    width: 50%;
+    height: 22rem;
+    top: 20%;
+    right: 12%;
+  }
+  .container .Hero__profil__circle__round_2 span {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.1em !important;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(1) {
+    top: -5%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(2) {
+    bottom: -5%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(3) {
+    left: -5%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(4) {
+    right: -5%;
+  }
+  .container .Hero__profil__circle__round_2 span img {
+    padding: 0.1em !important;
   }
   .container .Hero .Social__Media {
     display: none;
@@ -2298,38 +2340,57 @@ a {
     width: 362px;
     height: auto;
   }
-  .container .Hero__profil__code {
-    right: 4%;
-    top: 40%;
-    font-size: 0.8rem;
+  .container .Hero__profil__circle__round_1 {
+    width: 50%;
+    height: 12rem;
+    top: 25%;
+    left: 2%;
   }
-  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
-    font-size: 0.8rem;
+  .container .Hero__profil__circle__round_1 span {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1em !important;
   }
-  .container .Hero__profil__code__one {
-    top: 10%;
-    left: 20%;
-    z-index: 1;
+  .container .Hero__profil__circle__round_1 span:nth-child(1) {
+    top: -7%;
   }
-  .container .Hero__profil__code__two {
-    bottom: 20%;
-    left: 25%;
+  .container .Hero__profil__circle__round_1 span:nth-child(2) {
+    bottom: -7%;
   }
-  .container .Hero__profil__code__three {
-    bottom: 30%;
-    right: 20%;
+  .container .Hero__profil__circle__round_1 span:nth-child(3) {
+    left: -7%;
   }
-  .container .Hero__profil__code__four {
-    bottom: 25%;
-    left: 55%;
+  .container .Hero__profil__circle__round_1 span:nth-child(4) {
+    right: -7%;
   }
-  .container .Hero__profil__code__five {
-    top: 50%;
-    left: 15%;
+  .container .Hero__profil__circle__round_1 span img {
+    padding: 0.1em !important;
   }
-  .container .Hero__profil__code__six {
-    top: 20%;
-    left: 65%;
+  .container .Hero__profil__circle__round_2 {
+    width: 50%;
+    height: 12rem;
+    top: 25%;
+    right: 2%;
+  }
+  .container .Hero__profil__circle__round_2 span {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1em !important;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(1) {
+    top: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(2) {
+    bottom: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(3) {
+    left: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(4) {
+    right: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span img {
+    padding: 0.1em !important;
   }
   .container .Hero .Social__Media {
     display: none;
@@ -2400,38 +2461,57 @@ a {
     width: 350px;
     height: 280px;
   }
-  .container .Hero__profil__code {
-    right: 4%;
-    top: 40%;
-    font-size: 0.8rem;
+  .container .Hero__profil__circle__round_1 {
+    width: 50%;
+    height: 10rem;
+    top: 25%;
+    left: 2%;
   }
-  .container .Hero__profil__code__one, .container .Hero__profil__code__two, .container .Hero__profil__code__three, .container .Hero__profil__code__four, .container .Hero__profil__code__five, .container .Hero__profil__code__six {
-    font-size: 0.8rem;
+  .container .Hero__profil__circle__round_1 span {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1em !important;
   }
-  .container .Hero__profil__code__one {
-    top: 10%;
-    left: 20%;
-    z-index: 1;
+  .container .Hero__profil__circle__round_1 span:nth-child(1) {
+    top: -7%;
   }
-  .container .Hero__profil__code__two {
-    bottom: 20%;
-    left: 25%;
+  .container .Hero__profil__circle__round_1 span:nth-child(2) {
+    bottom: -7%;
   }
-  .container .Hero__profil__code__three {
-    bottom: 30%;
-    right: 20%;
+  .container .Hero__profil__circle__round_1 span:nth-child(3) {
+    left: -7%;
   }
-  .container .Hero__profil__code__four {
-    bottom: 25%;
-    left: 55%;
+  .container .Hero__profil__circle__round_1 span:nth-child(4) {
+    right: -7%;
   }
-  .container .Hero__profil__code__five {
-    top: 50%;
-    left: 15%;
+  .container .Hero__profil__circle__round_1 span img {
+    padding: 0.1em !important;
   }
-  .container .Hero__profil__code__six {
-    top: 20%;
-    left: 65%;
+  .container .Hero__profil__circle__round_2 {
+    width: 50%;
+    height: 10rem;
+    top: 25%;
+    right: 2%;
+  }
+  .container .Hero__profil__circle__round_2 span {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.1em !important;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(1) {
+    top: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(2) {
+    bottom: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(3) {
+    left: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span:nth-child(4) {
+    right: -7%;
+  }
+  .container .Hero__profil__circle__round_2 span img {
+    padding: 0.1em !important;
   }
   .container .Hero .Social__Media {
     display: none;

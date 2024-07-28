@@ -111,10 +111,6 @@
 }
 .container .Hero__profil__circle__round_1 {
   position: relative;
-  top: 30%;
-  left: 5%;
-  width: 50%;
-  height: 20rem;
   border-radius: 50%;
   z-index: 30;
   border: 1px solid #94a3b8;
@@ -122,31 +118,25 @@
 }
 .container .Hero__profil__circle__round_1 span {
   position: absolute;
-  width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #94a3b8;
   padding: 0.4em;
 }
 .container .Hero__profil__circle__round_1 span:nth-child(1) {
-  top: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_1 span:nth-child(2) {
-  bottom: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_1 span:nth-child(3) {
   top: 50%;
-  left: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_1 span:nth-child(4) {
   top: 50%;
-  right: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_1 span img {
@@ -168,10 +158,6 @@
 }
 .container .Hero__profil__circle__round_2 {
   position: relative;
-  top: 30%;
-  right: 8%;
-  width: 50%;
-  height: 20rem;
   border-radius: 50%;
   z-index: 30;
   border: 1px solid #94a3b8;
@@ -179,31 +165,24 @@
 }
 .container .Hero__profil__circle__round_2 span {
   position: absolute;
-  width: 3rem;
-  height: 3rem;
   border-radius: 50%;
   background-color: transparent;
   border: 1px solid #94a3b8;
-  padding: 0.4em;
 }
 .container .Hero__profil__circle__round_2 span:nth-child(1) {
-  top: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_2 span:nth-child(2) {
-  bottom: -7%;
   left: 50%;
   transform: translateX(-50%);
 }
 .container .Hero__profil__circle__round_2 span:nth-child(3) {
   top: 50%;
-  left: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_2 span:nth-child(4) {
   top: 50%;
-  right: -7%;
   transform: translateY(-50%);
 }
 .container .Hero__profil__circle__round_2 span img {
@@ -213,6 +192,7 @@
      object-fit: cover;
   background-color: white;
   border-radius: 50%;
+  padding: 0.2em;
   border: 1px solid #94a3b8;
 }
 @keyframes animateCircleTwo {
