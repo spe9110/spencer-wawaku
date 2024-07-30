@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './MainSass/index_main.css';

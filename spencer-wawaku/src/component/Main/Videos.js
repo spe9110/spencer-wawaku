@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+import React from 'react';
 import gsap from 'gsap';
 import { useRef, useLayoutEffect } from "react";
 import Slider from "react-slick";
@@ -107,7 +107,12 @@ export default function Videos(){
                 {videos.map(videoItem => (
                     <div className="Videos__card" key={videoItem.id}>
                         <div className="Videos__card__img">
-                            <img src={videoItem.image} alt="photo_main" className="Videos__card__img__picture"/>
+                            <img 
+                              src={videoItem.image} 
+                              alt="photo_main" 
+                              className="Videos__card__img__picture"
+                              loading="lazy"
+                              />
                             <span className="Videos__card__img__label">{videoItem.label}</span>
                         </div>
                         <div className="Videos__card__content">
@@ -115,7 +120,12 @@ export default function Videos(){
                             <p className="Videos__card__content__description">{videoItem.description}</p>
                             <div className="Videos__card__content__profil">
                                 <div className="Videos__card__content__profil__author">
-                                    <img src={videoItem.profil} alt={videoItem.author} className="Videos__card__content__profil__author__picture"/>
+                                    <img 
+                                      src={videoItem.profil} 
+                                      alt={videoItem.author} 
+                                      className="Videos__card__content__profil__author__picture"
+                                      loading="lazy"
+                                      />
                                     <div className="Videos__card__content__profil__author__nameJob">
                                     <span className="Videos__card__content__profil__author__nameJob__name">{videoItem.author}</span>
                                     <span className="Videos__card__content__profil__author__nameJob__job">{videoItem.job}</span>

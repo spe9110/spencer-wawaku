@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-no-undef */
+import React from 'react';
 import { useState, useRef, useLayoutEffect }  from 'react';
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 import './MainSass/index_main.css';
@@ -69,9 +69,9 @@ export default function About(){
                             <p>I create responsive and user-friendly websites that combine exceptional user interfaces with optimal performance and superior quality.  I am here to provide you with customized solutions tailored to your needs.</p>
                         </div>
                         <div className="About__content__wrapper__info__knowledge">
-                            {knowledges.map(skill => (
+                            {knowledges.map((skill, index) => (
                                 <div key={skill.id} className="About__content__wrapper__info__knowledge__list-skill">
-                                    <img src={skill.image} alt={skill.id} />
+                                    <img src={skill.image} alt={skill.id} loading='lazy' />
                                     <span>{skill.title}</span>
                                 </div>
                             ))}
@@ -81,7 +81,7 @@ export default function About(){
                     {showSkills === 2 && (<div className="About__content__wrapper__prog">
                         <div className="About__content__wrapper__prog__programming">
                             <h4>Programming skills</h4>
-                            {programmingSkills.map((prog) => (
+                            {programmingSkills.map((prog, index) => (
                                 <React.Fragment key={prog.id}>
                                     <div className='About__content__wrapper__prog__programming__skill-content'>
                                         <p>{prog.title}</p>
@@ -96,7 +96,7 @@ export default function About(){
                         </div>
                         <div className="About__content__wrapper__prog__tool">
                             <h4>Tools skills</h4>
-                            {tools.map(prog => (
+                            {tools.map((prog, index) => (
                                 <React.Fragment key={prog.id}>
                                     <div className="About__content__wrapper__prog__tool__tool-content">
                                         <p>{prog.tool}</p>
@@ -118,7 +118,7 @@ export default function About(){
                                 {otherSkills.map((Item) => (
                                     <React.Fragment  key={Item.id}>
                                         <CircularProgress value={`${Item.percentage}`} size='6rem' color='#1d4ed8' className="About__content__wrapper__other-skill__content__box__CircleBg">
-                                          <CircularProgressLabel>{`${Item.percentage}%`}</CircularProgressLabel>
+                                            <CircularProgressLabel>{`${Item.percentage}%`}</CircularProgressLabel>
                                             <p className="About__content__wrapper__other-skill__content__box__CircleBg__title">{Item.title}</p>
                                         </CircularProgress>
                                     </React.Fragment>

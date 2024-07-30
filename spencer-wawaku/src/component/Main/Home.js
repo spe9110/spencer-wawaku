@@ -1,3 +1,4 @@
+import React from 'react';
 import gsap from 'gsap';
 import { useRef, useLayoutEffect } from 'react';
 import { useTypewriter, Cursor} from 'react-simple-typewriter';

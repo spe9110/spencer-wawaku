@@ -390,3 +390,45 @@ npm run start:frontend
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   -->
+
+  
+
+// npm i sass --save-dev
+// npm i react-router-dom@
+// npm i react-icons
+// npm i react-simple-typewriter
+// emoji windows = touche windows + .
+// npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+// npm install react-multi-carousel --save
+// npm install --save-dev @babel/plugin-proposal-private-property-in-object
+// npm install slick-carousel --save
+// npm install gsap (Install the GSAP library) and 
+// npm install @gsap/react (Install the GSAP React package)
+
+npm install @babel/core @babel/cli babel-loader
+npm install @babel/plugin-transform-arrow-functions
+npm install @babel/preset-env
+npm install @babel/preset-react
+
+const root = ReactDOM.createRoot(document.getElementById('root')); //command to test babel
+npm install --save-dev webpack webpack-cli
+npm install css-loader --save-dev
+npm install style-loader --save-dev
+npm install sass-loader node-sass --save-dev
+npm install mini-css-extract-plugin --save-dev
+npm install sass-loader --save-dev
+npm install --save-dev @babel/cli @babel/core @babel/plugin-transform-arrow-functions @babel/preset-env @babel/preset-react
+<!-- package.json
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+    ]
+  },
+ -->

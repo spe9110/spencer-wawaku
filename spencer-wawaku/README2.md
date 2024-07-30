@@ -33,3 +33,59 @@ As already pointed out in this article, if you are getting the "0308010c:digital
 Hopefully the fixes we discussed in this tutorial help you fix this error. If any of the fixes fail to work for you, then you should try the others. In my case, upgrading react-scripts to 5+ was what worked for me.
 
  -->
+
+<!-- 
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+module.exports = {
+    // The entry point of your application
+    entry: './src/index.js',
+
+    // Where the bundled output should be placed
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.[contenthash].js',
+    },
+    devtool: 'source-map', // Generate source maps for easier debugging
+    
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/, // Correct regex to match .js and .jsx files
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                exclude: /node_modules/, // Exclude files in node_modules
+                use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                    }
+                }
+            },
+            {
+                test: /\.((c|sa|sc)ss)$/i, // Apply this rule to .css files
+                use: [MiniCssExtractPlugin.loader, 
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader",
+                ]
+            }
+        ]
+    },
+    watch: true,
+    mode: 'production', // Set mode to 'production' for optimized builds
+    resolve: {
+        extensions: ['.js', '.jsx'] // Resolve .js and .jsx extensions automatically
+    },
+    optimization: {
+        minimize: true
+    },
+    plugins: [
+        new MiniCssExtractPlugin({ 
+            filename: 'styles.css', 
+            template: './public/index.html', // Path to your template
+            inject: 'body', // Inject all scripts into the body
+        }) // Name of the extracted CSS file
+    ],
+}
+ -->

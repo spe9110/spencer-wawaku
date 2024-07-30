@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
+import React from 'react';
 import { useRef, useLayoutEffect } from "react";
 import services from "./DataMain/ServicesData";
 import './MainSass/index_main.css';
@@ -36,7 +36,7 @@ export default function ServicesSection(){
                     <div className="Services__wrapper__card" key={Item.id}>
                         <h1 className="Services__wrapper__card__number"> {Item.number} </h1>
                         <div className="Services__wrapper__card__img">
-                            <img src={Item.icon} alt='WebDev-Photo' />
+                            <img src={Item.icon} alt='a web dev icon' />
                         </div>
                         <h3 className="Services__wrapper__card__title"> {Item.title} </h3>
                         <p className="Services__wrapper__card__details"> {Item.description} </p>

@@ -1,15 +1,16 @@
-import { useState, useEffect } from "react";
-import Header from './component/Header/Header';
-import Home from './component/Main/Home';
-import About from './component/Main/About';
-import Services from "./component/Main/Services";
-import Videos from './component/Main/Videos'; 
-import Contact from './component/Main/Contact';
-import Footer from "./component/Footer/Footer";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { useTheme } from './component/Header/DarkMode';
-import Alert from "./component/Main/AlertMessage/Alert";
-import LoadingScreen from "./loader/LoadingScreen";
+const Header = lazy(()=> import('./component/Header/Header'));
+const Home = lazy(()=> import('./component/Main/Home'));
+const About = lazy(()=> import('./component/Main/About'));
+const Services = lazy(()=> import("./component/Main/Services"));
+const Videos = lazy(()=> import('./component/Main/Videos'));
+const Contact = lazy(()=> import('./component/Main/Contact'));
+const Footer = lazy(()=> import("./component/Footer/Footer"));
+const Alert = lazy(()=> import("./component/Main/AlertMessage/Alert"));
+const LoadingScreen = lazy(()=> import("./loader/LoadingScreen"));
+const NotFoundPage = lazy(()=> import("./component/Main/404"));
 
 function App() {
   const { theme } = useTheme();
@@ -26,14 +27,17 @@ function App() {
   return (
         <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
           <Header />
-          <Routes>        
-            <Route path="/" element={<Home />} /> 
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/videos" element={<Videos />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={<p>Loading...</p>}>
+            <Routes>        
+              <Route path="/" element={<Home />} />
+              <Route path="*" element={<NotFoundPage />} /> 
+              <Route path="/home" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/videos" element={<Videos />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
           <Footer />
           <Alert/>          
         </main>
@@ -54,6 +58,7 @@ export default App;
 // npm install slick-carousel --save
 // npm install gsap (Install the GSAP library) and 
 // npm install @gsap/react (Install the GSAP React package)
+// npm install babel-core babel-loader babel-preset-react css-loader react react-dom react-hot-loader style-loader webpack webpack-dev-server --save-dev
 
 
 /*

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import './MainSass/index_main.css';
 import CountUp from 'react-countup';
