@@ -89,3 +89,27 @@ module.exports = {
     ],
 }
  -->
+
+ <!-- 
+ Yes, I can confirm that you don't need to manually install webpack or create a webpack configuration when you create a React app using Create React App (CRA). The command npx create-react-app my-app sets up everything for you.
+
+Here's what happens when you run npx create-react-app my-app:
+
+Installation of Dependencies: CRA installs all the necessary dependencies, including React, React DOM, and a set of build tools.
+Webpack Configuration: CRA comes with a pre-configured webpack setup that handles the bundling and optimization of your JavaScript, CSS, and other assets. You don't need to touch webpack configuration unless you want to customize it.
+Development Server: CRA sets up a development server with hot module replacement (HMR) for a smooth development experience.
+Scripts for Common Tasks: CRA provides scripts for common tasks like starting the development server (npm start), creating a production build (npm run build), and running tests (npm test).
+With CRA, you can focus on writing your React components and developing your application without worrying about the underlying build configuration.
+
+If you ever need to customize the webpack configuration, you can do so by running npm run eject, but this is generally not recommended unless absolutely necessary because it makes the build setup more complex to manage.
+
+
+
+
+
+
+
+
+
+
+  -->

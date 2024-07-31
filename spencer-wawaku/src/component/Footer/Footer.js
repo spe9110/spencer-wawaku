@@ -36,7 +36,7 @@ export default function Footer() {
                 <div className="footer__content">
                     <ul className="footer__content__social__media">
                         <a 
-                            href="https://github.com/spe9110"
+                            href="https://www.instagram.com/code_spencer2/"
                             className="instagram-icon"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export default function Footer() {
                         </a>
 
                         <a 
-                            href="https://github.com/spe9110"
+                            href="https://x.com/SpencerNsitu/with_replies"
                             className="twitter-icon"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function Footer() {
                             <FaXTwitter />
                         </a>
                         <a 
-                            href="https://github.com/spe9110"
+                            href="https://www.facebook.com/profile.php?id=61554155662615"
                             className="facebook-icon"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -75,7 +75,7 @@ export default function Footer() {
                         </a>
 
                         <a 
-                            href="https://github.com/spe9110"
+                            href="https://www.tiktok.com/@dev_spe?_t=8nX6AACwZ1c&_r=1"
                             className="tiktok-icon"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export default function Footer() {
                         </a>
 
                         <a 
-                            href="https://github.com/spe9110"
+                            href="https://www.linkedin.com/in/spencer-nsitu-zola-971b75136/"
                             className="linkedin-icon"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function Footer() {
                         </a>
 
                         <a 
-                            href="https://www.youtube.com/@codewithspencer-fd7ib"
+                            href="https://www.youtube.com/watch?v=XqsZX9SA6yQ"
                             className="youtube-icon"
                             target="_blank"
                             rel="noopener noreferrer"

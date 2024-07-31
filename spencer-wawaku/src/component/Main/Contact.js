@@ -116,6 +116,7 @@ export default function Contact(){
                               <option value="Maintenance and Updates">Maintenance and Updates</option> 
                               <option value="Photoshop">Photoshop</option> 
                               <option value="Web consulting">Web consulting</option> 
+                              <option value="Mentorship">Mentorship</option> 
                               <option value="Other Services">Other Services</option> 
                             </Select>
                             <FormErrorMessage>{formik.errors.type}</FormErrorMessage>
