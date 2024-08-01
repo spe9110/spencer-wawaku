@@ -133,3 +133,17 @@ Package.json file before restoring the CRA
 }
 
  -->
+
+
+/*
+
+var mymap = L.map('map')
+
+#map{
+    width: 100%;
+    min-height: 600px;
+    z-index: 10;
+}
+Sources:
+https://zhiqiyu.github.io/post/react-leaflet-setup/
+*/ 

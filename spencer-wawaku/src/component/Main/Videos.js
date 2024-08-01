@@ -90,7 +90,7 @@ export default function Videos(){
           tl.current = gsap.timeline()
           .from(videosAnime.current.children, {
             duration: 1.5, 
-            opacity: 0,
+            opacity: 0.01,
             stagger: 1
         })
       });

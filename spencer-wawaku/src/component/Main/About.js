@@ -10,7 +10,7 @@ import otherSkills from './DataMain/OtherSkills';
 import tools from './DataMain/ToolsData';
 import { useTheme } from '../Header/DarkMode';
 import gsap from 'gsap';
-
+// import { IKImage, IKContext } from 'imagekitio-react';
 
 // picture variables
 const picture = pictures;
@@ -33,16 +33,18 @@ export default function About(){
             .from("#photo", {
                 x: "-100%",
                 duration: 1.8, 
-                opacity: 0,
+                opacity: 0.01,
             })
             .from("#stat", {
                 x: "100%",
                 duration: 1.8, 
-                opacity: 0,
+                opacity: 0.01,
             },  "-=1.5")
         });
         return () => ctx.revert();
     }, []);
+
+    // const apiKey = "https://ik.imagekit.io/spencer/"
 
     return(
         <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={aboutAnime} role='main'>
@@ -71,6 +73,13 @@ export default function About(){
                         <div className="About__content__wrapper__info__knowledge">
                             {knowledges.map((skill, index) => (
                                 <div key={skill.id} className="About__content__wrapper__info__knowledge__list-skill">
+                                    {/* <IKContext urlEndpoint={apiKey} >
+                                        <IKImage 
+                                            src={skill.image} 
+                                            alt={skill.id} 
+                                            loading='lazy' 
+                                            lqip={{ active: true }}/>
+                                    </IKContext> */}
                                     <img src={skill.image} alt={skill.id} loading='lazy' />
                                     <span>{skill.title}</span>
                                 </div>

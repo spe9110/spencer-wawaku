@@ -3,13 +3,13 @@ import { useRef, useEffect, useLayoutEffect } from "react";
 import { useFormik } from "formik"; 
 import * as Yup from 'yup'; 
 import { 
- Button, 
- FormControl,
- FormErrorMessage,  
- FormLabel, 
- Input, 
- Textarea,
- Select 
+  Button, 
+  FormControl,
+  FormErrorMessage,  
+  FormLabel, 
+  Input, 
+  Textarea,
+  Select 
 } from "@chakra-ui/react"; 
 import './MainSass/index_main.css';
 import ReactLeafletMap from './ReactLeafletMap';
@@ -34,7 +34,7 @@ export default function Contact(){
         },
         onSubmit: async (values) => {
           await submit('http://localhost:3001/contact', values);
-       },
+        },
 
         validationSchema: Yup.object({ 
           firstName: Yup.string().min(2, 'Too Short!').max(20, 'Too Long!').required("Required"),
@@ -67,7 +67,7 @@ export default function Contact(){
           tl.current = gsap.timeline()
           .from(contactAnime.current.children, {
             duration: 1.5, 
-            opacity: 0,
+            opacity: 0.01,
             stagger: 1
           })
       });

@@ -1,6 +1,10 @@
+"use client";
+
 import { useState, useEffect, Suspense, lazy } from "react";
 import { Routes, Route } from 'react-router-dom';
 import { useTheme } from './component/Header/DarkMode';
+import { ErrorBoundary } from "react-error-boundary";
+
 const Header = lazy(()=> import('./component/Header/Header'));
 const Home = lazy(()=> import('./component/Main/Home'));
 const About = lazy(()=> import('./component/Main/About'));
@@ -26,8 +30,9 @@ function App() {
 
   return (
         <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
-          <Header />
-          <Suspense fallback={<p>Loading...</p>}>
+          <ErrorBoundary fallback={<div style={{ color: "red" }}>Something went wrong</div>}>
+            <Suspense fallback={<p>Loading...</p>}>
+            <Header />
             <Routes>        
               <Route path="/" element={<Home />} />
               <Route path="*" element={<NotFoundPage />} /> 
@@ -37,9 +42,10 @@ function App() {
               <Route path="/videos" element={<Videos />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
+            <Footer />
+            <Alert/>  
           </Suspense>
-          <Footer />
-          <Alert/>          
+          </ErrorBoundary>
         </main>
   ) 
 }

@@ -69,37 +69,7 @@ const PictureProfil = ({ pictures, interval = 3000 }) => {
         onClick={goToSlide}
         />
     </>
-  )
+    )
 }
 
 export default PictureProfil;
-
-
-/*
-PREVIOUS CODE
-// handle Prevous function
-    const prevSlide = () =>{
-        setActiveIndex((activeIndex) =>
-            activeIndex === 0 ? pictures.length - 1 : activeIndex - 1 
-        );
-    };
-
-    // handle next function
-    const nextSlide = () => {
-        setActiveIndex((activeIndex) => 
-            activeIndex === pictures.length - 1 ? 0 : activeIndex + 1
-        );
-    };
-
-    // go to slide indicator
-    const goToSlide = (index) => {
-        setActiveIndex(index)
-    }
-
-
-    USECALLBACK HOOK
-
-    prevSlide, nextSlide, and goToSlide functions are now wrapped in useCallback to ensure that their references do not change between renders unless their dependencies change.
-    This ensures that useEffect will not mistakenly identify changes in the nextSlide function on every render.
-
-*/ 

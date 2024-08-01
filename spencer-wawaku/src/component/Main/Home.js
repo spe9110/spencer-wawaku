@@ -30,13 +30,13 @@ export default function HomeSection(){
             tl.current = gsap.timeline()
             .from("#greet, #name, #job, #descript, #btn_one", {
                 duration: 1.3, 
-                opacity: 0, 
+                opacity: 0.01, 
                 y: "+30", 
                 stagger: 0.5
             })
             .from("#picture", {
                 duration: 2, 
-                opacity: 0, 
+                opacity: 0.01, 
                 y: "+30", 
                 stagger: 1
             })
@@ -78,28 +78,6 @@ export default function HomeSection(){
                         ))}
                     </div>
                 </div>
-
-                {/* <div className="Hero__profil__code">
-                    <span>console.log(data)</span>
-                </div>
-                <div className="Hero__profil__code__one">
-                    <span>NODEJS</span>
-                </div>
-                <div className="Hero__profil__code__two">
-                    <span>REACT</span>
-                </div>
-                <div className="Hero__profil__code__three">
-                    <span>HTML</span>
-                </div>
-                <div className="Hero__profil__code__four">
-                    <span>CSS</span>
-                </div>                    
-                <div className="Hero__profil__code__five">
-                    <span>SASS</span>
-                </div>                    
-                <div className="Hero__profil__code__six">
-                    <span>JAVASCRIPT</span>
-                </div>                     */}
             </div>
             <ScrollingText/>
             <SocialMediaHero/>

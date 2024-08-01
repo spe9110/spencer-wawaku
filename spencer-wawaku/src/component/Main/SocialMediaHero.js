@@ -16,7 +16,7 @@ export default function SocialMediaHero(){
             tl.current = gsap.timeline()
             .from("#socialMedia", {
                 duration: 3, 
-                opacity: 0, 
+                opacity: 0.01, 
                 x: "50%", 
                 delay: 3, 
                 stagger: 1.5

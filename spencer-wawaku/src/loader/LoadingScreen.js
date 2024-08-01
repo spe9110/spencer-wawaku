@@ -18,12 +18,12 @@ const LoadingScreen= () => {
       })
       .from("#loading_1", {
         y: "+=30",
-        opacity: 0,
+        opacity: 0.01,
         stagger: 0.5
       })
       .to("#loading_1", {
         y: "-=30",
-        opacity: 0,
+        opacity: 0.01,
         delay: 6,
         stagger: 0.5
       })
@@ -32,7 +32,7 @@ const LoadingScreen= () => {
         duration: 1.3,
       })
       .from("#welcome", {
-        opacity: 0,
+        opacity: 0.01,
         duration: 0.5
       })
     }, introAnime);

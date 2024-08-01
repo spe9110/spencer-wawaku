@@ -18,7 +18,7 @@ export default function ServicesSection(){
             tl.current = gsap.timeline()
                 .from("#service, #help, #wrapper", {
                     duration: 1.5, 
-                    opacity: 0,
+                    opacity: 0.01,
                     stagger: 1
                 })
         });
