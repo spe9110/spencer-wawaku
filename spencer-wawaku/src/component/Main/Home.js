@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect, memo } from 'react';
 import gsap from 'gsap';
-import { useRef, useLayoutEffect } from 'react';
 import { useTypewriter, Cursor} from 'react-simple-typewriter';
 import './MainSass/index_main.css';
 import { GoArrowUpRight } from "react-icons/go";
 import { NavLink } from "react-router-dom";
-import Profil from './Images/avatar-bis.png';
+import Profil from './Images/avatar-bis.webp';
 import SocialMediaHero from "./SocialMediaHero";
 import ScrollingText from "../Main/ScrollingText";
 import { useTheme } from '../Header/DarkMode';
 import circleSkills from "./DataMain/RoundSkill";
 
-export default function HomeSection(){
+function HomeSection(){
     const { theme } = useTheme();
 
     const [text] = useTypewriter({
@@ -84,3 +83,4 @@ export default function HomeSection(){
         </div>
     )
 }
+export default memo(HomeSection);

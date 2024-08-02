@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState, useRef, useLayoutEffect }  from 'react';
+import React,{ useState, useRef, useLayoutEffect, memo }  from 'react';
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react';
 import './MainSass/index_main.css';
 import PictureProfil from './PictureProfil';
@@ -15,7 +14,7 @@ import gsap from 'gsap';
 // picture variables
 const picture = pictures;
 
-export default function About(){
+function About(){
     const { theme } = useTheme();
     const [showSkills, setShowSkills] = useState(1);
     
@@ -140,5 +139,5 @@ export default function About(){
         </div>
     )       
 }
-
+export default memo(About)
 //  "-=1.5" the both items start animation at the same time

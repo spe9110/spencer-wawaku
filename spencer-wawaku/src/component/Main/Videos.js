@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useRef, useLayoutEffect, memo } from "react";
 import gsap from 'gsap';
-import { useRef, useLayoutEffect } from "react";
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -30,7 +29,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-export default function Videos(){
+function Videos(){
     const { theme } = useTheme();
     
     let settings = {
@@ -153,3 +152,4 @@ export default function Videos(){
         </div>
     )
 }
+export default memo(Videos);

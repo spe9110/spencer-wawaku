@@ -1,9 +1,9 @@
-import WebDevelopment from '../Images/icons8-web-development-48.png';
-import WebConsulting from '../Images/icons8-consultation-100.png';
-import Maintenance from '../Images/icons8-performance-imac-100.png';
-import Seo from '../Images/icons8-seo-100.png';
-import Performance from '../Images/icons8-optimization-64.png';
-import AnimationEffets from '../Images/icons8-animation-64.png';
+import WebDevelopment from '../Images/icons8-web-development-48.webp';
+import WebConsulting from '../Images/icons8-consultation-100.webp';
+import Maintenance from '../Images/icons8-performance-imac-100.webp';
+import Seo from '../Images/icons8-seo-100.webp';
+import Performance from '../Images/icons8-optimization-64.webp';
+import AnimationEffets from '../Images/icons8-animation-64.webp';
 
 const services = [
     {

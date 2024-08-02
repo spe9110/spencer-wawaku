@@ -1,11 +1,11 @@
-import Html from '../Images/icons8-html-48.png'; 
-import Css from '../Images/icons8-css-48.png'; 
-import Javascript from '../Images/icons8-javascript-48.png'; 
-import React from '../Images/icons8-react-native-48.png'; 
-import Nextjs from '../Images/Next.js.png'; 
-import Figma from '../Images/Figma.png'; 
-import Bootstrap from '../Images/Bootstrap.png'; 
-import Php from '../Images/PHP.png'; 
+import Html from '../Images/icons8-html-48.webp'; 
+import Css from '../Images/icons8-css-48.webp'; 
+import Javascript from '../Images/icons8-javascript-48.webp'; 
+import React from '../Images/icons8-react-native-48.webp'; 
+import Nextjs from '../Images/Next.js.webp'; 
+import Figma from '../Images/Figma.webp'; 
+import Bootstrap from '../Images/Bootstrap.webp'; 
+import Php from '../Images/PHP.webp'; 
 
 const circleSkills = [
     {

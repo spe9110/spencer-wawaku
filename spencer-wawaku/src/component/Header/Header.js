@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import navbarItems from './Data/Data'; // Importing navbarItems from data.js
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link, NavLink } from 'react-router-dom';
@@ -8,7 +8,8 @@ import Switch from './Switch';
 import { useTheme } from './DarkMode';
 import './HeaderSass/index_header.css';
 
-export default function Header() {
+
+function Header() {
 
     const { theme } = useTheme();
 
@@ -69,3 +70,4 @@ export default function Header() {
         </div>
     );
 }
+export default memo(Header);

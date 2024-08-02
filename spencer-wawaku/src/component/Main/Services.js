@@ -1,11 +1,10 @@
-import React from 'react';
-import { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, memo } from "react";
 import services from "./DataMain/ServicesData";
 import './MainSass/index_main.css';
 import { useTheme } from '../Header/DarkMode';
 import gsap from 'gsap';
 
-export default function ServicesSection(){
+function ServicesSection(){
     const { theme } = useTheme();
 
     // GSAP
@@ -46,3 +45,4 @@ export default function ServicesSection(){
         </div>
     )
 }
+export default memo(ServicesSection);

@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { FaAngleUp, FaInstagram, FaGithub, FaXTwitter, FaFacebook, FaTiktok, FaLinkedin, FaYoutube } from "react-icons/fa6";
 import './FooterSass/index_footer.css';
 
-export default function Footer() {
+function Footer() {
     const [showBackToTop, setShowBackToTop] = useState(false);
     const currentYear = new Date().getFullYear();
     const handleBackToTop = () => {
@@ -116,36 +116,4 @@ export default function Footer() {
         </div>
     )
 }
-
-/*
- replaced Link with the standard HTML <a> tag for each icon.
-The href attribute contains the external link you want to navigate to.
-The target="_blank" attribute opens the link in a new tab.
-The rel="noopener noreferrer" attribute is a security best practice when using target="_blank" to prevent potential security vulnerabilities.
-
-IMPORTANT:
-It looks like you are using the Link component from react-router-dom to create links. However, for external links that navigate to external websites or platforms, you should use the regular HTML anchor (<a>) tag instead of the Link component. 
-
-INCORRECT WAY:
-==============
-<Link 
-                        to={{pathname: "https://www.youtube.com/@codewithspencer-fd7ib"}} 
-                        className="youtube-icon"
-                        target="_blank"
-                        aria-label="youtube"
-                        >
-                        <FaYoutube />
-                    </Link>
-
-CORRECT WAY
-============
-<a 
-                        href="https://www.youtube.com/@codewithspencer-fd7ib"
-                        className="youtube-icon"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="youtube"
-                        >
-                        <FaYoutube />
-                    </a>
-*/ 
+export default memo(Footer);

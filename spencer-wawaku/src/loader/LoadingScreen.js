@@ -1,5 +1,4 @@
-import React from 'react';
-import { useRef, useLayoutEffect } from 'react';
+import React, { useRef, useLayoutEffect, memo } from 'react';
 import './loading.css';
 import gsap from 'gsap';
 
@@ -60,4 +59,4 @@ const LoadingScreen= () => {
   )
 }
 
-export default LoadingScreen;
+export default memo(LoadingScreen);

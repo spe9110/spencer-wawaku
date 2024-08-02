@@ -1,5 +1,4 @@
-import React from 'react';
-import { useRef, useEffect, useLayoutEffect } from "react";
+import React, { useRef, useEffect, useLayoutEffect, memo } from "react";
 import { useFormik } from "formik"; 
 import * as Yup from 'yup'; 
 import { 
@@ -18,7 +17,7 @@ import { useAlertContext } from './AlertMessage/AlertContext';
 import gsap from 'gsap';
 import { useTheme } from '../Header/DarkMode';
 
-export default function Contact(){
+function Contact(){
   const { theme } = useTheme();
   const { isLoading, response, submit }  = UseSubmit();
   const { onOpen } = useAlertContext();
@@ -33,7 +32,7 @@ export default function Contact(){
             comment: '',
         },
         onSubmit: async (values) => {
-          await submit('http://localhost:3001/contact', values);
+          await submit("https://spencer-backend2.onrender.com/contact", values);
         },
 
         validationSchema: Yup.object({ 
@@ -152,3 +151,4 @@ export default function Contact(){
         </div>
     )
 }
+export default memo(Contact);

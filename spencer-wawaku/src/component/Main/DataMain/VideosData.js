@@ -1,12 +1,10 @@
-import ProfilPicture from '../Images/avatar.PNG';
-import windows from '../Images/window11 (1).jpg';
-import Capcut from '../Images/CAPCUTO.jpg';
-import Wedding from '../Images/wedd.png';
-import Javascript2 from '../Images/Javascript2.png';
-import Javascript3 from '../Images/Javascript3.png';
-import Javascript4 from '../Images/Javascript4.png';
-// import Javascript5 from '../Images/Javascript5.png';
-// import Javascript6 from '../Images/Javascript6.png';
+import ProfilPicture from '../Images/avatar.webp';
+import windows from '../Images/window11 (1).webp';
+import Capcut from '../Images/CAPCUTO.webp';
+import Wedding from '../Images/wedd.webp';
+import Javascript2 from '../Images/Javascript2.webp';
+import Javascript3 from '../Images/Javascript3.webp';
+import Javascript4 from '../Images/Javascript4.webp';
 
 const videos = [
     {
