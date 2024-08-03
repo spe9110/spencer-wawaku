@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './MainSass/index_main.css';
+import { Helmet} from "react-helmet";
 
 const CarouselIndicator = ({ pictures, activeIndex, onClick }) => {
     if(!pictures || !pictures.length){
@@ -55,8 +56,10 @@ const PictureProfil = ({ pictures, interval = 3000 }) => {
         <button onClick={prevSlide} className='carousel__btn carousel__btn--prev'>
             <FaArrowLeft/>
         </button>
-
-        <img src={pictures[activeIndex]} alt={`slide ${activeIndex}`} className="About__slider__picture__img" />
+        <Helmet>
+            <link rel="preload" as="image" href={pictures[activeIndex]} />
+        </Helmet>
+        <img src={pictures[activeIndex]} alt={`slide ${activeIndex}`} className="About__slider__picture__img" loading='lazy' />
 
         <button onClick={nextSlide} className='carousel__btn carousel__btn--next'>
             <FaArrowRight/>

@@ -9,6 +9,7 @@ import './MainSass/index_main.css';
 import videos from "./DataMain/VideosData";
 import CountUpPage from "./CountUpPage";
 import { useTheme } from '../Header/DarkMode';
+import UxDesign from "./UxDesign";
 
 
 function SampleNextArrow(props) {
@@ -98,6 +99,7 @@ function Videos(){
 
     return(
         <div className={`Videos ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={videosAnime} role='main'>
+            <UxDesign />
             <h3 className="Videos__title">Videos</h3>
             <p className="Videos__watch">Watch me on Youtube</p>
             

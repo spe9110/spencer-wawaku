@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
         const initialTheme = localStorage.getItem('theme')
         return initialTheme ? initialTheme : 'light';
     });
-  
+
     // 1 Function to toggle the theme
     // const toggleTheme = () => {
     //     setTheme(theme === 'light' ? 'dark' : 'light');
@@ -27,13 +27,6 @@ export const ThemeProvider = ({ children }) => {
             setTheme(savedTheme)
         }
     }
-    // we store the theme preference
-    // useEffect(()=>{
-    //     const storeTheme = localStorage.getItem('theme');
-    //     if(storeTheme){
-    //         setTheme(storeTheme);
-    //     }
-    // }, []);
 
     // 3 new functions theme
     function toggleTheme(){
@@ -44,21 +37,15 @@ export const ThemeProvider = ({ children }) => {
         });
     }
 
-
-    // Update local storage with the current theme
-    // useEffect(()=>{
-    //     localStorage.setItem('theme', theme);
-    // }, [theme]);
-
     //4. we use the useEffect Hook
     useEffect(()=>{
         getThemeFromLocalStorage()
     }, [theme])
-  
+
     return (
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
         {children}
-      </ThemeContext.Provider>
+        </ThemeContext.Provider>
     );
 };
 

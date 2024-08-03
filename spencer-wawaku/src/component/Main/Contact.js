@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useLayoutEffect, memo } from "react";
+import React, { useEffect, memo } from "react";
 import { useFormik } from "formik"; 
 import * as Yup from 'yup'; 
 import { 
@@ -14,8 +14,8 @@ import './MainSass/index_main.css';
 import ReactLeafletMap from './ReactLeafletMap';
 import UseSubmit from './AlertMessage/UseSubmit';
 import { useAlertContext } from './AlertMessage/AlertContext';
-import gsap from 'gsap';
 import { useTheme } from '../Header/DarkMode';
+import UxDesign from "./UxDesign";
 
 function Contact(){
   const { theme } = useTheme();
@@ -58,23 +58,9 @@ function Contact(){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response]); 
 
-    const contactAnime = useRef();
-    const tl = useRef();
-
-    useLayoutEffect(() => {
-      let ctx = gsap.context(() => {
-          tl.current = gsap.timeline()
-          .from(contactAnime.current.children, {
-            duration: 1.5, 
-            opacity: 0.01,
-            stagger: 1
-          })
-      });
-      return () => ctx.revert();
-    }, []);
-
     return(
-        <div className={`Contact ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={contactAnime} role='main'>
+        <div className={`Contact ${theme === 'light' ? 'dark-mode' : 'light'}`} role='main'>
+          <UxDesign />
             <h3 className="Contact__title">Contact</h3>
             <p className="Contact__touch">Let's get in touch</p>
             <div className='Contact__form'>
@@ -147,7 +133,7 @@ function Contact(){
                         </Button>              
                     </form> 
                 </div>
-           </div>
+            </div>
         </div>
     )
 }

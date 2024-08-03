@@ -1,0 +1,30 @@
+.Design{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    // z-index: -1 !important;
+    filter: blur(250px);
+    z-index: 0;
+}
+.Design:nth-child(1){
+    top: 20%;
+    left: 5%;
+    transform: translate(5%);
+    right: 0;
+    bottom: 0;
+    background-color:#2563eb !important;
+}
+.Design:nth-child(2){
+    top: 10%;
+    left: 30%;
+    transform: translate(30%);
+    bottom: 0;
+    background-color: #7c3aed !important;
+}
+.Design:nth-child(3){
+    top: 20%;
+    right: 10%;
+    transform: translate(10%);
+    background-color: #f97316 !important;
+}

@@ -1,7 +1,6 @@
 import React, { useRef, useLayoutEffect, memo } from 'react';
 import gsap from 'gsap';
 import { useTypewriter, Cursor} from 'react-simple-typewriter';
-import './MainSass/index_main.css';
 import { GoArrowUpRight } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import Profil from './Images/avatar-bis.webp';
@@ -9,6 +8,10 @@ import SocialMediaHero from "./SocialMediaHero";
 import ScrollingText from "../Main/ScrollingText";
 import { useTheme } from '../Header/DarkMode';
 import circleSkills from "./DataMain/RoundSkill";
+import { Helmet} from "react-helmet";
+import './MainSass/index_main.css';
+import UxDesign from './UxDesign';
+
 
 function HomeSection(){
     const { theme } = useTheme();
@@ -44,7 +47,8 @@ function HomeSection(){
     }, []);
 
     return(
-        <div ref={firstAnime} className={`Hero ${theme === 'light' ? 'dark-mode' : 'light'}`} id='Hero_Anime'>
+        <div ref={firstAnime} className={`Hero ${theme === 'light' ? 'dark-mode' : 'light'}`} id='Hero_Anime' role='main'>
+            <UxDesign/>
             {/* info */}
             <div className="Hero__info">
                 <p id='greet' className="Hero__info__greet">Hello <span style={{fontSize:30}}>👋🏾</span> it's </p>
@@ -67,13 +71,24 @@ function HomeSection(){
                 <img src={Profil} className="Hero__profil__picture" alt="avatar_picture"/>
                 <div className='Hero__profil__circle'>
                     <div className='Hero__profil__circle__round_1'>
+                        {/* Helmet to preload the largest contentful paint image in React */}
+                        <Helmet>
+                                {circleSkills.map(item => (
+                                    <link
+                                    key={item.id}
+                                    rel="preload"
+                                    href={item.circleOne}
+                                    as="image"
+                                />
+                                ))}
+                        </Helmet>        
                         {circleSkills.map(item => (
-                            <span><img src={item.circleOne} alt='skill_picture'/></span>
+                            <span key={item.id}><img src={item.circleOne} alt='skill_picture' loading='lazy' /></span>
                         ))}        
                     </div>
                     <div className='Hero__profil__circle__round_2'>
                         {circleSkills.map(item => (
-                            <span><img src={item.circleTwo} alt='skill_picture'/></span>
+                            <span key={item.id}><img src={item.circleTwo} alt='skill_picture'/></span>
                         ))}
                     </div>
                 </div>

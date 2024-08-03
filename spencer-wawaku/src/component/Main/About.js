@@ -9,7 +9,8 @@ import otherSkills from './DataMain/OtherSkills';
 import tools from './DataMain/ToolsData';
 import { useTheme } from '../Header/DarkMode';
 import gsap from 'gsap';
-// import { IKImage, IKContext } from 'imagekitio-react';
+import { Helmet} from "react-helmet";
+import UxDesign from './UxDesign';
 
 // picture variables
 const picture = pictures;
@@ -47,6 +48,7 @@ function About(){
 
     return(
         <div className={`About ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={aboutAnime} role='main'>
+            <UxDesign />
             <div className="About__slider" id='photo'>
                 {/* design */}
                 <div className="About__slider__design"></div>
@@ -70,15 +72,19 @@ function About(){
                             <p>I create responsive and user-friendly websites that combine exceptional user interfaces with optimal performance and superior quality.  I am here to provide you with customized solutions tailored to your needs.</p>
                         </div>
                         <div className="About__content__wrapper__info__knowledge">
+                            {/* Helmet to preload the largest contentful paint image in React */}
+                            <Helmet>
+                                {knowledges.map((skill) => (
+                                    <link
+                                        key={skill.id}
+                                        rel="preload"
+                                        href={skill.image}
+                                        as="image"
+                                    />
+                                ))}
+                            </Helmet>
                             {knowledges.map((skill, index) => (
                                 <div key={skill.id} className="About__content__wrapper__info__knowledge__list-skill">
-                                    {/* <IKContext urlEndpoint={apiKey} >
-                                        <IKImage 
-                                            src={skill.image} 
-                                            alt={skill.id} 
-                                            loading='lazy' 
-                                            lqip={{ active: true }}/>
-                                    </IKContext> */}
                                     <img src={skill.image} alt={skill.id} loading='lazy' />
                                     <span>{skill.title}</span>
                                 </div>

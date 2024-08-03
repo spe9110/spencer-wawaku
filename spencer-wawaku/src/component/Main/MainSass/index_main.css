@@ -20,7 +20,7 @@
 }
 .container .Hero__info__job {
   line-height: 1rem;
-  color: #0ea5e9;
+  color: #2563eb;
 }
 .container .Hero__info hr {
   content: "";
@@ -40,7 +40,7 @@
   gap: 0.5rem;
 }
 .container .Hero__info__btn__one {
-  background-color: #0ea5e9;
+  background-color: #2563eb;
   color: #fff;
   border: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -62,14 +62,13 @@
   border-radius: 290486px;
 }
 .container .Hero__info__btn__one:hover {
-  background-color: #fff;
+  background-color: #3b82f6;
   transition: background 0.3s ease-in-out;
-  color: #0ea5e9;
+  color: #fff;
   border-radius: 32px;
-  border: 3px solid #0ea5e9;
 }
 .container .Hero__info__btn__two {
-  background-color: #0ea5e9;
+  background-color: #2563eb;
   color: #fff;
   border: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -277,7 +276,7 @@
   color: #000;
 }
 .container .About__content__btn__one:hover, .container .About__content__btn__one.active, .container .About__content__btn__two:hover, .container .About__content__btn__two.active, .container .About__content__btn__three:hover, .container .About__content__btn__three.active {
-  background-color: blue;
+  background-color: #2563eb;
   color: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 5px;
@@ -349,7 +348,7 @@
   font-weight: bold;
   width: 100%;
   border-radius: 0.5rem;
-  background: blue;
+  background: #2563eb;
   border: 1px solid #e5e7eb;
   color: #fff;
 }
@@ -370,7 +369,7 @@
 .container .About__content__wrapper__prog__programming__skill-bg__skill-progress, .container .About__content__wrapper__prog__tool__skill-bg__skill-progress {
   width: 0%;
   height: 0.5rem;
-  background-color: blue;
+  background-color: #2563eb;
   border-radius: 0.5rem;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
@@ -392,7 +391,7 @@
   padding-left: 2rem !important;
   padding: 5px;
   border-radius: 0.5rem;
-  background: blue;
+  background: #2563eb;
   border: 1px solid #e5e7eb;
   color: #fff;
 }
@@ -686,7 +685,7 @@
   background: greenyellow;
 }
 .container .Contact__form__content {
-  background: white;
+  background: #ccc;
   color: #000;
 }
 .container .Contact__form__content form {
@@ -797,18 +796,6 @@
   z-index: 10;
 }
 
-/*
-
-var mymap = L.map('map')
-
-#map{
-    width: 100%;
-    min-height: 600px;
-    z-index: 10;
-}
-Sources:
-https://zhiqiyu.github.io/post/react-leaflet-setup/
-*/
 .container .Videos .CountUp {
   width: 100%;
   display: grid;
@@ -909,4 +896,37 @@ img:hover {
 
 .carousel__indicator.active {
   background-color: orangered; /* or any other color for active indicator */
+}
+
+.Design {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(250px);
+  z-index: 0;
+}
+
+.Design:nth-child(1) {
+  top: 20%;
+  left: 5%;
+  transform: translate(5%);
+  right: 0;
+  bottom: 0;
+  background-color: #2563eb !important;
+}
+
+.Design:nth-child(2) {
+  top: 10%;
+  left: 30%;
+  transform: translate(30%);
+  bottom: 0;
+  background-color: #7c3aed !important;
+}
+
+.Design:nth-child(3) {
+  top: 20%;
+  right: 10%;
+  transform: translate(10%);
+  background-color: #f97316 !important;
 }/*# sourceMappingURL=index_main.css.map */

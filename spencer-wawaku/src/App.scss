@@ -93,7 +93,7 @@ a{
                 }
                 // the active button
                 .active {
-                    background-color: blue;
+                    background-color: #2563eb;
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
@@ -1659,8 +1659,7 @@ a{
                         &__tool{
                             h4{
                                 font-size: 1.5rem;
-                                padding-left: 1.3em !important;
-                                padding: 4px;
+                                padding: 4px 4px 4px 1.3em !important;
                             }
                             &__skill-content,
                             &__tool-content{
@@ -1778,8 +1777,7 @@ a{
                         &__tool{
                             h4{
                                 font-size: 1.5rem;
-                                padding-left: 1.3em !important;
-                                padding: 4px;
+                                padding: 4px 4px 4px 1.3em !important;
                             }
                             &__skill-content,
                             &__tool-content{
@@ -1895,8 +1893,7 @@ a{
                         &__tool{
                             h4{
                                 font-size: 1.2rem;
-                                padding-left: 1.3em !important;
-                                padding: 4px;
+                                padding: 4px 4px 4px 1.3em !important;
                             }
                             &__skill-content,
                             &__tool-content{
@@ -1980,7 +1977,7 @@ a{
                         font-size: 1.3rem;
                         width: calc(100% / 3);
                     }
-                };
+                }
                     
                 &__wrapper{
                     &__info{
@@ -2008,8 +2005,7 @@ a{
                         &__tool{
                             h4{
                                 font-size: 1.3rem;
-                                padding-left: 1.5em !important;
-                                padding: 4px;
+                                padding: 4px 4px 4px 1.3em !important;
                             }
                             &__skill-content,
                             &__tool-content{
@@ -2118,8 +2114,7 @@ a{
                         &__tool{
                             h4{
                                 font-size: .9rem;
-                                padding-left: 1.5em !important;
-                                padding: 4px;
+                                padding: 4px 4px 4px 1.3em !important;
                             }
                             &__skill-content,
                             &__tool-content{
@@ -2227,8 +2222,7 @@ a{
                         &__tool{
                             h4{
                                 font-size: .5rem;
-                                padding-left: 1.5em !important;
-                                padding: 4px;
+                                padding: 4px 4px 4px 1.5em !important;
                             }
                             &__skill-content,
                             &__tool-content{
@@ -3433,7 +3427,6 @@ a{
     // footer
     .footer{
         @include responsive(large-wide){
-            background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
             justify-content: center;
@@ -3477,7 +3470,6 @@ a{
             }
         }       
         @include responsive(desktop){
-            background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
             justify-content: center;
@@ -3521,7 +3513,6 @@ a{
             }
         }       
         @include responsive(laptop){
-            background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
             justify-content: center;
@@ -3565,7 +3556,6 @@ a{
             }
         }
         @include responsive(tablet){
-            background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
             justify-content: center;
@@ -3609,7 +3599,6 @@ a{
             }
         }
         @include responsive(mobile){
-            background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
             height: 132px;
@@ -3653,7 +3642,6 @@ a{
             }
         }       
         @include responsive(xs-mobile){
-            background-color: #000000;
             color: $dark-theme-clr;
             display: flex;
             height: 132px;

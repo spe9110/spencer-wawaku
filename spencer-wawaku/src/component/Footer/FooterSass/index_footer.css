@@ -7,6 +7,7 @@
   align-items: center;
   gap: 1rem;
   justify-content: center;
+  background-color: #2563eb;
 }
 .container .footer h5 {
   text-align: center;

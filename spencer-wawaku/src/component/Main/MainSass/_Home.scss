@@ -1,5 +1,5 @@
 @mixin button-styles{
-    background-color: #0ea5e9;
+    background-color: #2563eb;
     color: #fff;
     border: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -24,8 +24,7 @@
         position: relative;
         width: 100%;
         overflow: hidden;
-        
-        
+    
         &__info{
             display: flex;
             flex-direction: column;
@@ -45,7 +44,7 @@
 
             &__job{
                 line-height: 1rem;
-                color: #0ea5e9;
+                color: #2563eb;
             }
             hr{
                 content: "";
@@ -69,11 +68,10 @@
                     @include button-styles;
 
                     &:hover{
-                        background-color: #fff;
+                        background-color: #3b82f6;
                         transition: background .3s ease-in-out;
-                        color:#0ea5e9;
+                        color:#fff;
                         border-radius: 32px;
-                        border: 3px solid #0ea5e9;
                     }
                 }
                 &__two{
@@ -209,3 +207,4 @@
         }       
     }
 }
+

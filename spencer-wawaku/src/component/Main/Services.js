@@ -3,6 +3,7 @@ import services from "./DataMain/ServicesData";
 import './MainSass/index_main.css';
 import { useTheme } from '../Header/DarkMode';
 import gsap from 'gsap';
+import UxDesign from "./UxDesign";
 
 function ServicesSection(){
     const { theme } = useTheme();
@@ -26,6 +27,7 @@ function ServicesSection(){
 
     return(
         <div className={`Services ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={servicesAnime} role='main'>
+            <UxDesign />
             <h3 id="service" className="Services__title">Services</h3>
             <p id="help" className="Services__help">I can help you with</p>
 

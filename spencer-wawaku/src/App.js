@@ -30,7 +30,14 @@ function App() {
 
   return (
         <main className={`container ${theme === 'light' ? 'dark-mode' : 'light'}`}>
-          <ErrorBoundary fallback={<div style={{ color: "red" }}>Something went wrong</div>}>
+          <ErrorBoundary fallback={<div 
+            style={{ 
+              color: "red",
+              display: "grid",
+              placeItems: "center",
+              fontSize: "4rem",
+              fontWeight: "600"
+            }}>Something went wrong</div>}>
             <Suspense fallback={<p>Loading...</p>}>
             <Header />
             <Routes>        

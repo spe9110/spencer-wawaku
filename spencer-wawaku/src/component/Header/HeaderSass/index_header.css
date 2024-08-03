@@ -74,7 +74,7 @@
 }
 .container .Header__contact__contactMe {
   border: none;
-  background: blue;
+  background: #2563eb;
   border-radius: 5px;
   cursor: pointer;
   color: #fff;
