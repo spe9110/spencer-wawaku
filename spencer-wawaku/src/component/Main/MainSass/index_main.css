@@ -113,7 +113,8 @@
   border-radius: 50%;
   z-index: 30;
   border: 1px solid #94a3b8;
-  animation: animateCircleOne 300s linear infinite;
+  /* 120s = 2 minutes */
+  animation: animateCircleOne 120s linear infinite;
 }
 .container .Hero__profil__circle__round_1 span {
   position: absolute;
@@ -160,7 +161,7 @@
   border-radius: 50%;
   z-index: 30;
   border: 1px solid #94a3b8;
-  animation: animateCircleTwo 300s linear infinite reverse;
+  animation: animateCircleTwo 120s linear infinite reverse;
 }
 .container .Hero__profil__circle__round_2 span {
   position: absolute;
@@ -330,7 +331,6 @@
 .container .About__content__wrapper__info__knowledge__list-skill span {
   font-weight: bold;
   text-align: center;
-  color: #000;
 }
 .container .About__content__wrapper__prog {
   display: flex;
@@ -388,8 +388,7 @@
 .container .About__content__wrapper__other-skill__content h4 {
   font-weight: bold;
   width: 100%;
-  padding-left: 2rem !important;
-  padding: 5px;
+  padding-left: 5px 5px 5px 2rem !important;
   border-radius: 0.5rem;
   background: #2563eb;
   border: 1px solid #e5e7eb;
@@ -685,7 +684,7 @@
   background: greenyellow;
 }
 .container .Contact__form__content {
-  background: #ccc;
+  background: #ffffff;
   color: #000;
 }
 .container .Contact__form__content form {
@@ -712,7 +711,7 @@
   align-items: center;
   justify-content: start;
   text-decoration: none;
-  background-color: #bae6fd;
+  background-color: #f8fafc;
   gap: 0.3rem;
   color: rgb(92, 90, 90);
   font-size: 1.5rem;

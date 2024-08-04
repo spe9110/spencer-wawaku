@@ -38,6 +38,7 @@ a{
         background: $dark-theme-bg; /* Default light mode background */
         color: $dark-theme-clr; /* Default light mode text color */
     }
+    
     // Header
     .Header{
         background: $light-theme-bg;
@@ -78,7 +79,6 @@ a{
                         a{
                             @include flexDirection(row, center, center);
                             gap: .2rem;
-                            // color: #fff;
                             margin: 0 auto;
                             padding: .2rem;
 
@@ -1617,6 +1617,7 @@ a{
                 min-height: 500px;
                 @include flexDirection(column,center,start);
                 padding: 1em;
+                // color: $light-theme-clr;
 
                 &__title{
                     font-size: 2.5rem !important;
@@ -1647,6 +1648,9 @@ a{
                             gap: .2rem;
 
                             &__list-skill{
+                                &.dark-mode{
+                                    color: $light-theme-clr;
+                                }
                                 span{
                                     font-size: .8rem;
                                 }
@@ -1928,7 +1932,6 @@ a{
                             }
                         }
                     }
-                   
                 }
             }
         }

@@ -31,6 +31,7 @@ export default function SocialMedia() {
     return (
         <div className='social-media'>
             <ul>
+                {/* social media for phone */}
                 {socialMediaIcons.map(socialMedia => (
                     <li key={socialMedia.id}>
                         <a

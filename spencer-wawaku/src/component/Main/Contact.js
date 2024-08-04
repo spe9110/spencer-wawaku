@@ -15,7 +15,6 @@ import ReactLeafletMap from './ReactLeafletMap';
 import UseSubmit from './AlertMessage/UseSubmit';
 import { useAlertContext } from './AlertMessage/AlertContext';
 import { useTheme } from '../Header/DarkMode';
-import UxDesign from "./UxDesign";
 
 function Contact(){
   const { theme } = useTheme();
@@ -60,7 +59,6 @@ function Contact(){
 
     return(
         <div className={`Contact ${theme === 'light' ? 'dark-mode' : 'light'}`} role='main'>
-          <UxDesign />
             <h3 className="Contact__title">Contact</h3>
             <p className="Contact__touch">Let's get in touch</p>
             <div className='Contact__form'>

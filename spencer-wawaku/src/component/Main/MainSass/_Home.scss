@@ -103,7 +103,8 @@
                     border-radius: 50%;
                     z-index: 30;
                     border: 1px solid #94a3b8;
-                    animation: animateCircleOne 300s linear infinite;
+                    /* 120s = 2 minutes */
+                    animation: animateCircleOne 120s linear infinite;
 
                     span{
                         position: absolute;
@@ -156,7 +157,7 @@
                     border-radius: 50%;
                     z-index: 30;
                     border: 1px solid #94a3b8;
-                    animation: animateCircleTwo 300s linear infinite reverse;
+                    animation: animateCircleTwo 120s linear infinite reverse;
 
                     span{
                         position: absolute;

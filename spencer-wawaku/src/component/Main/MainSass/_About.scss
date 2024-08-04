@@ -134,6 +134,7 @@
                             padding: 5px;
                             cursor: pointer;
 
+
                             &:hover{
                                 background-color: #f8fafc;
                                 color: #000;
@@ -147,7 +148,7 @@
                             span{
                                 font-weight: bold;
                                 text-align: center;
-                                color: #000;
+                                // color: #000;
                             }
                         }
                     }
@@ -165,6 +166,7 @@
                     &__tool{
                         width: 100%;
                         height: 100%;
+
                         h4{
                             font-weight: bold;
                             width: 100%;
@@ -216,8 +218,7 @@
                         h4{
                             font-weight: bold;
                             width: 100%;
-                            padding-left: 2rem !important;
-                            padding: 5px;
+                            padding-left: 5px 5px 5px 2rem !important;
                             border-radius: .5rem;
                             background: #2563eb;
                             border: 1px solid #e5e7eb;
@@ -249,7 +250,6 @@
                                 &__title{
                                     position: absolute;
                                     bottom: -1rem;
-                                    // font-size: .8rem;
                                     text-align: center;
                                     font-weight: 600;
                                 }                               

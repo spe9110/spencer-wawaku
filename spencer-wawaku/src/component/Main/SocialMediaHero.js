@@ -3,9 +3,7 @@ import { useRef, useLayoutEffect } from "react";
 import socials from "../Header/Data/IconsData";
 import './MainSass/index_main.css';
 import gsap from 'gsap';
-// import { useGSAP } from '@gsap/react';
 
-// gsap.registerPlugin(useGSAP);
 
 export default function SocialMediaHero(){
     const secondAnime = useRef();
