@@ -105,6 +105,7 @@ function Footer() {
                         </a>
                     </ul>
                     <p className="footer__content__copyright">&copy; {currentYear}  Spencer wawaku. All rights reserved.</p>
+                    
                 </div>
             </div>
 

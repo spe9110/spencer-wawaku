@@ -42,7 +42,7 @@ export default function CountUpPage(){
                             <FaYoutube/>
                         </span>
                         <span className="CountUp__wrapper__subscribers__number">
-                            {countOn && <CountUp start={0} end={130} duration={2.75} suffix="+" delay={0}/>}
+                            {countOn && <CountUp start={0} end={172} duration={2.75} suffix="+" delay={0}/>}
                         </span>
                         <span className="CountUp__wrapper__subscribers__title">
                             Subscribers
