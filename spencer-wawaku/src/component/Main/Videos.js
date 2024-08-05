@@ -1,5 +1,4 @@
-import React, { useRef, useLayoutEffect, memo } from "react";
-import gsap from 'gsap';
+import React, { memo } from "react";
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
@@ -82,23 +81,8 @@ function Videos(){
         prevArrow: <SamplePrevArrow />
     };
 
-    const videosAnime = useRef();
-    const tl = useRef();
-
-    useLayoutEffect(() => {
-      let ctx = gsap.context(() => {
-          tl.current = gsap.timeline()
-          .from(videosAnime.current.children, {
-            duration: 1.5, 
-            opacity: 0.01,
-            stagger: 1
-        })
-      });
-      return () => ctx.revert();
-    }, []);
-
     return(
-        <div className={`Videos ${theme === 'light' ? 'dark-mode' : 'light'}`} ref={videosAnime} role='main'>
+        <div className={`Videos ${theme === 'light' ? 'dark-mode' : 'light'}`} role='main'>
             <UxDesign />
             <h3 className="Videos__title">Videos</h3>
             <p className="Videos__watch">Watch me on Youtube</p>
