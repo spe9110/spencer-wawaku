@@ -42,12 +42,12 @@ function App() {
             <Header />
             <Routes>        
               <Route path="/" element={<Home />} />
-              <Route path="*" element={<NotFoundPage />} /> 
               <Route path="/home" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/videos" element={<Videos />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFoundPage />} /> 
             </Routes>
             <Footer />
             <Alert/>  
