@@ -15,7 +15,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider>
       {/* Router basename="/sw" evoid the 404 page to show by default after loading */}
-      <Router basename="/sw">
+      <Router basename="/spencer-wawaku">
         <AlertProvider>
           <ChakraProvider>
             <App />
