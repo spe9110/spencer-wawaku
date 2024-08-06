@@ -1201,7 +1201,7 @@ a {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   font-family: "Quicksand", sans-serif;
   background: #f8fafc; /* Default light mode background */
@@ -1209,6 +1209,8 @@ a {
   transition: background 0.3s ease-in-out;
   line-height: 1.5;
   margin: 1px;
+  overflow: hidden !important;
+  box-sizing: border-box;
 }
 .container.dark-mode {
   background: #0f172a; /* Default light mode background */
@@ -1220,7 +1222,7 @@ a {
 }
 @media only screen and (min-width: 1300px) {
   .container .Header {
-    position: sticky;
+    position: sticky !important;
     top: 0;
     height: 6rem;
     padding: 0 3em;
@@ -1289,7 +1291,7 @@ a {
 }
 @media only screen and (min-width: 993px) and (max-width: 1299px) {
   .container .Header {
-    position: sticky;
+    position: sticky !important;
     top: 0;
     height: 6rem;
     padding: 0 3em;
@@ -1357,7 +1359,7 @@ a {
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .container .Header {
-    position: sticky;
+    position: sticky !important;
     top: 0;
     height: 6rem;
     padding: 0 3em;
@@ -2633,6 +2635,7 @@ a {
   }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 1.5rem;
+    padding: 4px 4px 4px 1.5em !important;
   }
   .container .About__content__wrapper__other-skill__content__box {
     grid-template-columns: auto auto auto;
@@ -2730,6 +2733,7 @@ a {
   }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 1.5rem;
+    padding: 4px 4px 4px 1.5em !important;
   }
   .container .About__content__wrapper__other-skill__content__box {
     grid-template-columns: auto auto auto;
@@ -2826,6 +2830,7 @@ a {
   }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 1.3rem;
+    padding: 4px 4px 4px 1.3em !important;
   }
   .container .About__content__wrapper__other-skill__content__box {
     grid-template-columns: auto auto auto;
@@ -2917,6 +2922,7 @@ a {
   }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 1.3rem;
+    padding: 4px 4px 4px 1.5em !important;
   }
   .container .About__content__wrapper__other-skill__content__box {
     grid-template-columns: auto auto auto;
@@ -2927,7 +2933,7 @@ a {
     font-size: 1.3rem;
   }
   .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
-    font-size: 1rem;
+    font-size: 0.7rem;
     bottom: -1.5rem !important;
   }
 }
@@ -3008,6 +3014,7 @@ a {
   }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 0.9rem;
+    padding: 4px 4px 4px 1.5em !important;
   }
   .container .About__content__wrapper__other-skill__content__box {
     grid-template-columns: auto auto;
@@ -3017,7 +3024,7 @@ a {
     font-size: 0.9rem;
   }
   .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 }
 @media only screen and (min-width: 320px) and (max-width: 411px) {
@@ -3097,6 +3104,7 @@ a {
   }
   .container .About__content__wrapper__other-skill__content h4 {
     font-size: 0.7rem;
+    padding: 4px 4px 4px 1.5em !important;
   }
   .container .About__content__wrapper__other-skill__content__box {
     grid-template-columns: auto auto;
@@ -3106,7 +3114,7 @@ a {
     font-size: 0.7rem;
   }
   .container .About__content__wrapper__other-skill__content__box__CircleBg__title {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 }
 @media only screen and (min-width: 1300px) {
