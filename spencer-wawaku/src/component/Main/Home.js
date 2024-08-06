@@ -19,8 +19,8 @@ function HomeSection(){
     const [text] = useTypewriter({
         words: ["I'm a Front-End Developer", "I'm a React Developer", "I'm a Node Developer", "I'm a junior fullstack Developer", "I'm a content creator", "I'm a self-taught programmer" ],
         loop: {},
-        typeSpeed: 250,
-        deleteSpeed: 30,
+        typeSpeed: 100,
+        deleteSpeed: 120,
         delaySpeed: 2500
     });
 
