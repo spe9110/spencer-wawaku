@@ -46,4 +46,8 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         branch: gh-pages
+<<<<<<< HEAD
         folder: build
+=======
+        folder: build
+>>>>>>> fc9fd2a (Remove node_modules from repository and update .gitignore)

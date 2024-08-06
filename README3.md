@@ -181,4 +181,6 @@ CORRECT WAY
                         <FaYoutube />
                     </a>
 */ 
+pour netoyer le cache
+git rm -r --cached node_modules
  -->
