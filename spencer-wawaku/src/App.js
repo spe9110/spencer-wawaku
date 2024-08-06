@@ -35,22 +35,22 @@ function App() {
               color: "red",
               display: "grid",
               placeItems: "center",
-              fontSize: "4rem",
+              fontSize: "2rem",
               fontWeight: "600"
             }}>Something went wrong</div>}>
             <Suspense fallback={<p>Loading...</p>}>
-            <Header />
-            <Routes>        
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/videos" element={<Videos />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFoundPage />} /> 
-            </Routes>
-            <Footer />
-            <Alert/>  
+              <Header />
+              <Routes>        
+                <Route path="/" element={<Home />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/videos" element={<Videos />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFoundPage />} /> 
+              </Routes>
+              <Footer />
+              <Alert/>
           </Suspense>
           </ErrorBoundary>
         </main>

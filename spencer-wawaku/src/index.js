@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './App.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router,  } from 'react-router-dom';
 import {ThemeProvider} from './component/Header/DarkMode';
 import { ChakraProvider } from '@chakra-ui/react';
 import { AlertProvider } from './component/Main/AlertMessage/AlertContext';
@@ -14,13 +14,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
   <React.StrictMode>
     <ThemeProvider>
-      <BrowserRouter>
+      {/* Router basename="/sw" evoid the 404 page to show by default after loading */}
+      <Router basename="/sw">
         <AlertProvider>
           <ChakraProvider>
             <App />
           </ChakraProvider>
         </AlertProvider>
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   </React.StrictMode>
 );

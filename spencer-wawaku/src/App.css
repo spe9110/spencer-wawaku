@@ -1176,6 +1176,9 @@ html {
 }
 
 body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   min-height: 100vh;
   margin: 1px;
@@ -1929,9 +1932,9 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
-    top: 50%;
+    top: 50% !important;
     right: -9vw;
-    transform: translateY(-50%);
+    transform: translateY(-50%) !important;
   }
   .container .Hero .Social__Media li a:hover {
     transform: scale(1.1) translateX(-8.5vw);
@@ -2056,9 +2059,9 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
-    top: 50%;
+    top: 50% !important;
     right: -10vw;
-    transform: translateY(-50%);
+    transform: translateY(-50%) !important;
   }
   .container .Hero .Social__Media li a:hover {
     transform: scale(1.1) translateX(-9vw);
@@ -2178,9 +2181,9 @@ a {
   }
   .container .Hero .Social__Media {
     display: flex;
-    top: 30%;
+    top: 30% !important;
     right: -15.1vw;
-    transform: translateY(-30%);
+    transform: translateY(-30%) !important;
   }
   .container .Hero .Social__Media li a:hover {
     transform: scale(1.1) translateX(-14.5vw);

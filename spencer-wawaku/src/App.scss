@@ -845,9 +845,9 @@ a{
             }
             .Social__Media{
                 display: flex;
-                top: 50%;
+                top: 50% !important;
                 right: -9vw;
-                transform: translateY(-50%);
+                transform: translateY(-50%) !important;
 
                 li{
                     a{
@@ -994,9 +994,9 @@ a{
             }
             .Social__Media{
                 display: flex;
-                top: 50%;
+                top: 50% !important;
                 right: -10vw;
-                transform: translateY(-50%);
+                transform: translateY(-50%) !important;
 
                 li{
                     a{
@@ -1139,9 +1139,9 @@ a{
             }
             .Social__Media{
                 display: flex;
-                top: 30%;
+                top: 30% !important;
                 right: -15.1vw;
-                transform: translateY(-30%);
+                transform: translateY(-30%) !important;
 
                 li{
                     a{
