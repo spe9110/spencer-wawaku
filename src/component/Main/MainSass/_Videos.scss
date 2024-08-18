@@ -1,7 +1,8 @@
 .container{
     .Videos{
         margin: 0 auto;
-        overflow: hidden;
+        overflow: hidden !important;
+        box-sizing: border-box;
         
         &__title{
             margin-bottom: .5rem;
