@@ -118,6 +118,9 @@ a{
                     padding: 1em 1.4em;
                     font-size: 1rem;
                 }
+                &__contactMe:hover{
+                    background-color: #3b82f6;
+                }
             }
             
         }
@@ -171,7 +174,7 @@ a{
                 }
                 // the active button
                 .active {
-                    background-color: blue;
+                    background-color: #2563eb;
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
@@ -193,6 +196,9 @@ a{
                 &__contactMe {
                     padding: .4em;
                     // font-size: 1rem;
+                }
+                &__contactMe:hover{
+                    background-color: #3b82f6;
                 }
             }
             
@@ -246,7 +252,7 @@ a{
                 }
                 // the active button
                 .active {
-                    background-color: blue;
+                    background-color: #2563eb;
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
@@ -268,6 +274,9 @@ a{
                 // button
                 &__contactMe {
                     padding: .4em;
+                }
+                &__contactMe:hover{
+                    background-color: #3b82f6;
                 }
             }
         }
@@ -294,7 +303,7 @@ a{
             &__navbar{
                 position: fixed;
                 @include flexDirection(column, center, center);
-                background: rgba($color: #000000, $alpha: .6);
+                background: rgba($color: #334155, $alpha: 2);
                 backdrop-filter: blur(25px);
                 width: 100%;
                 height: 100vh; 
@@ -333,7 +342,7 @@ a{
                     }
                 }
                 .active {
-                    background-color: blue;
+                    background-color: #2563eb;
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
@@ -377,6 +386,11 @@ a{
                     padding: .4em;
                     // font-size: .8rem;
                 }
+
+                &__contactMe:hover{
+                    background-color: #3b82f6;
+                }
+
                 .Switch-btn{
                     width: 1.8rem;
                     height: 1.8rem;           
@@ -407,7 +421,7 @@ a{
             &__navbar{
                 position: fixed;
                 @include flexDirection(column, center, center);
-                background: rgba($color: #000000, $alpha: .6);
+                background: rgba($color: #334155, $alpha: 2);
                 backdrop-filter: blur(25px);
                 width: 100%;
                 height: 100vh; 
@@ -446,7 +460,7 @@ a{
                     }
                 }
                 .active {
-                    background-color: blue;
+                    background-color: #2563eb;
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
@@ -520,7 +534,7 @@ a{
             &__navbar{
                 position: fixed;
                 @include flexDirection(column, center, center);
-                background: rgba($color: #000000, $alpha: .6);
+                background: rgba($color: #334155, $alpha: 2);
                 backdrop-filter: blur(25px);
                 width: 100%;
                 height: 100vh; 
@@ -559,7 +573,7 @@ a{
                     }
                 }
                 .active {
-                    background-color: blue;
+                    background-color: #2563eb;
                     border-radius: 5px;
                     padding: .4em;
                     color: #fff;
@@ -636,7 +650,7 @@ a{
 
                 li{
                     a{
-                        font-size: 1.2rem;
+                        font-size: 1.6rem;
                         display: grid;
                         place-items: center;
 
@@ -662,7 +676,7 @@ a{
                 // gap: .2rem;
                 li{
                     a{
-                        font-size: 1.2rem;
+                        font-size: 1.6rem;
                         display: grid;
                         place-items: center;
 
@@ -688,7 +702,7 @@ a{
                 // gap: .2rem;
                 li{
                     a{
-                        font-size: .8rem;
+                        font-size: 1.4rem;
                         display: grid;
                         place-items: center;
 
