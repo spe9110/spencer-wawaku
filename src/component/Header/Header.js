@@ -1,4 +1,4 @@
-import { useState, memo } from 'react';
+import { useState, memo, useEffect } from 'react';
 import navbarItems from './Data/Data'; // Importing navbarItems from data.js
 import { FaBars, FaXmark } from "react-icons/fa6";
 import { Link, NavLink } from 'react-router-dom';
@@ -16,6 +16,15 @@ function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [hamburgerColor, setHamburgerColor] = useState(theme === '#000' ? '#ffffff' : '#000000');
     const initialHamburgerColor = theme === '#000' ? '#ffffff' : '#000000';
+
+    // Block/allow scroll when the menu is opened/closed
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    }, [mobileMenuOpen]);
 
     const handleHamburger = () => {
         setMobileMenuOpen(!mobileMenuOpen);
